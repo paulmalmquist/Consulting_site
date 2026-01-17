@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Work Graph",
+    "description": "Map the flow of work across roles, systems, and escalation points.",
+    "steps": ["Intake", "Decision", "Execution", "Audit"]
+  },
+  {
+    "title": "Decision Ladder",
+    "description": "Clarify thresholds so humans know when to approve, override, or escalate.",
+    "steps": ["Auto-approve", "Manager review", "Risk committee", "Executive override"]
+  },
+  {
+    "title": "RAG → Rules → HITL → Automation",
+    "description": "Progressively increase autonomy while keeping governance in place.",
+    "steps": ["Retrieve", "Apply rules", "Human review", "Automate"]
+  }
+]

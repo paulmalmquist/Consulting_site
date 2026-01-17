@@ -1,0 +1,62 @@
+[
+  {
+    "id": "kb-001",
+    "title": "Vendor approval risk thresholds",
+    "description": "Defines which vendor approvals require escalation based on contract value and data exposure.",
+    "role": "Procurement Lead",
+    "workflow": "Vendor intake",
+    "system": "Contract Repository",
+    "risk": "High",
+    "tags": ["vendor", "risk", "governance"],
+    "content": "Vendor approvals above $250k or involving regulated data require a risk committee review. Exceptions must include a mitigation plan and evidence of data handling controls.",
+    "citations": ["Policy: Vendor Risk v3.2", "Contract template section 4.1"]
+  },
+  {
+    "id": "kb-002",
+    "title": "Change order approval ladder",
+    "description": "Approval thresholds for project change orders and escalation owners.",
+    "role": "Project Director",
+    "workflow": "Change order triage",
+    "system": "PDS Tracker",
+    "risk": "Medium",
+    "tags": ["construction", "approvals", "decision"],
+    "content": "Change orders below $50k can be approved by the project manager. $50k-$250k requires director approval. Above $250k triggers finance and legal review.",
+    "citations": ["Capital Projects SOP 7.4", "PDS governance memo 2024-05"]
+  },
+  {
+    "id": "kb-003",
+    "title": "Claims exception escalation criteria",
+    "description": "Defines what triggers human review on insurance claims.",
+    "role": "Claims Supervisor",
+    "workflow": "Claims exception handling",
+    "system": "Claims Core",
+    "risk": "High",
+    "tags": ["insurance", "HITL", "risk"],
+    "content": "Claims with conflicting incident reports, coverage gaps, or payouts above the 90th percentile must be reviewed by a supervisor before payout.",
+    "citations": ["Claims Policy 2.9", "Fraud escalation guidelines"]
+  },
+  {
+    "id": "kb-004",
+    "title": "Finance exception routing",
+    "description": "Routing rules for invoice exceptions and payment approvals.",
+    "role": "Finance Ops",
+    "workflow": "Invoice approvals",
+    "system": "ERP",
+    "risk": "Medium",
+    "tags": ["finance", "exceptions", "workflow"],
+    "content": "Invoice exceptions under $10k can be approved by finance ops if documentation is complete. Missing documentation or totals above $10k require controller approval.",
+    "citations": ["AP policy 5.2", "Controller memo 2024-03"]
+  },
+  {
+    "id": "kb-005",
+    "title": "RAG citation integrity checklist",
+    "description": "Checklist to ensure retrieval outputs remain auditable.",
+    "role": "AI Program Manager",
+    "workflow": "Knowledge base governance",
+    "system": "Knowledge Hub",
+    "risk": "Low",
+    "tags": ["RAG", "governance", "citations"],
+    "content": "Every retrieved response must include the source document, section reference, and last review date. Objects without an owner are excluded from production retrieval.",
+    "citations": ["KB governance playbook", "Audit readiness guide"]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "kb-005",
+  "title": "RAG citation integrity checklist",
+  "description": "Checklist to ensure retrieval outputs remain auditable.",
+  "role": "AI Program Manager",
+  "workflow": "Knowledge base governance",
+  "system": "Knowledge Hub",
+  "risk": "Low",
+  "tags": ["RAG", "governance", "citations"],
+  "content": "Every retrieved response must include the source document, section reference, and last review date. Objects without an owner are excluded from production retrieval.",
+  "citations": ["KB governance playbook", "Audit readiness guide"]
+}

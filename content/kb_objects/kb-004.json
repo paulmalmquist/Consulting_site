@@ -1,0 +1,12 @@
+{
+  "id": "kb-004",
+  "title": "Finance exception routing",
+  "description": "Routing rules for invoice exceptions and payment approvals.",
+  "role": "Finance Ops",
+  "workflow": "Invoice approvals",
+  "system": "ERP",
+  "risk": "Medium",
+  "tags": ["finance", "exceptions", "workflow"],
+  "content": "Invoice exceptions under $10k can be approved by finance ops if documentation is complete. Missing documentation or totals above $10k require controller approval.",
+  "citations": ["AP policy 5.2", "Controller memo 2024-03"]
+}

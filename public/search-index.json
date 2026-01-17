@@ -1,0 +1,211 @@
+{
+  "documents": [
+    {
+      "id": "page-home",
+      "title": "Home",
+      "description": "AI readiness consulting for operations leaders.",
+      "type": "page",
+      "tags": ["home"],
+      "href": "/",
+      "content": "Operational truth, workflow compression, decision latency, and governance-ready AI readiness."
+    },
+    {
+      "id": "page-services",
+      "title": "Services",
+      "description": "Scoped engagements for AI readiness and governance.",
+      "type": "page",
+      "tags": ["services", "governance"],
+      "href": "/services",
+      "content": "AI Readiness Diagnostic, Workflow & Decision Inventory, AI Governance & Operating Model, SaaS Dependency strategy, Implementation Pilot."
+    },
+    {
+      "id": "page-method",
+      "title": "Method",
+      "description": "Phased method for AI readiness.",
+      "type": "page",
+      "tags": ["method"],
+      "href": "/method",
+      "content": "Work Reality Audit, AI Compression Analysis, Role/Workflow Consolidation, Executive Cover Package, Pilot with human-in-the-loop."
+    },
+    {
+      "id": "page-industries",
+      "title": "Industries",
+      "description": "Industry-agnostic workflows with tailored examples.",
+      "type": "page",
+      "tags": ["industries"],
+      "href": "/industries",
+      "content": "Professional services, construction/PDS, finance ops, healthcare admin, insurance ops."
+    },
+    {
+      "id": "page-proof",
+      "title": "Proof",
+      "description": "Anonymized case studies.",
+      "type": "page",
+      "tags": ["proof"],
+      "href": "/proof",
+      "content": "Workflow compression case studies with governance outcomes."
+    },
+    {
+      "id": "page-demo",
+      "title": "Demo",
+      "description": "Offline demo of a governed knowledge base.",
+      "type": "page",
+      "tags": ["demo", "kb"],
+      "href": "/demo",
+      "content": "Knowledge base explorer, question simulator, citations." 
+    },
+    {
+      "id": "page-insights",
+      "title": "Insights",
+      "description": "Executive-friendly reads on AI readiness.",
+      "type": "page",
+      "tags": ["insights"],
+      "href": "/insights",
+      "content": "Operational truth, decision latency, systems of record vs systems of work." 
+    },
+    {
+      "id": "page-about",
+      "title": "About",
+      "description": "Background and principles.",
+      "type": "page",
+      "tags": ["about"],
+      "href": "/about",
+      "content": "Operations redesign, human-in-the-loop, auditability." 
+    },
+    {
+      "id": "page-contact",
+      "title": "Contact",
+      "description": "Book an intro call or email.",
+      "type": "page",
+      "tags": ["contact"],
+      "href": "/contact",
+      "content": "Email {{EMAIL}} or use {{CALENDLY_URL}}." 
+    },
+    {
+      "id": "page-legal",
+      "title": "Legal",
+      "description": "Privacy and terms.",
+      "type": "page",
+      "tags": ["legal"],
+      "href": "/legal",
+      "content": "Privacy, terms, and engagement disclaimers." 
+    },
+    {
+      "id": "case-change-orders",
+      "title": "Change order triage in capital projects",
+      "description": "Reduced decision latency and improved auditability for change orders.",
+      "type": "case",
+      "tags": ["construction", "workflow"],
+      "href": "/proof/change-order-triage",
+      "content": "Mapped work graph, decision ladder, retrieval for contract clauses." 
+    },
+    {
+      "id": "case-finance-approvals",
+      "title": "Finance approvals with governance-ready AI routing",
+      "description": "Streamlined approvals without losing compliance traceability.",
+      "type": "case",
+      "tags": ["finance", "approvals"],
+      "href": "/proof/finance-approvals-governance",
+      "content": "Decision ladder, knowledge objects, human-in-the-loop checkpoints." 
+    },
+    {
+      "id": "case-claims",
+      "title": "Claims exception handling in insurance operations",
+      "description": "Reduced escalation fatigue while maintaining human oversight.",
+      "type": "case",
+      "tags": ["insurance", "claims"],
+      "href": "/proof/claims-exception-handling",
+      "content": "Exception triggers, verified citations, HITL model." 
+    },
+    {
+      "id": "post-ops-problem",
+      "title": "Why AI readiness is an operations problem",
+      "description": "AI readiness starts with operational truth.",
+      "type": "post",
+      "tags": ["operations", "readiness"],
+      "href": "/insights/why-ai-readiness-is-an-operations-problem",
+      "content": "Systems of work, decision ladders, workflow compression." 
+    },
+    {
+      "id": "post-systems",
+      "title": "Systems of record vs systems of work",
+      "description": "AI fails when we confuse formal systems with real work.",
+      "type": "post",
+      "tags": ["systems"],
+      "href": "/insights/systems-of-record-vs-systems-of-work",
+      "content": "Systems of record, systems of work, governance for retrieval." 
+    },
+    {
+      "id": "post-decision-latency",
+      "title": "Decision latency is the hidden tax",
+      "description": "Slow approvals cost more than you think.",
+      "type": "post",
+      "tags": ["decisions"],
+      "href": "/insights/decision-latency-the-hidden-tax",
+      "content": "Decision ladder, approval thresholds, escalation." 
+    },
+    {
+      "id": "post-saas-sprawl",
+      "title": "Why most SaaS sprawl is workflow debt",
+      "description": "Tools proliferate when workflows are unclear.",
+      "type": "post",
+      "tags": ["saas"],
+      "href": "/insights/why-most-saas-sprawl-is-workflow-debt",
+      "content": "Workflow debt, tool proliferation, governance." 
+    },
+    {
+      "id": "post-hitl",
+      "title": "Human-in-the-loop is a product requirement",
+      "description": "HITL is a deliberate design choice.",
+      "type": "post",
+      "tags": ["HITL"],
+      "href": "/insights/human-in-the-loop-is-a-product-requirement",
+      "content": "Accountability, escalation, audit trail." 
+    },
+    {
+      "id": "post-kb",
+      "title": "How to build a knowledge base that doesn’t become a junk drawer",
+      "description": "Retrieval only works with owners, context, and expiry.",
+      "type": "post",
+      "tags": ["knowledge-base"],
+      "href": "/insights/how-to-build-a-knowledge-base-that-doesnt-become-a-junk-drawer",
+      "content": "Knowledge base governance, owners, review cadence." 
+    },
+    {
+      "id": "deliverable-op-map",
+      "title": "Operational truth map",
+      "description": "Visual map of systems of work vs systems of record.",
+      "type": "deliverable",
+      "tags": ["template"],
+      "href": "/services",
+      "content": "Workflow map, systems of work, systems of record." 
+    },
+    {
+      "id": "deliverable-decision-ladder",
+      "title": "Decision ladder",
+      "description": "Reusable decision rights matrix.",
+      "type": "deliverable",
+      "tags": ["governance"],
+      "href": "/method",
+      "content": "Decision thresholds, approvals, auditability." 
+    },
+    {
+      "id": "kb-001",
+      "title": "Vendor approval risk thresholds",
+      "description": "Escalation rules based on contract value and data exposure.",
+      "type": "kb",
+      "tags": ["vendor", "risk"],
+      "href": "/demo",
+      "content": "Vendor approvals above $250k require risk committee review." 
+    },
+    {
+      "id": "kb-002",
+      "title": "Change order approval ladder",
+      "description": "Approval thresholds for project change orders.",
+      "type": "kb",
+      "tags": ["construction", "decision"],
+      "href": "/demo",
+      "content": "Change orders below $50k approved by PM, above $250k triggers legal." 
+    }
+  ]
+}
