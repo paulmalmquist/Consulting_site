@@ -1,0 +1,12 @@
+{
+  "id": "kb-001",
+  "title": "Vendor approval risk thresholds",
+  "description": "Defines which vendor approvals require escalation based on contract value and data exposure.",
+  "role": "Procurement Lead",
+  "workflow": "Vendor intake",
+  "system": "Contract Repository",
+  "risk": "High",
+  "tags": ["vendor", "risk", "governance"],
+  "content": "Vendor approvals above $250k or involving regulated data require a risk committee review. Exceptions must include a mitigation plan and evidence of data handling controls.",
+  "citations": ["Policy: Vendor Risk v3.2", "Contract template section 4.1"]
+}

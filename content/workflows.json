@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Vendor intake & compliance",
+    "description": "Reduce approval lag with a clear decision ladder and evidence trail.",
+    "tags": ["risk", "vendor", "governance"],
+    "href": "/method",
+    "eyebrow": "Workflow"
+  },
+  {
+    "title": "Change order triage",
+    "description": "Compress field requests into structured decisions without losing context.",
+    "tags": ["construction", "workflow"],
+    "href": "/industries",
+    "eyebrow": "Workflow"
+  },
+  {
+    "title": "Claims exception handling",
+    "description": "Flag high-risk claims and route them to human escalation.",
+    "tags": ["insurance", "HITL"],
+    "href": "/industries",
+    "eyebrow": "Workflow"
+  },
+  {
+    "title": "Finance ops approvals",
+    "description": "Reduce decision latency by clarifying owner, threshold, and fallback rules.",
+    "tags": ["finance", "decision"],
+    "href": "/industries",
+    "eyebrow": "Workflow"
+  }
+]

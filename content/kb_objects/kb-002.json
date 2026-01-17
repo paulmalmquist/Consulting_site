@@ -1,0 +1,12 @@
+{
+  "id": "kb-002",
+  "title": "Change order approval ladder",
+  "description": "Approval thresholds for project change orders and escalation owners.",
+  "role": "Project Director",
+  "workflow": "Change order triage",
+  "system": "PDS Tracker",
+  "risk": "Medium",
+  "tags": ["construction", "approvals", "decision"],
+  "content": "Change orders below $50k can be approved by the project manager. $50k-$250k requires director approval. Above $250k triggers finance and legal review.",
+  "citations": ["Capital Projects SOP 7.4", "PDS governance memo 2024-05"]
+}

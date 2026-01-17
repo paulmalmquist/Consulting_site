@@ -1,0 +1,12 @@
+{
+  "id": "kb-003",
+  "title": "Claims exception escalation criteria",
+  "description": "Defines what triggers human review on insurance claims.",
+  "role": "Claims Supervisor",
+  "workflow": "Claims exception handling",
+  "system": "Claims Core",
+  "risk": "High",
+  "tags": ["insurance", "HITL", "risk"],
+  "content": "Claims with conflicting incident reports, coverage gaps, or payouts above the 90th percentile must be reviewed by a supervisor before payout.",
+  "citations": ["Claims Policy 2.9", "Fraud escalation guidelines"]
+}

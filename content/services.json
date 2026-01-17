@@ -1,0 +1,37 @@
+[
+  {
+    "title": "AI Readiness Diagnostic",
+    "description": "Two-week diagnostic covering workflows, decision latency, risk posture, and data quality.",
+    "tags": ["2 weeks", "diagnostic", "baseline"],
+    "href": "/services",
+    "eyebrow": "Core offer"
+  },
+  {
+    "title": "Workflow & Decision Inventory",
+    "description": "Map high-impact workflows, owners, systems of record, and decision bottlenecks.",
+    "tags": ["2-4 weeks", "workflows", "decision ladder"],
+    "href": "/services",
+    "eyebrow": "Core offer"
+  },
+  {
+    "title": "AI Governance & Operating Model",
+    "description": "Define risk controls, audit trails, and escalation routes for human-in-the-loop delivery.",
+    "tags": ["2-6 weeks", "governance", "HITL"],
+    "href": "/services",
+    "eyebrow": "Core offer"
+  },
+  {
+    "title": "SaaS Dependency & Internalization Strategy",
+    "description": "Assess external AI vendors, cost exposure, and internalization paths for critical workflows.",
+    "tags": ["optional", "vendor risk", "strategy"],
+    "href": "/services",
+    "eyebrow": "Optional"
+  },
+  {
+    "title": "Implementation Pilot",
+    "description": "Design and run a controlled pilot with governance guardrails and measurable outcomes.",
+    "tags": ["optional", "pilot", "delivery"],
+    "href": "/services",
+    "eyebrow": "Optional"
+  }
+]

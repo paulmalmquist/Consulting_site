@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Operational truth map",
+    "description": "A visual map of systems of work vs. systems of record, with friction points tagged.",
+    "tags": ["template", "workflow"],
+    "href": "/services",
+    "eyebrow": "Deliverable"
+  },
+  {
+    "title": "Decision ladder",
+    "description": "Reusable decision rights matrix with audit-ready thresholds.",
+    "tags": ["governance", "decision"],
+    "href": "/method",
+    "eyebrow": "Deliverable"
+  },
+  {
+    "title": "Human-in-the-loop playbook",
+    "description": "Escalation steps, intervention points, and QA guardrails.",
+    "tags": ["HITL", "playbook"],
+    "href": "/services",
+    "eyebrow": "Deliverable"
+  },
+  {
+    "title": "RAG governance checklist",
+    "description": "Checklist for retrieval sources, citation integrity, and content freshness.",
+    "tags": ["RAG", "risk"],
+    "href": "/demo",
+    "eyebrow": "Deliverable"
+  }
+]

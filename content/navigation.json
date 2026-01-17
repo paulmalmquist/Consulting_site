@@ -1,0 +1,35 @@
+{
+  "groups": [
+    {
+      "title": "Overview",
+      "items": [
+        { "label": "Home", "href": "/", "icon": "🏠" },
+        { "label": "Services", "href": "/services", "icon": "🧭" },
+        { "label": "Method", "href": "/method", "icon": "🧩" }
+      ]
+    },
+    {
+      "title": "Solutions",
+      "items": [
+        { "label": "Industries", "href": "/industries", "icon": "🏗️" },
+        { "label": "Proof", "href": "/proof", "icon": "📈" },
+        { "label": "Demo", "href": "/demo", "icon": "🧪" }
+      ]
+    },
+    {
+      "title": "Library",
+      "items": [
+        { "label": "Insights", "href": "/insights", "icon": "📚" },
+        { "label": "Playbooks", "href": "/services", "icon": "📂" }
+      ]
+    },
+    {
+      "title": "Company",
+      "items": [
+        { "label": "About", "href": "/about", "icon": "👋" },
+        { "label": "Contact", "href": "/contact", "icon": "✉️" },
+        { "label": "Legal", "href": "/legal", "icon": "⚖️" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "headline": "Operational truth for AI readiness — compress workflows, reduce decision latency, and ship governance that holds up under audit.",
+    "subheadline": "I help CTOs and COOs redesign work before AI scale. The result: fewer handoffs, clearer ownership, and a defensible operating model for human-in-the-loop execution."
+  },
+  "pillars": [
+    {
+      "title": "Workflows",
+      "description": "We map the real work, not the org chart. Every intake, escalation, and exception becomes visible and compressible."
+    },
+    {
+      "title": "Decisions",
+      "description": "Decision ladders reduce latency. We clarify who can approve, override, and audit each step."
+    },
+    {
+      "title": "Governance",
+      "description": "Policy, evidence, and risk flags are built into the process so the system stays compliant when volume spikes."
+    }
+  ],
+  "deliverables": [
+    {
+      "title": "AI readiness diagnostic",
+      "description": "Fast baseline on workflow health, risk surface, and decision ownership."
+    },
+    {
+      "title": "Workflow compression map",
+      "description": "The top 5 workflows ranked by latency, risk, and automation potential."
+    },
+    {
+      "title": "Decision ladder",
+      "description": "Clear approval thresholds, escalation paths, and exception rules."
+    },
+    {
+      "title": "Governance starter kit",
+      "description": "Templates for auditability, human-in-the-loop checkpoints, and model oversight."
+    }
+  ]
+}
