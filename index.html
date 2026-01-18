@@ -1,9 +1,143 @@
-<html>
-<head>
-    <title>Consulting Site</title>
-</head>
-<body>
-    <h1>Welcome to My Consulting Site</h1>
-    <p>This is a sample site set up with GitHub Pages.</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Paul Malmquist consulting services focused on analytics strategy, BI implementation, and data-driven decision support." />
+    <title>Paul Malmquist | Consulting</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        --text: #1b1f24;
+        --muted: #5a6775;
+        --accent: #1f6feb;
+        --surface: #f6f8fa;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #ffffff;
+        color: var(--text);
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 64px 24px 80px;
+      }
+
+      header {
+        padding: 24px 0 48px;
+      }
+
+      .eyebrow {
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 12px;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 1.05rem;
+        color: var(--muted);
+        max-width: 720px;
+      }
+
+      section {
+        padding: 28px 0;
+        border-top: 1px solid #e4e8ee;
+      }
+
+      section:first-of-type {
+        border-top: none;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        padding: 8px 0;
+        color: var(--muted);
+      }
+
+      .card {
+        background: var(--surface);
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 16px;
+      }
+
+      footer {
+        margin-top: 40px;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">Paul Malmquist Consulting</div>
+        <h1>Analytics, BI, and consulting expertise for leaders who need trusted data decisions.</h1>
+        <p>
+          This site provides a concise overview of advisory services, delivery focus areas, and how to start a project.
+          It is intentionally lightweight and ready for future expansion as the business grows.
+        </p>
+      </header>
+
+      <section aria-labelledby="services">
+        <h2 id="services">Services</h2>
+        <p>Engagements are tailored to meet the current state of analytics maturity and business priorities.</p>
+        <ul>
+          <li>Analytics strategy and operating model alignment</li>
+          <li>BI roadmap planning and dashboard standardization</li>
+          <li>Executive reporting, KPI definition, and enablement</li>
+        </ul>
+        <div class="card">
+          <!-- Future enhancement: add a React-powered service selector here if a frontend build is introduced. -->
+        </div>
+      </section>
+
+      <section aria-labelledby="work">
+        <h2 id="work">Work / Case Studies</h2>
+        <p>Case studies and outcomes will be highlighted here as engagements are published.</p>
+        <div class="card">
+          <!-- Future enhancement: integrate with a CMS or API to pull case study summaries. -->
+        </div>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p>Connect to discuss scope, timelines, and the best engagement model for your team.</p>
+        <div class="card">
+          <!-- Future enhancement: embed a contact form or API-backed scheduling flow. -->
+        </div>
+      </section>
+
+      <footer>
+        Serving teams that need clarity, accountability, and measurable outcomes from analytics investments.
+      </footer>
+    </main>
+  </body>
 </html>
