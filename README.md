@@ -37,6 +37,18 @@ npm run build:search
 
 ## Deployment
 
+### GitHub Pages (static export)
+
+This repo ships a GitHub Actions workflow that builds a static export into `out/` and publishes it to GitHub Pages. The legacy root `index.html` has been moved to `legacy/` so only the Next.js output is deployed.
+
+1. In **Settings → Pages**, set **Source** to **GitHub Actions**.
+2. (Optional) If you are serving from `https://{user}.github.io/{repo}/`, set a repository variable named `NEXT_PUBLIC_BASE_PATH` to `/{repo}`.
+3. Push to `main` to trigger the build and deploy.
+
+Custom domains should keep `NEXT_PUBLIC_BASE_PATH` empty and place the `CNAME` file in `public/` (already included).
+
+### Other platforms
+
 - Vercel: push the repo and set the build command to `npm run build`.
 - Netlify: use the Next.js runtime or run `npm run build` with the Next adapter.
 
