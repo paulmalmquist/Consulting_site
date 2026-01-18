@@ -60,7 +60,7 @@ export default function HomePage() {
       />
       <CarouselRow
         title="Insights"
-        description="Short reads for executives building AI-ready teams." 
+        description="Short reads for executives building AI-ready teams."
         items={insights}
         viewAllHref="/insights"
       />
@@ -73,8 +73,10 @@ export default function HomePage() {
 
       <section className="space-y-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
         <div>
-          <h2 className="text-2xl font-semibold text-white">What the first 2–4 weeks look like</h2>
-          <p className="mt-2 text-sm text-slate-300">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            What the first 2–4 weeks look like
+          </h2>
+          <p className="mt-2 text-base leading-relaxed text-slate-300">
             A fast-start engagement that surfaces workflow truth, decision ownership, and governance guardrails.
           </p>
         </div>
@@ -82,7 +84,7 @@ export default function HomePage() {
           {home.deliverables.map((item) => (
             <div key={item.title} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
               <p className="text-sm font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-slate-300">{item.description}</p>
+              <p className="mt-2 text-base leading-relaxed text-slate-300">{item.description}</p>
             </div>
           ))}
         </div>
@@ -104,12 +106,12 @@ export default function HomePage() {
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-semibold text-white">How it works</h2>
-          <p className="mt-2 text-sm text-slate-300">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">How it works</h2>
+          <p className="mt-2 text-base leading-relaxed text-slate-300">
             A compact method designed for regulated operations and executive accountability.
           </p>
         </div>
-        <div className="space-y-3 text-sm text-slate-200">
+        <div className="space-y-4 text-base leading-relaxed text-slate-200">
           <p>1. Map real workflows (not titles or org charts).</p>
           <p>2. Capture decisions, rules, and exceptions that slow delivery.</p>
           <p>3. Identify AI compression opportunities with clear risk flags.</p>
@@ -120,16 +122,16 @@ export default function HomePage() {
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-semibold text-white">Who this is for</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-300">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Who this is for</h2>
+          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
             <li>CTO / COO leaders accountable for operational readiness.</li>
             <li>Ops leaders in legal, healthcare admin, construction/PDS, and finance.</li>
             <li>Regulated teams that need human-in-the-loop governance.</li>
           </ul>
         </div>
         <div>
-          <h2 className="text-2xl font-semibold text-white">Who it’s not for</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-300">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Who it’s not for</h2>
+          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
             <li>Teams looking for a chatbot demo without operational change.</li>
             <li>Pure marketing AI experiments with no governance posture.</li>
             <li>Unsupervised automation that bypasses auditability.</li>

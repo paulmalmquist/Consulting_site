@@ -7,7 +7,15 @@
 }
 
 body {
-  @apply bg-ink text-white antialiased;
+  @apply bg-ink text-white antialiased subpixel-antialiased;
+  text-rendering: optimizeLegibility;
+  text-wrap: balance;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-serif;
 }
 
 ::selection {

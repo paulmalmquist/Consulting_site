@@ -23,7 +23,8 @@ const config: Config = {
         gold: '#FBBF24'
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui']
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
+        serif: ['var(--font-serif)', 'ui-serif', 'Georgia']
       },
       boxShadow: {
         card: '0 8px 30px rgba(0, 0, 0, 0.3)'

@@ -22,10 +22,13 @@ export function CarouselRow({
     <section className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-semibold text-white">{title}</h2>
-          <p className="text-sm text-slate-400">{description}</p>
+          <h2 className="text-xl font-semibold tracking-tight text-white">{title}</h2>
+          <p className="text-base leading-relaxed text-slate-400">{description}</p>
         </div>
-        <Link href={viewAllHref} className="text-sm text-cyan-200 hover:text-cyan-100">
+        <Link
+          href={viewAllHref}
+          className="text-sm font-semibold text-cyan-200 hover:text-cyan-100 hover:underline"
+        >
           View all
         </Link>
       </div>
