@@ -35,7 +35,7 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
         onClick={openSearch}
       >
         <Search size={16} className="text-slate-400" />
-        <span className="flex-1">Search playbooks, proof, and KB objects…</span>
+        <span className="flex-1">Search insights, engagements, and KB objects…</span>
         <span className="text-xs text-slate-500">/</span>
       </button>
     </header>

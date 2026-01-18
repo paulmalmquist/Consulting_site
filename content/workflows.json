@@ -1,30 +1,30 @@
 [
   {
-    "title": "Vendor intake & compliance",
-    "description": "Reduce approval lag with a clear decision ladder and evidence trail.",
-    "tags": ["risk", "vendor", "governance"],
-    "href": "/method",
+    "title": "Paralegal intake & document triage",
+    "description": "Compress intake with structured questions, rules, and escalation paths.",
+    "tags": ["legal", "triage", "HITL"],
+    "href": "/proof",
     "eyebrow": "Workflow"
   },
   {
-    "title": "Change order triage",
-    "description": "Compress field requests into structured decisions without losing context.",
-    "tags": ["construction", "workflow"],
-    "href": "/industries",
+    "title": "Medical billing exception handling",
+    "description": "Reduce rework by codifying claim rules, exceptions, and approvals.",
+    "tags": ["healthcare", "claims", "governance"],
+    "href": "/proof",
     "eyebrow": "Workflow"
   },
   {
-    "title": "Claims exception handling",
-    "description": "Flag high-risk claims and route them to human escalation.",
-    "tags": ["insurance", "HITL"],
-    "href": "/industries",
+    "title": "Project delivery change orders",
+    "description": "Clarify decision thresholds so PDS teams move faster with auditability.",
+    "tags": ["construction", "PDS", "decision"],
+    "href": "/proof",
     "eyebrow": "Workflow"
   },
   {
     "title": "Finance ops approvals",
-    "description": "Reduce decision latency by clarifying owner, threshold, and fallback rules.",
-    "tags": ["finance", "decision"],
-    "href": "/industries",
+    "description": "Shorten approval cycles with explicit decision ladders and evidence trails.",
+    "tags": ["finance", "audit", "workflow"],
+    "href": "/proof",
     "eyebrow": "Workflow"
   }
 ]

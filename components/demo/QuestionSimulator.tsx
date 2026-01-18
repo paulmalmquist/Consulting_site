@@ -51,7 +51,7 @@ export function QuestionSimulator() {
       <div>
         <h3 className="text-lg font-semibold text-white">Question simulator</h3>
         <p className="text-sm text-slate-400">
-          This uses local retrieval plus a deterministic template — no hosted LLM calls.
+          This uses local retrieval plus a deterministic template — no hosted LLM calls, with citations preserved.
         </p>
       </div>
       <div className="flex flex-col gap-3 md:flex-row">
@@ -79,6 +79,11 @@ export function QuestionSimulator() {
                 <li key={result.item.id}>
                   <p className="font-semibold text-white">{result.item.title}</p>
                   <p className="text-xs text-slate-400">{result.item.description}</p>
+                  <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-slate-500">
+                    {result.item.citations.map((citation) => (
+                      <li key={citation}>{citation}</li>
+                    ))}
+                  </ul>
                 </li>
               ))}
             </ul>
