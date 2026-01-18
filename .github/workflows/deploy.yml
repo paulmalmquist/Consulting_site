@@ -33,6 +33,10 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
+      - name: Verify static export
+        run: |
+          ls -la out
+          test -f out/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
