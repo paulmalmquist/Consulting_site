@@ -1,9 +1,9 @@
 [
   {
     "title": "Operational truth map",
-    "description": "A visual map of systems of work vs. systems of record, with friction points tagged.",
+    "description": "Visual map of systems of work vs. systems of record, with friction points tagged.",
     "tags": ["template", "workflow"],
-    "href": "/services",
+    "href": "/method",
     "eyebrow": "Deliverable"
   },
   {
@@ -23,7 +23,7 @@
   {
     "title": "RAG governance checklist",
     "description": "Checklist for retrieval sources, citation integrity, and content freshness.",
-    "tags": ["RAG", "risk"],
+    "tags": ["RAG", "audit"],
     "href": "/demo",
     "eyebrow": "Deliverable"
   }

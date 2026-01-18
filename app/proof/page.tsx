@@ -8,9 +8,9 @@ export default function ProofPage() {
   return (
     <div className="space-y-8">
       <section className="space-y-4">
-        <h1 className="text-3xl font-semibold text-white">Proof & case studies</h1>
+        <h1 className="text-3xl font-semibold text-white">Example engagements (anonymized)</h1>
         <p className="text-lg text-slate-300">
-          These examples are anonymized composites, built to show the pattern of work without disclosing clients.
+          Short, anonymized examples that show how workflow compression and governance-safe AI are delivered.
         </p>
       </section>
       <div className="grid gap-4 md:grid-cols-2">

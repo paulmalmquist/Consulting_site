@@ -1,37 +1,30 @@
 [
   {
     "title": "AI Readiness Diagnostic",
-    "description": "Two-week diagnostic covering workflows, decision latency, risk posture, and data quality.",
+    "description": "For: CTO/COO teams needing clarity on where AI is safe. Removes: hidden decision latency and governance gaps. Delivers: readiness scorecard, workflow heat map, risk register. Timebox: 2 weeks.",
     "tags": ["2 weeks", "diagnostic", "baseline"],
     "href": "/services",
-    "eyebrow": "Core offer"
+    "eyebrow": "How I help"
   },
   {
     "title": "Workflow & Decision Inventory",
-    "description": "Map high-impact workflows, owners, systems of record, and decision bottlenecks.",
-    "tags": ["2-4 weeks", "workflows", "decision ladder"],
+    "description": "For: operations leaders with complex handoffs. Removes: unclear ownership and exception sprawl. Delivers: workflow inventory, decision ladder, exception rules. Timebox: 2–4 weeks.",
+    "tags": ["2–4 weeks", "workflows", "decision ladder"],
     "href": "/services",
-    "eyebrow": "Core offer"
+    "eyebrow": "How I help"
   },
   {
-    "title": "AI Governance & Operating Model",
-    "description": "Define risk controls, audit trails, and escalation routes for human-in-the-loop delivery.",
-    "tags": ["2-6 weeks", "governance", "HITL"],
+    "title": "Governance-Safe AI Operating Model",
+    "description": "For: regulated teams needing HITL control. Removes: audit risk and shadow automation. Delivers: governance charter, RACI, approval checkpoints, audit trails. Timebox: 2–6 weeks.",
+    "tags": ["2–6 weeks", "governance", "HITL"],
     "href": "/services",
-    "eyebrow": "Core offer"
+    "eyebrow": "How I help"
   },
   {
-    "title": "SaaS Dependency & Internalization Strategy",
-    "description": "Assess external AI vendors, cost exposure, and internalization paths for critical workflows.",
-    "tags": ["optional", "vendor risk", "strategy"],
+    "title": "Back-Office Automation (Legal, Healthcare, Ops)",
+    "description": "For: back-office teams buried in intake and triage. Removes: manual routing and slow exceptions. Delivers: automation blueprint, KB object map, pilot backlog. Timebox: 3–6 weeks.",
+    "tags": ["3–6 weeks", "back office", "automation"],
     "href": "/services",
-    "eyebrow": "Optional"
-  },
-  {
-    "title": "Implementation Pilot",
-    "description": "Design and run a controlled pilot with governance guardrails and measurable outcomes.",
-    "tags": ["optional", "pilot", "delivery"],
-    "href": "/services",
-    "eyebrow": "Optional"
+    "eyebrow": "How I help"
   }
 ]

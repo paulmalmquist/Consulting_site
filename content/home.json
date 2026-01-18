@@ -1,38 +1,29 @@
 {
   "hero": {
-    "headline": "Operational truth for AI readiness — compress workflows, reduce decision latency, and ship governance that holds up under audit.",
-    "subheadline": "I help CTOs and COOs redesign work before AI scale. The result: fewer handoffs, clearer ownership, and a defensible operating model for human-in-the-loop execution."
+    "headline": "AI readiness that compresses workflows and decisions now",
+    "subheadline": "AI impact comes from workflow compression and faster decisions, not deploying tools. I redesign systems of work with human-in-the-loop governance so regulated teams move faster without breaking auditability."
   },
   "pillars": [
-    {
-      "title": "Workflows",
-      "description": "We map the real work, not the org chart. Every intake, escalation, and exception becomes visible and compressible."
-    },
-    {
-      "title": "Decisions",
-      "description": "Decision ladders reduce latency. We clarify who can approve, override, and audit each step."
-    },
-    {
-      "title": "Governance",
-      "description": "Policy, evidence, and risk flags are built into the process so the system stays compliant when volume spikes."
-    }
+    "Workflow & decision capture (not org charts)",
+    "Human-in-the-loop, auditable AI",
+    "Built for regulated, real-world ops"
   ],
   "deliverables": [
     {
-      "title": "AI readiness diagnostic",
-      "description": "Fast baseline on workflow health, risk surface, and decision ownership."
-    },
-    {
       "title": "Workflow compression map",
-      "description": "The top 5 workflows ranked by latency, risk, and automation potential."
+      "description": "A ranked view of the 5 workflows with the most decision latency and rework."
     },
     {
-      "title": "Decision ladder",
-      "description": "Clear approval thresholds, escalation paths, and exception rules."
+      "title": "Decision ladder + exception rules",
+      "description": "Clear approval thresholds, overrides, and escalation paths you can audit."
     },
     {
-      "title": "Governance starter kit",
-      "description": "Templates for auditability, human-in-the-loop checkpoints, and model oversight."
+      "title": "Governance-safe AI operating model",
+      "description": "Roles, checkpoints, and evidence requirements for every automated decision."
+    },
+    {
+      "title": "Pilot plan (2–4 weeks)",
+      "description": "A scoped pilot plan with HITL checkpoints and measured workflow compression."
     }
   ]
 }

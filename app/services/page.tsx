@@ -16,7 +16,7 @@ export default function ServicesPage() {
       </section>
       <MarkdownRenderer content={page.content} />
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-white">Service cards</h2>
+        <h2 className="text-2xl font-semibold text-white">Engagement cards</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {services.map((item) => (
             <ContentCard key={item.title} item={item} />
