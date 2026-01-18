@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Inter", system-ui, sans-serif;
+        background: #0b0f14;
+        color: #e6edf3;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 24px;
+      }
+      main {
+        max-width: 520px;
+        text-align: center;
+      }
+      a {
+        color: #7aa2f7;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Page not found</h1>
+      <p>The page you requested doesn’t exist. You’ll be redirected to the homepage shortly.</p>
+      <p><a id="home-link" href="/">Go back home now</a></p>
+    </main>
+    <script>
+      (function () {
+        const isGithubPages = window.location.hostname.endsWith('github.io');
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const basePath = isGithubPages && pathParts.length ? `/${pathParts[0]}` : '';
+        const target = `${basePath}/`;
+        const link = document.getElementById('home-link');
+        if (link) {
+          link.setAttribute('href', target);
+        }
+        window.setTimeout(() => {
+          window.location.replace(target);
+        }, 4000);
+      })();
+    </script>
+  </body>
+</html>
