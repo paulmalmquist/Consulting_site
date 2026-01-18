@@ -1,0 +1,11 @@
+name: Pages build and deployment (disabled)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disabled default Pages workflow
+        run: echo "Default GitHub Pages workflow disabled."
