@@ -64,9 +64,15 @@ export function KBExplorer() {
               className="mt-2 w-full rounded-lg border border-slate-700/60 bg-slate-900/60 px-3 py-2 text-sm text-white"
             >
               <option>All</option>
-              {options[key].map((value) => (
-                <option key={value}>{value}</option>
-              ))}
+              {options[key].map((value) => {
+                const text = Array.isArray(value) ? value.join(', ') : value;
+                const optionKey = Array.isArray(value) ? value.join('|') : value;
+                return (
+                  <option key={optionKey} value={text}>
+                    {text}
+                  </option>
+                );
+              })}
             </select>
           </label>
         ))}
