@@ -80,3 +80,12 @@ public/
   search-index.json
 scripts/
 ```
+
+## Directory guide
+
+- `app/`: Next.js app router pages, layouts, and route segments that compose the site.
+- `components/`: Reusable UI building blocks grouped by domain (layout, content, demo, search, and shared UI).
+- `content/`: MDX and JSON content sources that drive pages, navigation, and marketing data.
+- `lib/`: Helper utilities and shared logic used across the app and components.
+- `public/`: Static assets, including the generated search index and any static files served at the root.
+- `scripts/`: One-off scripts used for tasks like generating the search index.
