@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export function ContactForm() {
   const [status, setStatus] = useState('');
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || 'mailto:{{EMAIL}}';
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -53,7 +54,11 @@ export function ContactForm() {
       </div>
       {status && <p className="text-xs text-cyan-200">{status}</p>}
       <p className="text-xs text-slate-400">
-        Prefer scheduling? Use the placeholder Calendly link: {{CALENDLY_URL}}.
+        Prefer scheduling? Use{' '}
+        <a href={calendlyUrl} className="underline" target="_blank" rel="noreferrer">
+          Calendly
+        </a>
+        .
       </p>
     </form>
   );
