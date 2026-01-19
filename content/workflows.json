@@ -26,5 +26,11 @@
     "tags": ["finance", "audit", "workflow"],
     "href": "/proof",
     "eyebrow": "Workflow"
+  },
+  {
+    "title": "Intent-Based Internal Support",
+    "description": "Employees shouldn’t need to know which system, form, or team owns their problem. I redesign internal support workflows so intent is captured once, context is assembled automatically, and the right action happens — with auditability and human oversight.",
+    "tags": ["HR", "IT", "Helpdesk", "HITL"],
+    "href": "/method#internal-support"
   }
 ]
