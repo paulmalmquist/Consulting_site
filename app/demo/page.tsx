@@ -10,6 +10,17 @@ export default function DemoPage() {
           This demo runs locally with structured knowledge base objects. It proves that structure and governance matter
           more than model size — no external APIs or paid LLM calls required.
         </p>
+        <div className="rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4 text-sm text-slate-300">
+          <p className="font-semibold text-white">Mock mode by default</p>
+          <p className="mt-2">
+            The demo uses synthetic or redacted data, makes no production writes, and includes traceable sources for
+            every response.
+          </p>
+          <p className="mt-2">
+            <span className="font-semibold text-white">Why this isn’t a chatbot:</span> it models decisions, rules, and
+            escalation paths so operators can audit the outcome.
+          </p>
+        </div>
       </section>
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-white">Knowledge base explorer</h2>

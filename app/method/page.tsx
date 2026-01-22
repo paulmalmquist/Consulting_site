@@ -14,6 +14,22 @@ export default function MethodPage() {
         <p className="text-lg text-slate-300">{page.description}</p>
       </section>
       <MarkdownRenderer content={page.content} />
+      <section className="space-y-4 rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Operational Decision Twin</h2>
+        <div className="space-y-3 text-slate-300">
+          <p>
+            The Operational Decision Twin is a virtual ops lab that models your workflows, decisions, and exceptions so
+            you can test changes without touching production systems.
+          </p>
+          <p>It is designed for regulated SMB teams who need proof-of-value and auditability before making changes.</p>
+        </div>
+        <ul className="list-disc space-y-2 pl-5 text-slate-300">
+          <li>Decision map, data/context inventory, and synthetic microcosm</li>
+          <li>Scenario-based what-if testing</li>
+          <li>Governance and human-in-the-loop guardrails</li>
+          <li>Executive walkthrough with a prioritized roadmap</li>
+        </ul>
+      </section>
       <section id="internal-support" className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Intent-Based Internal Support</h2>
         <div className="space-y-3 text-slate-300">
@@ -34,6 +50,21 @@ export default function MethodPage() {
           This approach reduces misrouted tickets, repeat questions, and dependency on tribal knowledge — without
           touching production systems.
         </p>
+      </section>
+      <section id="crm-ticketing" className="space-y-4">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">CRM + Ticketing Decision Layer</h2>
+        <div className="space-y-3 text-slate-300">
+          <p>CRMs and ticketing systems capture data, but the decision logic often lives in people’s heads.</p>
+          <p>
+            I add a governed decision layer that clarifies approvals, status transitions, and escalation paths so the
+            right action happens with traceability.
+          </p>
+        </div>
+        <ul className="list-disc space-y-2 pl-5 text-slate-300">
+          <li>Decision rules for approvals, handoffs, and exceptions</li>
+          <li>Context assembly from CRM, ticketing, and policy sources</li>
+          <li>Audit trails and human-in-the-loop checkpoints for sensitive actions</li>
+        </ul>
       </section>
       <section className="grid gap-4 md:grid-cols-3">
         {diagrams.map((diagram) => (
