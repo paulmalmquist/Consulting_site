@@ -1,19 +1,19 @@
 {
   "hero": {
-    "headline": "Safe, non-production operational replicas for regulated SMB ops leaders",
-    "subheadline": "Most teams start with a short, fixed-scope pilot to validate outcomes before changing production. The pilot is time-boxed and outcome-driven, with no long-term commitment required to begin, and it produces a clear decision on what to scale next."
+    "headline": "Reduce operational drag for regulated SMB teams",
+    "subheadline": "Intent-first internal support that keeps humans in control and proves outcomes in non-production replicas before any production change."
   },
   "pillars": [
-    "Intent-first intake for HR/IT/Ops",
-    "Smart routing plus self-service",
-    "Governed with audit-ready logs"
+    "Reduce operational drag across support workflows",
+    "Built for real, regulated environments",
+    "Human oversight by default"
   ],
   "whatYouGet": [
-    "AI front door (Teams/Slack/Email/Portal entry)",
-    "Intent detection + routing rules",
-    "Knowledge base that answers with citations",
-    "Human-in-the-loop approvals for sensitive actions",
-    "Weekly metrics report (latency, deflection, routing accuracy)"
+    "Fixed-scope workflow map and decision inventory",
+    "Time-boxed build in a non-production microcosm",
+    "Synthetic or redacted data only",
+    "Human-in-the-loop approval points for sensitive actions",
+    "Success metrics and a clear scale-or-stop decision"
   ],
   "deliverables": [
     {

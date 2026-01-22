@@ -1,13 +1,13 @@
 [
   {
     "title": "Discovery & Foundation",
-    "description": "What you get: assessment, stakeholder interviews, and workflow mapping. Typical timeline: 1–2 weeks. Decision enabled: confirm priority workflows and whether a pilot is worth running.",
+    "description": "What you get: assessment, stakeholder interviews, and workflow mapping. Typical timeline: 1–2 weeks. Decision enabled: confirm priority workflows and whether a Proof-of-Concept is worth running.",
     "tags": ["discovery", "assessment", "roadmap"],
     "href": "/services",
     "eyebrow": "Service tier"
   },
   {
-    "title": "Proof-of-Concept / Pilot",
+    "title": "Proof-of-Concept",
     "description": "What you get: 1–2 real workflows modeled in a safe, non-production environment with clear success criteria. Typical timeline: 2–4 weeks. Decision enabled: whether to scale and which workflows to expand.",
     "tags": ["pilot", "poc", "validation"],
     "href": "/services",

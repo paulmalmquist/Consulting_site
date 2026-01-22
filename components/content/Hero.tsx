@@ -19,16 +19,16 @@ export function Hero({
         <p className="max-w-prose text-base leading-relaxed text-slate-300 md:text-lg">{subheadline}</p>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/contact"
+            href="/demo"
             className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/30"
           >
-            Book a 20-minute Support Ops Fit Check
+            See how this works safely
           </Link>
           <Link
-            href="/demo"
+            href="/contact"
             className="rounded-full border border-slate-700/80 px-5 py-2 text-sm font-semibold text-slate-100 hover:border-slate-500"
           >
-            Walk Through an Auditable AI Workflow
+            Start with a Proof-of-Concept
           </Link>
         </div>
       </div>
