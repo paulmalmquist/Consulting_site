@@ -92,7 +92,7 @@ export default function SupportOpsPage() {
           href="/demo"
           className="rounded-full border border-slate-700/80 px-5 py-2 text-sm font-semibold text-slate-100 hover:border-slate-500"
         >
-          See the Intent-First Demo
+          See a Safe Demo in Your Environment
         </Link>
       </section>
     </div>

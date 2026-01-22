@@ -7,6 +7,13 @@
     "eyebrow": "How I help"
   },
   {
+    "title": "Operational Microcosms (Safe Demo Environments)",
+    "description": "Replicate critical data, workflows, and system handoffs in a safe sandbox so leaders can see the end-to-end flow without guesswork. Use synthetic or redacted data so approvals happen faster without exposing sensitive records. Keep every action non-production so teams can test decisions with zero operational blast radius. Show concrete outcomes early so buy-in is earned faster and rollout risk drops.",
+    "tags": ["microcosm", "safe demo", "risk reduction"],
+    "href": "/support-ops",
+    "eyebrow": "How I help"
+  },
+  {
     "title": "Ticket Routing & Triage Automation",
     "description": "Reduce misroutes and speed up resolution with intent detection, priority rules, and smart handoffs across systems.",
     "tags": ["routing", "triage", "resolution"],

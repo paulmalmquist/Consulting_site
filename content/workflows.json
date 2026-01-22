@@ -26,5 +26,33 @@
     "tags": ["legal", "intake", "escalation"],
     "href": "/support-ops",
     "eyebrow": "Workflow"
+  },
+  {
+    "title": "CRM intake and routing in a microcosm",
+    "description": "Simulate lead capture, enrichment, and routing rules to demonstrate automated assignment and escalation decisions.",
+    "tags": ["CRM", "routing", "microcosm"],
+    "href": "/support-ops",
+    "eyebrow": "Workflow"
+  },
+  {
+    "title": "Helpdesk triage using synthetic tickets",
+    "description": "Simulate synthetic ticket queues and priority signals to demonstrate automated triage and queue handoffs.",
+    "tags": ["helpdesk", "triage", "synthetic"],
+    "href": "/support-ops",
+    "eyebrow": "Workflow"
+  },
+  {
+    "title": "Healthcare scheduling with fake patient data",
+    "description": "Simulate scheduling requests with fake patient data to demonstrate appointment automation and approval decisions.",
+    "tags": ["healthcare", "scheduling", "microcosm"],
+    "href": "/support-ops",
+    "eyebrow": "Workflow"
+  },
+  {
+    "title": "Construction bid evaluation using mock projects",
+    "description": "Simulate bid packages with mock project data to demonstrate scoring automation and go/no-go decisions.",
+    "tags": ["construction", "bids", "simulation"],
+    "href": "/support-ops",
+    "eyebrow": "Workflow"
   }
 ]

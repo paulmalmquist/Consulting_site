@@ -1,7 +1,7 @@
 {
   "hero": {
-    "headline": "Intent-First Internal Support for regulated SMB ops",
-    "subheadline": "An AI front door that captures intent in plain English, routes requests, and enables self-service with audit-ready logs. Demo safely with no production interference."
+    "headline": "Safe, non-production operational replicas for regulated SMB ops leaders",
+    "subheadline": "We build safe, non-production operational replicas so SMB ops leaders in regulated environments understand workflows faster, demo automation safely, and make clearer decisions before touching production."
   },
   "pillars": [
     "Intent-first intake for HR/IT/Ops",
