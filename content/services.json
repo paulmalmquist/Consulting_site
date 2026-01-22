@@ -1,30 +1,30 @@
 [
   {
-    "title": "AI Readiness Diagnostic",
-    "description": "For: CTO/COO teams needing clarity on where AI is safe. Removes: hidden decision latency and governance gaps. Delivers: readiness scorecard, workflow heat map, risk register. Timebox: 2 weeks.",
-    "tags": ["2 weeks", "diagnostic", "baseline"],
-    "href": "/services",
+    "title": "QuickStart Proof-of-Value",
+    "description": "For: SMB operators who need evidence fast. Removes: guessing on what to automate. Delivers: workflow truth, decision map, and a scoped simulation plan. Timebox: 2–4 weeks.",
+    "tags": ["2–4 weeks", "proof-of-value", "quickstart"],
+    "href": "/services#quickstart-proof-of-value",
     "eyebrow": "How I help"
   },
   {
-    "title": "Workflow & Decision Inventory",
-    "description": "For: operations leaders with complex handoffs. Removes: unclear ownership and exception sprawl. Delivers: workflow inventory, decision ladder, exception rules. Timebox: 2–4 weeks.",
-    "tags": ["2–4 weeks", "workflows", "decision ladder"],
-    "href": "/services",
+    "title": "Operational Decision Twin (4–6 weeks)",
+    "description": "For: regulated ops teams who need a virtual lab before changing production. Removes: risky guesswork. Delivers: decision twin, scenarios, and executive proof-of-value.",
+    "tags": ["4–6 weeks", "decision twin", "simulation"],
+    "href": "/services#operational-decision-twin",
     "eyebrow": "How I help"
   },
   {
-    "title": "Governance-Safe AI Operating Model",
-    "description": "For: regulated teams needing HITL control. Removes: audit risk and shadow automation. Delivers: governance charter, RACI, approval checkpoints, audit trails. Timebox: 2–6 weeks.",
-    "tags": ["2–6 weeks", "governance", "HITL"],
-    "href": "/services",
+    "title": "Intent-Based Internal Support",
+    "description": "For: HR/IT/helpdesk leaders who need faster routing. Removes: misrouted tickets and manual triage. Delivers: intent capture, context assembly, and governed escalation.",
+    "tags": ["module", "internal support", "HITL"],
+    "href": "/method#internal-support",
     "eyebrow": "How I help"
   },
   {
-    "title": "Back-Office Automation (Legal, Healthcare, Ops)",
-    "description": "For: back-office teams buried in intake and triage. Removes: manual routing and slow exceptions. Delivers: automation blueprint, KB object map, pilot backlog. Timebox: 3–6 weeks.",
-    "tags": ["3–6 weeks", "back office", "automation"],
-    "href": "/services",
+    "title": "CRM + Ticketing Decision Layer",
+    "description": "For: sales/ops teams who need consistent approvals. Removes: opaque status updates and stalled handoffs. Delivers: decision rules, audit trails, and clearer next actions.",
+    "tags": ["module", "CRM", "ticketing"],
+    "href": "/method#crm-ticketing",
     "eyebrow": "How I help"
   }
 ]

@@ -5,6 +5,7 @@
       "items": [
         { "label": "Home", "href": "/", "icon": "🏠" },
         { "label": "Method", "href": "/method", "icon": "🧩" },
+        { "label": "Industries", "href": "/industries", "icon": "🏗️" },
         { "label": "Demo", "href": "/demo", "icon": "🧪" },
         { "label": "Example Engagements", "href": "/proof", "icon": "🧭" }
       ]

@@ -1,21 +1,21 @@
 [
   {
     "title": "Paralegal intake & document triage",
-    "description": "Compress intake with structured questions, rules, and escalation paths.",
+    "description": "Simulate intake rules and escalation paths before changing production workflows.",
     "tags": ["legal", "triage", "HITL"],
     "href": "/proof",
     "eyebrow": "Workflow"
   },
   {
     "title": "Medical billing exception handling",
-    "description": "Reduce rework by codifying claim rules, exceptions, and approvals.",
+    "description": "Test claim rules and exceptions in a decision twin to reduce rework.",
     "tags": ["healthcare", "claims", "governance"],
     "href": "/proof",
     "eyebrow": "Workflow"
   },
   {
     "title": "Project delivery change orders",
-    "description": "Clarify decision thresholds so PDS teams move faster with auditability.",
+    "description": "Model change-order thresholds and approvals with audit-ready traces.",
     "tags": ["construction", "PDS", "decision"],
     "href": "/proof",
     "eyebrow": "Workflow"
