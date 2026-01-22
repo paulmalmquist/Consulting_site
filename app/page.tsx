@@ -14,6 +14,7 @@ type CardData = {
 type HomeData = {
   hero: { headline: string; subheadline: string };
   pillars: string[];
+  whatYouGet: string[];
   deliverables: { title: string; description: string }[];
 };
 
@@ -42,15 +43,15 @@ export default function HomePage() {
       <Hero headline={home.hero.headline} subheadline={home.hero.subheadline} pillars={home.pillars} />
       <CarouselRow
         title="How I help"
-        description="Outcome-oriented engagements that deliver a safe, measurable Decision Twin."
+        description="Intent-first internal support modules that make routing, self-service, and governance practical."
         items={services}
         viewAllHref="/services"
       />
       <CarouselRow
         title="Common workflows I compress"
-        description="Decision-heavy handoffs where auditability and speed both matter."
+        description="Concrete support flows where intent, routing, and audit trails matter."
         items={workflows}
-        viewAllHref="/method"
+        viewAllHref="/support-ops"
       />
       <CarouselRow
         title="Example engagements"
@@ -60,7 +61,7 @@ export default function HomePage() {
       />
       <CarouselRow
         title="Insights"
-        description="Short reads for executives building AI-ready teams."
+        description="Short reads for leaders modernizing support ops."
         items={insights}
         viewAllHref="/insights"
       />
@@ -73,34 +74,28 @@ export default function HomePage() {
 
       <section className="space-y-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-            What you get in 4–6 weeks
-          </h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">What you get</h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            A flagship engagement that builds the Operational Decision Twin and proves value without production
-            interference.
+            A practical support-ops package that proves value without production interference.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          {home.deliverables.map((item) => (
-            <div key={item.title} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-              <p className="text-sm font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-base leading-relaxed text-slate-300">{item.description}</p>
-            </div>
+        <ul className="space-y-3 text-base leading-relaxed text-slate-200">
+          {home.whatYouGet.map((item) => (
+            <li key={item}>• {item}</li>
           ))}
-        </div>
+        </ul>
         <div className="flex flex-wrap gap-3">
           <Link
             href="/contact"
             className="rounded-full border border-slate-700/70 px-5 py-2 text-sm text-slate-100 hover:border-slate-500"
           >
-            Book a 20-minute fit check
+            Book a 20-minute Support Ops Fit Check
           </Link>
           <Link
-            href="/services"
+            href="/demo"
             className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 hover:bg-cyan-400/30"
           >
-            Request a QuickStart
+            See the Intent-First Demo
           </Link>
         </div>
       </section>
@@ -207,7 +202,7 @@ export default function HomePage() {
 
       <footer className="grid gap-6 border-t border-slate-800/70 pt-8 text-sm text-slate-400 md:grid-cols-3">
         <div>
-          <p className="font-semibold text-white">AI Readiness & Operations</p>
+          <p className="font-semibold text-white">Intent-First Internal Support</p>
           <p className="mt-2">{'{{CONSULTANT_NAME}}'}</p>
           <p>{'{{EMAIL}}'}</p>
         </div>
@@ -227,7 +222,7 @@ export default function HomePage() {
             Book a fit check or email me directly.
           </p>
           <Link className="text-cyan-200" href="/contact">
-            Book a 20-minute fit check →
+            Book a 20-minute Support Ops Fit Check →
           </Link>
         </div>
       </footer>

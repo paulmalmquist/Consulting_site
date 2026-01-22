@@ -1,36 +1,30 @@
 [
   {
-    "title": "Paralegal intake & document triage",
-    "description": "Simulate intake rules and escalation paths before changing production workflows.",
-    "tags": ["legal", "triage", "HITL"],
-    "href": "/proof",
+    "title": "IT: access request → approval → provisioning",
+    "description": "Compress the handoffs from intake to approval to account provisioning with tracked approvals.",
+    "tags": ["IT", "access", "approval"],
+    "href": "/support-ops",
     "eyebrow": "Workflow"
   },
   {
-    "title": "Medical billing exception handling",
-    "description": "Test claim rules and exceptions in a decision twin to reduce rework.",
-    "tags": ["healthcare", "claims", "governance"],
-    "href": "/proof",
+    "title": "HR: policy question → source doc → answer + citation",
+    "description": "Route HR questions to approved sources and return cited answers that reduce repeat follow-ups.",
+    "tags": ["HR", "policy", "citations"],
+    "href": "/support-ops",
     "eyebrow": "Workflow"
   },
   {
-    "title": "Project delivery change orders",
-    "description": "Model change-order thresholds and approvals with audit-ready traces.",
-    "tags": ["construction", "PDS", "decision"],
-    "href": "/proof",
+    "title": "Ops: vendor onboarding checklist",
+    "description": "Guide intake, collect required documents, and route approvals with a logged checklist.",
+    "tags": ["ops", "vendor", "checklist"],
+    "href": "/support-ops",
     "eyebrow": "Workflow"
   },
   {
-    "title": "Finance ops approvals",
-    "description": "Shorten approval cycles with explicit decision ladders and evidence trails.",
-    "tags": ["finance", "audit", "workflow"],
-    "href": "/proof",
+    "title": "Legal: intake triage + escalation",
+    "description": "Classify legal requests, assemble context, and escalate to counsel with traceable steps.",
+    "tags": ["legal", "intake", "escalation"],
+    "href": "/support-ops",
     "eyebrow": "Workflow"
-  },
-  {
-    "title": "Intent-Based Internal Support",
-    "description": "Employees shouldn’t need to know which system, form, or team owns their problem. I redesign internal support workflows so intent is captured once, context is assembled automatically, and the right action happens — with auditability and human oversight.",
-    "tags": ["HR", "IT", "Helpdesk", "HITL"],
-    "href": "/method#internal-support"
   }
 ]
