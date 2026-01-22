@@ -41,42 +41,75 @@ export default function HomePage() {
   return (
     <div className="space-y-12">
       <Hero headline={home.hero.headline} subheadline={home.hero.subheadline} pillars={home.pillars} />
+      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Where teams get stuck</h2>
+          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
+            <li>Misrouted tickets and unclear ownership.</li>
+            <li>Inconsistent HR answers that create policy drift.</li>
+            <li>CRM fragmentation across forms, inboxes, and spreadsheets.</li>
+            <li>Decision latency hiding in email and Slack threads.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">What that drag creates</h2>
+          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
+            <li>Escalations without context or audit trails.</li>
+            <li>Leaders guessing at bottlenecks instead of seeing them.</li>
+            <li>Risk reviews that happen after decisions are already made.</li>
+          </ul>
+        </div>
+      </section>
+
       <CarouselRow
-        title="How I help"
-        description="Engagements start with a short, fixed-scope pilot so teams can validate outcomes before scaling."
-        items={services}
-        viewAllHref="/services"
-      />
-      <CarouselRow
-        title="Common workflows I compress"
-        description="Concrete support flows where intent, routing, and audit trails matter."
+        title="Intent-first internal support"
+        description="AI listens first, understands requests by intent, and routes work with clear ownership."
         items={workflows}
         viewAllHref="/support-ops"
       />
+
+      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Operational microcosms</h2>
+          <p className="mt-2 text-base leading-relaxed text-slate-300">
+            We build non-production replicas so regulated teams can validate outcomes without touching production.
+          </p>
+        </div>
+        <div className="space-y-4 text-base leading-relaxed text-slate-200">
+          <p>1. Map real workflows, decisions, and exceptions.</p>
+          <p>2. Model the same routing and approval steps with synthetic or redacted data.</p>
+          <p>3. Run scenarios safely to surface latency, risk, and handoff gaps.</p>
+          <p>4. Capture results with traceable metrics and decision logs.</p>
+        </div>
+      </section>
+
       <CarouselRow
         title="Example engagements"
-        description="Anonymized engagements that show the operational pattern."
+        description="Anonymized engagement patterns that show what proof looks like before production."
         items={caseStudies}
         viewAllHref="/proof"
       />
-      <CarouselRow
-        title="Insights"
-        description="Short reads for leaders modernizing support ops."
-        items={insights}
-        viewAllHref="/insights"
-      />
-      <CarouselRow
-        title="Tools & deliverables"
-        description="Reusable assets that make governance, auditability, and HITL practical."
-        items={deliverables}
-        viewAllHref="/method"
-      />
+
+      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Human-in-the-loop governance</h2>
+          <p className="mt-2 text-base leading-relaxed text-slate-300">
+            AI proposes, humans approve, and every decision leaves a full audit trail.
+          </p>
+        </div>
+        <div className="space-y-3 text-base leading-relaxed text-slate-200">
+          <p>• Risk-based escalation and override paths</p>
+          <p>• Approval gates for sensitive actions</p>
+          <p>• Traceability across requests, decisions, and outcomes</p>
+          <p>• No production writes without explicit sign-off</p>
+        </div>
+      </section>
 
       <section className="space-y-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">What you get</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Fixed-scope Proof-of-Concept</h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            A practical support-ops package that proves value without production interference.
+            Time-boxed, outcome-driven, and designed to make a clear scale-or-stop decision.
           </p>
         </div>
         <ul className="space-y-3 text-base leading-relaxed text-slate-200">
@@ -89,88 +122,37 @@ export default function HomePage() {
             href="/services"
             className="rounded-full border border-slate-700/70 px-5 py-2 text-sm text-slate-100 hover:border-slate-500"
           >
-            How engagements are structured
+            Review engagement structure
           </Link>
           <Link
             href="/contact"
             className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 hover:bg-cyan-400/30"
           >
-            Start with a Pilot
+            Start with a Proof-of-Concept
           </Link>
         </div>
       </section>
 
-      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">How it works</h2>
-          <p className="mt-2 text-base leading-relaxed text-slate-300">
-            We build a working facsimile of your environment so regulated teams see outcomes before touching production.
-          </p>
-        </div>
-        <div className="space-y-4 text-base leading-relaxed text-slate-200">
-          <p>1. Map real workflows (not titles or org charts).</p>
-          <p>2. Capture decisions, rules, and exceptions that slow delivery.</p>
-          <p>3. Build the operational microcosm (safe, working facsimile).</p>
-          <p>4. Governance and auditability are designed in from day one.</p>
-          <p>5. Test scenarios safely with observable outcomes.</p>
-          <div className="space-y-2">
-            <p className="font-semibold text-white">HITL patterns built for compliance:</p>
-            <p>• Review before action</p>
-            <p>• Review after action</p>
-            <p>• Override and escalation</p>
-          </div>
-        </div>
-      </section>
+      <CarouselRow
+        title="How it scales"
+        description="Discovery → Proof-of-Concept → Expansion, with governance and operating model support."
+        items={services}
+        viewAllHref="/services"
+      />
 
-      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Safety &amp; governance</h2>
-          <p className="mt-2 text-base leading-relaxed text-slate-300">
-            Governance-first by design, so regulated teams can move quickly without adding audit risk.
-          </p>
-        </div>
-        <div className="space-y-3 text-base leading-relaxed text-slate-200">
-          <p>• No production writes</p>
-          <p>• Synthetic or redacted data by default</p>
-          <p>• Audit logs and traceability for decisions</p>
-          <p>• Human-in-the-loop controls for sensitive actions</p>
-          <p>• Fixed scope, defined exit points, and clear success criteria per phase</p>
-          <p>• Option to stop after the pilot if the criteria are not met</p>
-          <p>
-            <span className="font-semibold text-white">Why this isn’t a chatbot:</span> it models decisions, rules, and
-            escalation paths you can audit.
-          </p>
-        </div>
-      </section>
+      <CarouselRow
+        title="Tools & deliverables"
+        description="Reusable assets that make governance, auditability, and human oversight practical."
+        items={deliverables}
+        viewAllHref="/method"
+      />
 
-      <section className="space-y-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Engagement tiers</h2>
-          <p className="mt-2 text-base leading-relaxed text-slate-300">
-            Each tier is scoped with clear outcomes, success criteria, and a decision to make next.
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-            <p className="text-sm font-semibold text-white">Discovery &amp; Foundation (1–2 weeks)</p>
-            <p className="mt-2 text-sm text-slate-300">
-              Map workflows, interview stakeholders, and confirm whether a pilot is the right move.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-            <p className="text-sm font-semibold text-white">Proof-of-Concept / Pilot (2–4 weeks)</p>
-            <p className="mt-2 text-sm text-slate-300">
-              Model one or two workflows in a safe environment with clear success criteria.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-            <p className="text-sm font-semibold text-white">Scale &amp; Ongoing (monthly)</p>
-            <p className="mt-2 text-sm text-slate-300">
-              Expand to additional workflows, tune governance, and operationalize the model.
-            </p>
-          </div>
-        </div>
-      </section>
+      <CarouselRow
+        title="Insights"
+        description="Short reads for leaders modernizing support ops."
+        items={insights}
+        viewAllHref="/insights"
+      />
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div>
@@ -186,25 +168,6 @@ export default function HomePage() {
           <Link className="text-cyan-200" href="/industries">
             See industry modules →
           </Link>
-        </div>
-      </section>
-
-      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Who this is for</h2>
-          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
-            <li>SMB owners and operators accountable for regulated operations.</li>
-            <li>Ops leaders in healthcare admin, legal ops, and construction/PDS.</li>
-            <li>Teams that need governance, auditability, and fast proof-of-value.</li>
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Who it’s not for</h2>
-          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
-            <li>Teams looking for a chatbot demo without operational change.</li>
-            <li>Experiments without governance, auditability, or owner accountability.</li>
-            <li>Unsupervised automation that bypasses decision rights.</li>
-          </ul>
         </div>
       </section>
 
@@ -227,10 +190,10 @@ export default function HomePage() {
         <div className="space-y-2">
           <p className="font-semibold text-white">Take action</p>
           <p>
-            Start with a pilot or review how engagements are structured.
+            Start with a Proof-of-Concept or review how engagements are structured.
           </p>
           <Link className="text-cyan-200" href="/contact">
-            Start with a Pilot →
+            Start with a Proof-of-Concept →
           </Link>
         </div>
       </footer>
