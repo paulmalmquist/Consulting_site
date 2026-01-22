@@ -12,9 +12,7 @@ export function Hero({
   return (
     <section className="grid gap-8 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-[1.2fr_0.8fr]">
       <div className="space-y-6">
-        <p className="text-xs uppercase tracking-[0.4em] text-cyan-200/80">
-          Intent-first internal support for SMB ops
-        </p>
+        <p className="text-xs uppercase tracking-[0.4em] text-cyan-200/80">Intent-first internal support</p>
         <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-6xl">{headline}</h1>
         <p className="max-w-prose text-base leading-relaxed text-slate-300 md:text-lg">{subheadline}</p>
         <div className="flex flex-wrap gap-3">
