@@ -1,12 +1,19 @@
 {
   "hero": {
-    "headline": "Operational Decision Twin for regulated SMB operations",
-    "subheadline": "A business flight simulator for operations: model your workflows in a virtual ops lab, test changes safely with no production interference, and get fast proof-of-value in 4–6 weeks."
+    "headline": "Intent-First Internal Support for regulated SMB ops",
+    "subheadline": "An AI front door that captures intent in plain English, routes requests, and enables self-service with audit-ready logs. Demo safely with no production interference."
   },
   "pillars": [
-    "Operational Decision Twin (virtual ops lab)",
-    "No production writes; synthetic data by default",
-    "Fast proof-of-value with measurable outcomes"
+    "Intent-first intake for HR/IT/Ops",
+    "Smart routing plus self-service",
+    "Governed with audit-ready logs"
+  ],
+  "whatYouGet": [
+    "AI front door (Teams/Slack/Email/Portal entry)",
+    "Intent detection + routing rules",
+    "Knowledge base that answers with citations",
+    "Human-in-the-loop approvals for sensitive actions",
+    "Weekly metrics report (latency, deflection, routing accuracy)"
   ],
   "deliverables": [
     {

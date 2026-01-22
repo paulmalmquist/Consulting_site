@@ -1,30 +1,37 @@
 [
   {
-    "title": "QuickStart Proof-of-Value",
-    "description": "For: SMB operators who need evidence fast. Removes: guessing on what to automate. Delivers: workflow truth, decision map, and a scoped simulation plan. Timebox: 2–4 weeks.",
-    "tags": ["2–4 weeks", "proof-of-value", "quickstart"],
-    "href": "/services#quickstart-proof-of-value",
+    "title": "Intent-First Internal Support (Core)",
+    "description": "Define the AI front door for HR/IT/Ops so employees explain intent once and the right team responds faster with an auditable trail.",
+    "tags": ["core", "internal support", "intent-first"],
+    "href": "/support-ops",
     "eyebrow": "How I help"
   },
   {
-    "title": "Operational Decision Twin (4–6 weeks)",
-    "description": "For: regulated ops teams who need a virtual lab before changing production. Removes: risky guesswork. Delivers: decision twin, scenarios, and executive proof-of-value.",
-    "tags": ["4–6 weeks", "decision twin", "simulation"],
-    "href": "/services#operational-decision-twin",
+    "title": "Ticket Routing & Triage Automation",
+    "description": "Reduce misroutes and speed up resolution with intent detection, priority rules, and smart handoffs across systems.",
+    "tags": ["routing", "triage", "resolution"],
+    "href": "/support-ops",
     "eyebrow": "How I help"
   },
   {
-    "title": "Intent-Based Internal Support",
-    "description": "For: HR/IT/helpdesk leaders who need faster routing. Removes: misrouted tickets and manual triage. Delivers: intent capture, context assembly, and governed escalation.",
-    "tags": ["module", "internal support", "HITL"],
-    "href": "/method#internal-support",
+    "title": "HR & Policy Q&A (Benefits, PTO, Retirement)",
+    "description": "Answer routine questions with cited policies so HR spends less time repeating itself and more time on exceptions.",
+    "tags": ["HR", "policy", "citations"],
+    "href": "/support-ops",
     "eyebrow": "How I help"
   },
   {
-    "title": "CRM + Ticketing Decision Layer",
-    "description": "For: sales/ops teams who need consistent approvals. Removes: opaque status updates and stalled handoffs. Delivers: decision rules, audit trails, and clearer next actions.",
-    "tags": ["module", "CRM", "ticketing"],
-    "href": "/method#crm-ticketing",
+    "title": "Helpdesk Deflection (Password resets, access requests)",
+    "description": "Deflect repetitive tickets with guided self-service while preserving approvals and escalation paths.",
+    "tags": ["helpdesk", "deflection", "self-service"],
+    "href": "/support-ops",
+    "eyebrow": "How I help"
+  },
+  {
+    "title": "Auditability & HITL Controls",
+    "description": "Keep sensitive actions governed with human approvals, full logs, and evidence for compliance reviews.",
+    "tags": ["audit", "HITL", "governance"],
+    "href": "/support-ops",
     "eyebrow": "How I help"
   }
 ]
