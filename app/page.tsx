@@ -43,7 +43,7 @@ export default function HomePage() {
       <Hero headline={home.hero.headline} subheadline={home.hero.subheadline} pillars={home.pillars} />
       <CarouselRow
         title="How I help"
-        description="Intent-first internal support modules that make routing, self-service, and governance practical."
+        description="Engagements start with a short, fixed-scope pilot so teams can validate outcomes before scaling."
         items={services}
         viewAllHref="/services"
       />
@@ -86,16 +86,16 @@ export default function HomePage() {
         </ul>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/contact"
+            href="/services"
             className="rounded-full border border-slate-700/70 px-5 py-2 text-sm text-slate-100 hover:border-slate-500"
           >
-            Book a 20-minute Support Ops Fit Check
+            How engagements are structured
           </Link>
           <Link
-            href="/demo"
+            href="/contact"
             className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 hover:bg-cyan-400/30"
           >
-            Walk Through an Auditable AI Workflow
+            Start with a Pilot
           </Link>
         </div>
       </section>
@@ -134,6 +134,8 @@ export default function HomePage() {
           <p>• Synthetic or redacted data by default</p>
           <p>• Audit logs and traceability for decisions</p>
           <p>• Human-in-the-loop controls for sensitive actions</p>
+          <p>• Fixed scope, defined exit points, and clear success criteria per phase</p>
+          <p>• Option to stop after the pilot if the criteria are not met</p>
           <p>
             <span className="font-semibold text-white">Why this isn’t a chatbot:</span> it models decisions, rules, and
             escalation paths you can audit.
@@ -143,28 +145,28 @@ export default function HomePage() {
 
       <section className="space-y-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Pricing signals</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Engagement tiers</h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            SMB-friendly packages with scoped outcomes and clear fit.
+            Each tier is scoped with clear outcomes, success criteria, and a decision to make next.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-            <p className="text-sm font-semibold text-white">QuickStart Proof-of-Value (2–4 weeks)</p>
+            <p className="text-sm font-semibold text-white">Discovery &amp; Foundation (1–2 weeks)</p>
             <p className="mt-2 text-sm text-slate-300">
-              For teams who need fast clarity on what to change and what to avoid.
+              Map workflows, interview stakeholders, and confirm whether a pilot is the right move.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-            <p className="text-sm font-semibold text-white">Operational Decision Twin (4–6 weeks)</p>
+            <p className="text-sm font-semibold text-white">Proof-of-Concept / Pilot (2–4 weeks)</p>
             <p className="mt-2 text-sm text-slate-300">
-              For teams ready to test scenarios safely and secure executive buy-in.
+              Model one or two workflows in a safe environment with clear success criteria.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-            <p className="text-sm font-semibold text-white">Ongoing Support (monthly)</p>
+            <p className="text-sm font-semibold text-white">Scale &amp; Ongoing (monthly)</p>
             <p className="mt-2 text-sm text-slate-300">
-              For teams who want scenario updates, governance tuning, and ongoing decision support.
+              Expand to additional workflows, tune governance, and operationalize the model.
             </p>
           </div>
         </div>
@@ -225,10 +227,10 @@ export default function HomePage() {
         <div className="space-y-2">
           <p className="font-semibold text-white">Take action</p>
           <p>
-            Book a fit check or email me directly.
+            Start with a pilot or review how engagements are structured.
           </p>
           <Link className="text-cyan-200" href="/contact">
-            Book a 20-minute Support Ops Fit Check →
+            Start with a Pilot →
           </Link>
         </div>
       </footer>

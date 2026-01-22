@@ -1,7 +1,7 @@
 {
   "hero": {
     "headline": "Safe, non-production operational replicas for regulated SMB ops leaders",
-    "subheadline": "We build safe, non-production operational replicas so SMB ops leaders in regulated environments understand workflows faster, demo automation safely, and make clearer decisions with human-in-the-loop controls, clear approval gates, and audit trails by default before touching production."
+    "subheadline": "Most teams start with a short, fixed-scope pilot to validate outcomes before changing production. The pilot is time-boxed and outcome-driven, with no long-term commitment required to begin, and it produces a clear decision on what to scale next."
   },
   "pillars": [
     "Intent-first intake for HR/IT/Ops",
