@@ -95,7 +95,7 @@ export default function HomePage() {
             href="/demo"
             className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 hover:bg-cyan-400/30"
           >
-            See a Safe Demo in Your Environment
+            Walk Through an Auditable AI Workflow
           </Link>
         </div>
       </section>
@@ -113,6 +113,12 @@ export default function HomePage() {
           <p>3. Build the operational microcosm (safe, working facsimile).</p>
           <p>4. Governance and auditability are designed in from day one.</p>
           <p>5. Test scenarios safely with observable outcomes.</p>
+          <div className="space-y-2">
+            <p className="font-semibold text-white">HITL patterns built for compliance:</p>
+            <p>• Review before action</p>
+            <p>• Review after action</p>
+            <p>• Override and escalation</p>
+          </div>
         </div>
       </section>
 
