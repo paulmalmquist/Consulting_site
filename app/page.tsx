@@ -42,7 +42,11 @@ export default function HomePage() {
     <div className="space-y-12">
       <Hero headline={home.hero.headline} subheadline={home.hero.subheadline} pillars={home.pillars} />
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
-        <div>
+        <div className="space-y-4">
+          <p className="text-base leading-relaxed text-slate-300">
+            We help teams experiment with new ways of working in safe, non-production environments — so decisions are
+            driven by evidence, not guesswork.
+          </p>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Where teams get stuck</h2>
           <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
             <li>Misrouted tickets and unclear ownership.</li>
