@@ -95,7 +95,7 @@ export default function HomePage() {
             href="/demo"
             className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 hover:bg-cyan-400/30"
           >
-            See the Intent-First Demo
+            See a Safe Demo in Your Environment
           </Link>
         </div>
       </section>
@@ -104,14 +104,14 @@ export default function HomePage() {
         <div>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">How it works</h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            A compact method designed for regulated operations and executive accountability.
+            We build a working facsimile of your environment so regulated teams see outcomes before touching production.
           </p>
         </div>
         <div className="space-y-4 text-base leading-relaxed text-slate-200">
           <p>1. Map real workflows (not titles or org charts).</p>
           <p>2. Capture decisions, rules, and exceptions that slow delivery.</p>
-          <p>3. Build the Operational Decision Twin (virtual ops lab).</p>
-          <p>4. Design human-in-the-loop governance and auditability.</p>
+          <p>3. Build the operational microcosm (safe, working facsimile).</p>
+          <p>4. Governance and auditability are designed in from day one.</p>
           <p>5. Test scenarios safely with observable outcomes.</p>
         </div>
       </section>
