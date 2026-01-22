@@ -1,7 +1,7 @@
 [
   {
     "title": "IT: access request → approval → provisioning",
-    "description": "Compress the handoffs from intake to approval to account provisioning with tracked approvals.",
+    "description": "AI proposes access level, the IT manager approves or overrides, and provisioning pauses until sign-off. Every request, approval, and change is logged.",
     "tags": ["IT", "access", "approval"],
     "href": "/support-ops",
     "eyebrow": "Workflow"
@@ -22,7 +22,7 @@
   },
   {
     "title": "Legal: intake triage + escalation",
-    "description": "Classify legal requests, assemble context, and escalate to counsel with traceable steps.",
+    "description": "AI classifies the request, pauses on policy exceptions, and escalates to named counsel for approval. The classification, escalation, and final decision are logged.",
     "tags": ["legal", "intake", "escalation"],
     "href": "/support-ops",
     "eyebrow": "Workflow"
@@ -36,14 +36,14 @@
   },
   {
     "title": "Helpdesk triage using synthetic tickets",
-    "description": "Simulate synthetic ticket queues and priority signals to demonstrate automated triage and queue handoffs.",
+    "description": "Low-risk tickets auto-execute, high-risk requests pause for helpdesk lead approval. Routing, approvals, and outcomes are logged.",
     "tags": ["helpdesk", "triage", "synthetic"],
     "href": "/support-ops",
     "eyebrow": "Workflow"
   },
   {
     "title": "Healthcare scheduling with fake patient data",
-    "description": "Simulate scheduling requests with fake patient data to demonstrate appointment automation and approval decisions.",
+    "description": "AI proposes appointment slots, the clinic manager approves exceptions, and scheduling pauses on high-risk cases. Every slot change and approval is logged.",
     "tags": ["healthcare", "scheduling", "microcosm"],
     "href": "/support-ops",
     "eyebrow": "Workflow"

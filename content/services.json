@@ -35,9 +35,9 @@
     "eyebrow": "How I help"
   },
   {
-    "title": "Auditability & HITL Controls",
-    "description": "Keep sensitive actions governed with human approvals, full logs, and evidence for compliance reviews.",
-    "tags": ["audit", "HITL", "governance"],
+    "title": "Human-in-the-Loop Governance",
+    "description": "Set approval, override, and escalation steps by risk level so named owners stay in control. AI pauses for sign-off on high-risk actions, and every decision, rationale, and outcome is logged for audit.",
+    "tags": ["HITL", "governance", "audit"],
     "href": "/support-ops",
     "eyebrow": "How I help"
   }
