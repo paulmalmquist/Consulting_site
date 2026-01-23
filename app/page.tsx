@@ -43,25 +43,24 @@ export default function HomePage() {
       <Hero headline={home.hero.headline} subheadline={home.hero.subheadline} pillars={home.pillars} />
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div className="space-y-4">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Malmquist De Oliveira Consulting
+          </h2>
           <p className="text-base leading-relaxed text-slate-300">
-            We help teams experiment with new ways of working in safe, non-production environments — so decisions are
-            driven by evidence, not guesswork.
+            We are a senior operating team that partners with leaders to guide AI-driven operational transformation with
+            clear accountability and measurable outcomes. Our work focuses on reducing operational drag and decision
+            latency without asking teams to bet on unproven theory.
           </p>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Where teams get stuck</h2>
-          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
-            <li>Misrouted tickets and unclear ownership.</li>
-            <li>Inconsistent HR answers that create policy drift.</li>
-            <li>CRM fragmentation across forms, inboxes, and spreadsheets.</li>
-            <li>Decision latency hiding in email and Slack threads.</li>
-          </ul>
+          <p className="text-base leading-relaxed text-slate-300">
+            We build safe, auditable systems that respect the constraints of regulated and operationally complex
+            environments, including healthcare, legal, construction, and professional services.
+          </p>
         </div>
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">What that drag creates</h2>
-          <ul className="mt-3 space-y-4 text-base leading-relaxed text-slate-300">
-            <li>Escalations without context or audit trails.</li>
-            <li>Leaders guessing at bottlenecks instead of seeing them.</li>
-            <li>Risk reviews that happen after decisions are already made.</li>
-          </ul>
+          <p className="text-base leading-relaxed text-slate-300">
+            Clients trust us because we work inside real-world constraints, align governance with day-to-day operations,
+            and stay accountable for outcomes that stand up to audit and executive review.
+          </p>
         </div>
       </section>
 
