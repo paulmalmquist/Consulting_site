@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Financial Services",
+    "description": "Decouple critical workflows from legacy cores without compromising oversight, reporting, or audit expectations.",
+    "tags": ["regulatory", "controls", "continuity"],
+    "href": "/industries",
+    "eyebrow": "Industry"
+  },
+  {
+    "title": "Healthcare & Life Sciences",
+    "description": "Replace operational bottlenecks around scheduling, intake, and coordination while keeping core systems stable.",
+    "tags": ["coordination", "data quality", "risk"],
+    "href": "/industries",
+    "eyebrow": "Industry"
+  },
+  {
+    "title": "Manufacturing & Supply Chain",
+    "description": "Extract planning, allocation, and exception handling from overbuilt suites so operations can adapt faster.",
+    "tags": ["planning", "exceptions", "throughput"],
+    "href": "/industries",
+    "eyebrow": "Industry"
+  },
+  {
+    "title": "Public Sector & Education",
+    "description": "Introduce modular execution around procurement, grants, and service delivery without triggering full-suite replacements.",
+    "tags": ["governance", "budget", "resilience"],
+    "href": "/industries",
+    "eyebrow": "Industry"
+  }
+]

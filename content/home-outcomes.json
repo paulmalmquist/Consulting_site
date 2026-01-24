@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Restored Executive Control",
+    "description": "Leadership can see what runs where, what is changing, and what evidence supports each decision.",
+    "tags": ["visibility", "governance", "confidence"],
+    "href": "/outcomes",
+    "eyebrow": "Outcome"
+  },
+  {
+    "title": "Reduced Platform Risk",
+    "description": "Dependency is reduced capability by capability instead of betting the business on a single replacement event.",
+    "tags": ["risk reduction", "sequenced", "resilience"],
+    "href": "/outcomes",
+    "eyebrow": "Outcome"
+  },
+  {
+    "title": "Faster Adaptation",
+    "description": "Teams can adjust processes and policies without reopening the entire platform debate every quarter.",
+    "tags": ["agility", "policy", "change"],
+    "href": "/outcomes",
+    "eyebrow": "Outcome"
+  },
+  {
+    "title": "Evidence That Stands Up",
+    "description": "Controls, reconciliations, and cutovers produce documentation that holds up to audit, diligence, and review.",
+    "tags": ["audit-ready", "reconciliations", "trust"],
+    "href": "/outcomes",
+    "eyebrow": "Outcome"
+  }
+]

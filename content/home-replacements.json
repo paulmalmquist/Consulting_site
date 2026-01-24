@@ -1,0 +1,30 @@
+[
+  {
+    "title": "ERP Extensions & Workarounds",
+    "description": "Retire brittle customizations and side systems by extracting the capabilities they were masking.",
+    "tags": ["ERP", "extensions", "control"],
+    "href": "/replacements",
+    "eyebrow": "System replacement"
+  },
+  {
+    "title": "Ticketing-as-Operations",
+    "description": "Move critical execution out of general-purpose ticket queues into governed workflows with clear ownership.",
+    "tags": ["service ops", "execution", "visibility"],
+    "href": "/replacements",
+    "eyebrow": "System replacement"
+  },
+  {
+    "title": "Spreadsheet Control Towers",
+    "description": "Replace spreadsheet-driven coordination with modular capabilities that preserve flexibility without sacrificing auditability.",
+    "tags": ["Excel sprawl", "audit", "coordination"],
+    "href": "/replacements",
+    "eyebrow": "System replacement"
+  },
+  {
+    "title": "Monolithic Suites",
+    "description": "Decouple suites that try to do everything by introducing targeted modules around the decisions that matter most.",
+    "tags": ["monolith", "decoupling", "optionality"],
+    "href": "/replacements",
+    "eyebrow": "System replacement"
+  }
+]
