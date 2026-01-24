@@ -1,58 +1,44 @@
 [
   {
-    "title": "IT: access request → approval → provisioning",
-    "description": "AI proposes access level, the IT manager approves or overrides, and provisioning pauses until sign-off. Every request, approval, and change is logged.",
-    "tags": ["IT", "access", "approval"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
+    "title": "Accounting close support",
+    "description": "Ringfence reconciliations, approvals, and close checklists so finance can reduce system dependency without risking reporting integrity.",
+    "tags": ["accounting", "close", "controls"],
+    "href": "/industries",
+    "eyebrow": "Capability module"
   },
   {
-    "title": "HR: policy question → source doc → answer + citation",
-    "description": "Route HR questions to approved sources and return cited answers that reduce repeat follow-ups.",
-    "tags": ["HR", "policy", "citations"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
+    "title": "CRM routing and pipeline control",
+    "description": "Replace brittle assignment rules and manual workarounds with a governed decision layer that clarifies ownership, exceptions, and escalation paths.",
+    "tags": ["CRM", "routing", "governance"],
+    "href": "/industries",
+    "eyebrow": "Capability module"
   },
   {
-    "title": "Ops: vendor onboarding checklist",
-    "description": "Guide intake, collect required documents, and route approvals with a logged checklist.",
-    "tags": ["ops", "vendor", "checklist"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
+    "title": "Project and portfolio management",
+    "description": "Isolate intake, prioritization, and status control so delivery teams can improve visibility and decision speed without a full platform overhaul.",
+    "tags": ["PM", "portfolio", "intake"],
+    "href": "/industries",
+    "eyebrow": "Capability module"
   },
   {
-    "title": "Legal: intake triage + escalation",
-    "description": "AI classifies the request, pauses on policy exceptions, and escalates to named counsel for approval. The classification, escalation, and final decision are logged.",
-    "tags": ["legal", "intake", "escalation"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
+    "title": "Legal intake and obligation tracking",
+    "description": "Capture requests once, apply policy-aware triage, and maintain auditable obligation tracking while reducing reliance on heavyweight suites.",
+    "tags": ["legal", "intake", "obligations"],
+    "href": "/industries",
+    "eyebrow": "Capability module"
   },
   {
-    "title": "CRM intake and routing in a microcosm",
-    "description": "Simulate lead capture, enrichment, and routing rules to demonstrate automated assignment and escalation decisions.",
-    "tags": ["CRM", "routing", "microcosm"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
+    "title": "Operational analytics and executive reporting",
+    "description": "Decouple decision-grade reporting from platform lock-in by defining shared metrics, reconciliations, and ownership for critical executive views.",
+    "tags": ["analytics", "reporting", "metrics"],
+    "href": "/industries",
+    "eyebrow": "Capability module"
   },
   {
-    "title": "Helpdesk triage using synthetic tickets",
-    "description": "Low-risk tickets auto-execute, high-risk requests pause for helpdesk lead approval. Routing, approvals, and outcomes are logged.",
-    "tags": ["helpdesk", "triage", "synthetic"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
-  },
-  {
-    "title": "Healthcare scheduling with fake patient data",
-    "description": "AI proposes appointment slots, the clinic manager approves exceptions, and scheduling pauses on high-risk cases. Every slot change and approval is logged.",
-    "tags": ["healthcare", "scheduling", "microcosm"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
-  },
-  {
-    "title": "Construction bid evaluation using mock projects",
-    "description": "Simulate bid packages with mock project data to demonstrate scoring automation and go/no-go decisions.",
-    "tags": ["construction", "bids", "simulation"],
-    "href": "/support-ops",
-    "eyebrow": "Workflow"
+    "title": "Procurement approvals and vendor controls",
+    "description": "Introduce clear approval gates, policy checks, and exception routing to reduce spend leakage while keeping existing systems of record intact.",
+    "tags": ["procurement", "approvals", "policy"],
+    "href": "/industries",
+    "eyebrow": "Capability module"
   }
 ]

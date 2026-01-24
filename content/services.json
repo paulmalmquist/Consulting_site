@@ -1,23 +1,23 @@
 [
   {
-    "title": "Discovery & Foundation",
-    "description": "What you get: assessment, stakeholder interviews, and workflow mapping. Typical timeline: 1–2 weeks. Decision enabled: confirm priority workflows and whether a Proof-of-Concept is worth running.",
-    "tags": ["discovery", "assessment", "roadmap"],
+    "title": "Dependency Diagnostic",
+    "description": "What you get: capability dependency map, contract exposure snapshot, and continuity baselines finance can trust. Typical timeline: 2–3 weeks. Decision enabled: where dependency is actually risky vs. simply inconvenient.",
+    "tags": ["diagnostic", "risk", "baseline"],
     "href": "/services",
-    "eyebrow": "Service tier"
+    "eyebrow": "Engagement phase"
   },
   {
-    "title": "Proof-of-Concept",
-    "description": "What you get: 1–2 real workflows modeled in a safe, non-production environment with clear success criteria. Typical timeline: 2–4 weeks. Decision enabled: whether to scale and which workflows to expand.",
-    "tags": ["pilot", "poc", "validation"],
+    "title": "Capability Pilot",
+    "description": "What you get: one ringfenced capability run in parallel with reconciliations, exception handling, and rollback criteria defined up front. Typical timeline: 4–8 weeks. Decision enabled: approve cutover, extend the pilot, or stop safely.",
+    "tags": ["pilot", "parallel run", "cutover"],
     "href": "/services",
-    "eyebrow": "Service tier"
+    "eyebrow": "Engagement phase"
   },
   {
-    "title": "Scale & Ongoing",
-    "description": "What you get: expansion to additional workflows, governance and HITL tuning, and operating model support. Typical timeline: monthly cycles. Decision enabled: when to standardize and operationalize across teams.",
-    "tags": ["scale", "governance", "operations"],
+    "title": "Controlled Cutover Program",
+    "description": "What you get: sequenced capability replacements, executive control narratives, and governance routines that reduce dependency quarter by quarter. Typical timeline: roadmap-led. Decision enabled: scale with clarity instead of committing to a full replatform.",
+    "tags": ["cutover", "governance", "program"],
     "href": "/services",
-    "eyebrow": "Service tier"
+    "eyebrow": "Engagement phase"
   }
 ]

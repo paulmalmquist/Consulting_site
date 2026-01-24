@@ -1,44 +1,40 @@
 {
   "hero": {
-    "headline": "Build the future of work",
-    "subheadline": "Design, test, and validate modern workflows."
+    "headline": "Reduce enterprise dependency without losing control",
+    "subheadline": "Replace the capabilities you need. Keep the systems you trust."
   },
   "pillars": [
-    "Reduce operational drag across support workflows",
-    "Built for real, regulated environments",
-    "Human oversight by default"
+    "Cut run-rate cost by removing low-value complexity",
+    "Protect systems of record, audit trails, and reporting integrity",
+    "Sequence change in reversible, capability-based steps"
   ],
   "whatYouGet": [
-    "Fixed-scope workflow map and decision inventory",
-    "Time-boxed build in a non-production microcosm",
-    "Synthetic or redacted data only",
-    "Human-in-the-loop approval points for sensitive actions",
-    "Success metrics and a clear scale-or-stop decision"
+    "Dependency map showing what is truly mission-critical vs. merely entangled",
+    "Capability business case with finance-grade baselines and risk notes",
+    "Parallel-run plan that proves continuity before cutover",
+    "Control points for approvals, reconciliations, and exception handling",
+    "Capability cutover brief with rollback criteria and owner sign-off"
   ],
   "deliverables": [
     {
-      "title": "Decision map (workflow truth)",
-      "description": "A clear map of decisions, handoffs, and exceptions across priority workflows."
+      "title": "Capability dependency map",
+      "description": "A clear picture of what each critical capability depends on today — systems, data, and manual workarounds."
     },
     {
-      "title": "Data + context inventory",
-      "description": "Sources, rules, and context required to make decisions defensible."
+      "title": "Continuity baseline",
+      "description": "The metrics and reconciliations required to prove that a replacement can run without disrupting operations or reporting."
     },
     {
-      "title": "Microcosm (synthetic facsimile)",
-      "description": "A scrubbed sandbox version of the workflow for safe simulation."
+      "title": "Parallel-run scorecard",
+      "description": "Side-by-side evidence that the new capability matches outcomes before any cutover decision is made."
     },
     {
-      "title": "Simulation scenarios",
-      "description": "What-if tests that show how changes affect time, risk, and cost."
+      "title": "Cutover and rollback plan",
+      "description": "Named owners, approval gates, and a defined way back so optionality is preserved throughout execution."
     },
     {
-      "title": "Governance + HITL guardrails",
-      "description": "Audit-ready controls, escalation paths, and human oversight points."
-    },
-    {
-      "title": "Executive walkthrough + roadmap",
-      "description": "Clear outcomes, decisions to make next, and a prioritized path forward."
+      "title": "Control narrative for executives",
+      "description": "A decision-ready brief that connects technical choices to financial risk, operational continuity, and governance."
     }
   ]
 }
