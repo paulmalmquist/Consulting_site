@@ -1,40 +1,40 @@
 {
   "hero": {
-    "headline": "The operating system private equity real estate funds actually need",
-    "subheadline": "Replace generalized platforms with a capability-driven environment built for fund accounting, cash control, and investor trust."
+    "headline": "Replace platform bloat with capability-driven execution",
+    "subheadline": "We help enterprises decouple overbuilt systems and stand up modular platforms that restore control without forcing another all-or-nothing replatform."
   },
   "pillars": [
-    "Stop funding platform bloat that does not match fund operations",
-    "Run finance, operations, and reporting behind clear controls and audit trails",
-    "Add or replace capabilities without committing to a single vendor roadmap"
+    "Lead with capabilities, not vendor roadmaps",
+    "Protect systems of record while you modernize around them",
+    "Move in controlled increments that executives can govern"
   ],
   "whatYouGet": [
-    "An executive-level view of where platform costs and operational risk are actually concentrated",
-    "A capability blueprint that maps fund accounting, cash flows, waterfalls, and reporting to governed modules",
-    "Industry presets that shorten implementation without forcing fund-specific workflows into generic templates",
-    "Parallel-run plans and reconciliation checkpoints that CFOs and auditors can sign off on",
-    "A controlled path to cutover with rollback criteria, approval gates, and documented ownership"
+    "A plain-language view of where work is happening outside the system and why it keeps spreading",
+    "A capability map that defines ownership, decisions, and control points before any tooling decisions",
+    "A sequenced plan to replace or decouple the riskiest capabilities without destabilizing finance or operations",
+    "Evidence-based cutover criteria so leadership can approve change with confidence, not hope",
+    "A platform posture that stays adaptable as strategy, structure, and systems evolve"
   ],
   "deliverables": [
     {
       "title": "Capability control map",
-      "description": "A fund-specific map of core capabilities, upstream dependencies, and the control points required to govern change."
+      "description": "A cross-functional view of the capabilities that run the business, the systems that support them, and where control is currently leaking."
     },
     {
-      "title": "Finance-grade baselines",
-      "description": "Defined reconciliation rules, data contracts, and reporting baselines for accounting, cash, and investor outcomes."
+      "title": "Stabilization plan",
+      "description": "Targeted interventions that stop spreadsheet sprawl, patch brittle handoffs, and reduce operational noise while deeper changes are sequenced."
     },
     {
-      "title": "Parallel-run scorecard",
-      "description": "Evidence that new modules produce matching results before any system-of-record decision is made."
+      "title": "Replacement sequence",
+      "description": "A leadership-ready plan that shows what gets decoupled or replaced first, how risk is contained, and what proof is required to move forward."
     },
     {
       "title": "Cutover governance pack",
-      "description": "Approval gates, decision logs, rollback criteria, and continuity steps that protect operations during transition."
+      "description": "Decision checkpoints, approval criteria, rollback rules, and evidence expectations that keep platform change inside executive control."
     },
     {
       "title": "Optionality roadmap",
-      "description": "A sequenced plan for adding, retiring, or swapping capabilities without reopening the entire platform debate."
+      "description": "A practical path to evolve capability by capability so you are never forced back into a single-vendor, single-decision posture."
     }
   ]
 }
