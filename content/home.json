@@ -1,40 +1,40 @@
 {
   "hero": {
-    "headline": "Reduce enterprise dependency without losing control",
-    "subheadline": "Replace the capabilities you need. Keep the systems you trust."
+    "headline": "The operating system private equity real estate funds actually need",
+    "subheadline": "Replace generalized platforms with a capability-driven environment built for fund accounting, cash control, and investor trust."
   },
   "pillars": [
-    "Cut run-rate cost by removing low-value complexity",
-    "Protect systems of record, audit trails, and reporting integrity",
-    "Sequence change in reversible, capability-based steps"
+    "Stop funding platform bloat that does not match fund operations",
+    "Run finance, operations, and reporting behind clear controls and audit trails",
+    "Add or replace capabilities without committing to a single vendor roadmap"
   ],
   "whatYouGet": [
-    "Dependency map showing what is truly mission-critical vs. merely entangled",
-    "Capability business case with finance-grade baselines and risk notes",
-    "Parallel-run plan that proves continuity before cutover",
-    "Control points for approvals, reconciliations, and exception handling",
-    "Capability cutover brief with rollback criteria and owner sign-off"
+    "An executive-level view of where platform costs and operational risk are actually concentrated",
+    "A capability blueprint that maps fund accounting, cash flows, waterfalls, and reporting to governed modules",
+    "Industry presets that shorten implementation without forcing fund-specific workflows into generic templates",
+    "Parallel-run plans and reconciliation checkpoints that CFOs and auditors can sign off on",
+    "A controlled path to cutover with rollback criteria, approval gates, and documented ownership"
   ],
   "deliverables": [
     {
-      "title": "Capability dependency map",
-      "description": "A clear picture of what each critical capability depends on today — systems, data, and manual workarounds."
+      "title": "Capability control map",
+      "description": "A fund-specific map of core capabilities, upstream dependencies, and the control points required to govern change."
     },
     {
-      "title": "Continuity baseline",
-      "description": "The metrics and reconciliations required to prove that a replacement can run without disrupting operations or reporting."
+      "title": "Finance-grade baselines",
+      "description": "Defined reconciliation rules, data contracts, and reporting baselines for accounting, cash, and investor outcomes."
     },
     {
       "title": "Parallel-run scorecard",
-      "description": "Side-by-side evidence that the new capability matches outcomes before any cutover decision is made."
+      "description": "Evidence that new modules produce matching results before any system-of-record decision is made."
     },
     {
-      "title": "Cutover and rollback plan",
-      "description": "Named owners, approval gates, and a defined way back so optionality is preserved throughout execution."
+      "title": "Cutover governance pack",
+      "description": "Approval gates, decision logs, rollback criteria, and continuity steps that protect operations during transition."
     },
     {
-      "title": "Control narrative for executives",
-      "description": "A decision-ready brief that connects technical choices to financial risk, operational continuity, and governance."
+      "title": "Optionality roadmap",
+      "description": "A sequenced plan for adding, retiring, or swapping capabilities without reopening the entire platform debate."
     }
   ]
 }

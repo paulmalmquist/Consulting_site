@@ -41,84 +41,180 @@ export default function HomePage() {
   return (
     <div className="space-y-12">
       <Hero headline={home.hero.headline} subheadline={home.hero.subheadline} pillars={home.pillars} />
+
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Use less system. Keep more capability.</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Generalized platforms are now a fund-level liability
+          </h2>
           <p className="text-base leading-relaxed text-slate-300">
-            Most firms are paying enterprise prices for a fraction of enterprise value. They carry long contracts,
-            expensive change cycles, and brittle dependencies while only using a narrow slice of what they bought.
+            Private equity real estate firms are paying enterprise-suite prices for workflows that still require
+            spreadsheets, manual controls, and side systems to operate the fund. The mismatch is no longer a technology
+            gap. It is a governance and cost problem.
           </p>
           <p className="text-base leading-relaxed text-slate-300">
-            We help leadership teams reduce dependency without ripping out systems of record. The goal is control:
-            protect mission-critical capabilities, retire low-value complexity, and make each change reversible.
+            CIOs inherit brittle integrations, CFOs inherit opaque reporting chains, and COOs inherit processes that
+            cannot adapt without reopening the entire platform discussion.
           </p>
         </div>
-        <div>
+        <div className="space-y-4">
           <p className="text-base leading-relaxed text-slate-300">
-            This is not a replatforming pitch. It is a structured risk-reduction program that replaces specific
-            capabilities — on your timeline — while preserving data integrity, auditability, and operational continuity.
+            We replace the idea of a single, generalized platform with a capability-driven operating environment: one
+            that mirrors how funds actually run, and that can be governed capability by capability.
+          </p>
+          <p className="text-base leading-relaxed text-slate-300">
+            The objective is not more features. It is executive control — clear ownership, audit-ready outputs, and the
+            ability to change direction without destabilizing finance or investor reporting.
           </p>
         </div>
       </section>
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Why firms overpay and underuse</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            An industry-first operating system for private equity real estate
+          </h2>
           <p className="text-base leading-relaxed text-slate-300">
-            Oversized systems are purchased to cover every scenario, but operations run on a handful of repeatable
-            decisions. The unused surface area still shows up on the invoice, the roadmap, and the risk register.
+            We design an operating system around fund capabilities — not vendor product lines. Each module is defined
+            by the decisions it must support, the controls it must satisfy, and the financial outputs it must produce.
           </p>
         </div>
         <div className="space-y-3 text-base leading-relaxed text-slate-200">
-          <p>• Suites are bought for optionality but governed for uniformity.</p>
-          <p>• Customizations accumulate faster than they can be retired.</p>
-          <p>• Reporting looks integrated while operations remain fragmented.</p>
-          <p>• “Too risky to change” becomes the most expensive operating model.</p>
+          <p>• Capability ownership is explicit across finance, operations, and technology.</p>
+          <p>• Controls and audit trails are designed in before cutover, not after.</p>
+          <p>• Modules can be sequenced, swapped, or retired without replatforming the firm.</p>
+          <p>• Systems of record remain protected while capabilities around them evolve.</p>
+        </div>
+      </section>
+
+      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Who this is for — and not for
+          </h2>
+          <p className="text-base leading-relaxed text-slate-300">
+            We work best with executive teams who want tighter financial control without locking themselves into another
+            decade-long platform decision.
+          </p>
+        </div>
+        <div />
+        <div className="space-y-3 text-base leading-relaxed text-slate-200">
+          <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">This is for:</p>
+          <p>• CIOs accountable for platform risk, integration drag, and roadmap optionality</p>
+          <p>• CFOs who need audit-ready reporting even when underlying systems are imperfect</p>
+          <p>• COOs responsible for repeatable execution across deals, assets, and fund cycles</p>
+          <p>• Partners who want better control without underwriting another full replacement program</p>
+        </div>
+        <div className="space-y-3 text-base leading-relaxed text-slate-200">
+          <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">This is not for:</p>
+          <p>• Firms looking for a new monolithic platform to standardize every edge case</p>
+          <p>• Teams that want staff augmentation without executive ownership of outcomes</p>
+          <p>• Programs that cannot support parallel runs, reconciliations, or governed cutovers</p>
+        </div>
+      </section>
+
+      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Private equity real estate–specific pain points we address
+          </h2>
+          <p className="text-base leading-relaxed text-slate-300">
+            The problem is not a missing feature. It is the cost and risk of forcing fund operations into tools that
+            were not designed around fund realities.
+          </p>
+        </div>
+        <div className="space-y-3 text-base leading-relaxed text-slate-200">
+          <p>• Fund structures outpace the platform’s data model, so workarounds become the operating model</p>
+          <p>• Cash visibility depends on manual stitching across property, fund, and banking systems</p>
+          <p>• Waterfall logic lives in fragile spreadsheets because “the platform can’t quite do it”</p>
+          <p>• Investor reporting is accurate only after heroics, not because the system is trustworthy</p>
+          <p>• Every audit cycle reopens the same control questions with different evidence</p>
         </div>
       </section>
 
       <CarouselRow
-        title="Capability modules that reduce dependency"
-        description="Targeted replacements that remove pressure from oversized platforms without breaking what works."
+        title="Capability modules that replace platform bloat"
+        description="Targeted modules that fit how funds operate, without destabilizing systems of record."
         items={workflows}
         viewAllHref="/support-ops"
       />
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Industry presets and capability modules
+          </h2>
+          <p className="text-base leading-relaxed text-slate-300">
+            We start with private equity real estate presets — fund structures, entity patterns, close calendars, and
+            reporting expectations — then tailor modules to your governance model. Presets accelerate delivery, but
+            capability definitions remain yours.
+          </p>
+        </div>
+        <div className="space-y-3 text-base leading-relaxed text-slate-200">
+          <p>• Presets reflect how funds, assets, and entities actually relate</p>
+          <p>• Modules are defined by control objectives, not UI surfaces</p>
+          <p>• Each module has clear inputs, outputs, owners, and reconciliation points</p>
+          <p>• You can adopt modules selectively without committing to an all-at-once cutover</p>
+        </div>
+      </section>
+
+      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Fund accounting, cash flows, waterfalls, and investor reporting — handled as governed capabilities
+          </h2>
+          <p className="text-base leading-relaxed text-slate-300">
+            We treat finance-critical workflows as control systems. The design starts with accounting truth, cash
+            movement, and investor obligations, then works backward into data contracts, approvals, and outputs.
+          </p>
+        </div>
+        <div className="space-y-3 text-base leading-relaxed text-slate-200">
+          <p>• Fund accounting is anchored to agreed books-and-records sources with explicit adjustment rules</p>
+          <p>• Cash flows are modeled across property, fund, and investor layers with traceable lineage</p>
+          <p>• Waterfalls are implemented as versioned logic with scenario testing and approval gates</p>
+          <p>• Investor reporting is generated from reconciled outputs, with evidence that survives diligence</p>
+        </div>
+      </section>
+
+      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Risk reduction, not disruption</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Risk mitigation, parallel runs, and continuity by design
+          </h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            We design each step to lower operational risk: isolate a capability, prove continuity, and cut over with a
-            rollback plan already defined.
+            Every replacement is structured to reduce risk at each step: isolate the capability, prove equivalence, and
+            cut over only when finance, operations, and technology have matching evidence.
           </p>
         </div>
         <div className="space-y-4 text-base leading-relaxed text-slate-200">
-          <p>1. Ringfence the capability and the data it depends on.</p>
-          <p>2. Run the replacement in parallel until results match.</p>
-          <p>3. Cut over behind controls with finance and operations sign-off.</p>
-          <p>4. Keep the old path available until the new one earns trust.</p>
+          <p>1. Ringfence the capability, decision rights, and required data contracts.</p>
+          <p>2. Run in parallel with reconciliations tied to financial and operational baselines.</p>
+          <p>3. Cut over behind approvals, with rollback criteria defined before the decision meeting.</p>
+          <p>4. Preserve continuity by keeping prior paths available until the new module earns trust.</p>
         </div>
       </section>
 
       <CarouselRow
         title="Proof before platform change"
-        description="Anonymized engagements that show how we reduce risk while improving control."
+        description="Engagements that demonstrate control, continuity, and executive-grade evidence."
         items={caseStudies}
         viewAllHref="/proof"
       />
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Control for CFOs, CIOs, and operators</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Control for CIOs, CFOs, COOs, and Partners
+          </h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            We translate technical change into financial clarity, operational continuity, and defensible governance.
+            We translate platform change into fund governance: what is controlled, how it is evidenced, and who signs.
           </p>
         </div>
         <div className="space-y-3 text-base leading-relaxed text-slate-200">
-          <p>• CFO: reduce run-rate cost without introducing reporting surprises</p>
-          <p>• CIO: shrink dependency while strengthening control points</p>
-          <p>• Operations: remove friction without retraining the entire company</p>
-          <p>• Audit: clear evidence of what changed, why, and how it is governed</p>
+          <p>• CIO: reduce dependency and integration drag without surrendering architectural control</p>
+          <p>• CFO: protect books, cash integrity, and investor confidence through reconciled cutovers</p>
+          <p>• COO: standardize execution through defined capabilities, not improvised workarounds</p>
+          <p>• Partners: gain optionality — the ability to change course without compounding risk</p>
         </div>
       </section>
 
@@ -126,8 +222,8 @@ export default function HomePage() {
         <div>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">What you can expect early</h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            A time-boxed engagement that clarifies what to keep, what to replace, and how to do it without betting the
-            business.
+            A structured engagement that produces decision-ready artifacts for fund leadership — not a slide deck that
+            assumes the hard parts away.
           </p>
         </div>
         <ul className="space-y-3 text-base leading-relaxed text-slate-200">
@@ -146,57 +242,40 @@ export default function HomePage() {
             href="/contact"
             className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 hover:bg-cyan-400/30"
           >
-            Start with a Proof-of-Concept
+            Start with a Fund Capability Assessment
           </Link>
         </div>
       </section>
 
       <CarouselRow
-        title="How we work"
-        description="A structured path from dependency mapping to controlled capability cutovers."
+        title="How we structure the work"
+        description="From capability definition to governed cutover, sequenced for executive oversight."
         items={services}
         viewAllHref="/services"
       />
 
       <CarouselRow
         title="Decision-ready deliverables"
-        description="Artifacts executives can use to approve, sequence, and govern change."
+        description="Artifacts leaders can use to approve, sequence, and govern change with confidence."
         items={deliverables}
         viewAllHref="/method"
       />
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">We are not a SaaS vendor</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Why this is not SaaS — and not staff augmentation
+          </h2>
           <p className="text-base leading-relaxed text-slate-300">
-            We do not ask you to adopt a new platform. We help you make better decisions about the platforms you
-            already run — and replace only what no longer earns its keep.
+            We do not sell a platform and we do not rent out junior teams. We design and deliver governed capabilities
+            that you can own, operate, and audit — regardless of which systems of record remain in place.
           </p>
         </div>
         <div className="space-y-3 text-base leading-relaxed text-slate-200">
-          <p>• No licenses to push</p>
-          <p>• No replatform mandate</p>
-          <p>• No slideware handoff to your team</p>
-          <p>• Senior operators accountable for outcomes</p>
-        </div>
-      </section>
-
-      <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Who this is for — and not for</h2>
-        </div>
-        <div />
-        <div className="space-y-3 text-base leading-relaxed text-slate-200">
-          <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">This is for teams who:</p>
-          <p>• Need to reduce run-rate cost without losing critical capability</p>
-          <p>• Are constrained by audit, compliance, or operational risk</p>
-          <p>• Want optionality without starting a multi-year replacement program</p>
-        </div>
-        <div className="space-y-3 text-base leading-relaxed text-slate-200">
-          <p className="text-sm font-semibold uppercase tracking-wide text-cyan-200">This is not for teams who:</p>
-          <p>• Want a new platform more than a better operating model</p>
-          <p>• Need staff augmentation disguised as strategy</p>
-          <p>• Expect overnight savings without governance discipline</p>
+          <p>• No license agenda and no requirement to standardize on a single vendor suite</p>
+          <p>• No dependency on a bench of contractors to keep core finance processes running</p>
+          <p>• Senior operators stay accountable from design through parallel run and cutover</p>
+          <p>• The outcome is control and optionality, not another tool to administer</p>
         </div>
       </section>
 
@@ -204,30 +283,30 @@ export default function HomePage() {
         <div className="space-y-2">
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Common executive questions</h2>
           <p className="text-base leading-relaxed text-slate-300">
-            Direct answers to the risks that matter: continuity, data integrity, and control.
+            Direct answers to the risks that matter: fund continuity, reporting integrity, and decision control.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {[
             {
-              question: 'How do you reduce dependency without destabilizing operations?',
+              question: 'How do you avoid breaking fund reporting during transition?',
               answer:
-                'We isolate one capability at a time, run it in parallel, and only cut over after results match agreed baselines.'
+                'We define finance baselines up front, run parallel reconciliations, and require CFO-level sign-off before any cutover decision is made.'
             },
             {
-              question: 'How do you protect data integrity and financial reporting?',
+              question: 'What happens to our existing systems of record?',
               answer:
-                'We keep systems of record in place, reconcile outputs during parallel runs, and design controls that finance can sign off on.'
+                'They remain in place unless and until the evidence supports change. Our work reduces dependency without forcing premature replacement decisions.'
             },
             {
-              question: 'What happens if a module underperforms?',
+              question: 'How are waterfalls and allocations governed?',
               answer:
-                'Every cutover includes a defined rollback path. Optionality is designed in, not promised after the fact.'
+                'Waterfall logic is treated as a controlled capability: versioned, scenario-tested, and tied to approvals that reflect how your investment committee operates.'
             },
             {
-              question: 'How are you different from a SaaS replacement vendor?',
+              question: 'How is this different from hiring a consulting team to implement tools?',
               answer:
-                'Vendors sell platforms. We reduce risk and improve control across the platforms you already have, then replace only what is justified.'
+                'Implementation is downstream. We start by defining capabilities, controls, and evidence requirements, then deliver modules that hold up under audit and diligence.'
             }
           ].map((item) => (
             <div key={item.question} className="space-y-2 rounded-2xl border border-slate-800/70 bg-slate-950/40 p-5">
@@ -239,34 +318,36 @@ export default function HomePage() {
       </section>
 
       <CarouselRow
-        title="Insights"
-        description="Practical perspectives on cost, control, and capability sequencing."
+        title="Insights for fund leadership"
+        description="Perspectives on control, auditability, and capability-driven change in private equity real estate."
         items={insights}
         viewAllHref="/insights"
       />
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Capability focus areas</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            Capability focus areas for private equity real estate
+          </h2>
           <p className="mt-2 text-base leading-relaxed text-slate-300">
-            We prioritize high-dependency capabilities where cost, control, and continuity are tightly linked.
+            We prioritize capabilities where fund risk, investor trust, and platform cost intersect.
           </p>
         </div>
         <div className="space-y-4 text-base leading-relaxed text-slate-200">
-          <p>Accounting and close support</p>
-          <p>CRM workflow control and routing</p>
-          <p>Project and portfolio management</p>
-          <p>Legal intake and obligation tracking</p>
-          <p>Operational analytics and executive reporting</p>
+          <p>Fund accounting and close orchestration</p>
+          <p>Cash management, liquidity visibility, and approvals</p>
+          <p>Allocation engines, waterfalls, and distribution governance</p>
+          <p>Investor reporting, data rooms, and audit response readiness</p>
+          <p>Portfolio, asset, and deal operating rhythms tied to fund outcomes</p>
           <Link className="text-cyan-200" href="/industries">
-            See capability modules →
+            Explore capability modules →
           </Link>
         </div>
       </section>
 
       <footer className="grid gap-6 border-t border-slate-800/70 pt-8 text-sm text-slate-400 md:grid-cols-3">
         <div>
-          <p className="font-semibold text-white">Reduce dependency. Preserve capability.</p>
+          <p className="font-semibold text-white">Control the fund. Control the platform decisions.</p>
           <p className="mt-2">{'{{CONSULTANT_NAME}}'}</p>
           <p>{'{{EMAIL}}'}</p>
         </div>
@@ -282,11 +363,9 @@ export default function HomePage() {
         </div>
         <div className="space-y-2">
           <p className="font-semibold text-white">Take action</p>
-          <p>
-            Start with a Proof-of-Concept or review how engagements are structured.
-          </p>
+          <p>Begin with a capability assessment focused on fund risk, cost, and control.</p>
           <Link className="text-cyan-200" href="/contact">
-            Start with a Proof-of-Concept →
+            Start the assessment →
           </Link>
         </div>
       </footer>
