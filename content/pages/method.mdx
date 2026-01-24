@@ -1,40 +1,50 @@
 ---
 title: Method
-description: A compact, governance-first method to build an Operational Decision Twin for SMB operators.
-tags: [method, governance, workflow]
+description: A capability-based method that reduces dependency while preserving continuity, control, and optionality.
+tags: [method, capability, governance]
 type: page
 slug: method
 ---
 
-## How it works
+## Our stance
+Systems of record should remain stable. Capabilities that create drag should not. We separate the two so you can reduce dependency without introducing operational risk.
 
-### 1) Map real workflows (not titles)
-We capture how work actually moves: intake, handoffs, systems of record, and rework loops.
+## The method (high level)
 
-### 2) Capture decisions, rules, and exceptions
-We document decision ladders, thresholds, overrides, and the exceptions that slow delivery.
+### 1) Clarify the capability
+We define the specific capability in business terms: the outcomes it must produce, the decisions it drives, and the tolerance for error, delay, and exception handling.
 
-### 3) Build the Operational Decision Twin
-We create a virtual ops lab (the Decision Twin) where workflows can be tested without touching production.
+### 2) Map dependency and control points
+We document where the capability depends on enterprise systems, manual workarounds, and cross-team approvals. We also identify the control points that must remain intact for audit, finance, and operations.
 
-### 4) Design HITL + governance
-We define human-in-the-loop checkpoints, audit evidence, and ownership so the model is defensible.
+### 3) Establish continuity baselines
+Before proposing a replacement, we agree on what “safe and equivalent” means. This includes reconciliations, reporting checks, and the operational signals leaders need to trust the change.
 
-### 5) Prove value safely
-We run controlled scenarios with observable outcomes before any production change.
+### 4) Run in parallel and learn safely
+We stand up the replacement capability alongside the current path. Outputs are compared, exceptions are surfaced, and decision rights stay explicit.
 
-**HITL patterns (designed for compliance, not experimentation):**
-- Review before action
-- Review after action
-- Override and escalation
+### 5) Cut over with optionality intact
+Cutover is treated as a governance decision, not a technical milestone. Rollback criteria, owners, and approval gates are defined up front so optionality is preserved.
 
-## Deliverables
-- Decision map (workflow truth)
-- Data + context inventory
-- Microcosm (synthetic facsimile)
-- Simulation scenarios (what-if)
-- Governance + HITL guardrails
-- Executive walkthrough + roadmap
+## Example capability modules
+We do not lead with vendors. We lead with capabilities that matter to executives:
+- **Accounting and close support:** reconciliations, approvals, and close checklists
+- **CRM workflow control:** routing, ownership rules, and pipeline hygiene
+- **Project and portfolio management:** intake, prioritization, and status control
+- **Legal operations:** intake triage, obligation tracking, and escalation paths
+- **Operational analytics:** executive reporting, metric definitions, and reconciliations
 
-## Governance stance
-Every recommendation is tied to auditability. Systems of record stay; systems of work are redesigned.
+## Why this builds trust across the C-suite
+- **CFO confidence:** every change is tied to baselines, reconciliations, and financial clarity.
+- **CIO confidence:** systems of record are respected while dependency risk is actively reduced.
+- **Operations confidence:** capability cutovers are staged, observable, and reversible.
+
+## FAQ: risk, data integrity, and continuity
+**How do you protect data integrity?**
+We avoid uncontrolled writes, retain clear ownership of systems of record, and validate outputs during parallel runs before any cutover.
+
+**How do you ensure continuity during cutover?**
+We define continuity baselines up front, run in parallel, and require named executive approval before traffic shifts.
+
+**What if priorities change midstream?**
+Because the work is capability-based, sequencing can change without invalidating the entire program. Optionality is a design requirement, not a slogan.
