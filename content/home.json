@@ -9,8 +9,8 @@
     "Move in controlled increments that executives can govern"
   ],
   "whatYouGet": [
-    "A plain-language view of where work is happening outside the system and why it keeps spreading",
-    "A capability map that defines ownership, decisions, and control points before any tooling decisions",
+    "A plain-language view of where work sits outside the system and why it spreads",
+    "A capability map that defines ownership, decisions, and control points before tooling decisions",
     "A sequenced plan to replace or decouple the riskiest capabilities without destabilizing finance or operations",
     "Evidence-based cutover criteria so leadership can approve change with confidence, not hope",
     "A platform posture that stays adaptable as strategy, structure, and systems evolve"
@@ -18,7 +18,7 @@
   "deliverables": [
     {
       "title": "Capability control map",
-      "description": "A cross-functional view of the capabilities that run the business, the systems that support them, and where control is currently leaking."
+      "description": "A cross-functional view of the capabilities that run the business, the systems that support them, and where control leaks."
     },
     {
       "title": "Stabilization plan",
@@ -26,7 +26,7 @@
     },
     {
       "title": "Replacement sequence",
-      "description": "A leadership-ready plan that shows what gets decoupled or replaced first, how risk is contained, and what proof is required to move forward."
+      "description": "A leadership-ready plan that shows what is decoupled or replaced first, how risk is contained, and what proof is required to move forward."
     },
     {
       "title": "Cutover governance pack",
