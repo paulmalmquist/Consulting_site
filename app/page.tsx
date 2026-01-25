@@ -173,6 +173,10 @@ export default function HomePage() {
         items={services}
         viewAllHref="/services"
       />
+      <p className="text-base leading-relaxed text-slate-300">
+        Smaller teams can start with an Execution Baseline—a short, contained systems-hygiene engagement that clarifies
+        workflow boundaries and reduces fragility without ripping anything out.
+      </p>
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-4">
