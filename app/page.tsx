@@ -32,6 +32,7 @@ export default function HomePage() {
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wide text-slate-400">A common pattern in complex, growing systems.</p>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
             The pattern shows up everywhere: capability drift
           </h2>
@@ -46,15 +47,18 @@ export default function HomePage() {
           </p>
         </div>
         <div className="space-y-3 text-base leading-relaxed text-slate-200">
-          <p>• Excel sprawl becomes the unofficial operating layer.</p>
-          <p>• "Temporary" workarounds harden into critical infrastructure.</p>
-          <p>• Reporting chains multiply while accountability gets fuzzy.</p>
-          <p>• Every improvement request turns into a platform-level debate.</p>
+          <p>• Excel becomes the unofficial operating layer.</p>
+          <p>• "Temporary" workarounds harden into infrastructure.</p>
+          <p>• Reporting chains multiply and accountability blurs.</p>
+          <p>• Every improvement request becomes a platform debate.</p>
         </div>
       </section>
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wide text-slate-400">
+            The response is structural, not reactive.
+          </p>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
             Our philosophy: regain control by working capability by capability
           </h2>
@@ -90,6 +94,9 @@ export default function HomePage() {
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-2">
         <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wide text-slate-400">
+            A neutral position built for governance.
+          </p>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
             Positioned between software vendors and traditional consulting
           </h2>
@@ -173,6 +180,9 @@ export default function HomePage() {
         items={services}
         viewAllHref="/services"
       />
+      <p className="text-sm uppercase tracking-wide text-slate-400">
+        A lighter start is available when scope needs to stay contained.
+      </p>
       <p className="text-base leading-relaxed text-slate-300">
         Smaller teams can start with an Execution Baseline—a short, contained systems-hygiene engagement that clarifies
         workflow boundaries and reduces fragility without ripping anything out.
@@ -180,6 +190,9 @@ export default function HomePage() {
 
       <section className="grid gap-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8 md:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wide text-slate-400">
+            Outcomes stay consistent even as tools change.
+          </p>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
             What you get when the work stays capability-led
           </h2>
