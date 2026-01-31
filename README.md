@@ -27,6 +27,10 @@ All copy and structured data lives in `/content`.
 - Navigation: `content/navigation.json`
 - Home and carousel data: `content/*.json`
 
+### Homepage layout updates
+
+The homepage section order and copy live in `content/homepage.json`. Reorder the `sections` array to change the flow, and edit each section's `title`, `subtitle`, `cards`, or `tiles` fields to adjust card copy without touching React components.
+
 ## Search index
 
 A static index is stored at `public/search-index.json`. Update it with:
