@@ -1,21 +1,21 @@
 [
   {
     "title": "Dependency Diagnostic",
-    "description": "What you get: capability dependency map, contract exposure snapshot, and continuity baselines finance can trust. Typical timeline: 2–3 weeks. Decision enabled: where dependency is actually risky vs. simply inconvenient.",
+    "description": "What you get: capability dependency map, contract exposure snapshot, and continuity baselines finance can trust. Typical timeline: 2–3 weeks. Decision enabled: where hidden SaaS and workflow dependencies are actually risky vs. simply inconvenient.",
     "tags": ["diagnostic", "risk", "baseline"],
     "href": "/services",
     "eyebrow": "Engagement phase"
   },
   {
     "title": "Capability Pilot",
-    "description": "What you get: one ringfenced capability run in parallel with reconciliations, exception handling, and rollback criteria defined up front. Typical timeline: 4–8 weeks. Decision enabled: approve cutover, extend the pilot, or stop safely.",
+    "description": "What you get: one ringfenced capability (intake, scheduling, portal, or workflow) run in parallel with reconciliations, exception handling, and rollback criteria defined up front. Typical timeline: 4–8 weeks. Decision enabled: approve cutover, extend the pilot, or stop safely.",
     "tags": ["pilot", "parallel run", "cutover"],
     "href": "/services",
     "eyebrow": "Engagement phase"
   },
   {
     "title": "Controlled Cutover Program",
-    "description": "What you get: sequenced capability replacements, executive control narratives, and governance routines that reduce dependency quarter by quarter. Typical timeline: roadmap-led. Decision enabled: scale with clarity instead of committing to a full replatform.",
+    "description": "What you get: sequenced capability replacements, executive control narratives, and governance routines that reduce dependency quarter by quarter. Typical timeline: roadmap-led. Decision enabled: scale the replacements with clarity instead of committing to a full replatform.",
     "tags": ["cutover", "governance", "program"],
     "href": "/services",
     "eyebrow": "Engagement phase"
