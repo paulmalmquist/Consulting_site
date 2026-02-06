@@ -6,38 +6,70 @@
     },
     "links": [
       { "label": "Overview", "href": "#overview" },
+      { "label": "Capabilities", "href": "#capabilities" },
       { "label": "How it works", "href": "#how-it-works" },
-      { "label": "Engagement", "href": "#engagement" },
-      { "label": "Docs", "href": "#docs" }
+      { "label": "Engagement", "href": "#engagement" }
     ],
-    "primaryCta": { "label": "Start the diagnostic", "href": "/services" },
-    "secondaryCta": { "label": "Book a working session", "href": "/contact" }
+    "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
+    "secondaryCta": { "label": "Book strategy call", "href": "/contact" }
   },
   "sections": [
     {
       "id": "overview",
       "type": "hero",
-      "headline": "Modernize operations. Keep control.",
-      "subheadline": "We help operations leaders pilot one capability at a time -- with evidence gates, rollback controls, and zero replatform risk.",
-      "primaryCta": { "label": "Start the Dependency Diagnostic", "href": "/services" },
-      "secondaryCta": { "label": "Read the docs first", "href": "/docs" },
+      "headline": "Simplify Your Business Operations and Data.",
+      "subheadline": "Replace SaaS subscription models with modern solutions at a fraction of the cost with no long-term commitment",
+      "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
+      "secondaryCta": { "label": "Book strategy call", "href": "/contact" },
       "proofBullets": [
-        "Keep systems of record in place",
-        "Pilot one capability in 4-8 weeks",
-        "Cut over with reconciliations and rollback gates"
+        {
+          "icon": "🤖",
+          "title": "AI Concierge"
+        },
+        {
+          "icon": "📊",
+          "title": "Info Operations"
+        },
+        {
+          "icon": "⚙️",
+          "title": "Functional Applications"
+        }
+      ]
+    },
+    {
+      "id": "capabilities",
+      "type": "positioning",
+      "title": "Core capabilities we deliver",
+      "cards": [
+        {
+          "title": "Capability Mapping",
+          "description": "Define what the business must do, who owns it, and what evidence proves it is under control."
+        },
+        {
+          "title": "Workflow Stabilization",
+          "description": "Reduce spreadsheet dependency and manual stitching by tightening handoffs and clarifying system roles."
+        },
+        {
+          "title": "Modular Replacement",
+          "description": "Replace one capability at a time with fit-for-purpose tooling that plugs into your operating model."
+        },
+        {
+          "title": "Cutover Governance",
+          "description": "Run parallel paths, reconciliations, and approvals so leadership can sign off on change with clarity."
+        }
       ]
     },
     {
       "id": "how-it-works",
       "type": "structural",
-      "title": "A three-step path with proof at each gate",
+      "title": "Capability-by-capability execution with proof at each gate",
       "steps": [
-        "Map one critical capability, owner, and decision points",
-        "Run a controlled pilot with reconciliations and rollback rules",
-        "Scale cutover only after evidence meets agreed criteria"
+        "Map one critical capability with named owners and decision points",
+        "Run controlled pilot with parallel reconciliations and rollback triggers",
+        "Scale cutover only after evidence meets agreed governance criteria"
       ],
-      "whyTitle": "Why it works",
-      "whyBody": "Capability definitions stay stable even when vendors, org charts, or systems change. Leaders keep control while teams modernize safely."
+      "whyTitle": "Why this works",
+      "whyBody": "Capability definitions outlive vendors, org charts, and platform choices. Leaders keep control while teams modernize without betting the operation on one big replacement."
     },
     {
       "id": "engagement",
@@ -45,77 +77,32 @@
       "title": "How engagements are structured",
       "phases": [
         {
-          "title": "Dependency Diagnostic",
+          "title": "Capability Assessment",
           "duration": "2-3 weeks",
-          "description": "Map dependency risk, contract exposure, and continuity baselines.",
-          "decision": "Choose the first capability to pilot"
+          "description": "Map capability boundaries, ownership, and dependency exposure across systems.",
+          "decision": "Select first capability to pilot"
         },
         {
           "title": "Capability Pilot",
           "duration": "4-8 weeks",
-          "description": "Run one ringfenced capability in parallel with reconciliations and rollback criteria.",
+          "description": "Run ringfenced capability in parallel with reconciliations and rollback criteria.",
           "decision": "Approve cutover, extend pilot, or stop safely"
         },
         {
           "title": "Controlled Cutover Program",
           "duration": "Roadmap-led",
-          "description": "Sequence capability cutovers quarter by quarter with clear governance gates.",
-          "decision": "Scale with clarity, not momentum"
-        }
-      ]
-    },
-    {
-      "id": "docs",
-      "type": "explore",
-      "title": "Go deeper in docs",
-      "subtitle": "Everything we use to de-risk change before cutover.",
-      "primaryCta": { "label": "View all docs", "href": "/docs" },
-      "secondaryCta": { "label": "Book a working session", "href": "/contact" },
-      "tiles": [
-        {
-          "title": "Start here",
-          "description": "A 20-second overview of what we do and who we help.",
-          "href": "/docs/start-here"
-        },
-        {
-          "title": "Dependency signals",
-          "description": "How to spot where dependency creates risk before it creates crisis.",
-          "href": "/docs/dependency-signals"
-        },
-        {
-          "title": "Engagement model",
-          "description": "Three phases with evidence gates and rollback controls.",
-          "href": "/docs/engagement-model"
-        },
-        {
-          "title": "Deliverables",
-          "description": "What you leave with at each phase of the engagement.",
-          "href": "/docs/deliverables"
-        },
-        {
-          "title": "How we work",
-          "description": "No vendor bias, no staff-aug theater, operator-first governance.",
-          "href": "/docs/how-we-work"
-        },
-        {
-          "title": "FAQ",
-          "description": "Common questions from operations leaders and executives.",
-          "href": "/docs/faq"
-        },
-        {
-          "title": "Example engagements",
-          "description": "Anonymized delivery examples and outcomes.",
-          "href": "/proof"
+          "description": "Sequence capability cutovers with clear governance gates quarter by quarter.",
+          "decision": "Scale with evidence, not momentum"
         }
       ]
     },
     {
       "id": "cta",
       "type": "cta",
-      "headline": "Cut dependency while keeping control",
-      "body": "If you are stuck between suite sprawl and a full replatform, we help you take a third path: capability-first, evidence-led modernization.",
-      "primaryCta": { "label": "Start the Dependency Diagnostic", "href": "/services" },
-      "secondaryCta": { "label": "Book a working session", "href": "/contact" }
+      "headline": "Replace suite sprawl with governed capabilities",
+      "body": "If you are stuck between bloated suites and risky full replatforms, we help you take a third path: decompose dependency capability-by-capability with governance and proof.",
+      "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
+      "secondaryCta": { "label": "Book strategy call", "href": "/contact" }
     }
   ]
 }

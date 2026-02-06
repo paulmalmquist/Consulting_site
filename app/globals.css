@@ -39,3 +39,181 @@ h3 {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* System Convergence Graphic Animations */
+@keyframes drift-inward {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  45% {
+    transform: translate(var(--drift-x), var(--drift-y));
+    opacity: 0;
+  }
+  55% {
+    transform: translate(var(--drift-x), var(--drift-y));
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-line {
+  0%, 100% {
+    opacity: 0.2;
+    stroke-width: 1;
+  }
+  50% {
+    opacity: 0.6;
+    stroke-width: 1.5;
+  }
+}
+
+@keyframes emerge-core {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* System node styles */
+.system-nodes .node-circle {
+  fill: rgba(103, 232, 249, 0.2);
+  stroke: rgba(103, 232, 249, 0.5);
+  stroke-width: 2;
+}
+
+.system-nodes .node-label {
+  fill: rgba(159, 176, 194, 0.8);
+  font-size: 11px;
+  text-anchor: middle;
+  font-family: var(--font-sans);
+}
+
+/* Connection lines */
+.connection-lines .connection-line {
+  stroke: rgba(103, 232, 249, 0.3);
+  stroke-width: 1;
+  animation: pulse-line 4s ease-in-out infinite;
+}
+
+/* Capability core */
+.capability-core .core-shape {
+  fill: rgba(15, 23, 32, 0.9);
+  stroke: rgba(103, 232, 249, 0.7);
+  stroke-width: 2;
+  opacity: 0;
+  animation: emerge-core 12s ease-in-out infinite;
+}
+
+.capability-core .module {
+  fill: rgba(28, 39, 51, 0.8);
+  stroke: rgba(103, 232, 249, 0.4);
+  stroke-width: 1;
+  opacity: 0;
+  animation: emerge-core 12s ease-in-out 0.5s infinite;
+}
+
+.capability-core .module-label {
+  fill: rgba(103, 232, 249, 0.9);
+  font-size: 6px;
+  text-anchor: middle;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  opacity: 0;
+  animation: emerge-core 12s ease-in-out 0.7s infinite;
+}
+
+.capability-core .core-label {
+  fill: rgba(103, 232, 249, 1);
+  font-size: 12px;
+  text-anchor: middle;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  opacity: 0;
+  animation: emerge-core 12s ease-in-out 1s infinite;
+}
+
+/* Node drift animations with custom properties */
+.node[data-system="salesforce"] {
+  --drift-x: 220px;
+  --drift-y: 120px;
+  animation: drift-inward 12s ease-in-out infinite;
+}
+
+.node[data-system="mri"] {
+  --drift-x: -220px;
+  --drift-y: 110px;
+  animation: drift-inward 12s ease-in-out 0.1s infinite;
+}
+
+.node[data-system="erp"] {
+  --drift-x: 150px;
+  --drift-y: 20px;
+  animation: drift-inward 12s ease-in-out 0.2s infinite;
+}
+
+.node[data-system="ticketing"] {
+  --drift-x: -150px;
+  --drift-y: 10px;
+  animation: drift-inward 12s ease-in-out 0.3s infinite;
+}
+
+.node[data-system="excel"] {
+  --drift-x: 200px;
+  --drift-y: -100px;
+  animation: drift-inward 12s ease-in-out 0.4s infinite;
+}
+
+.node[data-system="email"] {
+  --drift-x: -200px;
+  --drift-y: -110px;
+  animation: drift-inward 12s ease-in-out 0.5s infinite;
+}
+
+.node[data-system="bi"] {
+  --drift-x: 50px;
+  --drift-y: 80px;
+  animation: drift-inward 12s ease-in-out 0.6s infinite;
+}
+
+.node[data-system="docs"] {
+  --drift-x: -50px;
+  --drift-y: -80px;
+  animation: drift-inward 12s ease-in-out 0.7s infinite;
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .system-nodes .node {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .connection-lines .connection-line {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .capability-core .core-shape,
+  .capability-core .module,
+  .capability-core .module-label,
+  .capability-core .core-label {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

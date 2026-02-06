@@ -4,6 +4,7 @@
       "title": "Overview",
       "items": [
         { "label": "Home", "href": "/", "icon": "🏠" },
+        { "label": "Capabilities", "href": "/capabilities", "icon": "⚡" },
         { "label": "Method", "href": "/method", "icon": "🧩" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
         { "label": "Demo", "href": "/demo", "icon": "🧪" },

@@ -2,7 +2,7 @@ import { getAllCaseStudies, getAllDocs, getAllInsights } from '../lib/content';
 
 export default function sitemap() {
   const baseUrl = 'https://{{DOMAIN}}';
-  const staticRoutes = ['', '/services', '/method', '/industries', '/proof', '/demo', '/insights', '/docs', '/about', '/contact', '/legal'];
+  const staticRoutes = ['', '/capabilities', '/services', '/method', '/industries', '/proof', '/demo', '/insights', '/docs', '/about', '/contact', '/legal'];
 
   const dynamicRoutes = [
     ...getAllInsights().map((post) => `/insights/${post.slug}`),

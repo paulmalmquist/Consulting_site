@@ -14,6 +14,19 @@
       "content": "Operations redesign and dependency reduction grounded in real work."
     },
     {
+      "id": "page-capabilities",
+      "title": "Capabilities",
+      "description": "Core capabilities for dependency reduction, replacement execution, and governance-safe modernization.",
+      "type": "page",
+      "tags": [
+        "capabilities",
+        "modernization",
+        "governance"
+      ],
+      "href": "/capabilities",
+      "content": "Core capabilities for dependency reduction, replacement execution, and governance-safe modernization."
+    },
+    {
       "id": "page-contact",
       "title": "Contact",
       "description": "Book an intro call or email to discuss capability-first dependency reduction.",
@@ -225,7 +238,7 @@
         "dependency",
         "risk",
         "operations",
-        "diagnosis"
+        "discovery"
       ],
       "href": "/docs/dependency-signals",
       "content": "How to spot where system dependency creates risk before it creates crisis."

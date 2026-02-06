@@ -1,8 +1,8 @@
 [
   {
-    "title": "Dependency Diagnostic",
+    "title": "Capability Discovery",
     "description": "What you get: dependency map, contract exposure snapshot, and continuity baselines. Typical timeline: 2-3 weeks. Decision enabled: where dependency is truly risky versus merely inconvenient.",
-    "tags": ["diagnostic", "risk", "baseline"],
+    "tags": ["discovery", "risk", "baseline"],
     "href": "/services",
     "eyebrow": "Engagement phase"
   },

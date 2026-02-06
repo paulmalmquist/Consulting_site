@@ -23,9 +23,7 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
         >
           <Menu size={18} />
         </button>
-        <div className="hidden text-xs uppercase tracking-[0.2em] text-slate-500 md:block">
-          Intent-First Internal Support
-        </div>
+        
       </div>
       <button
         type="button"
