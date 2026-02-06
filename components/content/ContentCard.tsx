@@ -16,7 +16,7 @@ export function ContentCard({ item }: { item: CardItem }) {
       className="group flex h-full flex-col justify-between rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4 transition duration-200 hover:-translate-y-1 hover:border-slate-600 hover:shadow-card"
     >
       <div className="space-y-3">
-        <div className="h-24 w-full rounded-xl bg-gradient-to-br from-cyan-400/20 via-transparent to-slate-800/70" />
+        <div className="h-24 w-full rounded-xl bg-gradient-to-br from-cyan-400/10 via-transparent to-slate-800/60" />
         {item.eyebrow && <p className="text-xs uppercase tracking-widest text-cyan-200/80">{item.eyebrow}</p>}
         <div>
           <h3 className="text-base font-semibold text-white group-hover:text-cyan-100">{item.title}</h3>

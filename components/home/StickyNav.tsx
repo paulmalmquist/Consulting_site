@@ -32,7 +32,7 @@ export function StickyNav({ logo, links, primaryCta, secondaryCta }: StickyNavPr
           </Link>
           <Link
             href={primaryCta.href}
-            className="rounded-full bg-cyan-300 px-4 py-2 text-xs font-semibold text-slate-950 transition hover:bg-cyan-200"
+            className="rounded-full border border-cyan-300/40 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
           >
             {primaryCta.label}
           </Link>

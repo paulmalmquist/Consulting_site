@@ -64,7 +64,7 @@ export function QuestionSimulator() {
         <button
           type="button"
           onClick={() => setSubmitted(true)}
-          className="rounded-xl bg-cyan-400/20 px-5 py-3 text-sm font-semibold text-cyan-100 hover:bg-cyan-400/30"
+          className="rounded-xl border border-cyan-300/30 bg-slate-900/70 px-5 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
         >
           Retrieve answers
         </button>

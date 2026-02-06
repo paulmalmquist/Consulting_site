@@ -84,7 +84,7 @@ export default function SupportOpsPage() {
       <section className="flex flex-wrap gap-3">
         <Link
           href="/contact"
-          className="rounded-full bg-cyan-400/20 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/30"
+          className="rounded-full border border-cyan-300/30 bg-slate-900/70 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
         >
           Book a 20-minute Support Ops Fit Check
         </Link>
