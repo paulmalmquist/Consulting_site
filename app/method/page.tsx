@@ -15,13 +15,13 @@ export default function MethodPage() {
       </section>
       <MarkdownRenderer content={page.content} />
       <section className="space-y-4 rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Operational Decision Twin</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Operational Decision Model</h2>
         <div className="space-y-3 text-slate-300">
           <p>
-            The Operational Decision Twin is a virtual ops lab that models your workflows, decisions, and exceptions so
+            The Operational Decision Model is a virtual ops lab that models your workflows, decisions, and exceptions so
             you can test changes without touching production systems.
           </p>
-          <p>It is designed for regulated SMB teams who need proof-of-value and auditability before making changes.</p>
+          <p>It is designed for regulated teams that need proof-of-value and auditability before making changes.</p>
         </div>
         <ul className="list-disc space-y-2 pl-5 text-slate-300">
           <li>Decision map, data/context inventory, and synthetic microcosm</li>

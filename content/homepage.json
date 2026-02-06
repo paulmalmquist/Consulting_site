@@ -11,35 +11,35 @@
       { "label": "Deliverables", "href": "#deliverables" },
       { "label": "Engagement", "href": "#engagement" }
     ],
-    "primaryCta": { "label": "See the diagnostic", "href": "/diagnostic" },
-    "secondaryCta": { "label": "Talk with an expert", "href": "/contact" }
+    "primaryCta": { "label": "Start the diagnostic", "href": "/services" },
+    "secondaryCta": { "label": "Book a working session", "href": "/contact" }
   },
   "sections": [
     {
       "id": "overview",
       "type": "hero",
-      "headline": "Replace platform bloat with capability-driven execution",
-      "subheadline": "We help enterprises decouple overbuilt systems and stand up modular platforms that restore control—without another all-or-nothing replatform.",
-      "primaryCta": { "label": "See how this works safely", "href": "/diagnostic" },
-      "secondaryCta": { "label": "Start with a Proof-of-Concept", "href": "/contact" },
+      "headline": "Reduce system dependency without a risky replatform",
+      "subheadline": "We help operations leaders isolate one high-friction capability, run a controlled pilot, and scale only when finance and compliance evidence is clear.",
+      "primaryCta": { "label": "Start the Dependency Diagnostic", "href": "/services" },
+      "secondaryCta": { "label": "Book a 30-minute working session", "href": "/contact" },
       "proofBullets": [
-        "Lead with capabilities, not vendor roadmaps",
-        "Protect systems of record while you modernize around them",
-        "Move in controlled increments executives can govern"
+        "Keep systems of record in place",
+        "Pilot one capability in 4-8 weeks",
+        "Cut over with reconciliations and rollback gates"
       ]
     },
     {
       "id": "pattern",
       "type": "pattern",
-      "title": "A common pattern in complex, growing systems",
-      "lead": "Platforms standardize the work on paper, but day-to-day execution escapes into side tools and workaround layers.",
+      "title": "Where dependency actually hides",
+      "lead": "The platform says one thing, but execution happens in side tools, inboxes, and hand-built workarounds.",
       "bullets": [
-        "Excel becomes the unofficial operating layer",
-        "\"Temporary\" workarounds harden into infrastructure",
-        "Reporting chains multiply and accountability blurs",
-        "Every improvement request becomes a platform debate"
+        "Spreadsheets become the real operating layer",
+        "Temporary fixes harden into permanent process",
+        "Approval chains multiply and ownership blurs",
+        "Every improvement turns into a platform debate"
       ],
-      "callout": "Why this matters: when the system is both overbuilt and under-trusted, leaders lose confidence in outputs and the cost of change spikes.",
+      "callout": "When the system is overbuilt and under-trusted, confidence drops and every change gets expensive.",
       "visual": {
         "title": "Control drift snapshot",
         "description": "Illustrative view of where work slips outside governed systems."
@@ -48,15 +48,14 @@
     {
       "id": "how-it-works",
       "type": "structural",
-      "title": "The response is structural, not reactive",
+      "title": "A three-step path with proof at each gate",
       "steps": [
-        "Clarify the capability, its owner, and its evidence",
-        "Stabilize the workflow so the noise stops growing",
-        "Replace or decouple in controlled increments",
-        "Prove outcomes before expanding the change surface"
+        "Map one critical capability, owner, and decision points",
+        "Run a controlled pilot with reconciliations and rollback rules",
+        "Scale cutover only after evidence meets agreed criteria"
       ],
       "whyTitle": "Why it works",
-      "whyBody": "Capability definitions stay stable even when vendors, org charts, and strategies change. That keeps executives in control of direction while teams modernize underneath."
+      "whyBody": "Capability definitions stay stable even when vendors, org charts, or systems change. Leaders keep control while teams modernize safely."
     },
     {
       "id": "governance",
@@ -64,15 +63,15 @@
       "title": "Built for governance",
       "cards": [
         {
-          "title": "Not a vendor pitch",
+          "title": "No vendor bias",
           "description": "Tool-agnostic and capability-led. Recommendations follow control needs, not partner quotas."
         },
         {
-          "title": "Not staff augmentation",
-          "description": "We own decision framing, sequencing, and evidence so leadership can steer the work."
+          "title": "No staff-aug theater",
+          "description": "We own sequencing and evidence design so leadership can steer with confidence."
         },
         {
-          "title": "Operator stance",
+          "title": "Operator-first execution",
           "description": "Systems of record stay. Systems of work are redesigned with oversight and auditability."
         }
       ]
@@ -80,34 +79,34 @@
     {
       "id": "explore",
       "type": "explore",
-      "title": "Explore your entry point",
-      "subtitle": "Start broad, then self-select.",
-      "primaryCta": { "label": "See the diagnostic", "href": "/diagnostic" },
-      "secondaryCta": { "label": "Talk with an expert", "href": "/contact" },
+      "title": "Choose your entry point",
+      "subtitle": "Start where risk is highest.",
+      "primaryCta": { "label": "Start the diagnostic", "href": "/services" },
+      "secondaryCta": { "label": "Book a working session", "href": "/contact" },
       "tiles": [
         {
           "title": "Industries",
-          "description": "See the model adapt across operating contexts without changing the core method.",
+          "description": "See how the same method adapts across operating contexts.",
           "href": "/industries"
         },
         {
-          "title": "Capabilities",
-          "description": "Review the building blocks used to reduce dependency and regain control.",
-          "href": "/capabilities"
+          "title": "Method",
+          "description": "Review the capability-first framework and governance gates.",
+          "href": "/method"
         },
         {
-          "title": "Common system replacements",
-          "description": "Explore where modular replacement outperforms another suite expansion.",
-          "href": "/replacements"
+          "title": "Example engagements",
+          "description": "See anonymized delivery examples and outcomes.",
+          "href": "/proof"
         },
         {
-          "title": "Outcomes",
-          "description": "Focus on the executive outcomes that matter more than any single platform decision.",
-          "href": "/outcomes"
+          "title": "Support operations",
+          "description": "See where decision latency and workflow drag can be reduced first.",
+          "href": "/support-ops"
         },
         {
           "title": "Engagement model",
-          "description": "Choose the on-ramp that fits your risk posture and scope.",
+          "description": "Choose the on-ramp that fits your risk posture and timeline.",
           "href": "/services"
         }
       ]
@@ -115,42 +114,37 @@
     {
       "id": "baseline",
       "type": "baseline",
-      "title": "A lighter start is available when scope must stay contained",
-      "description": "Smaller teams can begin with an Execution Baseline: a short, contained systems-hygiene engagement that clarifies workflow boundaries and reduces fragility without ripping anything out.",
-      "cta": { "label": "See the diagnostic", "href": "/diagnostic" }
+      "title": "Need a lighter start?",
+      "description": "Start with a short execution baseline to map one workflow, clarify boundaries, and reduce fragility without replacing core systems.",
+      "cta": { "label": "Start the diagnostic", "href": "/services" }
     },
     {
       "id": "deliverables",
       "type": "outcomes",
-      "title": "What you get when work stays capability-led",
-      "subtitle": "Outcomes stay consistent even as tools change.",
+      "title": "What you leave with",
+      "subtitle": "A decision-ready plan, not a generic recommendation deck.",
       "outcomes": [
-        "A plain-language view of where work sits outside the system and why it spreads",
-        "A capability map that defines ownership, decisions, and control points before tooling decisions",
-        "A sequenced plan to replace or decouple the riskiest capabilities without destabilizing finance or operations",
-        "Evidence-based cutover criteria so leadership can approve change with confidence, not hope",
-        "A platform posture that stays adaptable as strategy, structure, and systems evolve"
+        "A plain-language map of where dependency creates risk",
+        "Named owners, control points, and decision criteria",
+        "A sequenced pilot-to-cutover plan tied to business risk",
+        "Evidence gates leaders can use to approve or pause change"
       ],
       "deliverables": [
         {
           "title": "Capability control map",
-          "description": "Cross-functional view of the capabilities that run the business, the systems that support them, and where control leaks."
+          "description": "Cross-functional view of the capability, supporting systems, and where control leaks."
         },
         {
           "title": "Stabilization plan",
-          "description": "Targeted interventions that stop spreadsheet sprawl, patch brittle handoffs, and reduce operational noise."
+          "description": "Targeted interventions that stop spreadsheet sprawl and patch brittle handoffs."
         },
         {
-          "title": "Replacement sequence",
-          "description": "A leadership-ready plan that shows what is decoupled first, how risk is contained, and what proof is required."
+          "title": "Pilot design",
+          "description": "Parallel-run design, reconciliation routines, and rollback triggers defined before execution."
         },
         {
           "title": "Cutover governance pack",
-          "description": "Decision checkpoints, approval criteria, rollback rules, and evidence expectations that keep change in executive control."
-        },
-        {
-          "title": "Optionality roadmap",
-          "description": "A practical path to evolve capability by capability so you are never forced back into a single-vendor posture."
+          "description": "Decision checkpoints, approval criteria, and evidence expectations for executive control."
         }
       ],
       "visual": {
@@ -161,35 +155,35 @@
     {
       "id": "engagement",
       "type": "engagement",
-      "title": "A structured path that creates proof early",
+      "title": "How engagements are structured",
       "phases": [
         {
           "title": "Dependency Diagnostic",
-          "duration": "2–3 weeks",
-          "description": "Capability dependency map, contract exposure snapshot, and continuity baselines finance can trust.",
-          "decision": "Where dependency is risky vs. simply inconvenient"
+          "duration": "2-3 weeks",
+          "description": "Map dependency risk, contract exposure, and continuity baselines.",
+          "decision": "Choose the first capability to pilot"
         },
         {
           "title": "Capability Pilot",
-          "duration": "4–8 weeks",
-          "description": "One ringfenced capability run in parallel with reconciliations, exception handling, and rollback criteria defined up front.",
-          "decision": "Approve cutover, extend the pilot, or stop safely"
+          "duration": "4-8 weeks",
+          "description": "Run one ringfenced capability in parallel with reconciliations and rollback criteria.",
+          "decision": "Approve cutover, extend pilot, or stop safely"
         },
         {
           "title": "Controlled Cutover Program",
           "duration": "Roadmap-led",
-          "description": "Sequenced capability replacements, executive control narratives, and governance routines that reduce dependency quarter by quarter.",
-          "decision": "Scale with clarity instead of committing to a full replatform"
+          "description": "Sequence capability cutovers quarter by quarter with clear governance gates.",
+          "decision": "Scale with clarity, not momentum"
         }
       ]
     },
     {
       "id": "cta",
       "type": "cta",
-      "headline": "Modernize without surrendering control",
-      "body": "If you are caught between another suite expansion and a risky replatform, we can help you take a third path: modular, governed, and designed for executive oversight.",
-      "primaryCta": { "label": "See the diagnostic", "href": "/diagnostic" },
-      "secondaryCta": { "label": "Schedule a working session", "href": "/contact" }
+      "headline": "Cut dependency while keeping control",
+      "body": "If you are stuck between suite sprawl and a full replatform, we help you take a third path: capability-first, evidence-led modernization.",
+      "primaryCta": { "label": "Start the Dependency Diagnostic", "href": "/services" },
+      "secondaryCta": { "label": "Book a working session", "href": "/contact" }
     },
     {
       "id": "faq",
@@ -198,23 +192,23 @@
       "items": [
         {
           "question": "Do we have to replace systems of record?",
-          "answer": "No. Systems of record stay in place while we redesign the execution layer around them. Replacement only happens where risk and evidence support it."
+          "answer": "No. Systems of record stay in place while we redesign the execution layer around them. Replacement only happens where evidence supports it."
         },
         {
           "question": "How do you control risk?",
-          "answer": "Each phase defines ownership, evidence, and rollback criteria before change happens. That keeps leaders in control of scope and approval gates."
+          "answer": "Each phase defines ownership, evidence, and rollback criteria before change happens. Leaders keep control of scope and approvals."
         },
         {
           "question": "What does \"capability-led\" mean?",
-          "answer": "We define the business capability first—owner, decisions, and evidence—then align systems and workflows to that definition. Tools follow the capability, not the other way around."
+          "answer": "We define the business capability first: owner, decisions, and evidence. Tools follow the capability, not the other way around."
         },
         {
           "question": "How do you prove outcomes before scaling?",
-          "answer": "We run controlled pilots with parallel reconciliations and agreed proof criteria. Outcomes are verified before any broader cutover."
+          "answer": "We run controlled pilots with parallel reconciliations and agreed criteria. Outcomes are verified before broader cutover."
         },
         {
           "question": "Is this software or consulting?",
-          "answer": "It is governed execution design and delivery. We bring the operating model, sequencing, and evidence controls; your systems remain yours."
+          "answer": "This is governed execution design and delivery. We bring method, sequencing, and evidence controls; your systems remain yours."
         }
       ]
     }

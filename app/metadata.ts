@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 
 export const defaultMetadata: Metadata = {
   title: {
-    default: 'AI Readiness & Operations Redesign',
-    template: '%s | AI Readiness & Operations'
+    default: 'Capability-First Operations Modernization',
+    template: '%s | Capability-First Modernization'
   },
-  description: 'AI readiness consulting for operations leaders: workflow compression, governance, and human-in-the-loop delivery.',
+  description: 'We help operations leaders reduce system dependency with capability-first pilots, governance controls, and evidence-led cutovers.',
   metadataBase: new URL('https://{{DOMAIN}}'),
   openGraph: {
-    title: 'AI Readiness & Operations Redesign',
-    description: 'Operational clarity and AI readiness for executives.',
+    title: 'Capability-First Operations Modernization',
+    description: 'Reduce system dependency with controlled pilots and evidence-led cutovers.',
     type: 'website'
   },
   robots: {

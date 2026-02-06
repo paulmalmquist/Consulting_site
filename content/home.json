@@ -1,19 +1,18 @@
 {
   "hero": {
-    "headline": "Replace platform bloat with capability-driven execution",
-    "subheadline": "We help enterprises decouple overbuilt systems and stand up modular platforms that restore control without forcing another all-or-nothing replatform."
+    "headline": "Reduce system dependency without a risky replatform",
+    "subheadline": "We help operations leaders isolate one high-friction capability, run a controlled pilot, and scale only when evidence is clear."
   },
   "pillars": [
-    "Lead with capabilities, not vendor roadmaps",
-    "Protect systems of record while you modernize around them",
-    "Move in controlled increments that executives can govern"
+    "Keep systems of record in place",
+    "Pilot one capability in 4-8 weeks",
+    "Cut over with reconciliations and rollback gates"
   ],
   "whatYouGet": [
-    "A plain-language view of where work sits outside the system and why it spreads",
-    "A capability map that defines ownership, decisions, and control points before tooling decisions",
-    "A sequenced plan to replace or decouple the riskiest capabilities without destabilizing finance or operations",
-    "Evidence-based cutover criteria so leadership can approve change with confidence, not hope",
-    "A platform posture that stays adaptable as strategy, structure, and systems evolve"
+    "A plain-language map of where dependency creates risk",
+    "A capability map with clear ownership, controls, and decisions",
+    "A sequenced pilot-to-cutover plan tied to business risk",
+    "Evidence gates leaders can use to approve, pause, or stop change"
   ],
   "deliverables": [
     {
@@ -22,19 +21,15 @@
     },
     {
       "title": "Stabilization plan",
-      "description": "Targeted interventions that stop spreadsheet sprawl, patch brittle handoffs, and reduce operational noise while deeper changes are sequenced."
+      "description": "Targeted interventions that stop spreadsheet sprawl, patch brittle handoffs, and reduce operational noise."
     },
     {
-      "title": "Replacement sequence",
-      "description": "A leadership-ready plan that shows what is decoupled or replaced first, how risk is contained, and what proof is required to move forward."
+      "title": "Pilot design",
+      "description": "Parallel-run design with reconciliations and rollback triggers defined before execution."
     },
     {
       "title": "Cutover governance pack",
-      "description": "Decision checkpoints, approval criteria, rollback rules, and evidence expectations that keep platform change inside executive control."
-    },
-    {
-      "title": "Optionality roadmap",
-      "description": "A practical path to evolve capability by capability so you are never forced back into a single-vendor, single-decision posture."
+      "description": "Decision checkpoints, approval criteria, and evidence expectations that keep change under executive control."
     }
   ]
 }
