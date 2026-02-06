@@ -49,7 +49,7 @@ type HeroSection = {
   subheadline: string;
   primaryCta: CTA;
   secondaryCta: CTA;
-  proofBullets: string[];
+  proofBullets: { icon: string; title: string }[];
 };
 
 type PatternSection = {
