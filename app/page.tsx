@@ -219,7 +219,7 @@ export default function HomePage() {
               </div>
               <Link
                 href={section.cta.href}
-                className="rounded-full bg-cyan-300 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+                className="rounded-full border border-cyan-300/40 bg-slate-900/70 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
               >
                 {section.cta.label}
               </Link>

@@ -4,22 +4,33 @@
 
 :root {
   color-scheme: dark;
+  --nv-bg: 13 17 23;
+  --nv-surface: 16 21 28;
+  --nv-surface-raised: 21 27 36;
+  --nv-text-primary: 230 233 238;
+  --nv-text-secondary: 165 177 194;
+  --nv-accent-cyan: 127 215 224;
+  --nv-accent-violet: 169 148 222;
+  --nv-border: 43 52 66;
 }
 
 body {
-  @apply bg-ink text-white antialiased subpixel-antialiased;
+  @apply antialiased subpixel-antialiased;
+  background-color: rgb(var(--nv-bg));
+  color: rgb(var(--nv-text-primary));
   text-rendering: optimizeLegibility;
   text-wrap: balance;
+  line-height: 1.65;
 }
 
 h1,
 h2,
 h3 {
-  @apply font-serif;
+  @apply font-sans font-semibold tracking-tight;
 }
 
 ::selection {
-  background: rgba(103, 232, 249, 0.3);
+  background: rgba(var(--nv-accent-cyan), 0.25);
 }
 
 .skip-link {
@@ -27,8 +38,29 @@ h3 {
 }
 
 .gradient-card {
-  background: radial-gradient(circle at top left, rgba(103, 232, 249, 0.2), transparent 55%),
-    linear-gradient(145deg, rgba(59, 75, 93, 0.3), rgba(15, 23, 32, 0.9));
+  background: radial-gradient(circle at top left, rgba(var(--nv-accent-cyan), 0.12), transparent 60%),
+    linear-gradient(145deg, rgba(21, 27, 36, 0.4), rgba(11, 15, 20, 0.92));
+}
+
+.nv-hero-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.nv-hero-scanline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.04) 0,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  opacity: 0.18;
+  mix-blend-mode: screen;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -92,13 +124,13 @@ h3 {
 
 /* System node styles */
 .system-nodes .node-circle {
-  fill: rgba(103, 232, 249, 0.2);
-  stroke: rgba(103, 232, 249, 0.5);
+  fill: rgba(var(--nv-accent-cyan), 0.16);
+  stroke: rgba(var(--nv-accent-cyan), 0.45);
   stroke-width: 2;
 }
 
 .system-nodes .node-label {
-  fill: rgba(159, 176, 194, 0.8);
+  fill: rgba(var(--nv-text-secondary), 0.9);
   font-size: 11px;
   text-anchor: middle;
   font-family: var(--font-sans);
@@ -106,30 +138,30 @@ h3 {
 
 /* Connection lines */
 .connection-lines .connection-line {
-  stroke: rgba(103, 232, 249, 0.3);
+  stroke: rgba(var(--nv-accent-cyan), 0.28);
   stroke-width: 1;
   animation: pulse-line 4s ease-in-out infinite;
 }
 
 /* Capability core */
 .capability-core .core-shape {
-  fill: rgba(15, 23, 32, 0.9);
-  stroke: rgba(103, 232, 249, 0.7);
+  fill: rgba(var(--nv-surface), 0.92);
+  stroke: rgba(var(--nv-accent-cyan), 0.6);
   stroke-width: 2;
   opacity: 0;
   animation: emerge-core 12s ease-in-out infinite;
 }
 
 .capability-core .module {
-  fill: rgba(28, 39, 51, 0.8);
-  stroke: rgba(103, 232, 249, 0.4);
+  fill: rgba(var(--nv-surface-raised), 0.82);
+  stroke: rgba(var(--nv-accent-cyan), 0.35);
   stroke-width: 1;
   opacity: 0;
   animation: emerge-core 12s ease-in-out 0.5s infinite;
 }
 
 .capability-core .module-label {
-  fill: rgba(103, 232, 249, 0.9);
+  fill: rgba(var(--nv-accent-cyan), 0.85);
   font-size: 6px;
   text-anchor: middle;
   font-family: var(--font-sans);
@@ -139,7 +171,7 @@ h3 {
 }
 
 .capability-core .core-label {
-  fill: rgba(103, 232, 249, 1);
+  fill: rgba(var(--nv-accent-cyan), 1);
   font-size: 12px;
   text-anchor: middle;
   font-family: var(--font-sans);
