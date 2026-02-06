@@ -1,211 +1,427 @@
 {
   "documents": [
     {
-      "id": "page-home",
-      "title": "Home",
-      "description": "AI readiness consulting for operations leaders.",
-      "type": "page",
-      "tags": ["home"],
-      "href": "/",
-      "content": "Operational truth, workflow compression, decision latency, and governance-ready AI readiness."
-    },
-    {
-      "id": "page-services",
-      "title": "Services",
-      "description": "Scoped engagements for AI readiness and governance.",
-      "type": "page",
-      "tags": ["services", "governance"],
-      "href": "/services",
-      "content": "AI Readiness Diagnostic, Workflow & Decision Inventory, AI Governance & Operating Model, SaaS Dependency strategy, Implementation Pilot."
-    },
-    {
-      "id": "page-method",
-      "title": "Method",
-      "description": "Phased method for AI readiness.",
-      "type": "page",
-      "tags": ["method"],
-      "href": "/method",
-      "content": "Work Reality Audit, AI Compression Analysis, Role/Workflow Consolidation, Executive Cover Package, Pilot with human-in-the-loop."
-    },
-    {
-      "id": "page-industries",
-      "title": "Industries",
-      "description": "Industry-agnostic workflows with tailored examples.",
-      "type": "page",
-      "tags": ["industries"],
-      "href": "/industries",
-      "content": "Professional services, construction/PDS, finance ops, healthcare admin, insurance ops."
-    },
-    {
-      "id": "page-proof",
-      "title": "Proof",
-      "description": "Anonymized case studies.",
-      "type": "page",
-      "tags": ["proof"],
-      "href": "/proof",
-      "content": "Workflow compression case studies with governance outcomes."
-    },
-    {
-      "id": "page-demo",
-      "title": "Demo",
-      "description": "Offline demo of a governed knowledge base.",
-      "type": "page",
-      "tags": ["demo", "kb"],
-      "href": "/demo",
-      "content": "Knowledge base explorer, question simulator, citations." 
-    },
-    {
-      "id": "page-insights",
-      "title": "Insights",
-      "description": "Executive-friendly reads on AI readiness.",
-      "type": "page",
-      "tags": ["insights"],
-      "href": "/insights",
-      "content": "Operational truth, decision latency, systems of record vs systems of work." 
-    },
-    {
       "id": "page-about",
       "title": "About",
-      "description": "Background and principles.",
+      "description": "Operations redesign and dependency reduction grounded in real work.",
       "type": "page",
-      "tags": ["about"],
+      "tags": [
+        "about",
+        "leadership",
+        "operations"
+      ],
       "href": "/about",
-      "content": "Operations redesign, human-in-the-loop, auditability." 
+      "content": "Operations redesign and dependency reduction grounded in real work."
     },
     {
       "id": "page-contact",
       "title": "Contact",
-      "description": "Book an intro call or email.",
+      "description": "Book an intro call or email to discuss capability-first dependency reduction.",
       "type": "page",
-      "tags": ["contact"],
+      "tags": [
+        "contact",
+        "intro"
+      ],
       "href": "/contact",
-      "content": "Email {{EMAIL}} or use {{CALENDLY_URL}}." 
+      "content": "Book an intro call or email to discuss capability-first dependency reduction."
+    },
+    {
+      "id": "page-home",
+      "title": "Home",
+      "description": "Reduce enterprise dependency with capability-based replacements that protect continuity, control, and optionality.",
+      "type": "page",
+      "tags": [
+        "home"
+      ],
+      "href": "/",
+      "content": "Reduce enterprise dependency with capability-based replacements that protect continuity, control, and optionality."
+    },
+    {
+      "id": "page-industries",
+      "title": "Industries",
+      "description": "Three regulated sectors where capability-first pilots reduce risk before changes go live.",
+      "type": "page",
+      "tags": [
+        "industries",
+        "workflows",
+        "governance"
+      ],
+      "href": "/industries",
+      "content": "Three regulated sectors where capability-first pilots reduce risk before changes go live."
     },
     {
       "id": "page-legal",
       "title": "Legal",
-      "description": "Privacy and terms.",
+      "description": "Privacy, terms, and basic engagement policies.",
       "type": "page",
-      "tags": ["legal"],
+      "tags": [
+        "legal",
+        "privacy"
+      ],
       "href": "/legal",
-      "content": "Privacy, terms, and engagement disclaimers." 
+      "content": "Privacy, terms, and basic engagement policies."
     },
     {
-      "id": "case-change-orders",
-      "title": "Change order triage in capital projects",
-      "description": "Reduced decision latency and improved auditability for change orders.",
-      "type": "case",
-      "tags": ["construction", "workflow"],
-      "href": "/proof/change-order-triage",
-      "content": "Mapped work graph, decision ladder, retrieval for contract clauses." 
+      "id": "page-method",
+      "title": "Method",
+      "description": "A capability-based method that reduces dependency while preserving continuity, control, and optionality.",
+      "type": "page",
+      "tags": [
+        "method",
+        "capability",
+        "governance"
+      ],
+      "href": "/method",
+      "content": "A capability-based method that reduces dependency while preserving continuity, control, and optionality."
     },
     {
-      "id": "case-finance-approvals",
-      "title": "Finance approvals with governance-ready AI routing",
-      "description": "Streamlined approvals without losing compliance traceability.",
-      "type": "case",
-      "tags": ["finance", "approvals"],
-      "href": "/proof/finance-approvals-governance",
-      "content": "Decision ladder, knowledge objects, human-in-the-loop checkpoints." 
+      "id": "page-services",
+      "title": "Engagement Structure",
+      "description": "A capability-first modernization program that reduces dependency in controlled, finance-safe steps.",
+      "type": "page",
+      "tags": [
+        "services",
+        "capability",
+        "risk"
+      ],
+      "href": "/services",
+      "content": "A capability-first modernization program that reduces dependency in controlled, finance-safe steps."
     },
     {
-      "id": "case-claims",
-      "title": "Claims exception handling in insurance operations",
-      "description": "Reduced escalation fatigue while maintaining human oversight.",
-      "type": "case",
-      "tags": ["insurance", "claims"],
-      "href": "/proof/claims-exception-handling",
-      "content": "Exception triggers, verified citations, HITL model." 
-    },
-    {
-      "id": "post-ops-problem",
+      "id": "post-why-ai-readiness-is-an-operations-problem",
       "title": "Why AI readiness is an operations problem",
-      "description": "AI readiness starts with operational truth.",
+      "description": "AI readiness starts with operational truth — not model selection.",
       "type": "post",
-      "tags": ["operations", "readiness"],
+      "tags": [
+        "operations",
+        "readiness",
+        "governance"
+      ],
       "href": "/insights/why-ai-readiness-is-an-operations-problem",
-      "content": "Systems of work, decision ladders, workflow compression." 
+      "content": "AI readiness starts with operational truth — not model selection."
     },
     {
-      "id": "post-systems",
+      "id": "post-systems-of-record-vs-systems-of-work",
       "title": "Systems of record vs systems of work",
       "description": "AI fails when we confuse formal systems with real work.",
       "type": "post",
-      "tags": ["systems"],
+      "tags": [
+        "systems",
+        "workflow",
+        "data"
+      ],
       "href": "/insights/systems-of-record-vs-systems-of-work",
-      "content": "Systems of record, systems of work, governance for retrieval." 
+      "content": "AI fails when we confuse formal systems with real work."
     },
     {
-      "id": "post-decision-latency",
+      "id": "post-decision-latency-the-hidden-tax",
       "title": "Decision latency is the hidden tax",
-      "description": "Slow approvals cost more than you think.",
+      "description": "Slow approvals cost more than you think — and AI can make it worse if you ignore them.",
       "type": "post",
-      "tags": ["decisions"],
+      "tags": [
+        "decisions",
+        "operations",
+        "latency"
+      ],
       "href": "/insights/decision-latency-the-hidden-tax",
-      "content": "Decision ladder, approval thresholds, escalation." 
+      "content": "Slow approvals cost more than you think — and AI can make it worse if you ignore them."
     },
     {
-      "id": "post-saas-sprawl",
+      "id": "post-why-most-saas-sprawl-is-workflow-debt",
       "title": "Why most SaaS sprawl is workflow debt",
       "description": "Tools proliferate when workflows are unclear.",
       "type": "post",
-      "tags": ["saas"],
+      "tags": [
+        "saas",
+        "workflow",
+        "governance"
+      ],
       "href": "/insights/why-most-saas-sprawl-is-workflow-debt",
-      "content": "Workflow debt, tool proliferation, governance." 
+      "content": "Tools proliferate when workflows are unclear."
     },
     {
-      "id": "post-hitl",
+      "id": "post-human-in-the-loop-is-a-product-requirement",
       "title": "Human-in-the-loop is a product requirement",
-      "description": "HITL is a deliberate design choice.",
+      "description": "HITL is not a fallback; it is a deliberate design choice.",
       "type": "post",
-      "tags": ["HITL"],
+      "tags": [
+        "HITL",
+        "governance",
+        "risk"
+      ],
       "href": "/insights/human-in-the-loop-is-a-product-requirement",
-      "content": "Accountability, escalation, audit trail." 
+      "content": "HITL is not a fallback; it is a deliberate design choice."
     },
     {
-      "id": "post-kb",
+      "id": "post-how-to-build-a-knowledge-base-that-doesnt-become-a-junk-drawer",
       "title": "How to build a knowledge base that doesn’t become a junk drawer",
-      "description": "Retrieval only works with owners, context, and expiry.",
+      "description": "Retrieval only works when knowledge has owners, context, and expiry.",
       "type": "post",
-      "tags": ["knowledge-base"],
+      "tags": [
+        "knowledge-base",
+        "RAG",
+        "governance"
+      ],
       "href": "/insights/how-to-build-a-knowledge-base-that-doesnt-become-a-junk-drawer",
-      "content": "Knowledge base governance, owners, review cadence." 
+      "content": "Retrieval only works when knowledge has owners, context, and expiry."
     },
     {
-      "id": "deliverable-op-map",
-      "title": "Operational truth map",
-      "description": "Visual map of systems of work vs systems of record.",
-      "type": "deliverable",
-      "tags": ["template"],
-      "href": "/services",
-      "content": "Workflow map, systems of work, systems of record." 
+      "id": "case-project-delivery-change-orders",
+      "title": "Project delivery change orders (PDS)",
+      "description": "Aligning project delivery decisions with clear thresholds and audit trails.",
+      "type": "case",
+      "tags": [
+        "construction",
+        "PDS",
+        "operations"
+      ],
+      "href": "/proof/project-delivery-change-orders",
+      "content": "Aligning project delivery decisions with clear thresholds and audit trails."
     },
     {
-      "id": "deliverable-decision-ladder",
-      "title": "Decision ladder",
-      "description": "Reusable decision rights matrix.",
+      "id": "case-medical-billing-claims",
+      "title": "Medical billing and claims back office",
+      "description": "Compressing billing exceptions while protecting compliance and auditability.",
+      "type": "case",
+      "tags": [
+        "healthcare",
+        "billing",
+        "governance"
+      ],
+      "href": "/proof/medical-billing-claims",
+      "content": "Compressing billing exceptions while protecting compliance and auditability."
+    },
+    {
+      "id": "case-paralegal-intake-triage",
+      "title": "Paralegal intake and document triage",
+      "description": "Redesigning legal intake so decisions are faster, safer, and auditable.",
+      "type": "case",
+      "tags": [
+        "legal",
+        "intake",
+        "decision"
+      ],
+      "href": "/proof/paralegal-intake-triage",
+      "content": "Redesigning legal intake so decisions are faster, safer, and auditable."
+    },
+    {
+      "id": "doc-start-here",
+      "title": "Start here",
+      "description": "A 20-second overview of what we do, who we help, and how to navigate docs.",
+      "type": "doc",
+      "tags": [
+        "overview",
+        "getting-started"
+      ],
+      "href": "/docs/start-here",
+      "content": "A 20-second overview of what we do, who we help, and how to navigate docs."
+    },
+    {
+      "id": "doc-dependency-signals",
+      "title": "Dependency signals",
+      "description": "How to spot where system dependency creates risk before it creates crisis.",
+      "type": "doc",
+      "tags": [
+        "dependency",
+        "risk",
+        "operations",
+        "diagnosis"
+      ],
+      "href": "/docs/dependency-signals",
+      "content": "How to spot where system dependency creates risk before it creates crisis."
+    },
+    {
+      "id": "doc-engagement-model",
+      "title": "Engagement model",
+      "description": "Three phases with evidence gates and rollback controls at every step.",
+      "type": "doc",
+      "tags": [
+        "engagement",
+        "method",
+        "governance",
+        "phases"
+      ],
+      "href": "/docs/engagement-model",
+      "content": "Three phases with evidence gates and rollback controls at every step."
+    },
+    {
+      "id": "doc-deliverables",
+      "title": "Deliverables",
+      "description": "What you leave with at each phase of the engagement.",
+      "type": "doc",
+      "tags": [
+        "deliverables",
+        "outcomes",
+        "artifacts"
+      ],
+      "href": "/docs/deliverables",
+      "content": "What you leave with at each phase of the engagement."
+    },
+    {
+      "id": "doc-engagement-options",
+      "title": "Engagement options",
+      "description": "Standard three-phase program vs a lighter baseline start.",
+      "type": "doc",
+      "tags": [
+        "engagement",
+        "options",
+        "baseline",
+        "program"
+      ],
+      "href": "/docs/engagement-options",
+      "content": "Standard three-phase program vs a lighter baseline start."
+    },
+    {
+      "id": "doc-how-we-work",
+      "title": "How we work",
+      "description": "No vendor bias, no staff-aug theater, operator-first governance.",
+      "type": "doc",
+      "tags": [
+        "governance",
+        "positioning",
+        "principles"
+      ],
+      "href": "/docs/how-we-work",
+      "content": "No vendor bias, no staff-aug theater, operator-first governance."
+    },
+    {
+      "id": "doc-faq",
+      "title": "FAQ",
+      "description": "Common questions from operations leaders and executives.",
+      "type": "doc",
+      "tags": [
+        "faq",
+        "questions",
+        "overview"
+      ],
+      "href": "/docs/faq",
+      "content": "Common questions from operations leaders and executives."
+    },
+    {
+      "id": "deliverable-dependency-map-and-control-points",
+      "title": "Dependency map and control points",
+      "description": "Where the platform is truly required vs. where it is simply adjacent — with named control points for change.",
       "type": "deliverable",
-      "tags": ["governance"],
+      "tags": [
+        "dependency",
+        "controls"
+      ],
       "href": "/method",
-      "content": "Decision thresholds, approvals, auditability." 
+      "content": "Where the platform is truly required vs. where it is simply adjacent — with named control points for change."
+    },
+    {
+      "id": "deliverable-continuity-baselines-and-reconciliations",
+      "title": "Continuity baselines and reconciliations",
+      "description": "The evidence CFOs and auditors need to see before approving any capability cutover.",
+      "type": "deliverable",
+      "tags": [
+        "continuity",
+        "reconciliation"
+      ],
+      "href": "/method",
+      "content": "The evidence CFOs and auditors need to see before approving any capability cutover."
+    },
+    {
+      "id": "deliverable-parallel-run-scorecards",
+      "title": "Parallel-run scorecards",
+      "description": "Side-by-side outcomes that show the new capability is safe, accurate, and ready for controlled adoption.",
+      "type": "deliverable",
+      "tags": [
+        "parallel run",
+        "evidence"
+      ],
+      "href": "/services",
+      "content": "Side-by-side outcomes that show the new capability is safe, accurate, and ready for controlled adoption."
+    },
+    {
+      "id": "deliverable-cutover-briefs-and-rollback-criteria",
+      "title": "Cutover briefs and rollback criteria",
+      "description": "Clear go/no-go criteria, owners, and rollback triggers so optionality is preserved throughout the program.",
+      "type": "deliverable",
+      "tags": [
+        "cutover",
+        "rollback"
+      ],
+      "href": "/method",
+      "content": "Clear go/no-go criteria, owners, and rollback triggers so optionality is preserved throughout the program."
     },
     {
       "id": "kb-001",
-      "title": "Vendor approval risk thresholds",
-      "description": "Escalation rules based on contract value and data exposure.",
+      "title": "Paralegal intake decision rules",
+      "description": "Defines which legal intake requests require escalation and evidence capture.",
       "type": "kb",
-      "tags": ["vendor", "risk"],
+      "tags": [
+        "legal",
+        "intake",
+        "exceptions"
+      ],
       "href": "/demo",
-      "content": "Vendor approvals above $250k require risk committee review." 
+      "content": "Defines which legal intake requests require escalation and evidence capture."
     },
     {
       "id": "kb-002",
-      "title": "Change order approval ladder",
-      "description": "Approval thresholds for project change orders.",
+      "title": "Document triage exception categories",
+      "description": "Rules that classify document triage exceptions for legal review.",
       "type": "kb",
-      "tags": ["construction", "decision"],
+      "tags": [
+        "legal",
+        "triage",
+        "rules"
+      ],
       "href": "/demo",
-      "content": "Change orders below $50k approved by PM, above $250k triggers legal." 
+      "content": "Rules that classify document triage exceptions for legal review."
+    },
+    {
+      "id": "kb-003",
+      "title": "Medical billing exception ladder",
+      "description": "Approval thresholds for billing exceptions and human review.",
+      "type": "kb",
+      "tags": [
+        "healthcare",
+        "billing",
+        "HITL"
+      ],
+      "href": "/demo",
+      "content": "Approval thresholds for billing exceptions and human review."
+    },
+    {
+      "id": "kb-004",
+      "title": "Claims documentation rules",
+      "description": "Rules that determine claim completeness and escalation triggers.",
+      "type": "kb",
+      "tags": [
+        "healthcare",
+        "claims",
+        "governance"
+      ],
+      "href": "/demo",
+      "content": "Rules that determine claim completeness and escalation triggers."
+    },
+    {
+      "id": "kb-005",
+      "title": "Change order approval ladder",
+      "description": "Approval thresholds for project delivery change orders.",
+      "type": "kb",
+      "tags": [
+        "construction",
+        "approvals",
+        "decision"
+      ],
+      "href": "/demo",
+      "content": "Approval thresholds for project delivery change orders."
+    },
+    {
+      "id": "kb-006",
+      "title": "RAG citation integrity checklist",
+      "description": "Checklist to keep retrieval outputs auditable and governed.",
+      "type": "kb",
+      "tags": [
+        "governance",
+        "citations",
+        "auditability"
+      ],
+      "href": "/demo",
+      "content": "Checklist to keep retrieval outputs auditable and governed."
     }
   ]
 }

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getAllCaseStudies, getAllInsights, getAllPages, readJson } from '../lib/content';
+import { getAllCaseStudies, getAllDocs, getAllInsights, getAllPages, readJson } from '../lib/content';
 
 const outputPath = path.join(process.cwd(), 'public', 'search-index.json');
 
@@ -50,6 +50,18 @@ function run() {
       tags: study.tags,
       href: `/proof/${study.slug}`,
       content: study.description
+    });
+  });
+
+  getAllDocs().forEach((doc) => {
+    documents.push({
+      id: `doc-${doc.slug}`,
+      title: doc.title,
+      description: doc.description,
+      type: 'doc',
+      tags: doc.tags,
+      href: `/docs/${doc.slug}`,
+      content: doc.description
     });
   });
 

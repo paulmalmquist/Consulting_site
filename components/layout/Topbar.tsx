@@ -13,7 +13,7 @@ type TopbarProps = {
 
 export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-slate-800/80 bg-ink/80 px-4 py-4 backdrop-blur md:px-8">
+    <header className="sticky top-0 z-30 grid grid-cols-[1fr_auto_1fr] items-center gap-4 border-b border-slate-800/80 bg-ink/80 px-4 py-4 backdrop-blur md:px-8">
       <div className="flex items-center gap-3">
         <button
           type="button"
@@ -30,7 +30,7 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
       <button
         type="button"
         className={cn(
-          'flex w-full max-w-lg items-center gap-3 rounded-full border border-slate-700/60 bg-slate-900/60 px-4 py-2 text-left text-sm text-slate-300 transition hover:border-slate-500 md:flex'
+          'flex min-w-[200px] items-center gap-3 rounded-full border border-slate-700/60 bg-slate-900/60 px-4 py-2 text-left text-sm text-slate-300 transition hover:border-slate-500 md:min-w-[320px]'
         )}
         onClick={openSearch}
       >
@@ -38,6 +38,7 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
         <span className="flex-1">Search insights, engagements, and KB objects…</span>
         <span className="text-xs text-slate-500">/</span>
       </button>
+      <div />
     </header>
   );
 }

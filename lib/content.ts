@@ -82,6 +82,23 @@ export function getCaseStudyBySlug(slug: string): ContentItem {
   return study;
 }
 
+export function getAllDocs(): ContentMeta[] {
+  const index = readJson<Array<{ slug: string; order: number }>>('docs/index.json');
+  const orderMap = new Map(index.map((entry) => [entry.slug, entry.order]));
+  return readDirContent('docs')
+    .map(({ content, ...rest }) => rest)
+    .sort((a, b) => (orderMap.get(a.slug) ?? 99) - (orderMap.get(b.slug) ?? 99));
+}
+
+export function getDocBySlug(slug: string): ContentItem {
+  const docs = readDirContent('docs');
+  const doc = docs.find((item) => item.slug === slug);
+  if (!doc) {
+    throw new Error(`Doc not found: ${slug}`);
+  }
+  return doc;
+}
+
 export function readJson<T>(relativePath: string): T {
   const filePath = path.join(CONTENT_ROOT, relativePath);
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;

@@ -21,7 +21,7 @@ export function ExploreCarousel({ title, subtitle, tiles }: ExploreCarouselProps
           <p className="text-base leading-relaxed text-slate-300">{subtitle}</p>
         </div>
       </div>
-      <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-5 md:overflow-visible">
+      <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-4 md:overflow-visible">
         {tiles.map((tile) => (
           <Link
             key={tile.title}

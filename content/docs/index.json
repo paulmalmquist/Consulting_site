@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "start-here",
+    "title": "Start here",
+    "description": "A 20-second overview of what we do, who we help, and how to navigate docs.",
+    "order": 1
+  },
+  {
+    "slug": "dependency-signals",
+    "title": "Dependency signals",
+    "description": "How to spot where system dependency creates risk before it creates crisis.",
+    "order": 2
+  },
+  {
+    "slug": "engagement-model",
+    "title": "Engagement model",
+    "description": "Three phases with evidence gates and rollback controls at every step.",
+    "order": 3
+  },
+  {
+    "slug": "deliverables",
+    "title": "Deliverables",
+    "description": "What you leave with at each phase of the engagement.",
+    "order": 4
+  },
+  {
+    "slug": "engagement-options",
+    "title": "Engagement options",
+    "description": "Standard three-phase program vs a lighter baseline start.",
+    "order": 5
+  },
+  {
+    "slug": "how-we-work",
+    "title": "How we work",
+    "description": "No vendor bias, no staff-aug theater, operator-first governance.",
+    "order": 6
+  },
+  {
+    "slug": "faq",
+    "title": "FAQ",
+    "description": "Common questions from operations leaders and executives.",
+    "order": 7
+  }
+]

@@ -23,6 +23,8 @@ All copy and structured data lives in `/content`.
 - Pages: `content/pages/*.mdx`
 - Insights: `content/insights/*.mdx`
 - Case studies: `content/case_studies/*.mdx`
+- Docs: `content/docs/*.mdx`
+- Docs order/index: `content/docs/index.json`
 - KB objects: `content/kb_objects/*.json`
 - Navigation: `content/navigation.json`
 - Home and carousel data: `content/*.json`
@@ -65,6 +67,7 @@ app/
   about/
   contact/
   demo/
+  docs/
   industries/
   insights/
   legal/
@@ -82,6 +85,7 @@ components/
   ui/
 content/
   case_studies/
+  docs/
   insights/
   kb_objects/
   pages/

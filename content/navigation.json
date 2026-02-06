@@ -7,6 +7,7 @@
         { "label": "Method", "href": "/method", "icon": "🧩" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
         { "label": "Demo", "href": "/demo", "icon": "🧪" },
+        { "label": "Docs", "href": "/docs", "icon": "📘" },
         { "label": "Example Engagements", "href": "/proof", "icon": "🧭" }
       ]
     },
