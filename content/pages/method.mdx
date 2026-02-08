@@ -7,32 +7,24 @@ slug: method
 ---
 
 ## Our stance
-Systems of record should remain stable. Capabilities that create drag should not. We separate the two so you can reduce dependency without introducing operational risk.
+- Systems of record should remain stable.
+- Capabilities that create drag should not.
+- We separate the two so you can reduce dependency without introducing operational risk.
 
 ## The method (high level)
-
-### 1) Clarify the capability
-We define the specific capability in business terms: the outcomes it must produce, the decisions it drives, and the tolerance for error, delay, and exception handling.
-
-### 2) Map dependency and control points
-We document where the capability depends on enterprise systems, manual workarounds, and cross-team approvals. We also identify the control points that must remain intact for audit, finance, and operations.
-
-### 3) Establish continuity baselines
-Before proposing a replacement, we agree on what “safe and equivalent” means. This includes reconciliations, reporting checks, and the operational signals leaders need to trust the change.
-
-### 4) Run in parallel and learn safely
-We stand up the replacement capability alongside the current path. Outputs are compared, exceptions are surfaced, and decision rights stay explicit.
-
-### 5) Cut over with optionality intact
-Cutover is treated as a governance decision, not a technical milestone. Rollback criteria, owners, and approval gates are defined up front so optionality is preserved.
+1. Clarify the capability — outcomes, decisions, and tolerance for error, delay, and exception handling.
+2. Modernize existing workflows through agent-driven execution.
+3. Establish continuity baselines — reconciliations, reporting checks, and operational signals leaders need.
+4. Run in parallel and learn safely — compare outputs, surface exceptions, keep decision rights explicit.
+5. Cut over with optionality intact — rollback criteria, owners, and approval gates defined up front.
 
 ## Example capability modules
 We do not lead with vendors. We lead with capabilities that matter to executives:
-- **Accounting and close support:** reconciliations, approvals, and close checklists
-- **CRM workflow control:** routing, ownership rules, and pipeline hygiene
-- **Project and portfolio management:** intake, prioritization, and status control
-- **Legal operations:** intake triage, obligation tracking, and escalation paths
-- **Operational analytics:** executive reporting, metric definitions, and reconciliations
+- **Accounting and close support:** reconciliations, approvals, and close checklists.
+- **CRM workflow control:** routing, ownership rules, and pipeline hygiene.
+- **Project and portfolio management:** intake, prioritization, and status control.
+- **Legal operations:** intake triage, obligation tracking, and escalation paths.
+- **Operational analytics:** executive reporting, metric definitions, and reconciliations.
 
 ## Why this builds trust across the C-suite
 - **CFO confidence:** every change is tied to baselines, reconciliations, and financial clarity.
@@ -44,7 +36,7 @@ We do not lead with vendors. We lead with capabilities that matter to executives
 We avoid uncontrolled writes, retain clear ownership of systems of record, and validate outputs during parallel runs before any cutover.
 
 **How do you ensure continuity during cutover?**
-We define continuity baselines up front, run in parallel, and require named executive approval before traffic shifts.
+Continuity baselines are defined up front, parallel runs compare outputs, and named executive approval is required before traffic shifts.
 
 **What if priorities change midstream?**
 Because the work is capability-based, sequencing can change without invalidating the entire program. Optionality is a design requirement, not a slogan.
