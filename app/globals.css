@@ -81,9 +81,16 @@ h3 {
 }
 
 .nv-subheadline {
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-sans), sans-serif;
   letter-spacing: 0.01em;
   color: rgb(var(--nv-text-secondary));
+}
+
+.nv-hero-emphasis {
+  font-family: var(--font-display), sans-serif;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .nv-snap-flow {
