@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 type CapabilityItem = {
@@ -14,12 +15,14 @@ type CapabilityPanel = {
   title: string;
   sentence: string;
   graphic: 'process' | 'signal' | 'merge';
+  href?: string;
 };
 
 const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
   'Operational Assessment': {
     sentence: 'Map how work flows and where it can be simplified.',
-    graphic: 'process'
+    graphic: 'process',
+    href: '/operational-assessment'
   },
   'AI Concierge': {
     sentence: 'Turn new AI capabilities into practical operating advantages.',
@@ -133,6 +136,22 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
       <div className="nv-snap-flow">
         {panels.map((panel, index) => {
           const isVisible = visiblePanels[index] ?? index === 0;
+          const panelShellClassName = `nv-panel-shell transition duration-200 group-hover:border-cyan-200/50 group-hover:shadow-[0_0_35px_rgba(94,203,255,0.18)] group-focus-visible:border-cyan-200/70 group-focus-visible:shadow-[0_0_40px_rgba(94,203,255,0.28)] ${
+            isVisible ? 'nv-panel-shell--visible' : ''
+          }`;
+          const panelContent = (
+            <div className={panelShellClassName}>
+              <div className="flex flex-col gap-6 lg:gap-8">
+                <div className="rounded-3xl border border-cyan-100/20 bg-slate-950/70 p-6 shadow-[0_0_30px_rgba(94,203,255,0.14)]">
+                  {renderGraphic(panel.graphic)}
+                </div>
+                <div className="space-y-3">
+                  <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{panel.title}</h2>
+                  <p className="text-base leading-relaxed text-slate-300">{panel.sentence}</p>
+                </div>
+              </div>
+            </div>
+          );
 
           return (
             <article
@@ -143,17 +162,17 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
               data-panel-index={index}
               className="nv-snap-panel"
             >
-              <div className={`nv-panel-shell ${isVisible ? 'nv-panel-shell--visible' : ''}`}>
-                <div className="flex flex-col gap-6 lg:gap-8">
-                  <div className="rounded-3xl border border-cyan-100/20 bg-slate-950/70 p-6 shadow-[0_0_30px_rgba(94,203,255,0.14)]">
-                    {renderGraphic(panel.graphic)}
-                  </div>
-                  <div className="space-y-3">
-                    <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{panel.title}</h2>
-                    <p className="text-base leading-relaxed text-slate-300">{panel.sentence}</p>
-                  </div>
-                </div>
-              </div>
+              {panel.href ? (
+                <Link
+                  href={panel.href}
+                  className="group block w-full rounded-[1.75rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                  aria-label={`Learn more about ${panel.title}`}
+                >
+                  {panelContent}
+                </Link>
+              ) : (
+                panelContent
+              )}
             </article>
           );
         })}
