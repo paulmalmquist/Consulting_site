@@ -92,12 +92,13 @@ h3 {
 }
 
 .nv-snap-panel {
-  min-height: 100svh;
+  /* Mobile: allow panels to size to content so cards don't feel oversized. */
+  min-height: auto;
   display: flex;
   align-items: stretch;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  padding-block: 1rem;
+  padding-block: 1.5rem;
 }
 
 .nv-panel-shell {
@@ -105,7 +106,8 @@ h3 {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr;
-  align-content: center;
+  /* Mobile: keep content anchored to the top to avoid tall empty space. */
+  align-content: start;
   border: 1px solid rgb(var(--nv-border) / 0.75);
   border-radius: 1.75rem;
   background: linear-gradient(160deg, rgb(var(--nv-surface) / 0.88), rgb(var(--nv-bg) / 0.94));
@@ -118,6 +120,18 @@ h3 {
 .nv-panel-shell--visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  /* Desktop: restore full-screen snap panels for the scroll narrative. */
+  .nv-snap-panel {
+    min-height: 100svh;
+    padding-block: 1rem;
+  }
+
+  .nv-panel-shell {
+    align-content: center;
+  }
 }
 
 @media (min-width: 1024px) {
