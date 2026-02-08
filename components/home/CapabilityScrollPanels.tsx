@@ -20,25 +20,25 @@ type CapabilityPanel = {
 };
 
 const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
+  'Operational Assessment': {
+    description:
+      'We perform a structured inventory of how work actually moves through your organization — systems, handoffs, approvals, and decision points. The outcome is a clear view of where effort is duplicated, where context is lost, and where processes can be simplified or consolidated to improve continuity, control, and execution quality.',
+    visualTitle: 'Current-State Map',
+    visualBody: 'Systems, handoffs, approvals, and decision points are documented to establish an operational baseline.',
+    href: '/services'
+  },
   'AI Concierge': {
     description:
-      'Create a single operational front door for requests, triage, and handoffs so teams make decisions faster without adding process overhead.',
-    visualTitle: 'Unified Intake',
-    visualBody: 'Requests are normalized, prioritized, and routed with controls before they hit downstream systems.',
+      'We act as an ongoing intelligence layer for emerging AI capabilities — translating rapidly evolving tools into practical, business-ready applications. This service helps organizations understand what is newly possible, what is viable today, and how operating models can evolve as AI tools become more powerful, accessible, and integrated into daily work.',
+    visualTitle: 'Capability Signals',
+    visualBody: 'New tooling is evaluated against real operating constraints, readiness, and governance requirements.',
     href: '/services'
   },
-  'Info Operations': {
+  'Legacy SaaS Migration': {
     description:
-      'Standardize how operational data is captured, reconciled, and surfaced so leadership can act from one shared source of truth.',
-    visualTitle: 'Decision-Ready Data',
-    visualBody: 'Operational events, exceptions, and approvals are tracked in one governed reporting layer.',
-    href: '/services'
-  },
-  'Functional Applications': {
-    description:
-      'Replace brittle suite dependency with targeted applications that match real workflows while preserving governance and control.',
-    visualTitle: 'Capability Modules',
-    visualBody: 'Each module supports one business capability and integrates through stable interfaces.',
+      'We help organizations move off expensive, fragmented SaaS stacks in favor of consolidated, custom systems that are owned and operated internally. The focus is not replacement for its own sake, but reducing long-term cost, dependency, and complexity while preserving data continuity and institutional knowledge.',
+    visualTitle: 'Controlled Consolidation',
+    visualBody: 'Migration sequencing protects data continuity while reducing vendor dependency and cost exposure.',
     href: '/services'
   }
 };
@@ -46,7 +46,7 @@ const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
 export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
   const panels = useMemo<CapabilityPanel[]>(() => {
     // To add or remove homepage capability sections, edit the `proofBullets` array in `content/homepage.json`.
-    // Any new title can get custom copy by adding a key in `PANEL_CONTENT` above.
+    // For future cards, add a matching title key in `PANEL_CONTENT` above with the desired copy.
     return items.map((item) => {
       const content = PANEL_CONTENT[item.title] ?? {
         description: 'Deliver one focused capability with clear ownership, controls, and measurable outcomes.',

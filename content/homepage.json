@@ -18,16 +18,16 @@
       "secondaryCta": { "label": "Book strategy call", "href": "/contact" },
       "proofBullets": [
         {
+          "icon": "📌",
+          "title": "Operational Assessment"
+        },
+        {
           "icon": "🤖",
           "title": "AI Concierge"
         },
         {
-          "icon": "📊",
-          "title": "Info Operations"
-        },
-        {
-          "icon": "⚙️",
-          "title": "Functional Applications"
+          "icon": "🧭",
+          "title": "Legacy SaaS Migration"
         }
       ]
     }
