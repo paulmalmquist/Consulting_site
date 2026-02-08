@@ -20,7 +20,7 @@ type CapabilityPanel = {
 
 const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
   'Operational Assessment': {
-    sentence: 'Map how work flows and where it can be simplified.',
+    sentence: 'Map fragmented workflows to modern, agent-driven execution.',
     graphic: 'process',
     href: '/operational-assessment'
   },
