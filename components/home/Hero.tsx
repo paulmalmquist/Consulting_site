@@ -17,7 +17,7 @@ export function Hero({ headline, subheadline, primaryCta, secondaryCta, proofBul
         <div className="space-y-6 text-center lg:text-left">
           <p className="nv-brand-font text-sm uppercase tracking-[0.2em] text-cyan-200">novendor</p>
           <h1 className="text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">{headline}</h1>
-          <p className="max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg lg:mx-0">{subheadline}</p>
+          <p className="nv-subheadline max-w-2xl text-base leading-relaxed md:text-lg lg:mx-0">{subheadline}</p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
             <Link
               href={primaryCta.href}

@@ -29,6 +29,11 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
     setOpenGroups((prev) => ({ ...prev, [title]: !prev[title] }));
   };
 
+  const getBadgeLetter = (label: string) => {
+    const first = label.trim().charAt(0);
+    return first ? first.toUpperCase() : 'N';
+  };
+
   return (
     <aside
       className={cn(
@@ -41,7 +46,7 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
         <div className="flex items-center gap-3">
           <div className="relative h-11 w-11 overflow-hidden rounded-lg border border-cyan-100/25 bg-slate-950/80">
             <Image
-              src="/novendor-brand.jpg"
+              src="/assets/branding/Image-1.jpg"
               alt="Novendor logo"
               fill
               sizes="44px"
@@ -57,11 +62,11 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
         </div>
         <button
           type="button"
-          className="hidden rounded-md border border-slate-700/60 p-2 text-slate-200 transition hover:border-slate-500 hover:text-white md:inline-flex"
+          className="hidden p-1 text-slate-300 transition hover:text-white md:inline-flex"
           onClick={toggleCollapsed}
           aria-label="Toggle sidebar"
         >
-          {isCollapsed ? <PanelLeftOpen size={18} /> : <PanelLeftClose size={18} />}
+          {isCollapsed ? <PanelLeftOpen size={20} /> : <PanelLeftClose size={20} />}
         </button>
         <button
           type="button"
@@ -103,7 +108,7 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
                       )}
                     >
                       <span className="nv-mark-badge nv-mark-badge--sm" aria-hidden>
-                        N
+                        {getBadgeLetter(item.label)}
                       </span>
                       <span className={cn(isCollapsed && 'sr-only')}>{item.label}</span>
                     </Link>
