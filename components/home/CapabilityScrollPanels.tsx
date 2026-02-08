@@ -26,11 +26,13 @@ const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
   },
   'AI Concierge': {
     sentence: 'Turn new AI capabilities into practical operating advantages.',
-    graphic: 'signal'
+    graphic: 'signal',
+    href: '/ai-concierge'
   },
   'Legacy SaaS Migration': {
     sentence: 'Consolidate costly SaaS sprawl into an internal system you control.',
-    graphic: 'merge'
+    graphic: 'merge',
+    href: '/legacy-saas-migration'
   }
 };
 
@@ -162,17 +164,15 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
               data-panel-index={index}
               className="nv-snap-panel"
             >
-              {panel.href ? (
-                <Link
-                  href={panel.href}
-                  className="group block w-full rounded-[1.75rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                  aria-label={`Learn more about ${panel.title}`}
-                >
-                  {panelContent}
-                </Link>
-              ) : (
-                panelContent
-              )}
+              {/* Previously only one panel had an href, leaving other cards non-interactive on mobile taps. */}
+              {/* Wrap the full panel in a Link so the entire card area is a reliable tap target. */}
+              <Link
+                href={panel.href ?? '#'}
+                className="group block w-full rounded-[1.75rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 touch-manipulation cursor-pointer"
+                aria-label={`Learn more about ${panel.title}`}
+              >
+                {panelContent}
+              </Link>
             </article>
           );
         })}
