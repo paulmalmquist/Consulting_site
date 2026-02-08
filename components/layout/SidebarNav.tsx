@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { ChevronDown, Menu, PanelLeftClose, PanelLeftOpen, X } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
 import navigation from '../../content/navigation.json';
 import { cn } from '../ui/cn';
 
@@ -56,17 +56,17 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
           </div>
           {!isCollapsed && (
             <div>
-              <p className="nv-brand-font text-base font-semibold uppercase tracking-[0.14em] text-white">Novendor</p>
+              <p className="nv-headline text-base font-semibold uppercase tracking-[0.14em] text-white">Novendor</p>
             </div>
           )}
         </div>
         <button
           type="button"
-          className="hidden p-1 text-slate-300 transition hover:text-white md:inline-flex"
+          className="hidden p-0.5 text-slate-500 transition hover:text-slate-300 md:inline-flex"
           onClick={toggleCollapsed}
           aria-label="Toggle sidebar"
         >
-          {isCollapsed ? <PanelLeftOpen size={20} /> : <PanelLeftClose size={20} />}
+          {isCollapsed ? <ChevronRight size={16} strokeWidth={1.8} /> : <ChevronLeft size={16} strokeWidth={1.8} />}
         </button>
         <button
           type="button"
