@@ -94,7 +94,6 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
 
   return (
     <section className="space-y-3" aria-label="Capability walkthrough">
-      <p className="text-center text-xs uppercase tracking-[0.2em] text-slate-400 lg:text-left">Scroll to explore capabilities</p>
       <div className="nv-snap-flow">
         {panels.map((panel, index) => {
           const isVisible = visiblePanels[index] ?? index === 0;
