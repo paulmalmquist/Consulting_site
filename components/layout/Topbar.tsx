@@ -13,6 +13,11 @@ type TopbarProps = {
 };
 
 export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
+  const getBadgeLetter = (label: string) => {
+    const first = label.trim().charAt(0);
+    return first ? first.toUpperCase() : 'N';
+  };
+
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800/80 bg-ink/80 px-4 py-4 backdrop-blur md:px-8">
       <div className="flex w-full flex-col gap-3 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-4">
@@ -32,17 +37,16 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
             'flex w-full items-center gap-3 rounded-full border border-slate-700/60 bg-slate-900/60 px-4 py-2 text-left text-sm text-slate-300 transition hover:border-slate-500 md:min-w-[320px] md:w-auto'
           )}
           onClick={openSearch}
+          aria-label="Open search"
         >
           <Search size={16} className="text-slate-400" />
-          <span className="flex-1">Search insights, engagements, and KB objects…</span>
-          <span className="text-xs text-slate-500">/</span>
         </button>
         <div className="hidden md:block" />
         <nav className="grid grid-cols-4 gap-2 md:hidden">
           {[
             { label: 'Overview', href: '#overview' },
-            { label: 'Capabilities', href: '/capabilities' },
-            { label: 'Contact', href: '/contact' },
+            { label: 'See capabilities', href: '/capabilities' },
+            { label: 'Book strategy call', href: '/contact' },
             { label: 'Docs', href: '/docs' }
           ].map((item) => (
             <Link
@@ -50,7 +54,7 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
               href={item.href}
               className="group flex min-h-[44px] flex-col items-center justify-center gap-1 rounded-xl border border-slate-800/80 bg-slate-900/40 px-2 text-[11px] font-medium text-slate-400 transition hover:border-cyan-300/40 hover:text-cyan-200 hover:shadow-[0_0_16px_rgba(127,215,224,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
-              <span className="nv-mark-badge nv-mark-badge--sm">N</span>
+              <span className="nv-mark-badge nv-mark-badge--sm">{getBadgeLetter(item.label)}</span>
               <span className="text-center leading-tight">{item.label}</span>
             </Link>
           ))}

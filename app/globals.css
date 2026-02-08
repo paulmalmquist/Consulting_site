@@ -46,6 +46,10 @@ h3 {
   font-family: var(--font-sans), sans-serif;
 }
 
+.nv-headline {
+  font-family: var(--font-display), sans-serif;
+}
+
 .nv-mark-badge {
   display: inline-flex;
   height: 3rem;
