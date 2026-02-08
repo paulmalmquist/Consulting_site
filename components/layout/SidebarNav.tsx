@@ -100,6 +100,10 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
                     <Link
                       key={item.href}
                       href={item.href}
+                      onClick={() => {
+                        // Close the mobile drawer after navigation to avoid stuck overlays.
+                        setDrawerOpen(false);
+                      }}
                       className={cn(
                         'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition',
                         active
@@ -124,6 +128,7 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
           <p className={cn(isCollapsed && 'sr-only')}>Ready to talk?</p>
           <Link
             href="/contact"
+            onClick={() => setDrawerOpen(false)}
             className="mt-2 inline-flex w-full items-center justify-center rounded-lg border border-cyan-300/30 bg-slate-900/70 px-3 py-2 text-xs font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
           >
             Book intro

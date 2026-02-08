@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 type CapabilityItem = {
@@ -13,33 +12,72 @@ type CapabilityScrollPanelsProps = {
 
 type CapabilityPanel = {
   title: string;
-  description: string;
-  visualTitle: string;
-  visualBody: string;
-  href: string;
+  sentence: string;
+  graphic: 'process' | 'signal' | 'merge';
 };
 
 const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
   'Operational Assessment': {
-    description:
-      'We perform a structured inventory of how work actually moves through your organization — systems, handoffs, approvals, and decision points. The outcome is a clear view of where effort is duplicated, where context is lost, and where processes can be simplified or consolidated to improve continuity, control, and execution quality.',
-    visualTitle: 'Current-State Map',
-    visualBody: 'Systems, handoffs, approvals, and decision points are documented to establish an operational baseline.',
-    href: '/services'
+    sentence: 'Map how work flows and where it can be simplified.',
+    graphic: 'process'
   },
   'AI Concierge': {
-    description:
-      'We act as an ongoing intelligence layer for emerging AI capabilities — translating rapidly evolving tools into practical, business-ready applications. This service helps organizations understand what is newly possible, what is viable today, and how operating models can evolve as AI tools become more powerful, accessible, and integrated into daily work.',
-    visualTitle: 'Capability Signals',
-    visualBody: 'New tooling is evaluated against real operating constraints, readiness, and governance requirements.',
-    href: '/services'
+    sentence: 'Turn new AI capabilities into practical operating advantages.',
+    graphic: 'signal'
   },
   'Legacy SaaS Migration': {
-    description:
-      'We help organizations move off expensive, fragmented SaaS stacks in favor of consolidated, custom systems that are owned and operated internally. The focus is not replacement for its own sake, but reducing long-term cost, dependency, and complexity while preserving data continuity and institutional knowledge.',
-    visualTitle: 'Controlled Consolidation',
-    visualBody: 'Migration sequencing protects data continuity while reducing vendor dependency and cost exposure.',
-    href: '/services'
+    sentence: 'Consolidate costly SaaS sprawl into an internal system you control.',
+    graphic: 'merge'
+  }
+};
+
+const GRAPHIC_STYLES = 'h-28 w-full text-cyan-200';
+
+const renderGraphic = (variant: CapabilityPanel['graphic']) => {
+  switch (variant) {
+    case 'process':
+      return (
+        <svg viewBox="0 0 240 120" className={GRAPHIC_STYLES} aria-hidden="true">
+          <g fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="40" cy="30" r="12" />
+            <circle cx="120" cy="60" r="12" />
+            <circle cx="200" cy="30" r="12" />
+            <circle cx="200" cy="90" r="12" />
+            <path d="M52 30 L108 60" />
+            <path d="M132 60 L188 30" />
+            <path d="M132 60 L188 90" />
+            <path d="M120 72 L120 102" strokeDasharray="4 6" />
+          </g>
+        </svg>
+      );
+    case 'signal':
+      return (
+        <svg viewBox="0 0 240 120" className={GRAPHIC_STYLES} aria-hidden="true">
+          <g fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <path d="M30 90 C70 30, 130 30, 170 90" />
+            <path d="M50 90 C80 50, 120 50, 150 90" />
+            <path d="M70 90 C90 70, 110 70, 130 90" />
+            <circle cx="190" cy="42" r="16" />
+            <path d="M190 26 L190 10" />
+            <path d="M206 42 L220 42" />
+          </g>
+        </svg>
+      );
+    case 'merge':
+    default:
+      return (
+        <svg viewBox="0 0 240 120" className={GRAPHIC_STYLES} aria-hidden="true">
+          <g fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
+            <rect x="24" y="24" width="48" height="32" rx="6" />
+            <rect x="24" y="68" width="48" height="32" rx="6" />
+            <rect x="90" y="46" width="48" height="32" rx="6" />
+            <rect x="168" y="40" width="48" height="40" rx="8" />
+            <path d="M72 40 L90 56" />
+            <path d="M72 84 L90 72" />
+            <path d="M138 62 L168 60" />
+          </g>
+        </svg>
+      );
   }
 };
 
@@ -49,10 +87,8 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
     // For future cards, add a matching title key in `PANEL_CONTENT` above with the desired copy.
     return items.map((item) => {
       const content = PANEL_CONTENT[item.title] ?? {
-        description: 'Deliver one focused capability with clear ownership, controls, and measurable outcomes.',
-        visualTitle: 'Capability Snapshot',
-        visualBody: 'A concise operational view of ownership, controls, and decision flow.',
-        href: '/services'
+        sentence: 'Deliver one focused capability with clear ownership, controls, and measurable outcomes.',
+        graphic: 'process'
       };
 
       return {
@@ -108,27 +144,13 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
               className="nv-snap-panel"
             >
               <div className={`nv-panel-shell ${isVisible ? 'nv-panel-shell--visible' : ''}`}>
-                <div className="space-y-5 lg:space-y-6">
-                  <p className="text-xs uppercase tracking-[0.2em] text-cyan-200">Capability {index + 1}</p>
-                  <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">{panel.title}</h2>
-                  <p className="max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">{panel.description}</p>
-                  <Link
-                    href={panel.href}
-                    className="inline-flex rounded-full border border-slate-700 px-5 py-2 text-sm font-medium text-slate-200 transition hover:border-cyan-200/50 hover:text-white"
-                  >
-                    View details
-                  </Link>
-                </div>
-
-                <div className="rounded-3xl border border-cyan-100/20 bg-slate-950/70 p-6 shadow-[0_0_30px_rgba(94,203,255,0.14)]">
-                  <div className="space-y-4">
-                    <p className="text-sm uppercase tracking-[0.16em] text-cyan-100/80">{panel.visualTitle}</p>
-                    <p className="text-sm leading-relaxed text-slate-300">{panel.visualBody}</p>
+                <div className="flex flex-col gap-6 lg:gap-8">
+                  <div className="rounded-3xl border border-cyan-100/20 bg-slate-950/70 p-6 shadow-[0_0_30px_rgba(94,203,255,0.14)]">
+                    {renderGraphic(panel.graphic)}
                   </div>
-                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                    <div className="rounded-xl border border-slate-800/80 bg-slate-900/70 px-4 py-3 text-xs text-slate-200">Owners mapped</div>
-                    <div className="rounded-xl border border-slate-800/80 bg-slate-900/70 px-4 py-3 text-xs text-slate-200">Control gates</div>
-                    <div className="rounded-xl border border-slate-800/80 bg-slate-900/70 px-4 py-3 text-xs text-slate-200">Evidence feed</div>
+                  <div className="space-y-3">
+                    <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{panel.title}</h2>
+                    <p className="text-base leading-relaxed text-slate-300">{panel.sentence}</p>
                   </div>
                 </div>
               </div>
