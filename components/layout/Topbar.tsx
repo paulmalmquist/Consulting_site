@@ -39,7 +39,7 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
         <div className="hidden md:block" />
         <nav className="grid grid-cols-4 gap-2 md:hidden">
           {[
-            { label: 'Overview', href: '#overview', icon: House },
+            { label: 'Overview', href: '/', icon: House },
             { label: 'Services', href: '/services', icon: BriefcaseBusiness },
             { label: 'Book a call', href: '/contact', icon: CalendarDays },
             { label: 'Docs', href: '/docs', icon: Folder }
