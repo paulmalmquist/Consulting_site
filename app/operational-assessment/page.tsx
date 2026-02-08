@@ -94,16 +94,18 @@ const StepIcon = ({ step }: { step: string }) => {
 
 export default function OperationalAssessmentPage() {
   return (
-    <div className="space-y-12">
-      <section className="space-y-4">
+    <div className="space-y-10 sm:space-y-12">
+      <section className="space-y-3 sm:space-y-4">
         <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Operational Assessment</p>
-        <h1 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
+        <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
           Find the friction, quantify it, and replace it with traceable execution.
         </h1>
-        <p className="text-sm text-slate-300">A fast audit of motion, tools, and data contracts.</p>
+        <p className="text-sm text-slate-300 sm:text-base">
+          A fast audit of motion, tooling, and data contracts.
+        </p>
       </section>
 
-      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6">
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-5 sm:p-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <div
@@ -132,8 +134,8 @@ export default function OperationalAssessmentPage() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6">
-          <h2 className="text-xl font-semibold text-white">What you get</h2>
+        <div className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-5 sm:p-6">
+          <h2 className="text-lg font-semibold text-white sm:text-xl">What you get</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-200">
             {whatYouGet.map((item) => (
               <li key={item} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-3">
@@ -142,8 +144,8 @@ export default function OperationalAssessmentPage() {
             ))}
           </ul>
         </div>
-        <div className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6">
-          <h2 className="text-xl font-semibold text-white">Outputs</h2>
+        <div className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-5 sm:p-6">
+          <h2 className="text-lg font-semibold text-white sm:text-xl">Outputs</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-200">
             {outputs.map((item) => (
               <li key={item} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-3">
@@ -154,11 +156,11 @@ export default function OperationalAssessmentPage() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-8">
+      <section className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-6 sm:p-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-white">Ready to scope the assessment?</h2>
-            <p className="text-sm text-slate-300">We can start with a 30-minute working session.</p>
+            <h2 className="text-xl font-semibold text-white sm:text-2xl">Ready to scope the assessment?</h2>
+            <p className="text-sm text-slate-300 sm:text-base">We can start with a 30-minute working session.</p>
           </div>
           <Link
             href="/contact"
