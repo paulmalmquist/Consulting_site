@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -38,12 +39,19 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
     >
       <div className="flex items-center justify-between px-4 py-5">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400/30 to-transparent text-lg font-semibold">
-            N
+          <div className="relative h-11 w-11 overflow-hidden rounded-lg border border-cyan-100/25 bg-slate-950/80">
+            <Image
+              src="/novendor-brand.jpg"
+              alt="Novendor logo"
+              fill
+              sizes="44px"
+              className="object-cover"
+              priority
+            />
           </div>
           {!isCollapsed && (
             <div>
-              <p className="text-sm font-semibold">Novendor</p>
+              <p className="nv-brand-font text-base font-semibold uppercase tracking-[0.14em] text-white">Novendor</p>
             </div>
           )}
         </div>
@@ -94,8 +102,8 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
                           : 'text-slate-300 hover:bg-slate-800/60 hover:text-white'
                       )}
                     >
-                      <span className="text-base" aria-hidden>
-                        {item.icon}
+                      <span className="nv-mark-badge nv-mark-badge--sm" aria-hidden>
+                        N
                       </span>
                       <span className={cn(isCollapsed && 'sr-only')}>{item.label}</span>
                     </Link>

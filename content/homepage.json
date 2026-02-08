@@ -4,12 +4,7 @@
       "label": "Consulting",
       "href": "/"
     },
-    "links": [
-      { "label": "Overview", "href": "#overview" },
-      { "label": "Capabilities", "href": "#capabilities" },
-      { "label": "How it works", "href": "#how-it-works" },
-      { "label": "Engagement", "href": "#engagement" }
-    ],
+    "links": [{ "label": "Overview", "href": "#overview" }],
     "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
     "secondaryCta": { "label": "Book strategy call", "href": "/contact" }
   },
@@ -17,8 +12,8 @@
     {
       "id": "overview",
       "type": "hero",
-      "headline": "Simplify Your Business Operations and Data.",
-      "subheadline": "Replace SaaS subscription models with modern solutions at a fraction of the cost with no long-term commitment",
+      "headline": "run your business, not your vendors.",
+      "subheadline": "Cut costs, remove lock-in, and modernize operations without long-term commitments.",
       "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
       "secondaryCta": { "label": "Book strategy call", "href": "/contact" },
       "proofBullets": [
@@ -35,74 +30,6 @@
           "title": "Functional Applications"
         }
       ]
-    },
-    {
-      "id": "capabilities",
-      "type": "positioning",
-      "title": "Core capabilities we deliver",
-      "cards": [
-        {
-          "title": "Capability Mapping",
-          "description": "Define what the business must do, who owns it, and what evidence proves it is under control."
-        },
-        {
-          "title": "Workflow Stabilization",
-          "description": "Reduce spreadsheet dependency and manual stitching by tightening handoffs and clarifying system roles."
-        },
-        {
-          "title": "Modular Replacement",
-          "description": "Replace one capability at a time with fit-for-purpose tooling that plugs into your operating model."
-        },
-        {
-          "title": "Cutover Governance",
-          "description": "Run parallel paths, reconciliations, and approvals so leadership can sign off on change with clarity."
-        }
-      ]
-    },
-    {
-      "id": "how-it-works",
-      "type": "structural",
-      "title": "Capability-by-capability execution with proof at each gate",
-      "steps": [
-        "Map one critical capability with named owners and decision points",
-        "Run controlled pilot with parallel reconciliations and rollback triggers",
-        "Scale cutover only after evidence meets agreed governance criteria"
-      ],
-      "whyTitle": "Why this works",
-      "whyBody": "Capability definitions outlive vendors, org charts, and platform choices. Leaders keep control while teams modernize without betting the operation on one big replacement."
-    },
-    {
-      "id": "engagement",
-      "type": "engagement",
-      "title": "How engagements are structured",
-      "phases": [
-        {
-          "title": "Capability Assessment",
-          "duration": "2-3 weeks",
-          "description": "Map capability boundaries, ownership, and dependency exposure across systems.",
-          "decision": "Select first capability to pilot"
-        },
-        {
-          "title": "Capability Pilot",
-          "duration": "4-8 weeks",
-          "description": "Run ringfenced capability in parallel with reconciliations and rollback criteria.",
-          "decision": "Approve cutover, extend pilot, or stop safely"
-        },
-        {
-          "title": "Controlled Cutover Program",
-          "duration": "Roadmap-led",
-          "description": "Sequence capability cutovers with clear governance gates quarter by quarter.",
-          "decision": "Scale with evidence, not momentum"
-        }
-      ]
-    },
-    {
-      "id": "cta",
-      "type": "cta",
-      "headline": "Replace suite sprawl with governed capabilities",
-      "body": "If you are stuck between bloated suites and risky full replatforms, we help you take a third path: decompose dependency capability-by-capability with governance and proof.",
-      "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
-      "secondaryCta": { "label": "Book strategy call", "href": "/contact" }
     }
   ]
 }

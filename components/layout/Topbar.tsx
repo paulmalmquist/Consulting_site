@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Calendar, Handshake, LayoutGrid, Menu, Route, Search } from 'lucide-react';
+import { Menu, Search } from 'lucide-react';
 import { cn } from '../ui/cn';
 
 type TopbarProps = {
@@ -40,23 +40,20 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
         <div className="hidden md:block" />
         <nav className="grid grid-cols-4 gap-2 md:hidden">
           {[
-            { label: 'Capabilities', href: '#capabilities', icon: LayoutGrid },
-            { label: 'How it works', href: '#how-it-works', icon: Route },
-            { label: 'Engagement', href: '#engagement', icon: Handshake },
-            { label: 'Book strategy call', href: '/contact', icon: Calendar }
-          ].map((item) => {
-            const Icon = item.icon;
-            return (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="group flex min-h-[44px] flex-col items-center justify-center gap-1 rounded-xl border border-slate-800/80 bg-slate-900/40 px-2 text-[11px] font-medium text-slate-400 transition hover:border-cyan-300/40 hover:text-cyan-200 hover:shadow-[0_0_16px_rgba(127,215,224,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
-              >
-                <Icon size={20} strokeWidth={1.75} className="text-slate-400 transition group-hover:text-cyan-200" />
-                <span className="text-center leading-tight">{item.label}</span>
-              </Link>
-            );
-          })}
+            { label: 'Overview', href: '#overview' },
+            { label: 'Capabilities', href: '/capabilities' },
+            { label: 'Contact', href: '/contact' },
+            { label: 'Docs', href: '/docs' }
+          ].map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="group flex min-h-[44px] flex-col items-center justify-center gap-1 rounded-xl border border-slate-800/80 bg-slate-900/40 px-2 text-[11px] font-medium text-slate-400 transition hover:border-cyan-300/40 hover:text-cyan-200 hover:shadow-[0_0_16px_rgba(127,215,224,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+            >
+              <span className="nv-mark-badge nv-mark-badge--sm">N</span>
+              <span className="text-center leading-tight">{item.label}</span>
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
