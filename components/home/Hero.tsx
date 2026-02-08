@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ProofBullets } from './ProofBullets';
+import { CapabilityScrollPanels } from './CapabilityScrollPanels';
 import { SystemConvergenceGraphic } from './SystemConvergenceGraphic';
 
 type HeroProps = {
@@ -37,7 +37,7 @@ export function Hero({ headline, subheadline, primaryCta, secondaryCta, proofBul
           <SystemConvergenceGraphic />
         </div>
       </div>
-      <ProofBullets items={proofBullets} />
+      <CapabilityScrollPanels items={proofBullets} />
     </section>
   );
 }
