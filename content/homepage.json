@@ -12,7 +12,7 @@
     {
       "id": "overview",
       "type": "hero",
-      "headline": "run your business, not your vendors.",
+      "headline": "Run Your Business, Not Your Vendors",
       "subheadline": "Cut costs, remove lock-in, and modernize operations without long-term commitments.",
       "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
       "secondaryCta": { "label": "Book strategy call", "href": "/contact" },
