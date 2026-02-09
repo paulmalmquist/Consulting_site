@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { readJson } from '../lib/content';
-import { StickyNav } from '../components/home/StickyNav';
 import { Hero } from '../components/home/Hero';
 import { Stepper } from '../components/home/Stepper';
 import { CardGrid } from '../components/home/CardGrid';
@@ -282,13 +281,7 @@ export default function HomePage() {
 
   return (
     <div className="space-y-12">
-      <StickyNav
-        logo={home.nav.logo}
-        links={home.nav.links}
-        primaryCta={home.nav.primaryCta}
-        secondaryCta={home.nav.secondaryCta}
-      />
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16">
+      <div className="mx-auto flex w-full max-w-none flex-col gap-16 md:mr-auto md:ml-0">
         {home.sections.map((section) => (
           <div key={section.id}>{renderSection(section)}</div>
         ))}

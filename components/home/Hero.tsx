@@ -21,9 +21,9 @@ export function Hero({ headline, subheadline, primaryCta, secondaryCta, proofBul
   const afterVendors = hasEmphasis && vendorsOffset !== -1 ? afterNot.slice(vendorsOffset + 1) : '';
 
   return (
-    <section className="nv-hero-scanline space-y-10 pt-4 pb-8 lg:pt-8 lg:pb-16">
-      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="space-y-6 text-center lg:text-left">
+    <section className="nv-hero-scanline space-y-10 pt-4 pb-8 lg:space-y-3 lg:pt-6 lg:pb-6">
+      <div className="grid gap-8 lg:grid-cols-2">
+        <div className="space-y-6 text-center lg:pl-3 lg:text-left">
           <p className="nv-headline text-sm uppercase tracking-[0.2em] text-cyan-200">novendor</p>
           <h1 className="nv-brand-font text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
             {hasEmphasis ? (

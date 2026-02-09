@@ -4,13 +4,11 @@ import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { SidebarNav } from './SidebarNav';
 import { Topbar } from './Topbar';
-import { SearchCommandPalette } from '../search/SearchCommandPalette';
 
 export function LayoutShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [desktopOverlayOpen, setDesktopOverlayOpen] = useState(false);
 
   useEffect(() => {
@@ -69,8 +67,7 @@ export function LayoutShell({ children }: { children: ReactNode }) {
       isCollapsed,
       toggleCollapsed,
       drawerOpen,
-      setDrawerOpen,
-      openSearch: () => setSearchOpen(true)
+      setDrawerOpen
     }),
     [isCollapsed, drawerOpen]
   );
@@ -99,7 +96,6 @@ export function LayoutShell({ children }: { children: ReactNode }) {
           </main>
         </div>
       </div>
-      <SearchCommandPalette open={searchOpen} onOpenChange={setSearchOpen} />
     </div>
   );
 }

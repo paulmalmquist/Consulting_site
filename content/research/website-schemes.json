@@ -1,0 +1,90 @@
+{
+  "id": "research-website-schemes",
+  "title": "Website Schemes",
+  "slug": "website-schemes",
+  "summary": "Four narrative schemes for presenting capability-first services with clear story arcs, CTA patterns, and risks.",
+  "tags": ["Website", "Messaging", "Category", "Proof", "Industry"],
+  "audience": ["CEO", "COO", "CIO/IT", "Ops"],
+  "maturity": "Refine",
+  "sections": [
+    {
+      "type": "callout",
+      "title": "Choose one primary narrative",
+      "body": "Select the scheme that matches your buyer context, then keep the story consistent across hero, proof, and CTA."
+    },
+    {
+      "type": "schemes",
+      "title": "Narrative Comparison",
+      "items": [
+        {
+          "id": "problem-solution",
+          "name": "Problem/Solution",
+          "whenToUse": "Use when buyers feel daily friction and need a practical path out.",
+          "narrativeArc": [
+            "Name operational bottlenecks clearly.",
+            "Show the execution model shift.",
+            "Offer a low-risk first step."
+          ],
+          "hero": {
+            "headline": "Reduce system dependency without replatform chaos.",
+            "subhead": "Replace reconciliation work with governed execution over your existing systems."
+          },
+          "ctaExample": "Run a dependency diagnosis",
+          "risk": "Message can sound overly negative if pain is overemphasized.",
+          "mitigation": "Balance every pain statement with a concrete improvement path."
+        },
+        {
+          "id": "aspirational",
+          "name": "Aspirational",
+          "whenToUse": "Use when leadership is growth-focused and already aligned on change.",
+          "narrativeArc": [
+            "Paint a clear future operating state.",
+            "Connect capabilities to strategic goals.",
+            "Show how to start with controlled scope."
+          ],
+          "hero": {
+            "headline": "Build execution systems that scale with your strategy.",
+            "subhead": "Move faster with internal control of workflows, data logic, and approval paths."
+          },
+          "ctaExample": "Map your future-state execution model",
+          "risk": "Can feel abstract if not tied to current constraints.",
+          "mitigation": "Anchor aspirational copy with one present-day bottleneck and proof."
+        },
+        {
+          "id": "proven-process",
+          "name": "Proven Process",
+          "whenToUse": "Use when buyers prioritize risk control, governance, and delivery confidence.",
+          "narrativeArc": [
+            "Introduce a clear staged method.",
+            "Show decision gates and evidence at each stage.",
+            "Reinforce continuity into ongoing operations."
+          ],
+          "hero": {
+            "headline": "A proven path from fragmented tooling to governed execution.",
+            "subhead": "Use a phased method to design, pilot, and operationalize internal execution capabilities."
+          },
+          "ctaExample": "Review the operating method",
+          "risk": "Process detail may feel heavy before value is clear.",
+          "mitigation": "Lead with outcomes, then layer process in expandable sections."
+        },
+        {
+          "id": "industry-insider",
+          "name": "Industry Insider",
+          "whenToUse": "Use when a specific vertical has unique workflows, controls, or compliance needs.",
+          "narrativeArc": [
+            "Open with sector-specific workflow context.",
+            "Translate capability model into that domain.",
+            "Support with vertical proof patterns."
+          ],
+          "hero": {
+            "headline": "Execution models tuned for your operating environment.",
+            "subhead": "Apply one capability framework with language and controls matched to your industry."
+          },
+          "ctaExample": "View industry execution patterns",
+          "risk": "Over-segmentation can dilute the core brand story.",
+          "mitigation": "Keep a shared core narrative and vary only context-specific examples."
+        }
+      ]
+    }
+  ]
+}

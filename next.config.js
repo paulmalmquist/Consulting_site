@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
-const isProd = process.env.NODE_ENV === 'production';
+const useStaticExport = process.env.NEXT_EXPORT === 'true';
 
 const nextConfig = {
   reactStrictMode: true,
   experimental: {},
-  // Keep local dev on standard Next server behavior; export only for production builds.
-  output: isProd ? 'export' : undefined,
+  // Keep server mode by default. Opt-in to static export with NEXT_EXPORT=true.
+  output: useStaticExport ? 'export' : undefined,
   trailingSlash: true,
   basePath,
   assetPrefix: basePath ? `${basePath}/` : undefined,

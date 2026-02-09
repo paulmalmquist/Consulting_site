@@ -14,30 +14,16 @@
       "content": "Operations redesign and dependency reduction grounded in real work."
     },
     {
-      "id": "page-shift",
-      "title": "The Shift",
-      "description": "From SaaS stacks to internal execution engines over unified data.",
-      "type": "page",
-      "tags": [
-        "shift",
-        "execution",
-        "automation",
-        "governance"
-      ],
-      "href": "/shift",
-      "content": "From SaaS stacks to internal execution engines over unified data."
-    },
-    {
       "id": "page-contact",
       "title": "Contact",
-      "description": "Book an intro call or email to discuss capability-first dependency reduction.",
+      "description": "Book an in-site strategy meeting and receive calendar reminders.",
       "type": "page",
       "tags": [
         "contact",
         "intro"
       ],
       "href": "/contact",
-      "content": "Book an intro call or email to discuss capability-first dependency reduction."
+      "content": "Book an in-site strategy meeting and receive calendar reminders."
     },
     {
       "id": "page-home",
@@ -100,6 +86,20 @@
       ],
       "href": "/services",
       "content": "A capability-first modernization program that reduces dependency in controlled, finance-safe steps."
+    },
+    {
+      "id": "page-shift",
+      "title": "The Shift",
+      "description": "From SaaS stacks to internal execution engines over unified data.",
+      "type": "page",
+      "tags": [
+        "shift",
+        "execution",
+        "automation",
+        "governance"
+      ],
+      "href": "/shift",
+      "content": "From SaaS stacks to internal execution engines over unified data."
     },
     {
       "id": "post-why-ai-readiness-is-an-operations-problem",
@@ -310,6 +310,85 @@
       ],
       "href": "/docs/faq",
       "content": "Common questions from operations leaders and executives."
+    },
+    {
+      "id": "research-positioning",
+      "title": "Positioning Framework",
+      "description": "Eight framing questions and a worksheet to sharpen audience, category, differentiation, and proof.",
+      "type": "research",
+      "tags": [
+        "Positioning",
+        "Category",
+        "Objections",
+        "Website",
+        "CEO",
+        "COO",
+        "CIO/IT",
+        "Ops",
+        "Start"
+      ],
+      "href": "/research/positioning",
+      "content": "Eight framing questions and a worksheet to sharpen audience, category, differentiation, and proof. Positioning Category Objections Website"
+    },
+    {
+      "id": "research-messaging",
+      "title": "Messaging Guidance",
+      "description": "Rulebook for clear, capability-first messaging with practical do/avoid guidance and a quick quality checker.",
+      "type": "research",
+      "tags": [
+        "Messaging",
+        "Website",
+        "Objections",
+        "Proof",
+        "CEO",
+        "COO",
+        "CIO/IT",
+        "Ops",
+        "Finance",
+        "Refine"
+      ],
+      "href": "/research/messaging",
+      "content": "Rulebook for clear, capability-first messaging with practical do/avoid guidance and a quick quality checker. Messaging Website Objections Proof"
+    },
+    {
+      "id": "research-website-schemes",
+      "title": "Website Schemes",
+      "description": "Four narrative schemes for presenting capability-first services with clear story arcs, CTA patterns, and risks.",
+      "type": "research",
+      "tags": [
+        "Website",
+        "Messaging",
+        "Category",
+        "Proof",
+        "Industry",
+        "CEO",
+        "COO",
+        "CIO/IT",
+        "Ops",
+        "Refine"
+      ],
+      "href": "/research/website-schemes",
+      "content": "Four narrative schemes for presenting capability-first services with clear story arcs, CTA patterns, and risks. Website Messaging Category Proof Industry"
+    },
+    {
+      "id": "research-examples",
+      "title": "Proof Patterns",
+      "description": "Reusable proof patterns that show credibility without naming vendors or overloading buyers with case detail.",
+      "type": "research",
+      "tags": [
+        "Proof",
+        "Website",
+        "Messaging",
+        "Industry",
+        "CEO",
+        "COO",
+        "CIO/IT",
+        "Ops",
+        "Finance",
+        "Prove"
+      ],
+      "href": "/research/examples",
+      "content": "Reusable proof patterns that show credibility without naming vendors or overloading buyers with case detail. Proof Website Messaging Industry"
     },
     {
       "id": "deliverable-dependency-map-and-control-points",

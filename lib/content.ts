@@ -15,6 +15,34 @@ export type ContentItem = ContentMeta & {
   content: string;
 };
 
+export type ResearchTag =
+  | 'Positioning'
+  | 'Messaging'
+  | 'Category'
+  | 'Proof'
+  | 'Website'
+  | 'Objections'
+  | 'Industry';
+
+export type ResearchAudience = 'CEO' | 'COO' | 'CIO/IT' | 'Ops' | 'Finance';
+export type ResearchMaturity = 'Start' | 'Refine' | 'Prove';
+
+export type ResearchSection = {
+  type: string;
+  [key: string]: unknown;
+};
+
+export type ResearchEntry = {
+  id: string;
+  title: string;
+  slug: string;
+  summary: string;
+  tags: ResearchTag[];
+  audience: ResearchAudience[];
+  maturity: ResearchMaturity;
+  sections: ResearchSection[];
+};
+
 const CONTENT_ROOT = path.join(process.cwd(), 'content');
 
 function readMdxFile(filePath: string): ContentItem {
@@ -102,4 +130,40 @@ export function getDocBySlug(slug: string): ContentItem {
 export function readJson<T>(relativePath: string): T {
   const filePath = path.join(CONTENT_ROOT, relativePath);
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
+}
+
+const RESEARCH_ORDER = ['positioning', 'messaging', 'website-schemes', 'examples'];
+
+function readResearchFile(filePath: string): ResearchEntry {
+  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as ResearchEntry;
+}
+
+export function getAllResearchEntries(): ResearchEntry[] {
+  const researchDir = path.join(CONTENT_ROOT, 'research');
+  if (!fs.existsSync(researchDir)) {
+    return [];
+  }
+
+  const orderMap = new Map(RESEARCH_ORDER.map((slug, index) => [slug, index]));
+
+  return fs
+    .readdirSync(researchDir)
+    .filter((file) => file.endsWith('.json'))
+    .map((file) => readResearchFile(path.join(researchDir, file)))
+    .sort((a, b) => {
+      const aOrder = orderMap.get(a.slug) ?? RESEARCH_ORDER.length + 1;
+      const bOrder = orderMap.get(b.slug) ?? RESEARCH_ORDER.length + 1;
+      if (aOrder !== bOrder) {
+        return aOrder - bOrder;
+      }
+      return a.title.localeCompare(b.title);
+    });
+}
+
+export function getResearchBySlug(slug: string): ResearchEntry {
+  const match = getAllResearchEntries().find((item) => item.slug === slug);
+  if (!match) {
+    throw new Error(`Research entry not found: ${slug}`);
+  }
+  return match;
 }

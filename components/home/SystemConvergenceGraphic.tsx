@@ -2,7 +2,7 @@
 
 export function SystemConvergenceGraphic() {
   return (
-    <div className="relative h-full min-h-[400px] w-full overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-950/40 p-8">
+    <div className="relative h-full min-h-[360px] w-full overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-950/40 p-8">
       <svg
         viewBox="0 0 600 400"
         className="h-full w-full"
@@ -52,10 +52,10 @@ export function SystemConvergenceGraphic() {
             <text x="250" y="155" className="node-label">BI</text>
           </g>
 
-          {/* Docs */}
+          {/* Core Research */}
           <g className="node" data-system="docs">
             <circle cx="350" cy="280" r="24" className="node-circle" />
-            <text x="350" y="315" className="node-label">Docs</text>
+            <text x="350" y="315" className="node-label">Core Research</text>
           </g>
         </g>
 

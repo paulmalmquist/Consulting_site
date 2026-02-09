@@ -1,0 +1,174 @@
+{
+  "id": "research-positioning",
+  "title": "Positioning Framework",
+  "slug": "positioning",
+  "summary": "Eight framing questions and a worksheet to sharpen audience, category, differentiation, and proof.",
+  "tags": ["Positioning", "Category", "Objections", "Website"],
+  "audience": ["CEO", "COO", "CIO/IT", "Ops"],
+  "maturity": "Start",
+  "sections": [
+    {
+      "type": "callout",
+      "title": "Before rewriting copy",
+      "body": "Answer these prompts first, then convert answers into homepage language and sales proof."
+    },
+    {
+      "type": "accordion",
+      "id": "eight-questions",
+      "title": "The 8 Questions",
+      "items": [
+        {
+          "id": "purpose",
+          "title": "What do we stand for?",
+          "whyItMatters": "Purpose and principles keep positioning consistent across pages and conversations.",
+          "outputFormat": "One purpose line and three operating principles.",
+          "example": "We help operators regain control of execution decisions."
+        },
+        {
+          "id": "value",
+          "title": "What value do clients feel first?",
+          "whyItMatters": "Early value decides whether buyers keep listening.",
+          "outputFormat": "Top three outcomes with simple measures.",
+          "example": "Fewer handoffs, faster approvals, lower software overhead."
+        },
+        {
+          "id": "alternatives",
+          "title": "What alternatives exist today?",
+          "whyItMatters": "Buyers compare you to current habits, not just direct competitors.",
+          "outputFormat": "List current options and their tradeoffs.",
+          "example": "Status quo, internal stopgaps, broad advisory retainers."
+        },
+        {
+          "id": "differentiation",
+          "title": "How are we meaningfully different?",
+          "whyItMatters": "Differentiation must tie directly to business impact.",
+          "outputFormat": "Three differentiators and the business outcome for each.",
+          "example": "Execution-first delivery reduces reconciliation overhead."
+        },
+        {
+          "id": "best-fit",
+          "title": "Who needs this most right now?",
+          "whyItMatters": "Focus improves clarity, conversion, and case-study relevance.",
+          "outputFormat": "Ideal customer profile by size, role, and trigger.",
+          "example": "COOs managing fragmented workflows across multiple systems."
+        },
+        {
+          "id": "category",
+          "title": "What category are we in?",
+          "whyItMatters": "Category language helps buyers understand where you fit.",
+          "outputFormat": "One category label plus a plain-language definition.",
+          "example": "Execution consultancy: strategy and operating build in one motion."
+        },
+        {
+          "id": "inaction",
+          "title": "What happens if they wait?",
+          "whyItMatters": "Inaction costs create urgency without fear-based messaging.",
+          "outputFormat": "Five concrete consequences stated in business terms.",
+          "example": "Decision latency rises while software spend remains fixed."
+        },
+        {
+          "id": "statement",
+          "title": "Can we summarize it in two sentences?",
+          "whyItMatters": "If the message cannot be short, it will not travel.",
+          "outputFormat": "Two-sentence positioning statement and one short headline.",
+          "example": "For operations leaders, we build execution systems that simplify delivery and governance."
+        }
+      ]
+    },
+    {
+      "type": "template",
+      "title": "Your 2-Sentence Positioning Statement",
+      "template": "For [target], who [need], we provide [category] that delivers [outcome], because [differentiator].",
+      "copyLabel": "Copy template"
+    },
+    {
+      "type": "bullets",
+      "title": "Consequences of Inaction",
+      "items": [
+        "Cost drift continues while capability gains flatten.",
+        "Critical logic remains scattered and hard to govern.",
+        "Teams keep spending time on reconciliation work.",
+        "Operational knowledge stays trapped in individuals.",
+        "Change requests keep competing with platform constraints."
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "follow-on-paths",
+      "title": "Follow-On Exploration Paths",
+      "expandable": true,
+      "cards": [
+        {
+          "id": "target-focus",
+          "title": "Refining Target Focus",
+          "whatToDo": [
+            "Narrow to one high-fit decision maker profile.",
+            "Map top trigger events for that audience.",
+            "Align page messaging to one primary pain pattern."
+          ],
+          "goodLooksLike": [
+            "Visitors self-identify within 10 seconds.",
+            "Sales calls start with fewer qualification loops."
+          ],
+          "deliverable": "Ideal-customer profile brief with trigger matrix"
+        },
+        {
+          "id": "differentiators",
+          "title": "Strengthening Differentiators",
+          "whatToDo": [
+            "Audit competitor claims for repeated language.",
+            "Tie each differentiator to one measurable outcome.",
+            "Replace generic claims with specific operating methods."
+          ],
+          "goodLooksLike": [
+            "Prospects repeat your language back in discovery.",
+            "Pricing conversations center on value, not hours."
+          ],
+          "deliverable": "Differentiator map with proof requirements"
+        },
+        {
+          "id": "category-education",
+          "title": "Category Creation & Education",
+          "whatToDo": [
+            "Define category terms in one simple framework.",
+            "Publish a short explainer and visual model.",
+            "Use repeated language across web, decks, and calls."
+          ],
+          "goodLooksLike": [
+            "Buyers adopt your category wording consistently.",
+            "Inbound questions shift from what to why-now."
+          ],
+          "deliverable": "Category narrative one-pager"
+        },
+        {
+          "id": "client-concerns",
+          "title": "Addressing Client Concerns",
+          "whatToDo": [
+            "List top objections from recent calls.",
+            "Create evidence-backed responses for each objection.",
+            "Embed responses into page copy and FAQs."
+          ],
+          "goodLooksLike": [
+            "Fewer late-stage security and ownership concerns.",
+            "Shorter path from first call to pilot decision."
+          ],
+          "deliverable": "Objection handling guide with proof links"
+        },
+        {
+          "id": "testing",
+          "title": "Testing & Iteration",
+          "whatToDo": [
+            "Test two headline variants per major page.",
+            "Track message resonance in discovery notes.",
+            "Retire phrases that do not improve conversion."
+          ],
+          "goodLooksLike": [
+            "Higher conversion from research pages to contact.",
+            "Internal teams use the same message consistently."
+          ],
+          "deliverable": "Quarterly messaging experiment log"
+        }
+      ]
+    }
+  ]
+}

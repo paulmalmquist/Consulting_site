@@ -1,0 +1,154 @@
+{
+  "id": "research-messaging",
+  "title": "Messaging Guidance",
+  "slug": "messaging",
+  "summary": "Rulebook for clear, capability-first messaging with practical do/avoid guidance and a quick quality checker.",
+  "tags": ["Messaging", "Website", "Objections", "Proof"],
+  "audience": ["CEO", "COO", "CIO/IT", "Ops", "Finance"],
+  "maturity": "Refine",
+  "sections": [
+    {
+      "type": "callout",
+      "title": "Use this as a pre-publish checklist",
+      "body": "These rules keep language clear for non-technical decision makers while preserving credibility."
+    },
+    {
+      "type": "ruleCards",
+      "title": "Messaging Rules",
+      "rules": [
+        {
+          "id": "outcome-first",
+          "name": "Lead with outcomes",
+          "do": [
+            "Describe the operational result first.",
+            "Attach one simple metric where possible.",
+            "State who benefits inside the business."
+          ],
+          "avoid": [
+            "Feature lists without business context.",
+            "Tool names as the primary headline.",
+            "Long technical preambles."
+          ]
+        },
+        {
+          "id": "plain-language",
+          "name": "Prefer plain language",
+          "do": [
+            "Write for a mixed business and technical audience.",
+            "Use short sentences and concrete verbs.",
+            "Define uncommon terms once."
+          ],
+          "avoid": [
+            "Dense consultant phrasing.",
+            "Layered acronyms without explanation.",
+            "Abstract nouns that hide action."
+          ]
+        },
+        {
+          "id": "pain-context",
+          "name": "Name real friction",
+          "do": [
+            "Reference day-to-day execution bottlenecks.",
+            "Show how friction appears in team workflows.",
+            "Pair pain with a practical next step."
+          ],
+          "avoid": [
+            "Fear-based warnings.",
+            "Overstating risk without evidence.",
+            "Generalized complaints about technology."
+          ]
+        },
+        {
+          "id": "specific-differentiation",
+          "name": "Differentiate with specifics",
+          "do": [
+            "Tie each differentiator to a measurable effect.",
+            "Explain method, not just promise.",
+            "Use clear before-and-after framing."
+          ],
+          "avoid": [
+            "Generic claims any firm can make.",
+            "Unqualified superlatives.",
+            "Messaging that sounds interchangeable."
+          ]
+        },
+        {
+          "id": "proof-driven",
+          "name": "Back claims with proof",
+          "do": [
+            "Add metrics, artifacts, or concise testimonials.",
+            "Specify scope and timeframe for outcomes.",
+            "Link proof to one clear claim."
+          ],
+          "avoid": [
+            "Unsupported performance language.",
+            "Anecdotes without context.",
+            "Proof hidden deep in long pages."
+          ]
+        },
+        {
+          "id": "voice-consistency",
+          "name": "Keep voice consistent",
+          "do": [
+            "Use the same core phrases across pages.",
+            "Maintain a calm, executive tone.",
+            "Align marketing and sales language."
+          ],
+          "avoid": [
+            "Switching tone by channel.",
+            "Conflicting category labels.",
+            "Style drift between page sections."
+          ]
+        },
+        {
+          "id": "challenger-balanced",
+          "name": "Challenge responsibly",
+          "do": [
+            "Contrast approaches without attacking vendors.",
+            "Focus on control, speed, and governance.",
+            "Frame change as a practical upgrade path."
+          ],
+          "avoid": [
+            "Aggressive anti-vendor language.",
+            "All-or-nothing migration claims.",
+            "Inflammatory category rhetoric."
+          ]
+        },
+        {
+          "id": "actionable-next-step",
+          "name": "Close with clear next steps",
+          "do": [
+            "Give one primary CTA per section.",
+            "Describe what happens after click.",
+            "Keep ask proportional to buyer intent."
+          ],
+          "avoid": [
+            "Competing CTAs in one block.",
+            "Vague invitations with no scope.",
+            "Calls to action without business context."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "checker",
+      "title": "Message Checker",
+      "bannedPhrases": [
+        "digital transformation",
+        "revolutionary",
+        "game-changing",
+        "best-in-class",
+        "world-class",
+        "synergy",
+        "paradigm shift"
+      ],
+      "suggestions": [
+        "Replace buzzwords with one concrete outcome.",
+        "Break long sentences into one point each.",
+        "Use active verbs tied to business action.",
+        "Name audience and scope explicitly.",
+        "Add one piece of evidence for each major claim."
+      ]
+    }
+  ]
+}

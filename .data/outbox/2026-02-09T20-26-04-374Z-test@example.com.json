@@ -1,0 +1,12 @@
+{
+  "to": "test@example.com",
+  "subject": "NoVendor Meeting — calendar invite",
+  "text": "Your booking is confirmed.\n\nWhen (UTC): 2026-02-10T18:00:00.000Z to 2026-02-10T18:45:00.000Z\nLocation: Online\nJoin link: http://localhost:3000/contact?booking=bk_mlfmgqms_3831e712\n\nAdd to Google Calendar: https://calendar.google.com/calendar/render?action=TEMPLATE&text=NoVendor+Meeting&details=Validate+invite+flow%0AJoin+link%3A+http%3A%2F%2Flocalhost%3A3000%2Fcontact%3Fbooking%3Dbk_mlfmgqms_3831e712&location=Online&dates=20260210T180000Z%2F20260210T184500Z\nAdd to Outlook: https://outlook.live.com/calendar/0/deeplink/compose?subject=NoVendor+Meeting&body=Validate+invite+flow%0AJoin+link%3A+http%3A%2F%2Flocalhost%3A3000%2Fcontact%3Fbooking%3Dbk_mlfmgqms_3831e712&location=Online&startdt=2026-02-10T18%3A00%3A00Z&enddt=2026-02-10T18%3A45%3A00Z\n\nIf links do not open correctly, open the attached calendar file.",
+  "attachments": [
+    {
+      "filename": "novendor-booking-bk_mlfmgqms_3831e712.ics",
+      "content": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//NoVendor//In-Site Booking//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:bk_mlfmgqms_3831e712@novendor.local\r\nDTSTAMP:20260209T202604Z\r\nDTSTART:20260210T180000Z\r\nDTEND:20260210T184500Z\r\nSUMMARY:NoVendor Meeting\r\nDESCRIPTION:Agenda: Validate invite flow\\nAttendee: Test User <test@example.com>\\nJoin link: http://localhost:3000/contact?booking=bk_mlfmgqms_3831e712\\nBooking ID: bk_mlfmgqms_3831e712\r\nLOCATION:Online\r\nORGANIZER;CN=NoVendor:MAILTO:no-reply@novendor.local\r\nATTENDEE;CN=Test User;RSVP=TRUE:MAILTO:test@example.com\r\nSTATUS:CONFIRMED\r\nSEQUENCE:0\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+      "contentType": "text/calendar; method=REQUEST; charset=UTF-8"
+    }
+  ]
+}

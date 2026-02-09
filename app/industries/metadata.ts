@@ -2,5 +2,5 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Industries',
-  description: 'Industry-agnostic workflows with tailored AI readiness examples.'
+  description: 'Visual industry maps for healthcare admin ops, legal ops, finance, real estate investment, and construction pilots.'
 };

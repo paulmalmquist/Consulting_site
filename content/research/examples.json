@@ -1,0 +1,97 @@
+{
+  "id": "research-examples",
+  "title": "Proof Patterns",
+  "slug": "examples",
+  "summary": "Reusable proof patterns that show credibility without naming vendors or overloading buyers with case detail.",
+  "tags": ["Proof", "Website", "Messaging", "Industry"],
+  "audience": ["CEO", "COO", "CIO/IT", "Ops", "Finance"],
+  "maturity": "Prove",
+  "sections": [
+    {
+      "type": "callout",
+      "title": "Proof beats claims",
+      "body": "Use pattern-based proof modules to show evidence consistently across pages, decks, and proposals."
+    },
+    {
+      "type": "proofPatterns",
+      "title": "Proof Pattern Library",
+      "patterns": [
+        {
+          "id": "bold-category-stance",
+          "title": "Bold category stance",
+          "description": "Define a clear category point of view and reinforce it across every major page. The goal is fast recognition, not provocative language.",
+          "whatToShow": [
+            "One-sentence category definition",
+            "Before vs after operating model visual",
+            "Consistent terminology across navigation and headers"
+          ],
+          "evidence": [
+            "Message recall from discovery calls",
+            "Engagement metrics on category explainer content",
+            "Sales notes showing reduced confusion"
+          ]
+        },
+        {
+          "id": "vertical-credibility",
+          "title": "Vertical credibility",
+          "description": "Show domain familiarity through workflow context, not broad claims. Buyers should recognize their environment immediately.",
+          "whatToShow": [
+            "Industry-specific workflow map",
+            "Constraint-aware implementation notes",
+            "Role-specific outcomes by function"
+          ],
+          "evidence": [
+            "Before/after cycle time metrics",
+            "Domain stakeholder testimonial",
+            "Process artifact annotated with controls"
+          ]
+        },
+        {
+          "id": "methodology-first-trust",
+          "title": "Methodology-first trust",
+          "description": "Establish confidence with a visible method and explicit decision gates. This lowers perceived risk for complex programs.",
+          "whatToShow": [
+            "Phased method with deliverables",
+            "Decision criteria per stage",
+            "Governance checkpoints and owners"
+          ],
+          "evidence": [
+            "Pilot-to-scale conversion rate",
+            "Sample weekly operating report",
+            "Client quote on delivery predictability"
+          ]
+        },
+        {
+          "id": "outcome-backed-proof",
+          "title": "Outcome-backed proof",
+          "description": "Pair every strategic claim with concrete operating outcomes. Keep numbers contextual and easy to interpret.",
+          "whatToShow": [
+            "Outcome cards with timeframe",
+            "Simple baseline vs current comparison",
+            "Scope notes for measurement integrity"
+          ],
+          "evidence": [
+            "Metric deltas with dates",
+            "Executive testimonial with role",
+            "Audit trail or run history snapshot"
+          ]
+        },
+        {
+          "id": "custom-build-wins",
+          "title": "Custom build wins when off-the-shelf breaks",
+          "description": "Use this pattern when prepackaged tools cannot fit core workflows without heavy compromise. Focus on continuity and governance outcomes.",
+          "whatToShow": [
+            "Critical workflow where fit failed",
+            "Targeted build scope and constraints",
+            "Governance and ownership model after launch"
+          ],
+          "evidence": [
+            "Reduction in workaround steps",
+            "Before/after cost structure",
+            "Exception approval records"
+          ]
+        }
+      ]
+    }
+  ]
+}

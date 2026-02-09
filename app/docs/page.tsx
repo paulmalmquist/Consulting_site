@@ -7,7 +7,7 @@ export default function DocsPage() {
   return (
     <div className="space-y-8">
       <section className="space-y-4">
-        <h1 className="text-3xl font-semibold text-white">Docs</h1>
+        <h1 className="text-3xl font-semibold text-white">Core Research</h1>
         <p className="text-lg text-slate-300">Detailed guidance on method, engagement structure, and decision controls.</p>
       </section>
       <div className="grid gap-4 md:grid-cols-2">

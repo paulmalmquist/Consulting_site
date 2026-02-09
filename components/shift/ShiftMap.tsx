@@ -153,7 +153,7 @@ export function ShiftMap() {
             <text x="102" y="104" fill="rgba(203,213,225,0.95)" fontSize="14">CRM</text>
             <text x="246" y="120" fill="rgba(203,213,225,0.95)" fontSize="14">Ticketing</text>
             <text x="164" y="186" fill="rgba(203,213,225,0.95)" fontSize="14">ERP</text>
-            <text x="96" y="260" fill="rgba(203,213,225,0.95)" fontSize="14">Docs</text>
+            <text x="96" y="260" fill="rgba(203,213,225,0.95)" fontSize="14">Core Research</text>
             <text x="246" y="276" fill="rgba(203,213,225,0.95)" fontSize="14">Email</text>
             <text x="170" y="336" fill="rgba(203,213,225,0.95)" fontSize="14">BI</text>
           </g>

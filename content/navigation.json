@@ -6,17 +6,8 @@
         { "label": "Home", "href": "/", "icon": "🏠" },
         { "label": "The Shift", "href": "/shift", "icon": "↗️" },
         { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
-        { "label": "Method", "href": "/method", "icon": "🧩" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
-        { "label": "Demo", "href": "/demo", "icon": "🧪" },
-        { "label": "Docs", "href": "/docs", "icon": "📘" },
-        { "label": "Example Engagements", "href": "/proof", "icon": "🧭" }
-      ]
-    },
-    {
-      "title": "Library",
-      "items": [
-        { "label": "Insights", "href": "/insights", "icon": "📚" }
+        { "label": "Research", "href": "/research", "icon": "📘" }
       ]
     },
     {

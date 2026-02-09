@@ -2,24 +2,24 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BriefcaseBusiness, CalendarDays, Folder, House, Menu, Search } from 'lucide-react';
+import { BriefcaseBusiness, CalendarDays, Folder, House, Menu } from 'lucide-react';
 import { cn } from '../ui/cn';
+import { InlineSearch } from '../search/InlineSearch';
 
 type TopbarProps = {
   isCollapsed: boolean;
   toggleCollapsed: () => void;
   drawerOpen: boolean;
   setDrawerOpen: (open: boolean) => void;
-  openSearch: () => void;
 };
 
-export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
+export function Topbar({ setDrawerOpen }: TopbarProps) {
   const pathname = usePathname();
   const isHome = pathname === '/';
 
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800/80 bg-ink/80 px-4 py-4 backdrop-blur md:px-8">
-      <div className="flex w-full flex-col gap-3 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-4">
+      <div className="mx-auto flex w-full max-w-none flex-col gap-3 md:mr-auto md:ml-0 md:flex-row md:items-center md:gap-4">
         <div className="flex items-center gap-3">
           <button
             type="button"
@@ -30,23 +30,13 @@ export function Topbar({ openSearch, setDrawerOpen }: TopbarProps) {
             <Menu size={18} />
           </button>
         </div>
-        <button
-          type="button"
-          className={cn(
-            'flex w-full items-center gap-3 rounded-full border border-slate-700/60 bg-slate-900/60 px-4 py-2 text-left text-sm text-slate-300 transition hover:border-slate-500 md:min-w-[320px] md:w-auto'
-          )}
-          onClick={openSearch}
-          aria-label="Open search"
-        >
-          <Search size={16} className="text-slate-400" />
-        </button>
-        <div className="hidden md:block" />
+        <InlineSearch />
         <nav className="grid grid-cols-4 gap-2 md:hidden">
           {[
             { label: 'Overview', href: '/', icon: House },
             { label: 'Services', href: '/services', icon: BriefcaseBusiness },
             { label: 'Book a call', href: '/contact', icon: CalendarDays },
-            { label: 'Docs', href: '/docs', icon: Folder }
+            { label: 'Research', href: '/research', icon: Folder }
           ].map((item) => {
             const Icon = item.icon;
             return (
