@@ -130,12 +130,12 @@ h3 {
 
 @media (min-width: 768px) {
   .nv-snap-panel {
-    min-height: 100svh;
+    min-height: auto;
     padding-block: 1rem;
   }
 
   .nv-panel-shell {
-    align-content: center;
+    align-content: start;
   }
 }
 
