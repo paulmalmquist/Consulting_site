@@ -8,6 +8,24 @@ import { ChevronDown, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
 import navigation from '../../content/navigation.json';
 import { cn } from '../ui/cn';
 
+const ALLOWED_NAV_ITEMS = new Set([
+  'Home',
+  'The Shift',
+  'Operational Assessment',
+  'Industries',
+  'Research',
+  'Core Research',
+  'About',
+  'Contact'
+]);
+
+const VISIBLE_NAV_GROUPS = navigation.groups
+  .map((group) => ({
+    ...group,
+    items: group.items.filter((item) => ALLOWED_NAV_ITEMS.has(item.label))
+  }))
+  .filter((group) => group.items.length > 0);
+
 type LayoutState = {
   isCollapsed: boolean;
   toggleCollapsed: () => void;
@@ -19,7 +37,7 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
   const pathname = usePathname();
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {};
-    navigation.groups.forEach((group) => {
+    VISIBLE_NAV_GROUPS.forEach((group) => {
       initial[group.title] = true;
     });
     return initial;
@@ -78,7 +96,7 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
         </button>
       </div>
       <nav className="flex-1 space-y-4 overflow-y-auto px-3 pb-6">
-        {navigation.groups.map((group) => (
+        {VISIBLE_NAV_GROUPS.map((group) => (
           <div key={group.title} className="space-y-2">
             <button
               type="button"

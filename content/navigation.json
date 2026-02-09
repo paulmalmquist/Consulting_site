@@ -7,7 +7,7 @@
         { "label": "The Shift", "href": "/shift", "icon": "↗️" },
         { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
-        { "label": "Research", "href": "/research", "icon": "📘" }
+        { "label": "Core Research", "href": "/research", "icon": "📘" }
       ]
     },
     {
