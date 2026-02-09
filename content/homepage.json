@@ -5,7 +5,7 @@
       "href": "/"
     },
     "links": [{ "label": "Overview", "href": "#overview" }],
-    "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
+    "primaryCta": { "label": "Operational assessment", "href": "/operational-assessment" },
     "secondaryCta": { "label": "Book strategy call", "href": "/contact" }
   },
   "sections": [
@@ -14,7 +14,7 @@
       "type": "hero",
       "headline": "Run Your Business, Not Your Vendors",
       "subheadline": "Cut costs, remove lock-in, and modernize operations without long-term commitments.",
-      "primaryCta": { "label": "See capabilities", "href": "/capabilities" },
+      "primaryCta": { "label": "Operational assessment", "href": "/operational-assessment" },
       "secondaryCta": { "label": "Book strategy call", "href": "/contact" },
       "proofBullets": [
         {

@@ -100,7 +100,6 @@ h3 {
 }
 
 .nv-snap-panel {
-  /* Mobile: allow panels to size to content so cards don't feel oversized. */
   min-height: auto;
   display: flex;
   align-items: stretch;
@@ -114,7 +113,6 @@ h3 {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr;
-  /* Mobile: keep content anchored to the top to avoid tall empty space. */
   align-content: start;
   border: 1px solid rgb(var(--nv-border) / 0.75);
   border-radius: 1.75rem;
@@ -131,7 +129,6 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  /* Desktop: restore full-screen snap panels for the scroll narrative. */
   .nv-snap-panel {
     min-height: 100svh;
     padding-block: 1rem;

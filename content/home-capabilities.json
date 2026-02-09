@@ -3,28 +3,28 @@
     "title": "Capability Mapping",
     "description": "Define what the business must do, who owns it, and what evidence proves it is under control.",
     "tags": ["ownership", "decisions", "controls"],
-    "href": "/capabilities",
+    "href": "/shift",
     "eyebrow": "Capability"
   },
   {
     "title": "Workflow Stabilization",
     "description": "Reduce spreadsheet dependency and manual stitching by tightening handoffs and clarifying system roles.",
     "tags": ["stability", "handoffs", "risk"],
-    "href": "/capabilities",
+    "href": "/shift",
     "eyebrow": "Capability"
   },
   {
     "title": "Modular Replacement",
     "description": "Replace one capability at a time with fit-for-purpose tooling that plugs into your operating model.",
     "tags": ["modular", "sequencing", "fit"],
-    "href": "/capabilities",
+    "href": "/shift",
     "eyebrow": "Capability"
   },
   {
     "title": "Cutover Governance",
     "description": "Run parallel paths, reconciliations, and approvals so leadership can sign off on change with clarity.",
     "tags": ["parallel run", "evidence", "approvals"],
-    "href": "/capabilities",
+    "href": "/shift",
     "eyebrow": "Capability"
   }
 ]

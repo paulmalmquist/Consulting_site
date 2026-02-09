@@ -88,8 +88,6 @@ const renderGraphic = (variant: CapabilityPanel['graphic']) => {
 
 export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
   const panels = useMemo<CapabilityPanel[]>(() => {
-    // To add or remove homepage capability sections, edit the `proofBullets` array in `content/homepage.json`.
-    // For future cards, add a matching title key in `PANEL_CONTENT` above with the desired copy.
     return items.map((item) => {
       const content = PANEL_CONTENT[item.title] ?? {
         sentence: 'Deliver one focused capability with clear ownership, controls, and measurable outcomes.',
@@ -164,8 +162,6 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
               data-panel-index={index}
               className="nv-snap-panel"
             >
-              {/* Previously only one panel had an href, leaving other cards non-interactive on mobile taps. */}
-              {/* Wrap the full panel in a Link so the entire card area is a reliable tap target. */}
               <Link
                 href={panel.href ?? '#'}
                 className="group block w-full rounded-[1.75rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 touch-manipulation cursor-pointer"

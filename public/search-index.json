@@ -14,17 +14,18 @@
       "content": "Operations redesign and dependency reduction grounded in real work."
     },
     {
-      "id": "page-capabilities",
-      "title": "Capabilities",
-      "description": "Core capabilities for dependency reduction, replacement execution, and governance-safe modernization.",
+      "id": "page-shift",
+      "title": "The Shift",
+      "description": "From SaaS stacks to internal execution engines over unified data.",
       "type": "page",
       "tags": [
-        "capabilities",
-        "modernization",
+        "shift",
+        "execution",
+        "automation",
         "governance"
       ],
-      "href": "/capabilities",
-      "content": "Core capabilities for dependency reduction, replacement execution, and governance-safe modernization."
+      "href": "/shift",
+      "content": "From SaaS stacks to internal execution engines over unified data."
     },
     {
       "id": "page-contact",

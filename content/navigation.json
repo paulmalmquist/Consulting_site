@@ -4,7 +4,7 @@
       "title": "Overview",
       "items": [
         { "label": "Home", "href": "/", "icon": "🏠" },
-        { "label": "Capabilities", "href": "/capabilities", "icon": "⚡" },
+        { "label": "The Shift", "href": "/shift", "icon": "↗️" },
         { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
         { "label": "Method", "href": "/method", "icon": "🧩" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
