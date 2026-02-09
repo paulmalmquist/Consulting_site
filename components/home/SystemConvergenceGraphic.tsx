@@ -95,7 +95,7 @@ export function SystemConvergenceGraphic() {
           </g>
 
           {/* Core label */}
-          <text x="300" y="240" className="core-label">Capability Operating Model</text>
+          <text x="300" y="240" className="core-label">Modern Operating Model</text>
         </g>
       </svg>
     </div>
