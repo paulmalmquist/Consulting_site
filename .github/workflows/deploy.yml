@@ -30,7 +30,7 @@ jobs:
       - name: Build search index (non-blocking)
         run: npm run build:search || echo "Search index build failed — continuing"
       - name: Build static export
-        run: npm run build
+        run: npm run build:static
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
       - name: Verify static export
