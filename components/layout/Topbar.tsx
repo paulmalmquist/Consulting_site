@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BriefcaseBusiness, CalendarDays, Folder, House, Menu } from 'lucide-react';
+import { ArrowRightLeft, BookOpenText, CalendarDays, House, Menu } from 'lucide-react';
 import { cn } from '../ui/cn';
 import { InlineSearch } from '../search/InlineSearch';
 
@@ -34,9 +34,9 @@ export function Topbar({ setDrawerOpen }: TopbarProps) {
         <nav className="grid grid-cols-4 gap-2 md:hidden">
           {[
             { label: 'Overview', href: '/', icon: House },
-            { label: 'Services', href: '/services', icon: BriefcaseBusiness },
-            { label: 'Book a call', href: '/contact', icon: CalendarDays },
-            { label: 'Research', href: '/research', icon: Folder }
+            { label: 'The Shift', href: '/shift', icon: ArrowRightLeft },
+            { label: 'Core Research', href: '/docs', icon: BookOpenText },
+            { label: 'Book appointment', href: '/contact', icon: CalendarDays }
           ].map((item) => {
             const Icon = item.icon;
             return (
