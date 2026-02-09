@@ -54,7 +54,7 @@ export function Hero({ headline, subheadline, primaryCta, secondaryCta, proofBul
             </Link>
           </div>
         </div>
-        <div className="hidden lg:block">
+        <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none">
           <SystemConvergenceGraphic />
         </div>
       </div>
