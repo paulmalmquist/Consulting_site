@@ -12,6 +12,7 @@ const ALLOWED_NAV_ITEMS = new Set([
   'Home',
   'The Shift',
   'Operational Assessment',
+  'SaaS Iceberg',
   'Industries',
   'Research',
   'Core Research',
