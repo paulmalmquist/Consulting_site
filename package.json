@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:clean": "bash scripts/dev-clean.sh",
     "build": "next build",
     "build:static": "NEXT_EXPORT=true next build",
     "start": "next start",
