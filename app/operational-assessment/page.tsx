@@ -97,9 +97,7 @@ export default function OperationalAssessmentPage() {
     <div className="space-y-10 sm:space-y-12">
       <section className="space-y-3 sm:space-y-4">
         <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Operational Assessment</p>
-        <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
-          Find the friction, quantify it, and replace it with traceable execution.
-        </h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">Remove the friction</h1>
         <p className="text-sm text-slate-300 sm:text-base">
           A fast audit of motion, tooling, and data contracts.
         </p>
