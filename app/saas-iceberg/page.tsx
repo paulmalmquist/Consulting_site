@@ -82,6 +82,8 @@ const selfAssessment = [
   'Our process lives in heroics, not systems.'
 ];
 
+const WATERLINE_TOP = '40%';
+
 export default function SaaSIcebergPage() {
   const [activeMode, setActiveMode] = useState<DiagnosticMode>(modes[0]);
   const [activeItem, setActiveItem] = useState<{ label: string; explainer: string }>(modes[0].below[0]);
@@ -100,32 +102,39 @@ export default function SaaSIcebergPage() {
         </p>
 
         <div className="relative mt-8 h-[320px] rounded-3xl border border-cyan-200/20 bg-slate-950/50 p-5 sm:h-[380px]">
-          <div className="absolute left-0 top-[40%] h-px w-full bg-cyan-200/50" aria-hidden="true" />
-          <p className="absolute right-4 top-[calc(40%-18px)] text-[11px] uppercase tracking-[0.2em] text-cyan-100/80">Waterline</p>
+          <div className="absolute left-0 h-px w-full bg-cyan-200/50" style={{ top: WATERLINE_TOP }} aria-hidden="true" />
+          <p
+            className="absolute right-4 text-[11px] uppercase tracking-[0.2em] text-cyan-100/80"
+            style={{ top: `calc(${WATERLINE_TOP} - 18px)` }}
+          >
+            Waterline
+          </p>
           <div className="absolute left-1/2 top-[17%] h-24 w-32 -translate-x-1/2 rounded-[45%_45%_35%_35%] border border-cyan-100/35 bg-gradient-to-b from-cyan-100/30 to-cyan-200/10 shadow-[0_0_40px_rgba(104,220,255,0.22)] animate-pulse" />
           <div className="absolute left-1/2 top-[33%] h-44 w-72 -translate-x-1/2 rounded-[45%_45%_55%_55%] border border-cyan-100/20 bg-gradient-to-b from-cyan-300/10 to-transparent" />
           <div className="absolute bottom-0 left-0 h-[60%] w-full bg-gradient-to-b from-cyan-700/20 via-cyan-900/20 to-slate-950/70" />
 
-          <div className="relative z-10 grid h-full items-end gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-cyan-100/15 bg-slate-950/60 p-4">
-              <p className="text-xs uppercase tracking-[0.22em] text-cyan-100/80">Above the water</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {['Features', 'UI', 'Convenience'].map((item) => (
-                  <span key={item} className="rounded-full border border-cyan-200/30 px-3 py-1 text-xs text-cyan-100">
-                    {item}
-                  </span>
-                ))}
-              </div>
+          <div className="absolute left-5 top-5 z-20 w-[min(18rem,calc(100%-2.5rem))] rounded-2xl border border-cyan-100/15 bg-slate-950/60 p-4">
+            <p className="text-xs uppercase tracking-[0.22em] text-cyan-100/80">Above the water</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {['Features', 'UI', 'Convenience'].map((item) => (
+                <span key={item} className="rounded-full border border-cyan-200/30 px-3 py-1 text-xs text-cyan-100">
+                  {item}
+                </span>
+              ))}
             </div>
-            <div className="rounded-2xl border border-violet-200/15 bg-slate-950/60 p-4">
-              <p className="text-xs uppercase tracking-[0.22em] text-violet-100/80">Below the water</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {['Conflict avoidance', 'Process ownership', 'Blame absorption', 'Institutional memory'].map((item) => (
-                  <span key={item} className="rounded-full border border-violet-200/30 px-3 py-1 text-xs text-violet-100">
-                    {item}
-                  </span>
-                ))}
-              </div>
+          </div>
+
+          <div
+            className="absolute right-5 z-20 w-[min(18rem,calc(100%-2.5rem))] rounded-2xl border border-violet-200/15 bg-slate-950/60 p-4"
+            style={{ top: `calc(${WATERLINE_TOP} + 16px)` }}
+          >
+            <p className="text-xs uppercase tracking-[0.22em] text-violet-100/80">Below the water</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {['Conflict avoidance', 'Process ownership', 'Blame absorption', 'Institutional memory'].map((item) => (
+                <span key={item} className="rounded-full border border-violet-200/30 px-3 py-1 text-xs text-violet-100">
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
         </div>
