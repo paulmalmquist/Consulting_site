@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import type { LucideIcon } from 'lucide-react';
+import { Calculator, FileCheck2, FileSpreadsheet, GitBranch, GitPullRequestArrow, LayoutDashboard, Map, ShieldCheck } from 'lucide-react';
 
 const steps = [
   { title: 'Inventory', detail: 'Map tools + handoffs' },
@@ -7,20 +9,26 @@ const steps = [
   { title: 'Certify', detail: 'Replayable outputs' }
 ];
 
-const whatYouGet = [
-  'Workflow map + tool inventory',
-  'Bottleneck & rework scorecard',
-  'Data contract recommendations',
-  'Cutover plan (parallel-run first)',
-  'ROI estimate (time + license reduction)'
+type ArtifactItem = {
+  title: string;
+  icon: LucideIcon;
+  tag: string;
+};
+
+const whatYouGet: ArtifactItem[] = [
+  { title: 'Workflow map + tool inventory', icon: Map, tag: 'Map' },
+  { title: 'Bottleneck & rework scorecard', icon: LayoutDashboard, tag: 'Scorecard' },
+  { title: 'Data contract recommendations', icon: ShieldCheck, tag: 'Contracts' },
+  { title: 'Cutover plan (parallel-run first)', icon: GitPullRequestArrow, tag: 'Cutover' },
+  { title: 'ROI estimate (time + license reduction)', icon: Calculator, tag: 'ROI' }
 ];
 
-const outputs = [
-  'Capability backlog (versioned)',
-  'Control points + evidence plan',
-  '“Excel-as-UI” migration targets',
-  'ETL rules to certify',
-  'Rollback + replay strategy'
+const outputs: ArtifactItem[] = [
+  { title: 'Capability backlog (versioned)', icon: GitBranch, tag: 'Backlog' },
+  { title: 'Control points + evidence plan', icon: FileCheck2, tag: 'Evidence' },
+  { title: '“Excel-as-UI” migration targets', icon: FileSpreadsheet, tag: 'Migration' },
+  { title: 'ETL rules to certify', icon: ShieldCheck, tag: 'Rules' },
+  { title: 'Rollback + replay strategy', icon: GitPullRequestArrow, tag: 'Recovery' }
 ];
 
 const iconClassName = 'h-6 w-6 text-cyan-200';
@@ -92,6 +100,76 @@ const StepIcon = ({ step }: { step: string }) => {
   }
 };
 
+const ArtifactPanel = ({
+  title,
+  eyebrow,
+  tone,
+  items
+}: {
+  title: string;
+  eyebrow: string;
+  tone: 'cyan' | 'violet';
+  items: ArtifactItem[];
+}) => {
+  const toneClasses =
+    tone === 'cyan'
+      ? {
+          glow: 'bg-cyan-300/15',
+          border: 'border-cyan-200/25',
+          icon: 'text-cyan-200',
+          tag: 'border-cyan-200/25 bg-cyan-300/10 text-cyan-100'
+        }
+      : {
+          glow: 'bg-violet-300/15',
+          border: 'border-violet-200/25',
+          icon: 'text-violet-200',
+          tag: 'border-violet-200/25 bg-violet-300/10 text-violet-100'
+        };
+
+  return (
+    <div className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/60 p-5 sm:p-6">
+      <div className={`pointer-events-none absolute -top-20 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full ${toneClasses.glow} blur-3xl`} />
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">{eyebrow}</p>
+          <h2 className="mt-2 text-lg font-semibold text-white sm:text-xl">{title}</h2>
+        </div>
+        <div className="relative mt-0.5 hidden h-12 w-12 sm:block" aria-hidden="true">
+          <div className={`absolute left-0 top-2 h-9 w-9 rotate-[-8deg] rounded-2xl border ${toneClasses.border} bg-slate-950/35`} />
+          <div className={`absolute left-2 top-1 h-9 w-9 rotate-[6deg] rounded-2xl border ${toneClasses.border} bg-slate-950/45`} />
+          <div className={`absolute left-4 top-0 h-9 w-9 rotate-[18deg] rounded-2xl border ${toneClasses.border} bg-slate-950/55`} />
+        </div>
+      </div>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+        {items.map((item) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={item.title}
+              className="group rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4 transition hover:border-slate-600/70 hover:bg-slate-950/55"
+            >
+              <div className="flex items-start gap-3">
+                <span className={`mt-0.5 inline-flex h-10 w-10 items-center justify-center rounded-xl border ${toneClasses.border} bg-slate-950/60`}>
+                  <Icon className={`h-5 w-5 ${toneClasses.icon}`} aria-hidden="true" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <p className="text-sm font-semibold text-white">{item.title}</p>
+                    <span className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${toneClasses.tag}`}>
+                      {item.tag}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 export default function OperationalAssessmentPage() {
   return (
     <div className="space-y-10 sm:space-y-12">
@@ -132,26 +210,8 @@ export default function OperationalAssessmentPage() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-5 sm:p-6">
-          <h2 className="text-lg font-semibold text-white sm:text-xl">What you get</h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-200">
-            {whatYouGet.map((item) => (
-              <li key={item} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-3">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-5 sm:p-6">
-          <h2 className="text-lg font-semibold text-white sm:text-xl">Outputs</h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-200">
-            {outputs.map((item) => (
-              <li key={item} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-3">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ArtifactPanel title="What you get" eyebrow="Deliverables" tone="cyan" items={whatYouGet} />
+        <ArtifactPanel title="Outputs" eyebrow="Replayable artifacts" tone="violet" items={outputs} />
       </section>
 
       <section className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-6 sm:p-8">
