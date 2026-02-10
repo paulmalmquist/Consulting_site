@@ -5,8 +5,8 @@
       "items": [
         { "label": "Home", "href": "/", "icon": "🏠" },
         { "label": "The Shift", "href": "/shift", "icon": "↗️" },
-        { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
         { "label": "SaaS Iceberg", "href": "/saas-iceberg", "icon": "🧊" },
+        { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
         { "label": "Core Research", "href": "/research", "icon": "📘" }
       ]
