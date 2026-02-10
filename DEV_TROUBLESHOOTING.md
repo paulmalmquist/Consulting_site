@@ -16,6 +16,49 @@
   - `GET /_next/static/css/app/layout.css?... 404`
   - sometimes `500` before returning to `404`.
 
+## CSS Missing (layout.css 404)
+
+### Symptom
+- The app renders with little/no styling.
+- Network shows `/_next/static/css/app/layout.css?...` returning `404`.
+
+### Common causes (this repo)
+- `.next` got corrupted (interrupted compile, multiple dev servers, or a crash).
+- You're running a different dev server than you think (port already in use; old process still serving).
+- For GitHub Pages: incorrect `basePath` / `assetPrefix` (`NEXT_PUBLIC_BASE_PATH`) means assets are requested from the wrong path.
+
+### Fix (local dev)
+1. Kill any existing Next processes and clear `.next`:
+
+```bash
+pkill -f "next dev" || true
+rm -rf .next
+```
+
+2. Start dev and force a full reload:
+
+```bash
+npm run dev -- --hostname 127.0.0.1 --port 3000
+```
+
+Then hard refresh in browser (`Cmd+Shift+R`).
+
+3. Validate the CSS URL emitted by `/` actually returns `200`:
+
+```bash
+curl -s http://127.0.0.1:3000/ > /tmp/home-check.html
+URL=$(rg -o '/_next/static/css/app/layout.css\\?v=[0-9]+' /tmp/home-check.html | head -n1)
+echo "$URL"
+curl -I "http://127.0.0.1:3000$URL"
+```
+
+### Fix (GitHub Pages deploy)
+If HTML loads but CSS is missing on the live site, verify:
+- The GitHub Pages workflow ran `npm run build:static` successfully (static export creates `out/`).
+- `NEXT_PUBLIC_BASE_PATH` (GitHub repo variable) matches the Pages path:
+  - `''` for a root domain
+  - `'/<repo>'` for `username.github.io/<repo>`
+
 ### What usually causes it
 - Stale or partially-written `.next` artifacts after interrupted runs, process crashes, or overlapping dev sessions.
 - A previous `next dev` process still bound to port `3000` while files were changed.
