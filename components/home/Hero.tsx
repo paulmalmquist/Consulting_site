@@ -42,7 +42,7 @@ export function Hero({ headline, subheadline, primaryCta, secondaryCta, proofBul
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
             <Link
               href={primaryCta.href}
-              className="rounded-full border border-cyan-300/40 bg-slate-900/70 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
+              className="hidden rounded-full border border-cyan-300/40 bg-slate-900/70 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10 lg:inline-flex"
             >
               {primaryCta.label}
             </Link>
