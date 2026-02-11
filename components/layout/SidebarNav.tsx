@@ -4,13 +4,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { ChevronDown, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
+import {
+  ArrowRightLeft,
+  BookOpenText,
+  Briefcase,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ClipboardCheck,
+  Factory,
+  FlaskConical,
+  House,
+  Layers3,
+  Mail,
+  Menu,
+  Snowflake,
+  UserRound,
+  Workflow,
+  X
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import navigation from '../../content/navigation.json';
 import { cn } from '../ui/cn';
 
 const ALLOWED_NAV_ITEMS = new Set([
   'Home',
+  'What We Do',
   'The Shift',
+  'Capabilities',
+  'Docs',
   'Operational Assessment',
   'SaaS Iceberg',
   'Industries',
@@ -26,6 +48,21 @@ const VISIBLE_NAV_GROUPS = navigation.groups
     items: group.items.filter((item) => ALLOWED_NAV_ITEMS.has(item.label))
   }))
   .filter((group) => group.items.length > 0);
+
+const NAV_ICON_BY_LABEL: Record<string, LucideIcon> = {
+  Home: House,
+  'What We Do': Workflow,
+  'The Shift': ArrowRightLeft,
+  Industries: Factory,
+  Capabilities: Layers3,
+  Docs: BookOpenText,
+  'Operational Assessment': ClipboardCheck,
+  'SaaS Iceberg': Snowflake,
+  Research: FlaskConical,
+  'Core Research': FlaskConical,
+  About: UserRound,
+  Contact: Mail
+};
 
 type LayoutState = {
   isCollapsed: boolean;
@@ -48,9 +85,11 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
     setOpenGroups((prev) => ({ ...prev, [title]: !prev[title] }));
   };
 
-  const getBadgeLetter = (label: string) => {
-    const first = label.trim().charAt(0);
-    return first ? first.toUpperCase() : 'N';
+  const isActivePath = (href: string) => {
+    if (href === '/') {
+      return pathname === href;
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
   };
 
   return (
@@ -114,7 +153,8 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
             {openGroups[group.title] && (
               <div className="space-y-1">
                 {group.items.map((item) => {
-                  const active = pathname === item.href;
+                  const Icon = NAV_ICON_BY_LABEL[item.label] ?? Briefcase;
+                  const active = isActivePath(item.href);
                   return (
                     <Link
                       key={item.href}
@@ -124,14 +164,23 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
                         setDrawerOpen(false);
                       }}
                       className={cn(
-                        'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition',
+                        'group flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition',
                         active
-                          ? 'bg-slate-700/60 text-white'
-                          : 'text-slate-300 hover:bg-slate-800/60 hover:text-white'
+                          ? 'border border-emerald-300/45 bg-emerald-200/10 text-emerald-50'
+                          : 'border border-transparent text-slate-300 hover:border-emerald-300/35 hover:bg-slate-800/60 hover:text-emerald-100'
                       )}
                     >
-                      <span className="nv-mark-badge nv-mark-badge--sm" aria-hidden>
-                        {getBadgeLetter(item.label)}
+                      <span
+                        className={cn(
+                          'inline-flex h-8 w-8 items-center justify-center rounded-lg border bg-slate-950/60',
+                          active
+                            ? 'border-emerald-300/55 text-emerald-100'
+                            : 'border-slate-700/80 text-slate-300 group-hover:border-emerald-300/45 group-hover:text-emerald-100'
+                        )}
+                        role="img"
+                        aria-label={`${item.label} icon`}
+                      >
+                        <Icon size={16} strokeWidth={1.9} aria-hidden="true" />
                       </span>
                       <span className={cn(isCollapsed && 'sr-only')}>{item.label}</span>
                     </Link>

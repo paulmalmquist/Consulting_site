@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowRightLeft, Factory, House, Menu } from 'lucide-react';
+import { ArrowRightLeft, Factory, House, Menu, Workflow } from 'lucide-react';
 import { cn } from '../ui/cn';
 import { InlineSearch } from '../search/InlineSearch';
 
@@ -17,8 +17,9 @@ export function Topbar({ setDrawerOpen }: TopbarProps) {
   const pathname = usePathname();
   const mobilePrimaryNav = [
     { label: 'Home', href: '/', icon: House },
+    { label: 'What We Do', href: '/what-we-do', icon: Workflow },
+    { label: 'The Shift', href: '/shift', icon: ArrowRightLeft },
     { label: 'Industries', href: '/industries', icon: Factory },
-    { label: 'The Shift', href: '/shift', icon: ArrowRightLeft }
   ];
 
   return (
@@ -35,7 +36,7 @@ export function Topbar({ setDrawerOpen }: TopbarProps) {
           </button>
         </div>
         <InlineSearch />
-        <nav className="grid grid-cols-3 gap-2 md:hidden">
+        <nav className="grid grid-cols-4 gap-2 md:hidden">
           {mobilePrimaryNav.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;

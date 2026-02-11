@@ -4,10 +4,13 @@
       "title": "Overview",
       "items": [
         { "label": "Home", "href": "/", "icon": "🏠" },
+        { "label": "What We Do", "href": "/what-we-do", "icon": "⚙️" },
         { "label": "The Shift", "href": "/shift", "icon": "↗️" },
+        { "label": "Industries", "href": "/industries", "icon": "🏗️" },
+        { "label": "Capabilities", "href": "/capabilities", "icon": "🧩" },
+        { "label": "Docs", "href": "/docs", "icon": "📄" },
         { "label": "SaaS Iceberg", "href": "/saas-iceberg", "icon": "🧊" },
         { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
-        { "label": "Industries", "href": "/industries", "icon": "🏗️" },
         { "label": "Core Research", "href": "/research", "icon": "📘" }
       ]
     },
