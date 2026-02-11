@@ -130,7 +130,7 @@ export default function AboutPage() {
         <div className="space-y-2">
           <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">Built From the Inside of Finance and Operations</p>
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-            This is operating experience, not theory.
+            Use our operating experience.
           </h2>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
