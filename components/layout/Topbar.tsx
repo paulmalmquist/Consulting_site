@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowRightLeft, BookOpenText, CalendarDays, House, Menu } from 'lucide-react';
+import { ArrowRightLeft, Factory, House, Menu } from 'lucide-react';
 import { cn } from '../ui/cn';
 import { InlineSearch } from '../search/InlineSearch';
 
@@ -15,7 +15,11 @@ type TopbarProps = {
 
 export function Topbar({ setDrawerOpen }: TopbarProps) {
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const mobilePrimaryNav = [
+    { label: 'Home', href: '/', icon: House },
+    { label: 'Industries', href: '/industries', icon: Factory },
+    { label: 'The Shift', href: '/shift', icon: ArrowRightLeft }
+  ];
 
   return (
     <header className="sticky top-0 z-30 border-b border-slate-800/80 bg-ink/80 px-4 py-4 backdrop-blur md:px-8">
@@ -31,14 +35,10 @@ export function Topbar({ setDrawerOpen }: TopbarProps) {
           </button>
         </div>
         <InlineSearch />
-        <nav className="grid grid-cols-4 gap-2 md:hidden">
-          {[
-            { label: 'Overview', href: '/', icon: House },
-            { label: 'The Shift', href: '/shift', icon: ArrowRightLeft },
-            { label: 'Core Research', href: '/docs', icon: BookOpenText },
-            { label: 'Book appointment', href: '/contact', icon: CalendarDays }
-          ].map((item) => {
+        <nav className="grid grid-cols-3 gap-2 md:hidden">
+          {mobilePrimaryNav.map((item) => {
             const Icon = item.icon;
+            const isActive = pathname === item.href;
             return (
               <Link
                 key={item.label}
@@ -47,7 +47,7 @@ export function Topbar({ setDrawerOpen }: TopbarProps) {
                 aria-label={item.label}
                 className={cn(
                   'group flex min-h-[44px] items-center justify-center rounded-xl border border-slate-800/80 bg-slate-900/40 px-2 text-slate-400 transition hover:border-cyan-300/40 hover:text-cyan-200 hover:shadow-[0_0_16px_rgba(127,215,224,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink',
-                  isHome && 'border-cyan-300/40 focus-visible:border-cyan-200/70'
+                  isActive && 'border-cyan-300/40 text-cyan-200 focus-visible:border-cyan-200/70'
                 )}
               >
                 <Icon size={18} strokeWidth={2} />
