@@ -10,7 +10,7 @@ type HeroProps = {
   proofBullets: Array<{ icon: string; title: string }>;
 };
 
-export function Hero({ headline, subheadline, primaryCta, secondaryCta, proofBullets }: HeroProps) {
+export function Hero({ headline, subheadline, secondaryCta, proofBullets }: HeroProps) {
   const notIndex = headline.indexOf('Not');
   const vendorsIndex = headline.indexOf('Vendors');
   const hasEmphasis = notIndex !== -1 && vendorsIndex !== -1 && vendorsIndex > notIndex;
@@ -40,12 +40,6 @@ export function Hero({ headline, subheadline, primaryCta, secondaryCta, proofBul
           </h1>
           <p className="nv-subheadline max-w-2xl text-base leading-relaxed md:text-lg lg:mx-0">{subheadline}</p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
-            <Link
-              href={primaryCta.href}
-              className="hidden rounded-full border border-cyan-300/40 bg-slate-900/70 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10 lg:inline-flex"
-            >
-              {primaryCta.label}
-            </Link>
             <Link
               href={secondaryCta.href}
               className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-white transition hover:border-slate-500 hover:bg-white/5"
