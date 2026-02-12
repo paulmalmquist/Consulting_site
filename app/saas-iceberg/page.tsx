@@ -92,16 +92,7 @@ const ABOVE_WATER_CHIPS = [
   'Integrations',
   'Automations',
   'Dashboards',
-  'Reporting',
-  'Mobile App',
-  'Notifications',
-  'Search',
-  'Permissions',
-  'Custom Fields',
-  'Workflows',
-  'API Access',
-  'SLA / Support',
-  'Updates'
+  'Reporting'
 ];
 
 const BELOW_WATER_CHIPS = [
@@ -116,18 +107,7 @@ const BELOW_WATER_CHIPS = [
   'Role clarity',
   'Approval chains',
   'Data governance',
-  'Access control',
-  'Risk transfer',
-  'Vendor liability',
-  'Security posture',
-  'Compliance posture',
-  'Documentation burden',
-  'Training burden',
-  'Operational continuity',
-  'Bus factor',
-  'Escalation path',
-  'Decision logging',
-  'Coordination costs'
+  'Access control'
 ];
 
 export default function SaaSIcebergPage() {
@@ -149,12 +129,6 @@ export default function SaaSIcebergPage() {
 
         <div className="relative mt-8 h-[320px] rounded-3xl border border-cyan-200/20 bg-slate-950/50 p-5 sm:h-[380px]">
           <div className="absolute left-0 h-px w-full bg-cyan-200/50" style={{ top: WATERLINE_TOP }} aria-hidden="true" />
-          <p
-            className="absolute right-4 text-[11px] uppercase tracking-[0.2em] text-cyan-100/80"
-            style={{ top: `calc(${WATERLINE_TOP} - 18px)` }}
-          >
-            Waterline
-          </p>
           <div className="absolute left-1/2 top-[17%] h-24 w-32 -translate-x-1/2 rounded-[45%_45%_35%_35%] border border-cyan-100/35 bg-gradient-to-b from-cyan-100/30 to-cyan-200/10 shadow-[0_0_40px_rgba(104,220,255,0.22)] animate-pulse" />
           <div className="absolute left-1/2 top-[33%] h-44 w-72 -translate-x-1/2 rounded-[45%_45%_55%_55%] border border-cyan-100/20 bg-gradient-to-b from-cyan-300/10 to-transparent" />
           <div className="absolute bottom-0 left-0 h-[60%] w-full bg-gradient-to-b from-cyan-700/20 via-cyan-900/20 to-slate-950/70" />
