@@ -22,9 +22,9 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
 
   return (
     <section className="nv-hero-section flex flex-col">
-      <div className="nv-hero-scanline space-y-10 pt-4 pb-8 lg:flex-1 lg:flex lg:flex-col lg:justify-center lg:space-y-6 lg:pt-6 lg:pb-0">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-          <div className="space-y-6 text-center lg:pl-3 lg:text-left">
+      <div className="nv-hero-scanline nv-hero-content-area space-y-10 pt-4 pb-8 lg:space-y-6 lg:pt-12 lg:pb-8">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
+          <div className="space-y-6 text-center lg:pl-3 lg:text-left lg:pt-8">
             <p className="nv-headline text-sm uppercase tracking-[0.2em] text-cyan-200">novendor</p>
             <h1 className="nv-brand-font text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
               {hasEmphasis ? (
@@ -49,7 +49,7 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
               </Link>
             </div>
           </div>
-          <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none lg:max-h-[360px] lg:overflow-hidden">
+          <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none lg:max-h-[380px]">
             <SystemConvergenceGraphic />
           </div>
         </div>

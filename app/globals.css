@@ -169,6 +169,15 @@ h3 {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nv-hero-content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 3rem;
   }
 
   .nv-hero-cards-container {
@@ -178,6 +187,7 @@ h3 {
     display: flex;
     align-items: flex-end;
     padding-bottom: 2rem;
+    margin-top: auto;
   }
 }
 
