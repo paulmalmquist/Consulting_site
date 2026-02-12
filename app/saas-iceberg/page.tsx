@@ -83,6 +83,52 @@ const selfAssessment = [
 ];
 
 const WATERLINE_TOP = '40%';
+const ABOVE_WATER_CHIPS = [
+  'Features',
+  'UI',
+  'Convenience',
+  'Onboarding',
+  'Templates',
+  'Integrations',
+  'Automations',
+  'Dashboards',
+  'Reporting',
+  'Mobile App',
+  'Notifications',
+  'Search',
+  'Permissions',
+  'Custom Fields',
+  'Workflows',
+  'API Access',
+  'SLA / Support',
+  'Updates'
+];
+
+const BELOW_WATER_CHIPS = [
+  'Conflict avoidance',
+  'Process ownership',
+  'Blame absorption',
+  'Institutional memory',
+  'Accountability',
+  'Exception handling',
+  'Audit trails',
+  'Change control',
+  'Role clarity',
+  'Approval chains',
+  'Data governance',
+  'Access control',
+  'Risk transfer',
+  'Vendor liability',
+  'Security posture',
+  'Compliance posture',
+  'Documentation burden',
+  'Training burden',
+  'Operational continuity',
+  'Bus factor',
+  'Escalation path',
+  'Decision logging',
+  'Coordination costs'
+];
 
 export default function SaaSIcebergPage() {
   const [activeMode, setActiveMode] = useState<DiagnosticMode>(modes[0]);
@@ -113,11 +159,14 @@ export default function SaaSIcebergPage() {
           <div className="absolute left-1/2 top-[33%] h-44 w-72 -translate-x-1/2 rounded-[45%_45%_55%_55%] border border-cyan-100/20 bg-gradient-to-b from-cyan-300/10 to-transparent" />
           <div className="absolute bottom-0 left-0 h-[60%] w-full bg-gradient-to-b from-cyan-700/20 via-cyan-900/20 to-slate-950/70" />
 
-          <div className="absolute left-5 top-5 z-20 w-[min(18rem,calc(100%-2.5rem))] rounded-2xl border border-cyan-100/15 bg-slate-950/60 p-4">
+          <div className="absolute top-5 right-5 left-5 z-20 rounded-2xl border border-cyan-100/15 bg-slate-950/60 p-4 md:p-5">
             <p className="text-xs uppercase tracking-[0.22em] text-cyan-100/80">Above the water</p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {['Features', 'UI', 'Convenience'].map((item) => (
-                <span key={item} className="rounded-full border border-cyan-200/30 px-3 py-1 text-xs text-cyan-100">
+            <div className="mt-3 flex min-w-0 flex-wrap gap-2 overflow-hidden md:flex-nowrap">
+              {ABOVE_WATER_CHIPS.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-cyan-200/30 bg-cyan-300/5 px-3 py-1 text-xs text-cyan-100 transition hover:border-cyan-200/50 md:shrink-0"
+                >
                   {item}
                 </span>
               ))}
@@ -125,13 +174,16 @@ export default function SaaSIcebergPage() {
           </div>
 
           <div
-            className="absolute right-5 z-20 w-[min(18rem,calc(100%-2.5rem))] rounded-2xl border border-violet-200/15 bg-slate-950/60 p-4"
+            className="absolute right-5 left-5 z-20 rounded-2xl border border-violet-200/15 bg-slate-950/60 p-4 md:p-5"
             style={{ top: `calc(${WATERLINE_TOP} + 16px)` }}
           >
             <p className="text-xs uppercase tracking-[0.22em] text-violet-100/80">Below the water</p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {['Conflict avoidance', 'Process ownership', 'Blame absorption', 'Institutional memory'].map((item) => (
-                <span key={item} className="rounded-full border border-violet-200/30 px-3 py-1 text-xs text-violet-100">
+            <div className="mt-3 flex min-w-0 flex-wrap gap-2 overflow-hidden md:flex-nowrap">
+              {BELOW_WATER_CHIPS.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-violet-200/30 bg-violet-300/5 px-3 py-1 text-xs text-violet-100 transition hover:border-violet-200/50 md:shrink-0"
+                >
                   {item}
                 </span>
               ))}
