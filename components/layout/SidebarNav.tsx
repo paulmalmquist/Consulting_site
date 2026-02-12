@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import {
   ArrowRightLeft,
-  Briefcase,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -145,8 +144,9 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
             {openGroups[group.title] && (
               <div className="space-y-1">
                 {group.items.map((item) => {
-                  const Icon = NAV_ICON_BY_LABEL[item.label] ?? Briefcase;
+                  const Icon = NAV_ICON_BY_LABEL[item.label];
                   const active = isActivePath(item.href);
+                  if (!Icon) return null;
                   return (
                     <Link
                       key={item.href}
