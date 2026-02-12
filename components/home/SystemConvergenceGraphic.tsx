@@ -8,54 +8,54 @@ export function SystemConvergenceGraphic() {
         className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Scattered system nodes - initial state */}
+        {/* Scattered system nodes - initial state with increased scale */}
         <g className="system-nodes">
           {/* Salesforce */}
           <g className="node" data-system="salesforce">
-            <circle cx="80" cy="80" r="24" className="node-circle" />
-            <text x="80" y="115" className="node-label">Salesforce</text>
+            <circle cx="80" cy="80" r="28" className="node-circle" />
+            <text x="80" y="118" className="node-label">Salesforce</text>
           </g>
 
           {/* MRI */}
           <g className="node" data-system="mri">
-            <circle cx="520" cy="90" r="24" className="node-circle" />
-            <text x="520" y="125" className="node-label">MRI</text>
+            <circle cx="520" cy="90" r="28" className="node-circle" />
+            <text x="520" y="128" className="node-label">MRI</text>
           </g>
 
           {/* ERP */}
           <g className="node" data-system="erp">
-            <circle cx="150" cy="180" r="24" className="node-circle" />
-            <text x="150" y="215" className="node-label">ERP</text>
+            <circle cx="150" cy="180" r="28" className="node-circle" />
+            <text x="150" y="218" className="node-label">ERP</text>
           </g>
 
           {/* Ticketing */}
           <g className="node" data-system="ticketing">
-            <circle cx="450" cy="190" r="24" className="node-circle" />
-            <text x="450" y="225" className="node-label">Ticketing</text>
+            <circle cx="450" cy="190" r="28" className="node-circle" />
+            <text x="450" y="228" className="node-label">Ticketing</text>
           </g>
 
           {/* Excel */}
           <g className="node" data-system="excel">
-            <circle cx="100" cy="300" r="24" className="node-circle" />
-            <text x="100" y="335" className="node-label">Excel</text>
+            <circle cx="100" cy="300" r="28" className="node-circle" />
+            <text x="100" y="338" className="node-label">Excel</text>
           </g>
 
           {/* Email */}
           <g className="node" data-system="email">
-            <circle cx="500" cy="310" r="24" className="node-circle" />
-            <text x="500" y="345" className="node-label">Email</text>
+            <circle cx="500" cy="310" r="28" className="node-circle" />
+            <text x="500" y="348" className="node-label">Email</text>
           </g>
 
           {/* BI */}
           <g className="node" data-system="bi">
-            <circle cx="250" cy="120" r="24" className="node-circle" />
-            <text x="250" y="155" className="node-label">BI</text>
+            <circle cx="250" cy="120" r="28" className="node-circle" />
+            <text x="250" y="158" className="node-label">BI</text>
           </g>
 
           {/* Core Research */}
           <g className="node" data-system="docs">
-            <circle cx="350" cy="280" r="24" className="node-circle" />
-            <text x="350" y="315" className="node-label">Core Research</text>
+            <circle cx="350" cy="280" r="28" className="node-circle" />
+            <text x="350" y="318" className="node-label">Core Research</text>
           </g>
         </g>
 
@@ -71,31 +71,24 @@ export function SystemConvergenceGraphic() {
           <line x1="350" y1="280" x2="300" y2="200" className="connection-line" />
         </g>
 
-        {/* Central consolidated object - final state */}
-        <g className="capability-core">
-          {/* Outer hexagon */}
-          <path
-            d="M 300 140 L 340 160 L 340 200 L 300 220 L 260 200 L 260 160 Z"
-            className="core-shape"
-          />
-
-          {/* Inner modules */}
-          <g className="core-modules">
-            <rect x="270" y="155" width="25" height="20" rx="2" className="module" />
-            <text x="282.5" y="168" className="module-label">Intake</text>
-
-            <rect x="305" y="155" width="25" height="20" rx="2" className="module" />
-            <text x="317.5" y="168" className="module-label">Decisions</text>
-
-            <rect x="270" y="185" width="25" height="20" rx="2" className="module" />
-            <text x="282.5" y="198" className="module-label">Controls</text>
-
-            <rect x="305" y="185" width="25" height="20" rx="2" className="module" />
-            <text x="317.5" y="198" className="module-label">Reports</text>
+        {/* Central NV logo - emerges as convergence target */}
+        <g className="nv-logo-core" transform="translate(300, 200)">
+          {/* NV Logo outline */}
+          <g transform="scale(0.35) translate(-100, -80)">
+            {/* N letter */}
+            <path
+              d="M 20 20 L 20 120 L 35 120 L 35 55 L 75 120 L 90 120 L 90 20 L 75 20 L 75 85 L 35 20 Z"
+              className="nv-letter"
+            />
+            {/* V letter */}
+            <path
+              d="M 110 20 L 140 120 L 155 120 L 185 20 L 168 20 L 147.5 95 L 127 20 Z"
+              className="nv-letter"
+            />
           </g>
 
-          {/* Core label */}
-          <text x="300" y="240" className="core-label">Modern Operating Model</text>
+          {/* Subtle glow effect */}
+          <circle cx="0" cy="0" r="50" className="nv-glow" />
         </g>
       </svg>
     </div>

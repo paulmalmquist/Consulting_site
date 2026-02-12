@@ -261,18 +261,29 @@ h3 {
   }
 }
 
-/* System node styles */
+/* System node styles - increased scale */
 .system-nodes .node-circle {
   fill: rgb(var(--nv-accent-cyan) / 0.16);
   stroke: rgb(var(--nv-accent-cyan) / 0.45);
-  stroke-width: 2;
+  stroke-width: 2.2;
 }
 
 .system-nodes .node-label {
   fill: rgb(var(--nv-text-secondary) / 0.9);
-  font-size: 11px;
+  font-size: 12px;
   text-anchor: middle;
   font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+/* Mobile: reduce icon size slightly */
+@media (max-width: 640px) {
+  .system-nodes .node-circle {
+    stroke-width: 2;
+  }
+  .system-nodes .node-label {
+    font-size: 10px;
+  }
 }
 
 /* Connection lines */
@@ -282,41 +293,61 @@ h3 {
   animation: pulse-line 4s ease-in-out infinite;
 }
 
-/* Capability core */
-.capability-core .core-shape {
-  fill: rgb(var(--nv-surface) / 0.92);
-  stroke: rgb(var(--nv-accent-cyan) / 0.6);
-  stroke-width: 2;
+/* NV Logo Core - replaces hexagon */
+.nv-logo-core .nv-letter {
+  fill: none;
+  stroke: rgb(var(--nv-accent-cyan) / 0.7);
+  stroke-width: 3;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
   opacity: 0;
-  animation: emerge-core 12s ease-in-out infinite;
+  animation: emerge-logo 12s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgb(var(--nv-accent-cyan) / 0.4));
 }
 
-.capability-core .module {
-  fill: rgb(var(--nv-surface-raised) / 0.82);
-  stroke: rgb(var(--nv-accent-cyan) / 0.35);
-  stroke-width: 1;
+.nv-logo-core .nv-glow {
+  fill: rgb(var(--nv-accent-cyan) / 0.08);
+  stroke: none;
   opacity: 0;
-  animation: emerge-core 12s ease-in-out 0.5s infinite;
+  animation: emerge-glow 12s ease-in-out infinite;
 }
 
-.capability-core .module-label {
-  fill: rgb(var(--nv-accent-cyan) / 0.85);
-  font-size: 6px;
-  text-anchor: middle;
-  font-family: var(--font-sans);
-  font-weight: 600;
-  opacity: 0;
-  animation: emerge-core 12s ease-in-out 0.7s infinite;
+@keyframes emerge-logo {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  45% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  55% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
 }
 
-.capability-core .core-label {
-  fill: rgb(var(--nv-accent-cyan) / 1);
-  font-size: 12px;
-  text-anchor: middle;
-  font-family: var(--font-sans);
-  font-weight: 600;
-  opacity: 0;
-  animation: emerge-core 12s ease-in-out 1s infinite;
+@keyframes emerge-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
 }
 
 /* Node drift animations with custom properties */
@@ -380,12 +411,11 @@ h3 {
     opacity: 0 !important;
   }
 
-  .capability-core .core-shape,
-  .capability-core .module,
-  .capability-core .module-label,
-  .capability-core .core-label {
+  .nv-logo-core .nv-letter,
+  .nv-logo-core .nv-glow {
     animation: none !important;
-    opacity: 1 !important;
+    opacity: 0.75 !important;
+    transform: none !important;
   }
 
   .nv-panel-shell {
