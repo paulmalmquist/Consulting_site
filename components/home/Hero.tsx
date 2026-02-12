@@ -21,38 +21,42 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
   const afterVendors = hasEmphasis && vendorsOffset !== -1 ? afterNot.slice(vendorsOffset + 1) : '';
 
   return (
-    <section className="nv-hero-scanline space-y-10 pt-4 pb-8 lg:space-y-3 lg:pt-6 lg:pb-6">
-      <div className="grid gap-8 lg:grid-cols-2">
-        <div className="space-y-6 text-center lg:pl-3 lg:text-left">
-          <p className="nv-headline text-sm uppercase tracking-[0.2em] text-cyan-200">novendor</p>
-          <h1 className="nv-brand-font text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
-            {hasEmphasis ? (
-              <>
-                {beforeNot}
-                <span className="nv-hero-emphasis">N</span>
-                {beforeVendors}
-                <span className="nv-hero-emphasis">V</span>
-                {afterVendors}
-              </>
-            ) : (
-              headline
-            )}
-          </h1>
-          <p className="nv-subheadline max-w-2xl text-base leading-relaxed md:text-lg lg:mx-0">{subheadline}</p>
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
-            <Link
-              href={secondaryCta.href}
-              className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-white transition hover:border-slate-500 hover:bg-white/5"
-            >
-              {secondaryCta.label}
-            </Link>
+    <section className="nv-hero-section flex flex-col">
+      <div className="nv-hero-scanline space-y-10 pt-4 pb-8 lg:flex-1 lg:flex lg:flex-col lg:justify-center lg:space-y-6 lg:pt-6 lg:pb-0">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+          <div className="space-y-6 text-center lg:pl-3 lg:text-left">
+            <p className="nv-headline text-sm uppercase tracking-[0.2em] text-cyan-200">novendor</p>
+            <h1 className="nv-brand-font text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
+              {hasEmphasis ? (
+                <>
+                  {beforeNot}
+                  <span className="nv-hero-emphasis">N</span>
+                  {beforeVendors}
+                  <span className="nv-hero-emphasis">V</span>
+                  {afterVendors}
+                </>
+              ) : (
+                headline
+              )}
+            </h1>
+            <p className="nv-subheadline max-w-2xl text-base leading-relaxed md:text-lg lg:mx-0">{subheadline}</p>
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
+              <Link
+                href={secondaryCta.href}
+                className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-white transition hover:border-slate-500 hover:bg-white/5"
+              >
+                {secondaryCta.label}
+              </Link>
+            </div>
+          </div>
+          <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none lg:max-h-[360px] lg:overflow-hidden">
+            <SystemConvergenceGraphic />
           </div>
         </div>
-        <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none lg:max-h-[360px] lg:overflow-hidden">
-          <SystemConvergenceGraphic />
-        </div>
       </div>
-      <CapabilityScrollPanels items={proofBullets} />
+      <div className="nv-hero-cards-container">
+        <CapabilityScrollPanels items={proofBullets} />
+      </div>
     </section>
   );
 }

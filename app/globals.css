@@ -145,17 +145,39 @@ h3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     scroll-snap-type: none;
+    height: 100%;
   }
 
   .nv-snap-panel {
     min-height: auto;
     padding-block: 0;
+    height: 100%;
+    align-items: flex-end;
   }
 
   .nv-panel-shell {
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding: 1.5rem;
+    height: auto;
+  }
+}
+
+/* Hero section container - desktop height-based layout */
+@media (min-width: 1024px) {
+  .nv-hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nv-hero-cards-container {
+    height: 20vh;
+    min-height: 200px;
+    max-height: 280px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2rem;
   }
 }
 

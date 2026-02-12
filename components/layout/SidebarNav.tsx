@@ -31,6 +31,7 @@ const ALLOWED_NAV_ITEMS = new Set([
   'The Shift',
   'Operational Assessment',
   'SaaS Iceberg',
+  'Legacy SaaS',
   'Industries',
   'About',
   'Contact'
@@ -47,6 +48,7 @@ const NAV_ICON_BY_LABEL: Record<string, LucideIcon> = {
   Home: House,
   'What We Do': Workflow,
   'The Shift': ArrowRightLeft,
+  'Legacy SaaS': Layers3,
   Industries: Factory,
   'Operational Assessment': ClipboardCheck,
   'SaaS Iceberg': Snowflake,

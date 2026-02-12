@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { LucideIcon } from 'lucide-react';
 import { Calculator, FileCheck2, FileSpreadsheet, GitBranch, GitPullRequestArrow, LayoutDashboard, Map, ShieldCheck } from 'lucide-react';
+import { OperationalQuestionnaire } from '../../components/assessment/OperationalQuestionnaire';
 
 const steps = [
   { title: 'Inventory', detail: 'Map tools + handoffs' },
@@ -212,6 +213,17 @@ export default function OperationalAssessmentPage() {
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <ArtifactPanel title="What you get" eyebrow="Deliverables" tone="cyan" items={whatYouGet} />
         <ArtifactPanel title="Outputs" eyebrow="Replayable artifacts" tone="violet" items={outputs} />
+      </section>
+
+      <section className="space-y-4">
+        <div className="space-y-2">
+          <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Quick Assessment</p>
+          <h2 className="text-2xl font-semibold tracking-tight text-white">Check your current state</h2>
+          <p className="text-sm text-slate-300 sm:text-base">
+            Answer a few questions to understand where your operations stand and identify priority areas.
+          </p>
+        </div>
+        <OperationalQuestionnaire variant="public" />
       </section>
 
       <section className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-6 sm:p-8">
