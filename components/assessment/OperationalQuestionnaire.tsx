@@ -256,7 +256,7 @@ export function OperationalQuestionnaire({
             <h2 className="text-2xl font-semibold text-white">Your Operational Assessment</h2>
           </div>
           <p className="text-sm text-slate-300">
-            Based on your responses, here's your current operational state across key areas.
+            Based on your responses, here&apos;s your current operational state across key areas.
           </p>
         </div>
 
