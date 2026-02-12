@@ -104,10 +104,7 @@ const BELOW_WATER_CHIPS = [
   'Exception handling',
   'Audit trails',
   'Change control',
-  'Role clarity',
-  'Approval chains',
-  'Data governance',
-  'Access control'
+  'Role clarity'
 ];
 
 export default function SaaSIcebergPage() {
@@ -152,7 +149,7 @@ export default function SaaSIcebergPage() {
             style={{ top: `calc(${WATERLINE_TOP} + 16px)` }}
           >
             <p className="text-xs uppercase tracking-[0.22em] text-violet-100/80">Below the water</p>
-            <div className="mt-3 flex min-w-0 flex-wrap gap-2 overflow-hidden md:flex-nowrap">
+            <div className="mt-3 flex min-w-0 flex-wrap justify-end gap-2 overflow-hidden md:flex-nowrap">
               {BELOW_WATER_CHIPS.map((item) => (
                 <span
                   key={item}

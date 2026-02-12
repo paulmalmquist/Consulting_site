@@ -6,14 +6,12 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import {
   ArrowRightLeft,
-  BookOpenText,
   Briefcase,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   ClipboardCheck,
   Factory,
-  FlaskConical,
   House,
   Layers3,
   Mail,
@@ -32,12 +30,9 @@ const ALLOWED_NAV_ITEMS = new Set([
   'What We Do',
   'The Shift',
   'Capabilities',
-  'Docs',
   'Operational Assessment',
   'SaaS Iceberg',
   'Industries',
-  'Research',
-  'Core Research',
   'About',
   'Contact'
 ]);
@@ -55,11 +50,8 @@ const NAV_ICON_BY_LABEL: Record<string, LucideIcon> = {
   'The Shift': ArrowRightLeft,
   Industries: Factory,
   Capabilities: Layers3,
-  Docs: BookOpenText,
   'Operational Assessment': ClipboardCheck,
   'SaaS Iceberg': Snowflake,
-  Research: FlaskConical,
-  'Core Research': FlaskConical,
   About: UserRound,
   Contact: Mail
 };
