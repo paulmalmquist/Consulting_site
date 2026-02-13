@@ -21,12 +21,12 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
   const afterVendors = hasEmphasis && vendorsOffset !== -1 ? afterNot.slice(vendorsOffset + 1) : '';
 
   return (
-    <section className="nv-hero-section flex flex-col">
-      <div className="nv-hero-scanline nv-hero-content-area space-y-10 pt-4 pb-8 lg:space-y-6 lg:pt-12 lg:pb-8">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
-          <div className="space-y-6 text-center lg:pl-3 lg:text-left lg:pt-8">
+    <section className="nv-hero-section nv-hero-scanline flex min-h-screen flex-col justify-between pb-[clamp(2rem,6vh,4rem)]">
+      <div className="flex flex-col gap-y-[clamp(1.5rem,4vh,3rem)] pt-[clamp(3rem,8vh,6rem)]">
+        <div className="grid gap-[clamp(1.25rem,3vh,2.5rem)] lg:grid-cols-2 lg:items-start lg:gap-[clamp(2rem,4vw,3.5rem)]">
+          <div className="space-y-[clamp(1rem,2.2vh,1.5rem)] text-center lg:pl-3 lg:text-left">
             <p className="nv-headline text-sm uppercase tracking-[0.2em] text-cyan-200">novendor</p>
-            <h1 className="nv-brand-font text-3xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
+            <h1 className="nv-brand-font text-[clamp(2rem,5vw,3.75rem)] font-semibold tracking-tight text-white">
               {hasEmphasis ? (
                 <>
                   {beforeNot}
@@ -39,7 +39,7 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
                 headline
               )}
             </h1>
-            <p className="nv-subheadline max-w-2xl text-base leading-relaxed md:text-lg lg:mx-0">{subheadline}</p>
+            <p className="nv-subheadline max-w-2xl text-[clamp(1rem,1.45vw,1.125rem)] leading-relaxed lg:mx-0">{subheadline}</p>
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
               <Link
                 href={secondaryCta.href}
@@ -49,12 +49,12 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
               </Link>
             </div>
           </div>
-          <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none lg:max-h-[380px]">
+          <div className="mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none lg:max-h-[clamp(18rem,42vh,25rem)]">
             <SystemConvergenceGraphic />
           </div>
         </div>
       </div>
-      <div className="nv-hero-cards-container">
+      <div className="w-full max-w-7xl mx-auto px-6 pb-8 md:pb-12">
         <CapabilityScrollPanels items={proofBullets} />
       </div>
     </section>

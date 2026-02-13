@@ -36,7 +36,7 @@ const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
   }
 };
 
-const GRAPHIC_STYLES = 'h-28 w-full text-cyan-200';
+const GRAPHIC_STYLES = 'h-[clamp(4.5rem,9vh,7rem)] w-full text-cyan-200';
 
 const renderGraphic = (variant: CapabilityPanel['graphic']) => {
   switch (variant) {
@@ -141,13 +141,13 @@ export function CapabilityScrollPanels({ items }: CapabilityScrollPanelsProps) {
           }`;
           const panelContent = (
             <div className={panelShellClassName}>
-              <div className="flex flex-col gap-6 lg:gap-8">
-                <div className="rounded-3xl border border-cyan-100/20 bg-slate-950/70 p-6 shadow-[0_0_30px_rgba(94,203,255,0.14)]">
+              <div className="flex flex-col gap-[clamp(0.9rem,1.8vh,1.6rem)]">
+                <div className="rounded-3xl border border-cyan-100/20 bg-slate-950/70 p-[clamp(0.9rem,1.5vh,1.5rem)] shadow-[0_0_30px_rgba(94,203,255,0.14)]">
                   {renderGraphic(panel.graphic)}
                 </div>
-                <div className="space-y-3">
-                  <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{panel.title}</h2>
-                  <p className="text-base leading-relaxed text-slate-300">{panel.sentence}</p>
+                <div className="space-y-[clamp(0.45rem,1vh,0.8rem)]">
+                  <h2 className="text-[clamp(1.05rem,1.15vw,1.55rem)] font-semibold tracking-tight text-white">{panel.title}</h2>
+                  <p className="text-[clamp(0.9rem,0.95vw,1rem)] leading-relaxed text-slate-300">{panel.sentence}</p>
                 </div>
               </div>
             </div>

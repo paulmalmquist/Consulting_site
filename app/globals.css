@@ -111,13 +111,13 @@ h3 {
 .nv-panel-shell {
   width: 100%;
   display: grid;
-  gap: 1.5rem;
+  gap: clamp(0.9rem, 1.4vh, 1.25rem);
   grid-template-columns: 1fr;
   align-content: start;
   border: 1px solid rgb(var(--nv-border) / 0.75);
   border-radius: 1.75rem;
   background: linear-gradient(160deg, rgb(var(--nv-surface) / 0.88), rgb(var(--nv-bg) / 0.94));
-  padding: 1.5rem;
+  padding: clamp(1rem, 1.6vh, 1.5rem);
   opacity: 0.45;
   transform: translateY(24px);
   transition: opacity 360ms ease, transform 360ms ease;
@@ -143,7 +143,7 @@ h3 {
   .nv-snap-flow {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    gap: clamp(1.5rem, 2vw, 2rem);
     scroll-snap-type: none;
     height: 100%;
   }
@@ -157,37 +157,9 @@ h3 {
 
   .nv-panel-shell {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-    padding: 1.5rem;
+    gap: clamp(0.9rem, 1.4vh, 1.25rem);
+    padding: clamp(1rem, 1.6vh, 1.5rem);
     height: auto;
-  }
-}
-
-/* Hero section container - desktop height-based layout */
-@media (min-width: 1024px) {
-  .nv-hero-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .nv-hero-content-area {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 3rem;
-  }
-
-  .nv-hero-cards-container {
-    height: 20vh;
-    min-height: 200px;
-    max-height: 280px;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 2rem;
-    margin-top: auto;
   }
 }
 

@@ -12,6 +12,7 @@ Core claim:
 - Run old and new workflows in parallel.
 - Cut over only when evidence is clear.
 
+
 Commercial posture:
 - Fixed-scope, fixed-fee engagements.
 - Not seat-based software licensing.
