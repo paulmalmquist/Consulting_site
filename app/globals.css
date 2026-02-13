@@ -221,57 +221,7 @@ h3 {
   scrollbar-width: none;
 }
 
-/* System Convergence Graphic Animations */
-@keyframes drift-inward {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  45% {
-    transform: translate(var(--drift-x), var(--drift-y));
-    opacity: 0;
-  }
-  55% {
-    transform: translate(var(--drift-x), var(--drift-y));
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes pulse-line {
-  0%, 100% {
-    opacity: 0.2;
-    stroke-width: 1;
-  }
-  50% {
-    opacity: 0.6;
-    stroke-width: 1.5;
-  }
-}
-
-@keyframes emerge-core {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  45% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  55% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-}
-
-/* System node styles - optimized for execution domains */
+/* System Convergence Graphic — styles only (animation is JS-driven) */
 .system-nodes .node-circle {
   fill: rgb(var(--nv-accent-cyan) / 0.16);
   stroke: rgb(var(--nv-accent-cyan) / 0.45);
@@ -287,14 +237,12 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-/* Desktop: slightly larger for readability */
 @media (min-width: 1024px) {
   .system-nodes .node-label {
     font-size: 11.5px;
   }
 }
 
-/* Mobile: reduce icon size slightly */
 @media (max-width: 640px) {
   .system-nodes .node-circle {
     stroke-width: 2;
@@ -304,144 +252,27 @@ h3 {
   }
 }
 
-/* Connection lines */
 .connection-lines .connection-line {
   stroke: rgb(var(--nv-accent-cyan) / 0.28);
   stroke-width: 1;
-  animation: pulse-line 4s ease-in-out infinite;
 }
 
-/* NV Logo Core - replaces hexagon */
 .nv-logo-core .nv-letter {
   fill: none;
   stroke: rgb(var(--nv-accent-cyan) / 0.7);
   stroke-width: 3;
   stroke-linejoin: miter;
   stroke-linecap: square;
-  opacity: 0;
-  animation: emerge-logo 12s ease-in-out infinite;
   filter: drop-shadow(0 0 8px rgb(var(--nv-accent-cyan) / 0.4));
 }
 
 .nv-logo-core .nv-glow {
   fill: rgb(var(--nv-accent-cyan) / 0.08);
   stroke: none;
-  opacity: 0;
-  animation: emerge-glow 12s ease-in-out infinite;
 }
 
-@keyframes emerge-logo {
-  0% {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  45% {
-    opacity: 0.85;
-    transform: scale(1);
-  }
-  55% {
-    opacity: 0.85;
-    transform: scale(1.03);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-}
-
-@keyframes emerge-glow {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  45% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  55% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-}
-
-/* Node drift animations with custom properties - execution domains */
-.node[data-system="crm"] {
-  --drift-x: 220px;
-  --drift-y: 120px;
-  animation: drift-inward 12s ease-in-out infinite;
-}
-
-.node[data-system="datawarehouse"] {
-  --drift-x: -220px;
-  --drift-y: 110px;
-  animation: drift-inward 12s ease-in-out 0.1s infinite;
-}
-
-.node[data-system="erp"] {
-  --drift-x: 150px;
-  --drift-y: 20px;
-  animation: drift-inward 12s ease-in-out 0.2s infinite;
-}
-
-.node[data-system="helpdesk"] {
-  --drift-x: -150px;
-  --drift-y: 10px;
-  animation: drift-inward 12s ease-in-out 0.3s infinite;
-}
-
-.node[data-system="accounting"] {
-  --drift-x: 200px;
-  --drift-y: -100px;
-  animation: drift-inward 12s ease-in-out 0.4s infinite;
-}
-
-.node[data-system="projectmgmt"] {
-  --drift-x: -200px;
-  --drift-y: -110px;
-  animation: drift-inward 12s ease-in-out 0.5s infinite;
-}
-
-.node[data-system="bi"] {
-  --drift-x: 50px;
-  --drift-y: 80px;
-  animation: drift-inward 12s ease-in-out 0.6s infinite;
-}
-
-.node[data-system="docmgmt"] {
-  --drift-x: -50px;
-  --drift-y: -80px;
-  animation: drift-inward 12s ease-in-out 0.7s infinite;
-}
-
-.node[data-system="reporting"] {
-  --drift-x: 225px;
-  --drift-y: 0px;
-  animation: drift-inward 12s ease-in-out 0.8s infinite;
-}
-
-/* Reduced motion fallback */
+/* Reduced motion — handled by JS fallback, but ensure panels still work */
 @media (prefers-reduced-motion: reduce) {
-  .system-nodes .node {
-    animation: none !important;
-    opacity: 0 !important;
-  }
-
-  .connection-lines .connection-line {
-    animation: none !important;
-    opacity: 0 !important;
-  }
-
-  .nv-logo-core .nv-letter,
-  .nv-logo-core .nv-glow {
-    animation: none !important;
-    opacity: 0.75 !important;
-    transform: none !important;
-  }
-
   .nv-panel-shell {
     opacity: 1 !important;
     transform: none !important;

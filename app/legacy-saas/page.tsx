@@ -75,7 +75,7 @@ export default function LegacySaaSPage() {
             ].map((target) => (
               <div
                 key={target}
-                className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4 text-sm text-slate-200"
+                className="rounded-2xl border border-cyan-200/15 bg-slate-950/40 p-4 text-sm text-slate-200 transition-all duration-200 hover:border-cyan-200/35 hover:bg-cyan-200/[0.02] hover:shadow-[0_0_12px_rgba(127,215,224,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 {target}
               </div>

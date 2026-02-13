@@ -52,12 +52,6 @@ const OUTCOMES = [
   { title: 'Auditability', description: 'Every state change is traceable and reviewable.', icon: ShieldCheck }
 ];
 
-const POSITIONING_LINES = [
-  'Your Data, Delivered. No Overhead Required.',
-  'Stop Buying Tools. Start Using Your Data.',
-  'The Foundation for Your AI Future.'
-];
-
 export default function WhatWeDoPage() {
   return (
     <div className="space-y-8 lg:space-y-10">
@@ -67,14 +61,7 @@ export default function WhatWeDoPage() {
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
           We build owned execution systems that turn fragmented operations into structured, auditable workflows.
         </p>
-        <ul className="mt-5 flex flex-wrap gap-2 text-xs text-slate-200 sm:text-sm">
-          {POSITIONING_LINES.map((line) => (
-            <li key={line} className="rounded-full border border-emerald-300/25 bg-emerald-200/10 px-3 py-1.5">
-              {line}
-            </li>
-          ))}
-        </ul>
-        <div className="mt-7 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="#how-it-works"
             className="inline-flex items-center gap-2 rounded-full border border-emerald-300/45 bg-slate-950/70 px-5 py-2.5 text-sm font-semibold text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-200/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"

@@ -43,7 +43,7 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
               <Link
                 href={secondaryCta.href}
-                className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-white transition hover:border-slate-500 hover:bg-white/5"
+                className="nv-hero-cta rounded-full border border-[rgb(var(--nv-accent-cyan)/0.45)] bg-[rgb(var(--nv-accent-cyan)/0.08)] px-7 py-3 text-sm font-semibold text-white shadow-[0_0_16px_rgb(var(--nv-accent-cyan)/0.12)] transition-all duration-200 hover:border-[rgb(var(--nv-accent-cyan)/0.7)] hover:bg-[rgb(var(--nv-accent-cyan)/0.14)] hover:shadow-[0_0_24px_rgb(var(--nv-accent-cyan)/0.22)] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--nv-accent-cyan)/0.6)] focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               >
                 {secondaryCta.label}
               </Link>
