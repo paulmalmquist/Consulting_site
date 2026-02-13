@@ -38,6 +38,16 @@ export function generateMetadata({ params }: IndustryPageProps): Metadata {
   };
 }
 
+function SourceRefs({ ids }: { ids: number[] }) {
+  return (
+    <span className="ml-1 text-xs text-emerald-200/90">
+      {ids.map((id) => (
+        <span key={id} className="mr-1 inline-block">[{id}]</span>
+      ))}
+    </span>
+  );
+}
+
 export default function IndustryPage({ params }: IndustryPageProps) {
   const industry = INDUSTRY_BY_SLUG[params.slug];
 
@@ -132,6 +142,31 @@ export default function IndustryPage({ params }: IndustryPageProps) {
       </section>
 
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">2b) Risk Context (Benchmarks)</h2>
+        <p className="mt-2 text-sm text-slate-300">
+          Benchmarks are directional ranges from external publications. They frame severity and are calibrated during operational audit.
+        </p>
+        <div className="mt-4 space-y-3">
+          {industry.riskContext.map((item) => (
+            <article key={item.claim} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
+              <p className="text-sm text-slate-100">
+                {item.claim}
+                <SourceRefs ids={item.sourceIds} />
+              </p>
+              <div className="mt-2 grid gap-2 text-xs sm:grid-cols-2">
+                <p className="rounded-lg border border-slate-800/80 bg-slate-900/60 px-3 py-2 text-slate-300">
+                  <span className="font-semibold text-slate-100">Benchmark range:</span> {item.benchmarkRange}
+                </p>
+                <p className="rounded-lg border border-slate-800/80 bg-slate-900/60 px-3 py-2 text-slate-300">
+                  <span className="font-semibold text-slate-100">As of:</span> {item.asOf}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">3) Failure Mechanics</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-200">
           {industry.failureMechanics.map((item) => (
@@ -157,6 +192,18 @@ export default function IndustryPage({ params }: IndustryPageProps) {
       </section>
 
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">4b) Data Quality Prerequisites</h2>
+        <p className="mt-2 text-sm text-slate-300">Automation amplifies upstream data quality. These controls are required before scale-out.</p>
+        <ul className="mt-4 space-y-2 text-sm text-slate-200">
+          {industry.dataQualityPrerequisites.map((item) => (
+            <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">5) Engagement Model</h2>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           {industry.engagementModel.map((phase) => (
@@ -174,15 +221,62 @@ export default function IndustryPage({ params }: IndustryPageProps) {
         </div>
       </section>
 
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">5b) Change Management & Continuity</h2>
+        <ul className="mt-4 space-y-2 text-sm text-slate-200">
+          {industry.changeManagement.map((item) => (
+            <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="rounded-3xl border border-amber-300/25 bg-amber-950/15 p-5 sm:p-7">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Regulatory / Jurisdictional Variance</h2>
+        <p className="mt-3 text-sm text-slate-200">{industry.regulatoryCaveat}</p>
+      </section>
+
       <section className="rounded-3xl border border-emerald-300/25 bg-gradient-to-r from-slate-900/85 to-emerald-900/20 p-5 sm:p-7">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">6) Executive Outcomes</h2>
-        <div className="mt-4 rounded-2xl border border-emerald-300/25 bg-slate-950/45 p-4">
-          <ul className="space-y-2 text-sm text-slate-100">
-            {industry.executiveOutcomes.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">6) Executive Outcomes (Measurable)</h2>
+        <div className="mt-4 overflow-x-auto rounded-2xl border border-emerald-300/20 bg-slate-950/50">
+          <table className="min-w-full text-left text-sm">
+            <thead className="bg-slate-900/70 text-xs uppercase tracking-[0.12em] text-slate-300">
+              <tr>
+                <th className="px-4 py-3">Metric</th>
+                <th className="px-4 py-3">Baseline Note</th>
+                <th className="px-4 py-3">Target Range</th>
+                <th className="px-4 py-3">Control Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {industry.outcomeMetrics.map((item) => (
+                <tr key={item.metric} className="border-t border-slate-800/70 text-slate-100">
+                  <td className="px-4 py-3 font-semibold text-white">{item.metric}</td>
+                  <td className="px-4 py-3 text-slate-300">{item.baselineNote}</td>
+                  <td className="px-4 py-3 text-slate-300">{item.targetRange}</td>
+                  <td className="px-4 py-3 text-slate-300">{item.controlLink}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+      </section>
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Sources</h2>
+        <p className="mt-2 text-sm text-slate-300">Directional references for benchmark claims and control framing. Client baselines are validated during audit.</p>
+        <ol className="mt-4 space-y-3 text-sm text-slate-200">
+          {industry.sources.map((source) => (
+            <li key={source.id} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-4">
+              <p className="font-semibold text-white">[{source.id}] {source.title}</p>
+              <p className="mt-1 text-slate-300">{source.publisher}</p>
+              <p className="mt-1 break-all text-xs text-slate-400">{source.url}</p>
+              <p className="mt-1 text-xs text-slate-400">Accessed: {source.accessedOn}</p>
+              <p className="mt-2 text-xs text-slate-300">Claim support: {source.claimSupport}</p>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section className="rounded-3xl border border-slate-800/80 bg-slate-950/50 p-6 sm:p-8">

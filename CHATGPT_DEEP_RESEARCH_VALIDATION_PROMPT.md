@@ -40,10 +40,15 @@ Industries in scope:
 Each industry is structured into:
 1. Operational Lifecycle
 2. System Fragmentation
-3. Failure Mechanics
-4. What We Reconstruct
-5. Engagement Model
-6. Executive Outcomes
+3. Risk Context (Benchmarks)
+4. Failure Mechanics
+5. What We Reconstruct
+6. Data Quality Prerequisites
+7. Engagement Model
+8. Change Management & Continuity
+9. Regulatory / Jurisdictional Variance
+10. Executive Outcomes (Measurable)
+11. Sources
 
 Cross-industry engagement model:
 - Phase 1: Operational Audit
@@ -135,22 +140,43 @@ For each industry:
 - Are failure points technically and operationally plausible?
 - Are mechanics clearly causal (not vague symptoms)?
 
-4. Control model feasibility
+4. Risk quantification quality
+- Are risk statements quantified with conservative ranges where possible?
+- Is each hard metric paired with source and publication/access date?
+- Are benchmark ranges framed as directional, not universal guarantees?
+
+5. Control model feasibility
 - Is the execution-layer approach feasible in regulated environments?
 - Are governance, logging, and audit controls operationally realistic?
 
-5. Compliance and legal risk posture
+6. Change-management realism
+- Are owner enablement, training, cutover controls, and governance cadence explicit?
+- Are handoff and continuity controls clear enough for operator adoption?
+
+7. Data quality prerequisites
+- Are upstream data quality dependencies explicit?
+- Does content avoid implying automation will succeed without data controls?
+
+8. Compliance and legal risk posture
 - Identify where wording may overstate certainty.
 - Flag where disclaimers or qualifications are needed.
+- Validate jurisdictional/regulatory variance caveats for each industry.
 
-6. Executive outcome defensibility
+9. Executive outcome defensibility
 - Are outcomes measurable and decision-relevant?
+- Is each outcome linked to lifecycle interventions and control mechanisms?
 - Are claims causally defensible without overpromising?
+
+10. AI capability boundary integrity
+- Flag wording that implies autonomous action where human control is required.
+- Confirm AI language is clearly AI-assisted and governed.
+- Confirm sensitive-data handling requirements are explicit.
 
 ## Research Quality Standard
 
 - Use current, credible sources.
 - Prioritize primary sources where possible (regulators, standards, official system docs, authoritative industry bodies).
+- No stat without source and date.
 - Cite sources for non-obvious claims.
 - Distinguish clearly between:
   - Confirmed fact
@@ -181,7 +207,17 @@ For each industry include:
 - Top 3 corrections
 - Source-backed notes
 
-### 3) Cross-Cutting Risk Register
+### 3) Claim Validation Table (Required)
+For each high-impact claim include:
+- Claim
+- Current wording
+- Confidence (High/Med/Low)
+- Benchmark range (if applicable)
+- Source + date
+- Recommended rewrite
+- Caveat needed (Yes/No)
+
+### 4) Cross-Cutting Risk Register
 For each risk:
 - Claim
 - Risk type (factual / compliance / overpromise / ambiguity)
@@ -189,15 +225,24 @@ For each risk:
 - Recommended revision
 - Source(s)
 
-### 4) Edit-Ready Recommendations
+### 5) Edit-Ready Recommendations
 Provide line-level suggestions in this format:
 - Current wording
 - Proposed wording
 - Why
 - Source(s)
 
-### 5) Prioritized Gaps
+### 6) Prioritized Gaps
 - P1, P2, P3 actions to raise enterprise trust and operator credibility.
+
+## Fail Conditions (Must Flag)
+
+Flag the review as failed if any of these are present:
+- Any hard metric with no source and date.
+- Any executive outcome not tied to lifecycle stage/control mechanism.
+- Any AI claim implying autonomous execution without explicit control language.
+- Any industry page lacking change-management or data-quality prerequisites.
+- Any industry page missing regulatory/jurisdiction variance caveat.
 
 ## Reviewer Tone Guidance
 
@@ -220,3 +265,5 @@ Before finalizing, confirm:
 - Execution-infrastructure positioning remains clear
 - Lifecycle states are explicit
 - Outcomes are measurable and defensible
+- Risk context is quantified with sourced ranges
+- AI boundaries are clearly AI-assisted with human control

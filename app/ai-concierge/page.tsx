@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { AlertTriangle, BookOpenText, Compass, FileSearch, ShieldCheck, TimerReset } from 'lucide-react';
 
 const WHAT_IT_DOES = [
-  'Guides teams through workflow decisions using your own operating rules and current records.',
-  'Analyzes documents and structured records to answer operational questions with source references.',
-  'Supports scenario modeling for approvals, exceptions, and policy-sensitive decisions.'
+  'Provides AI-assisted workflow guidance using your approved lifecycle states, ownership rules, and control thresholds.',
+  'Reviews documents and structured records to return answers with traceable source references.',
+  'Supports scenario comparisons for exceptions, approvals, and policy-sensitive decisions before action is taken.'
 ];
 
 const WHERE_IT_OPERATES = [
@@ -15,17 +15,40 @@ const WHERE_IT_OPERATES = [
 ];
 
 const SAFEGUARDS = [
-  'Human override on every critical decision path.',
-  'Audit logs for prompts, outputs, and action requests.',
-  'No autonomous execution without explicit permission and defined controls.',
-  'Role-based boundaries for sensitive records and workflow actions.'
+  'Human approval required for policy, financial, and compliance-impacting actions.',
+  'No autonomous production action without explicit permission and role-based controls.',
+  'Prompt, response, and action-request logs retained for audit review.',
+  'Role-scoped access boundaries and redaction standards for sensitive records.'
+];
+
+const OPERATING_CONSTRAINTS = [
+  'Data classification must be defined before ingestion (public, internal, restricted, sensitive).',
+  'Sensitive fields require masking/redaction and minimum-necessary access design.',
+  'Response quality is validated against approved source sets before broad rollout.',
+  'Drift monitoring and periodic control testing are required to keep guidance reliable.'
 ];
 
 const EXEC_OUTCOMES = [
-  'Faster decision cycles for recurring operational questions.',
-  'Retained institutional knowledge in a structured, searchable form.',
-  'Reduced reversion to external systems for basic workflow guidance.',
-  'Clearer ownership of exceptions and escalation paths.'
+  {
+    metric: 'Decision latency for recurring exceptions',
+    target: '15%–35% reduction after guardrail tuning',
+    control: 'Role-gated approvals + logged escalation paths'
+  },
+  {
+    metric: 'Exception routing accuracy',
+    target: 'Raise correctly routed exceptions to >90% in sampled periods',
+    control: 'Canonical taxonomy + owner-state mapping'
+  },
+  {
+    metric: 'Retrieval provenance coverage',
+    target: '95%+ responses with linked source trace in audited samples',
+    control: 'Source whitelisting + citation logging'
+  },
+  {
+    metric: 'Off-system backchannel handling',
+    target: '20%–40% reduction in email/chat-only decision handling',
+    control: 'Workflow-integrated guidance + audit logging'
+  }
 ];
 
 export default function AIConciergePage() {
@@ -36,10 +59,10 @@ export default function AIConciergePage() {
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.2em] text-slate-400">AI Concierge</p>
             <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
-              Context-aware operational guidance inside real workflows.
+              AI-assisted operational guidance inside real workflows.
             </h1>
             <p className="text-sm text-slate-300 sm:text-base">
-              This is an intelligence overlay for execution work. It helps teams evaluate scenarios, review documents, and move decisions forward using structured internal logic.
+              AI Concierge is an advisory layer for execution work. It helps teams evaluate scenarios and interpret records, while keeping human ownership for approvals and actions.
             </p>
             <div className="mt-6">
               <Link
@@ -54,9 +77,9 @@ export default function AIConciergePage() {
             <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Operating profile</p>
             <div className="mt-4 space-y-3">
               {[
-                { title: 'Context-aware', detail: 'Uses workflow state, owners, and policy boundaries.', icon: Compass },
-                { title: 'Document analysis', detail: 'Reads internal files with source traceability.', icon: FileSearch },
-                { title: 'Decision support', detail: 'Assists with scenario comparisons and escalation guidance.', icon: BookOpenText }
+                { title: 'AI-assisted', detail: 'Supports decisions; does not autonomously execute critical actions.', icon: Compass },
+                { title: 'Document analysis', detail: 'Reads approved internal records with source traceability.', icon: FileSearch },
+                { title: 'Decision support', detail: 'Compares scenarios and proposes next-step guidance.', icon: BookOpenText }
               ].map((item) => {
                 const Icon = item.icon;
                 return (
@@ -118,17 +141,43 @@ export default function AIConciergePage() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-6 sm:p-8">
-        <h2 className="text-xl font-semibold text-white sm:text-2xl">4) Executive Outcome</h2>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {EXEC_OUTCOMES.map((item) => (
-            <div key={item} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4 text-sm text-slate-200">
-              <span className="flex items-start gap-3">
-                <TimerReset size={16} className="mt-0.5 text-cyan-200" aria-hidden="true" />
-                <span>{item}</span>
-              </span>
-            </div>
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-5 sm:p-8">
+        <h2 className="text-xl font-semibold text-white sm:text-2xl">4) Data Governance and Model Controls</h2>
+        <ul className="mt-4 space-y-2 text-sm text-slate-200">
+          {OPERATING_CONSTRAINTS.map((item) => (
+            <li key={item} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-3">
+              {item}
+            </li>
           ))}
+        </ul>
+      </section>
+
+      <section className="rounded-3xl border border-slate-700/80 bg-slate-900/70 p-6 sm:p-8">
+        <h2 className="text-xl font-semibold text-white sm:text-2xl">5) Executive Outcomes</h2>
+        <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-800/70 bg-slate-950/40">
+          <table className="min-w-full text-left text-sm">
+            <thead className="bg-slate-900/70 text-xs uppercase tracking-[0.12em] text-slate-300">
+              <tr>
+                <th className="px-4 py-3">Metric</th>
+                <th className="px-4 py-3">Target</th>
+                <th className="px-4 py-3">Control Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {EXEC_OUTCOMES.map((item) => (
+                <tr key={item.metric} className="border-t border-slate-800/70 text-slate-100">
+                  <td className="px-4 py-3 font-semibold text-white">
+                    <span className="inline-flex items-start gap-2">
+                      <TimerReset size={16} className="mt-0.5 text-cyan-200" aria-hidden="true" />
+                      <span>{item.metric}</span>
+                    </span>
+                  </td>
+                  <td className="px-4 py-3 text-slate-300">{item.target}</td>
+                  <td className="px-4 py-3 text-slate-300">{item.control}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
