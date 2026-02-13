@@ -1,63 +1,106 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import {
+  ArrowRight,
+  Briefcase,
+  CheckCircle2,
+  CircleOff,
+  DollarSign,
+  Hammer,
+  ListChecks,
+  Map,
+  Network,
+  PackageCheck,
+  Receipt,
+  RotateCcw,
+  Search,
+  ShieldCheck,
+  Users
+} from 'lucide-react';
 
-const WHAT_THIS_IS_NOT = ['Staff augmentation', 'Generic consulting', 'SaaS subscriptions', 'Big-bang rip-and-replace programs'];
+type LabelItem = {
+  label: string;
+  icon: LucideIcon;
+};
 
-const WHAT_THIS_IS = [
-  'Fixed-scope workflow replacement',
-  'Senior delivery with decision gates',
-  'Parallel-run proof before cutover',
-  'Ownership transfer with governance controls'
+type StepItem = {
+  title: string;
+  timeline: string;
+  receives: string;
+  decision: string;
+  icon: LucideIcon;
+};
+
+type DeliverableItem = {
+  title: string;
+  icon: LucideIcon;
+};
+
+const WHAT_THIS_IS_NOT: LabelItem[] = [
+  { label: 'Staff augmentation', icon: CircleOff },
+  { label: 'Generic consulting', icon: CircleOff },
+  { label: 'SaaS subscriptions', icon: CircleOff },
+  { label: 'Big-bang rip-and-replace programs', icon: CircleOff }
 ];
 
-const STEP_MODEL = [
+const WHAT_THIS_IS: LabelItem[] = [
+  { label: 'Fixed-scope workflow replacement', icon: CheckCircle2 },
+  { label: 'Senior delivery with decision gates', icon: CheckCircle2 },
+  { label: 'Parallel-run proof before cutover', icon: CheckCircle2 },
+  { label: 'Ownership transfer with governance controls', icon: CheckCircle2 }
+];
+
+const STEP_MODEL: StepItem[] = [
   {
-    title: 'Step 1 — Discovery',
+    title: 'Step 1 - Discovery',
     timeline: '2-3 weeks',
     receives: 'Workflow map, system dependency map, cost baseline, and pilot scope.',
-    decision: 'Approve the pilot scope or stop with clear findings.'
+    decision: 'Approve the pilot scope or stop with clear findings.',
+    icon: Search
   },
   {
-    title: 'Step 2 — Pilot',
+    title: 'Step 2 - Pilot',
     timeline: '6-8 weeks',
     receives: 'Working replacement workflow, parallel-run proof log, and rollback plan.',
-    decision: 'Cut over, extend the pilot, or stop.'
+    decision: 'Cut over, extend the pilot, or stop.',
+    icon: Hammer
   },
   {
-    title: 'Step 3 — Cutover + Governance',
+    title: 'Step 3 - Cutover + Governance',
     timeline: '10-12 weeks total when bundled with pilot',
     receives: 'Production handoff package, governance checklist, and reporting controls.',
-    decision: 'Approve production ownership and governance cadence.'
+    decision: 'Approve production ownership and governance cadence.',
+    icon: ShieldCheck
   }
 ];
 
-const DELIVERABLES = [
-  'Workflow map',
-  'System dependency map',
-  'Cost baseline',
-  'Parallel-run proof log',
-  'Rollback plan',
-  'Production handoff package',
-  'Governance checklist'
+const DELIVERABLES: DeliverableItem[] = [
+  { title: 'Workflow map', icon: Map },
+  { title: 'System dependency map', icon: Network },
+  { title: 'Cost baseline', icon: DollarSign },
+  { title: 'Parallel-run proof log', icon: ListChecks },
+  { title: 'Rollback plan', icon: RotateCcw },
+  { title: 'Production handoff package', icon: PackageCheck },
+  { title: 'Governance checklist', icon: Receipt }
 ];
 
 const PRICING = [
   {
-    offer: 'Option 1 — Capability Discovery',
+    offer: 'Option 1 - Capability Discovery',
     price: '$35,000 fixed',
     scope: '1 workflow',
     timeline: '2-3 weeks',
     included: 'Workflow map, dependency map, cost baseline, pilot scope, decision memo'
   },
   {
-    offer: 'Option 2 — Pilot Build',
+    offer: 'Option 2 - Pilot Build',
     price: '$125,000 fixed',
     scope: '1 workflow pilot',
     timeline: '6-8 weeks',
     included: 'Working replacement workflow, parallel run, proof log, rollback plan'
   },
   {
-    offer: 'Option 3 — Pilot + Cutover',
+    offer: 'Option 3 - Pilot + Cutover',
     price: '$195,000 fixed',
     scope: '1 workflow pilot + cutover',
     timeline: '10-12 weeks',
@@ -90,24 +133,54 @@ export default function WhatWeDoPage() {
   return (
     <div className="space-y-8 lg:space-y-10">
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
-        <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">What We Do</p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
-          Replace one broken workflow.
-        </h1>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-          Novendor fixes one high-friction workflow at a time and replaces it with a system your company owns and controls.
-        </p>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-          We map the workflow, build the replacement, run both side by side, and switch only when proof is clear.
-        </p>
-        <div className="mt-6">
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 rounded-full border border-emerald-300/45 bg-slate-950/70 px-5 py-2.5 text-sm font-semibold text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-200/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-          >
-            Start with Capability Discovery
-            <ArrowRight size={16} aria-hidden="true" />
-          </Link>
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">What We Do</p>
+            <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+              Replace one broken workflow without a risky full overhaul.
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+              Novendor fixes one high-friction workflow at a time and replaces it with a system your company owns and controls.
+            </p>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+              We map the workflow, build the replacement, run both side by side, and switch only when proof is clear.
+            </p>
+            <div className="mt-6">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-300/45 bg-slate-950/70 px-5 py-2.5 text-sm font-semibold text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-200/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              >
+                Start with Capability Discovery
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+          <aside className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
+            <p className="text-xs uppercase tracking-[0.12em] text-slate-400">At a glance</p>
+            <div className="mt-4 space-y-3">
+              {[
+                { title: 'Discovery', detail: 'Map the workflow and costs', icon: Search },
+                { title: 'Pilot', detail: 'Run old and new side by side', icon: Hammer },
+                { title: 'Cutover', detail: 'Switch with rollback safety', icon: ShieldCheck }
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="relative rounded-xl border border-slate-800/80 bg-slate-900/70 p-3">
+                    <div className="flex items-start gap-3">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-emerald-300/30 bg-emerald-200/10 text-emerald-100">
+                        <Icon size={14} aria-hidden="true" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-white">{item.title}</p>
+                        <p className="text-xs text-slate-300">{item.detail}</p>
+                      </div>
+                    </div>
+                    {index < 2 && <div className="mt-3 h-px bg-gradient-to-r from-emerald-300/35 to-transparent" aria-hidden="true" />}
+                  </div>
+                );
+              })}
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -116,8 +189,11 @@ export default function WhatWeDoPage() {
           <h2 className="text-xl font-semibold text-white">What This Is Not</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-200">
             {WHAT_THIS_IS_NOT.map((item) => (
-              <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                {item}
+              <li key={item.label} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
+                <span className="flex items-center gap-2">
+                  <item.icon size={14} className="text-rose-200" aria-hidden="true" />
+                  {item.label}
+                </span>
               </li>
             ))}
           </ul>
@@ -126,8 +202,11 @@ export default function WhatWeDoPage() {
           <h2 className="text-xl font-semibold text-white">What This Is</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-200">
             {WHAT_THIS_IS.map((item) => (
-              <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                {item}
+              <li key={item.label} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
+                <span className="flex items-center gap-2">
+                  <item.icon size={14} className="text-emerald-200" aria-hidden="true" />
+                  {item.label}
+                </span>
               </li>
             ))}
           </ul>
@@ -142,31 +221,48 @@ export default function WhatWeDoPage() {
           </h2>
         </div>
         <div className="mt-5 grid gap-3 md:grid-cols-3">
-          {STEP_MODEL.map((step) => (
-            <article key={step.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-              <p className="text-base font-semibold text-white">{step.title}</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.12em] text-emerald-200">{step.timeline}</p>
-              <div className="mt-3 space-y-2">
-                <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Client receives</p>
-                <p className="text-sm text-slate-200">{step.receives}</p>
-              </div>
-              <div className="mt-3 space-y-2">
-                <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Decision made</p>
-                <p className="text-sm text-slate-200">{step.decision}</p>
-              </div>
-            </article>
-          ))}
+          {STEP_MODEL.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <article key={step.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-300/30 bg-emerald-200/10 text-emerald-100">
+                    <Icon size={16} aria-hidden="true" />
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200/90">{index + 1}</span>
+                </div>
+                <p className="mt-3 text-base font-semibold text-white">{step.title}</p>
+                <p className="mt-2 text-xs uppercase tracking-[0.12em] text-emerald-200">{step.timeline}</p>
+                <div className="mt-3 space-y-2">
+                  <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Client receives</p>
+                  <p className="text-sm text-slate-200">{step.receives}</p>
+                </div>
+                <div className="mt-3 space-y-2">
+                  <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Decision made</p>
+                  <p className="text-sm text-slate-200">{step.decision}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Concrete Deliverables</h2>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
-          {DELIVERABLES.map((item) => (
-            <div key={item} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4 text-sm text-slate-200">
-              {item}
-            </div>
-          ))}
+          {DELIVERABLES.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4 text-sm text-slate-200">
+                <span className="flex items-center gap-3">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-slate-700/80 bg-slate-900/70 text-cyan-200">
+                    <Icon size={15} aria-hidden="true" />
+                  </span>
+                  {item.title}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -218,7 +314,10 @@ export default function WhatWeDoPage() {
           <ul className="mt-4 space-y-2 text-sm text-slate-200">
             {WHO_FOR.map((item) => (
               <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                {item}
+                <span className="flex items-start gap-2">
+                  <Briefcase size={14} className="mt-0.5 text-emerald-200" aria-hidden="true" />
+                  <span>{item}</span>
+                </span>
               </li>
             ))}
           </ul>
@@ -228,7 +327,10 @@ export default function WhatWeDoPage() {
           <ul className="mt-4 space-y-2 text-sm text-slate-200">
             {WHO_NOT_FOR.map((item) => (
               <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                {item}
+                <span className="flex items-start gap-2">
+                  <Users size={14} className="mt-0.5 text-slate-300" aria-hidden="true" />
+                  <span>{item}</span>
+                </span>
               </li>
             ))}
           </ul>
