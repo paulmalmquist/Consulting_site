@@ -3,18 +3,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   ArrowRightLeft,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   ClipboardCheck,
+  Compass,
   Factory,
   House,
   Layers3,
   Mail,
-  Menu,
   Snowflake,
   UserRound,
   Workflow,
@@ -26,6 +26,7 @@ import { cn } from '../ui/cn';
 
 const ALLOWED_NAV_ITEMS = new Set([
   'Home',
+  'AI Concierge',
   'What We Do',
   'The Shift',
   'Operational Assessment',
@@ -36,6 +37,15 @@ const ALLOWED_NAV_ITEMS = new Set([
   'Contact'
 ]);
 
+const INDUSTRY_CHILDREN = [
+  { label: 'Healthcare', href: '/industries/healthcare' },
+  { label: 'Legal', href: '/industries/legal' },
+  { label: 'Real Estate Private Equity', href: '/industries/real-estate-private-equity' },
+  { label: 'Finance', href: '/industries/finance' },
+  { label: 'Construction', href: '/industries/construction' },
+  { label: 'Project & Development Services (PDS)', href: '/industries/pds' }
+];
+
 const VISIBLE_NAV_GROUPS = navigation.groups
   .map((group) => ({
     ...group,
@@ -45,6 +55,7 @@ const VISIBLE_NAV_GROUPS = navigation.groups
 
 const NAV_ICON_BY_LABEL: Record<string, LucideIcon> = {
   Home: House,
+  'AI Concierge': Compass,
   'What We Do': Workflow,
   'The Shift': ArrowRightLeft,
   'Legacy SaaS': Layers3,
@@ -71,6 +82,13 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
     });
     return initial;
   });
+  const [industriesOpen, setIndustriesOpen] = useState(pathname.startsWith('/industries'));
+
+  useEffect(() => {
+    if (pathname.startsWith('/industries')) {
+      setIndustriesOpen(true);
+    }
+  }, [pathname]);
 
   const toggleGroup = (title: string) => {
     setOpenGroups((prev) => ({ ...prev, [title]: !prev[title] }));
@@ -81,6 +99,122 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
       return pathname === href;
     }
     return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
+  const renderNavItem = (item: { label: string; href: string }) => {
+    const Icon = NAV_ICON_BY_LABEL[item.label];
+    const active = isActivePath(item.href);
+    if (!Icon) return null;
+
+    if (item.label === 'Industries') {
+      const industriesActive = pathname.startsWith('/industries');
+      return (
+        <div key={item.href} className="space-y-1">
+          <div
+            className={cn(
+              'group flex items-center gap-2 rounded-lg border px-2 py-1.5 text-sm transition',
+              industriesActive
+                ? 'border-emerald-300/45 bg-emerald-200/10 text-emerald-50'
+                : 'border border-transparent text-slate-300 hover:border-emerald-300/35 hover:bg-slate-800/60 hover:text-emerald-100'
+            )}
+          >
+            <Link
+              href={item.href}
+              onClick={() => {
+                setDrawerOpen(false);
+              }}
+              className="flex min-w-0 flex-1 items-center gap-3"
+            >
+              <span
+                className={cn(
+                  'inline-flex h-8 w-8 items-center justify-center rounded-lg border bg-slate-950/60',
+                  industriesActive
+                    ? 'border-emerald-300/55 text-emerald-100'
+                    : 'border-slate-700/80 text-slate-300 group-hover:border-emerald-300/45 group-hover:text-emerald-100'
+                )}
+                role="img"
+                aria-label={`${item.label} icon`}
+              >
+                <Icon size={16} strokeWidth={1.9} aria-hidden="true" />
+              </span>
+              <span className={cn('truncate', isCollapsed && 'sr-only')}>{item.label}</span>
+            </Link>
+            <button
+              type="button"
+              onClick={() => setIndustriesOpen((prev) => !prev)}
+              className={cn(
+                'inline-flex h-8 w-8 items-center justify-center rounded-md text-slate-300 transition hover:bg-slate-800/70 hover:text-emerald-100',
+                isCollapsed && 'hidden'
+              )}
+              aria-label={industriesOpen ? 'Collapse industries list' : 'Expand industries list'}
+              aria-expanded={industriesOpen}
+            >
+              <ChevronDown size={14} className={cn('transition-transform duration-300', industriesOpen ? 'rotate-0' : '-rotate-90')} />
+            </button>
+          </div>
+
+          <div
+            className={cn(
+              'overflow-hidden pl-12 pr-1 transition-[max-height,opacity] duration-300 ease-out',
+              industriesOpen ? 'max-h-[360px] opacity-100' : 'max-h-0 opacity-0'
+            )}
+          >
+            <div className="space-y-1 pb-1 pt-1">
+              {INDUSTRY_CHILDREN.map((child) => {
+                const childActive = isActivePath(child.href);
+                return (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    onClick={() => {
+                      setDrawerOpen(false);
+                    }}
+                    className={cn(
+                      'block rounded-md border px-3 py-2 text-xs transition',
+                      childActive
+                        ? 'border-emerald-300/45 bg-emerald-200/10 text-emerald-50'
+                        : 'border-transparent text-slate-300 hover:border-emerald-300/30 hover:bg-slate-800/60 hover:text-emerald-100'
+                    )}
+                  >
+                    {child.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={() => {
+          setDrawerOpen(false);
+        }}
+        className={cn(
+          'group flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition',
+          active
+            ? 'border border-emerald-300/45 bg-emerald-200/10 text-emerald-50'
+            : 'border border-transparent text-slate-300 hover:border-emerald-300/35 hover:bg-slate-800/60 hover:text-emerald-100'
+        )}
+      >
+        <span
+          className={cn(
+            'inline-flex h-8 w-8 items-center justify-center rounded-lg border bg-slate-950/60',
+            active
+              ? 'border-emerald-300/55 text-emerald-100'
+              : 'border-slate-700/80 text-slate-300 group-hover:border-emerald-300/45 group-hover:text-emerald-100'
+          )}
+          role="img"
+          aria-label={`${item.label} icon`}
+        >
+          <Icon size={16} strokeWidth={1.9} aria-hidden="true" />
+        </span>
+        <span className={cn(isCollapsed && 'sr-only')}>{item.label}</span>
+      </Link>
+    );
   };
 
   return (
@@ -141,45 +275,7 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
                 className={cn('transition', openGroups[group.title] ? 'rotate-0' : '-rotate-90', isCollapsed && 'hidden')}
               />
             </button>
-            {openGroups[group.title] && (
-              <div className="space-y-1">
-                {group.items.map((item) => {
-                  const Icon = NAV_ICON_BY_LABEL[item.label];
-                  const active = isActivePath(item.href);
-                  if (!Icon) return null;
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => {
-                        // Close the mobile drawer after navigation to avoid stuck overlays.
-                        setDrawerOpen(false);
-                      }}
-                      className={cn(
-                        'group flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition',
-                        active
-                          ? 'border border-emerald-300/45 bg-emerald-200/10 text-emerald-50'
-                          : 'border border-transparent text-slate-300 hover:border-emerald-300/35 hover:bg-slate-800/60 hover:text-emerald-100'
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          'inline-flex h-8 w-8 items-center justify-center rounded-lg border bg-slate-950/60',
-                          active
-                            ? 'border-emerald-300/55 text-emerald-100'
-                            : 'border-slate-700/80 text-slate-300 group-hover:border-emerald-300/45 group-hover:text-emerald-100'
-                        )}
-                        role="img"
-                        aria-label={`${item.label} icon`}
-                      >
-                        <Icon size={16} strokeWidth={1.9} aria-hidden="true" />
-                      </span>
-                      <span className={cn(isCollapsed && 'sr-only')}>{item.label}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            )}
+            {openGroups[group.title] && <div className="space-y-1">{group.items.map((item) => renderNavItem(item))}</div>}
           </div>
         ))}
       </nav>

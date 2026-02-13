@@ -3,6 +3,7 @@
     {
       "title": "Overview",
       "items": [
+        { "label": "AI Concierge", "href": "/ai-concierge", "icon": "🧭" },
         { "label": "Home", "href": "/", "icon": "🏠" },
         { "label": "What We Do", "href": "/what-we-do", "icon": "⚙️" },
         { "label": "The Shift", "href": "/shift", "icon": "↗️" },
