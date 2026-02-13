@@ -92,7 +92,7 @@ export default function WhatWeDoPage() {
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
         <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">What We Do</p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
-          Replace one broken workflow without a risky full overhaul.
+          Replace one broken workflow.
         </h1>
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
           Novendor fixes one high-friction workflow at a time and replaces it with a system your company owns and controls.
