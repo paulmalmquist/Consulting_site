@@ -1,63 +1,33 @@
-# Repo Inventory + Deep Research Prompt (For ChatGPT)
+# Deep Research Validation Prompt (Standalone)
 
-Use this file to run a high-rigor, tactful content validation pass on the Novendor site.
+Use this prompt to run a high-rigor, tactful validation pass on Novendor's public content.
 
-## Repository Inventory (Current)
+## Context You Should Assume
 
-### Stack
-- Next.js App Router (`next@14`), TypeScript, Tailwind.
-- Content-driven architecture: most messaging in `content/*`, rendered via `app/*` pages.
+Novendor's positioning is execution infrastructure for operational workflows.
 
-### Core App Surface
-- Route pages: `app/*`
-- Primary positioning pages:
-  - `app/page.tsx`
-  - `app/what-we-do/page.tsx`
-  - `app/ai-concierge/page.tsx`
-  - `app/industries/page.tsx`
-  - `app/industries/[slug]/page.tsx`
-  - `app/services/page.tsx`
-  - `app/operational-assessment/page.tsx`
+Core claim:
+- Replace one broken workflow at a time with an internal system the client owns.
+- Keep core systems in place.
+- Run old and new workflows in parallel.
+- Cut over only when evidence is clear.
 
-### Navigation + Layout
-- `components/layout/SidebarNav.tsx`
-- `components/layout/Topbar.tsx`
-- `content/navigation.json`
+Commercial posture:
+- Fixed-scope, fixed-fee engagements.
+- Not seat-based software licensing.
+- Not hourly staff augmentation.
+- Not a big-bang rip-and-replace program.
 
-### Strategy / Messaging Sources
-- `content/docs/*.mdx` (engagement model, options, FAQ, how we work)
-- `content/pages/*.mdx` (site narrative pages)
-- `content/research/*.json` (messaging frameworks and positioning notes)
-- `content/internal/industry-glossary.md`
-- `content/internal/industry-engagement-template.md`
-- `content/industry-engagements.ts` (industry-specific operator content)
+Tone requirements:
+- Practitioner-grade
+- Calm
+- Enterprise-safe
+- Specific
+- No hype
+- No vendor attacks
+- No generic transformation language
 
-### Industry Implementation
-- Industry index: `app/industries/page.tsx`
-- Dynamic pages: `app/industries/[slug]/page.tsx`
-- Industry data model: `content/industry-engagements.ts`
-
-### Additional Context Files
-- `README.md`
-- `business_positioning_research.txt`
-- `Novendor.ai Public Positioning and Competitive Evaluation.pdf`
-- `Novendor.ai Public Positioning and Competitive Evaluation-3.pdf`
-
----
-
-## Copy/Paste Prompt for ChatGPT Deep Research
-
-You are a senior operator + domain researcher + enterprise content reviewer.
-Your task is to **validate and strengthen** this website content with evidence, while preserving tone and positioning.
-
-### Working style
-- Be tactful, calm, and precise.
-- Treat this as a quality review, not a teardown.
-- Preserve the site's point of view unless it is materially inaccurate or risky.
-- Focus on correctness, credibility, and operator realism.
-
-### Primary objective
-Validate whether this content is factually sound, practitioner-grade, and enterprise-safe across:
+Industries in scope:
 - Healthcare
 - Legal
 - Real Estate Private Equity
@@ -65,71 +35,144 @@ Validate whether this content is factually sound, practitioner-grade, and enterp
 - Construction
 - Project & Development Services (PDS)
 
-This is execution-infrastructure positioning, not SaaS marketing.
+## Existing Content Model (What You Are Validating)
 
-### Content to review (priority order)
-1. `content/industry-engagements.ts`
-2. `app/industries/[slug]/page.tsx`
-3. `app/ai-concierge/page.tsx`
-4. `app/what-we-do/page.tsx`
-5. `content/internal/industry-glossary.md`
-6. `content/docs/how-we-work.mdx`
-7. `content/docs/engagement-model.mdx`
-8. `content/docs/faq.mdx`
+Each industry is structured into:
+1. Operational Lifecycle
+2. System Fragmentation
+3. Failure Mechanics
+4. What We Reconstruct
+5. Engagement Model
+6. Executive Outcomes
 
-If needed, sample adjacent pages for consistency (`app/services/page.tsx`, `content/pages/services.mdx`, `content/navigation.json`).
+Cross-industry engagement model:
+- Phase 1: Operational Audit
+- Phase 2: Control Definition
+- Phase 3: Execution Layer Build
+- Phase 4: Continuity Transfer
 
-### Validation requirements
-For each industry, validate:
-1. **Operational lifecycle accuracy**
+Execution-layer control principles:
+- Canonical lifecycle states
+- Named ownership by state
+- Version-controlled artifacts
+- Logged approvals and escalations
+- Taxonomy normalization
+- Audit-ready outputs
+
+## Industry-Specific Technical Domains to Validate
+
+Healthcare examples expected:
+- 837 claim transmission
+- 835 ERA reconciliation
+- CARC/RARC normalization
+- Denial root cause taxonomy
+- Contract variance/underpayment analysis
+- PHI escalation logging
+- A/R aging >90 by owner
+
+Legal examples expected:
+- Matter intake workflow
+- Conflict check registry
+- Engagement letter execution
+- Time capture and realization
+- Trust accounting (IOLTA) reconciliation
+- Partner write-off controls
+- Phase-level profitability logic
+
+Real Estate PE examples expected:
+- IC memo approval log
+- Underwriting model version control
+- Capital call lifecycle
+- Waterfall promote calculation
+- NAV reconciliation
+- Asset-level NOI bridge
+- LP distribution auditability
+
+Finance examples expected:
+- Journal entry workflow
+- Sub-ledger rollforward
+- Intercompany elimination
+- SOX control evidence
+- Close calendar enforcement
+- Variance bridge reproducibility
+
+Construction examples expected:
+- RFI lifecycle
+- Submittal registry
+- Change order approval chain
+- Schedule of Values reconciliation
+- Cost-to-complete forecast validation
+- Pay application audit trail
+
+PDS examples expected:
+- Development budget versioning
+- GMP validation controls
+- Headcount-to-fee allocation
+- Milestone gating framework
+- Contractor performance scoring
+- Client reporting package standardization
+
+## Your Task
+
+You are a senior operator + domain researcher + enterprise content reviewer.
+Validate whether this content is factually sound, practitioner-grade, and enterprise-safe.
+
+Do not rewrite for style first. Validate for accuracy first.
+
+## Validation Requirements
+
+For each industry:
+1. Operational lifecycle accuracy
 - Are stage names realistic and used by practitioners?
-- Are ownership roles correctly framed?
-- Are artifacts and documents correctly named?
+- Are owner roles accurate?
+- Are key artifacts correctly named?
 
-2. **System dependency realism**
-- Are listed systems plausible/common for that workflow?
+2. System dependency realism
+- Are system categories and common tools plausible?
 - Are integration assumptions realistic?
 
-3. **Failure mechanics credibility**
-- Are breakdown points technically and operationally plausible?
-- Is the explanation specific enough to be useful?
+3. Fragmentation and failure mechanics credibility
+- Are failure points technically and operationally plausible?
+- Are mechanics clearly causal (not vague symptoms)?
 
-4. **Control model validity**
-- Is the proposed internal execution layer technically and organizationally feasible?
-- Are governance and audit controls realistic in regulated environments?
+4. Control model feasibility
+- Is the execution-layer approach feasible in regulated environments?
+- Are governance, logging, and audit controls operationally realistic?
 
-5. **Compliance and risk posture**
-- Identify legal/compliance sensitivity where wording may overstate certainty.
-- Flag claims that should be qualified.
+5. Compliance and legal risk posture
+- Identify where wording may overstate certainty.
+- Flag where disclaimers or qualifications are needed.
 
-6. **Executive outcome measurability**
-- Are outcomes measurable and decision-relevant (CFO/COO/CIO)?
-- Are any outcomes too vague or not causally defensible?
+6. Executive outcome defensibility
+- Are outcomes measurable and decision-relevant?
+- Are claims causally defensible without overpromising?
 
-### Research quality standards
-- Use current, credible sources (official docs, regulators, accounting/audit standards, reputable industry references).
+## Research Quality Standard
+
+- Use current, credible sources.
+- Prioritize primary sources where possible (regulators, standards, official system docs, authoritative industry bodies).
 - Cite sources for non-obvious claims.
-- Distinguish between:
-  - confirmed fact
-  - reasonable inference
-  - opinion/recommendation
-- If uncertain, say so explicitly.
+- Distinguish clearly between:
+  - Confirmed fact
+  - Inference
+  - Recommendation
+- If uncertain, state uncertainty explicitly.
 
-### Hard constraints
-- No hype copy.
-- No generic “digital transformation” rhetoric.
-- No vendor-bashing language.
-- Keep enterprise-safe tone.
-- Do not force a full rewrite if targeted corrections are sufficient.
+## Hard Constraints
 
-### Output format (required)
+- No hype language.
+- No vendor-bashing.
+- No generic “digital transformation” phrasing.
+- No forced full rewrite if targeted corrections are sufficient.
 
-#### 1) Executive assessment (short)
+## Required Output Format
+
+### 1) Executive Assessment
 - Overall confidence score (0-100)
 - Top strengths
 - Top risks
 
-#### 2) Industry-by-industry validation table
+### 2) Industry-by-Industry Validation Table
 For each industry include:
 - Accuracy score (0-100)
 - What is strong
@@ -138,49 +181,42 @@ For each industry include:
 - Top 3 corrections
 - Source-backed notes
 
-#### 3) Cross-cutting risk register
+### 3) Cross-Cutting Risk Register
+For each risk:
 - Claim
 - Risk type (factual / compliance / overpromise / ambiguity)
 - Severity (High/Med/Low)
 - Recommended revision
 - Source(s)
 
-#### 4) Line-level edit recommendations
-Provide edit-ready suggestions in this structure:
-- File path
+### 4) Edit-Ready Recommendations
+Provide line-level suggestions in this format:
 - Current wording
 - Proposed wording
 - Why
 - Source(s)
 
-Target files first:
-- `content/industry-engagements.ts`
-- `app/industries/[slug]/page.tsx`
-- `app/ai-concierge/page.tsx`
-- `app/what-we-do/page.tsx`
+### 5) Prioritized Gaps
+- P1, P2, P3 actions to raise enterprise trust and operator credibility.
 
-#### 5) Gaps to close next
-- Missing artifacts, control language, or disclaimers needed for enterprise trust.
-- Prioritized as P1/P2/P3.
+## Reviewer Tone Guidance
 
-### Reviewer tone guidance
 Use language like:
 - “This is strong because…”
 - “This may be interpreted as…”
 - “To reduce risk, consider…”
 - “A tighter phrasing would be…”
 
-Avoid language like:
-- “This is wrong” (unless clearly false)
-- “You should scrap this”
+Avoid:
+- Dismissive tone
 - Broad negative judgments without evidence
 
-### Final check
-Before finalizing, confirm:
-- terminology accuracy by industry
-- equal depth across industries
-- no single industry dominates quality
-- no SaaS framing drift
-- no vague abstraction replacing operational specificity
-- measurable outcomes remain intact
+## Final Validation Checklist
 
+Before finalizing, confirm:
+- Terminology accuracy by industry
+- Equal depth across all six industries
+- No single industry dominates quality
+- Execution-infrastructure positioning remains clear
+- Lifecycle states are explicit
+- Outcomes are measurable and defensible
