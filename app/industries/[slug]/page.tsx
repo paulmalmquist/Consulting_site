@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { INDUSTRY_BY_SLUG, INDUSTRY_ENGAGEMENTS } from '../../../content/industry-engagements';
 
@@ -10,6 +11,31 @@ type IndustryPageProps = {
 
 export function generateStaticParams() {
   return INDUSTRY_ENGAGEMENTS.map((industry) => ({ slug: industry.slug }));
+}
+
+export function generateMetadata({ params }: IndustryPageProps): Metadata {
+  const industry = INDUSTRY_BY_SLUG[params.slug];
+
+  if (!industry) {
+    return {
+      title: 'Industry Not Found | Novendor'
+    };
+  }
+
+  const systemsPreview = industry.systemTags.slice(0, 3).join(', ');
+  const description = `${industry.label} execution infrastructure: lifecycle controls, audit logging, and workflow ownership across ${systemsPreview}.`;
+
+  return {
+    title: `${industry.label} | Industry Engagement | Novendor`,
+    description,
+    alternates: {
+      canonical: `/industries/${industry.slug}`
+    },
+    openGraph: {
+      title: `${industry.label} Industry Engagement | Novendor`,
+      description
+    }
+  };
 }
 
 export default function IndustryPage({ params }: IndustryPageProps) {
