@@ -12,8 +12,8 @@
     {
       "id": "overview",
       "type": "hero",
-      "headline": "Run Your Business, Not Your Vendors",
-      "subheadline": "Consulting engagements to end reliance on expensive third-party software.",
+      "headline": "Put AI to Work",
+      "subheadline": "Consulting engagements to show measurable ROI using AI-native workflows",
       "primaryCta": { "label": "Operational assessment", "href": "/operational-assessment" },
       "secondaryCta": { "label": "Book strategy call", "href": "/contact" },
       "proofBullets": [
