@@ -6,6 +6,14 @@ type IndustryVerticalPageProps = {
 };
 
 export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
+  const icpBullets = [
+    'Companies with real operational complexity',
+    'Multiple departments and vendor sprawl',
+    '50-1,000 employees',
+    'Leadership under AI ROI pressure',
+    'Teams buried in spreadsheets and manual reconciliation'
+  ];
+
   return (
     <div className="space-y-8 lg:space-y-10">
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
@@ -14,6 +22,9 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
           Put AI to Work in {industry.label} Operations
         </h1>
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">{industry.heroSubheadline}</p>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+          AI embedded in controlled operational systems creates value only when outcomes are measurable, traceable, and audit-ready.
+        </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/contact"
@@ -84,10 +95,28 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
             </li>
           ))}
         </ul>
+        <p className="mt-4 text-sm leading-relaxed text-emerald-100/90">
+          We don&apos;t deploy AI experiments. We deliver operational systems - with evidence.
+        </p>
+      </section>
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Who This Is Built For</h2>
+        <ul className="mt-4 space-y-2 text-sm text-slate-200">
+          {icpBullets.map((item) => (
+            <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-sm leading-relaxed text-slate-300">
+          Built for companies big enough to have process - small enough to fix it.
+        </p>
       </section>
 
       <section className="rounded-3xl border border-emerald-300/25 bg-gradient-to-r from-slate-900/85 to-emerald-900/20 p-5 sm:p-7">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Measurable Operational Impact.</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-200">{industry.controlStatement}</p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {industry.outcomeCards.map((card) => (
             <article key={card.title} className="rounded-2xl border border-emerald-300/20 bg-slate-950/55 p-4">

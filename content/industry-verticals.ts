@@ -23,6 +23,7 @@ export type IndustryVertical = {
     intro: string;
     principles: string[];
   };
+  controlStatement: string;
   outcomeCards: IndustryCard[];
 };
 
@@ -31,87 +32,93 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     slug: 'real-estate-private-equity',
     label: 'Real Estate Private Equity',
     heroSubheadline:
-      'Operational AI for asset management reporting, capital tracking, and covenant monitoring workflows.',
+      'AI-native workflows with measurable operational impact across LP reporting packages, capital account statements, waterfall calculations, and covenant compliance.',
     pressureCards: [
       {
-        title: 'LP Reporting Expectations Are Tightening',
+        title: 'LP Reporting Timelines Keep Compressing',
         description:
-          'LP stakeholders expect faster, cleaner reporting cycles with fewer manual revisions across operating periods.'
+          'Investor expectations for faster LP reporting packages are rising while supporting data still arrives from fragmented systems.'
       },
       {
-        title: 'Portfolio Visibility Lags Decision Cadence',
+        title: 'Portfolio Rollups Lag Decision Windows',
         description:
-          'Investment and asset management teams often operate on delayed views when data is assembled manually.'
+          'Investment teams often review stale portfolio rollups when manual consolidation delays investment committee materials.'
       },
       {
-        title: 'Excel Dependency Creates Control Risk',
+        title: 'Waterfall Logic Is Hard to Defend',
         description:
-          'Spreadsheet-heavy processes increase version drift, hidden logic risk, and review burden under timeline pressure.'
+          'Spreadsheet-based waterfall calculations increase version drift, manual reconciliation, and escalation risk near close cycles.'
       },
       {
-        title: 'Volatile Capital Markets Raise Scrutiny',
+        title: 'Covenant Compliance Scrutiny Is Higher',
         description:
-          'When financing conditions move quickly, operating controls and reporting defensibility are tested harder.'
+          'Debt markets volatility increases pressure for traceable covenant compliance reporting and defensible exception handling.'
       }
     ],
     breakpoints: {
       items: [
-        'Asset management reporting is assembled manually across disconnected files.',
-        'Waterfall calculations diverge across analyst-maintained templates.',
-        'Capital call tracking relies on email and spreadsheet reconciliation.',
-        'Debt covenant monitoring is delayed by fragmented portfolio data pulls.'
+        'LP reporting packages are rebuilt manually from disconnected portfolio sources.',
+        'Capital account statements require repeated tie-outs before release.',
+        'Waterfall calculations vary across analyst templates, reducing IRR integrity.',
+        'Covenant compliance monitoring depends on delayed spreadsheet portfolio rollups.'
       ],
       explanation:
-        'These failures are not about effort. They result from fragmented data states, uncontrolled calculation logic, and inconsistent ownership at handoff points.'
+        'AI does not replace fragmented systems. It exposes where controls are weak. The issue is not effort; it is missing execution logic, weak traceability, and inconsistent ownership.'
     },
     reconstructCards: [
       {
-        title: 'Automated Reporting Pack Assembly',
-        description: 'Standardize source inputs and generate repeatable LP and IC reporting packages.',
-        outcome: 'Reduce reporting cycle compression risk and improve consistency under deadlines.'
+        title: 'LP Reporting System',
+        description:
+          'Automate LP reporting package assembly with documented logic, approval checkpoints, and version traceability.',
+        outcome: 'Defensible performance reporting with lower manual reconciliation load.'
       },
       {
-        title: 'Controlled Waterfall Engine',
-        description: 'Replace uncontrolled spreadsheet logic with versioned, governed waterfall calculations.',
-        outcome: 'Improve defensibility and reduce calculation reconciliation effort.'
+        title: 'Standardized Waterfall Engine',
+        description:
+          'Replace spreadsheet drift with controlled waterfall calculations and explicit model governance.',
+        outcome: 'Standardized waterfall logic and improved IRR integrity controls.'
       },
       {
-        title: 'Portfolio Data Layer',
-        description: 'Create a unified operating data layer across asset, capital, and debt monitoring workflows.',
-        outcome: 'Support faster cross-portfolio decision reviews with consistent metrics.'
+        title: 'Capital Activity Control Layer',
+        description:
+          'Structure capital call, notice, and capital account statement workflows around auditable state transitions.',
+        outcome: 'Reduced capital call errors and cleaner investor communication trails.'
       },
       {
-        title: 'Audit-Ready Reporting Pipelines',
-        description: 'Build structured reporting workflows with traceable lineage and approval checkpoints.',
-        outcome: 'Strengthen control posture for audit, lender, and investor review cycles.'
+        title: 'Audit-Ready Portfolio Reporting Infrastructure',
+        description:
+          'Build portfolio-level data consistency checks across asset updates, debt covenants, and IC materials.',
+        outcome: 'Portfolio-level data consistency with traceable, audit-ready reporting outputs.'
       }
     ],
     engagementModel: {
       intro:
-        'Engagements are executed as fixed-scope workflow replacement programs with clear decision gates and owner transfer.',
+        'Execution systems are designed to produce measurable outcomes: traceable logic, governed approvals, and audit-ready reporting evidence.',
       principles: [
-        'Fixed scope and fixed fee aligned to one workflow.',
-        'Replace one workflow at a time to protect operating continuity.',
-        'Parallel-run old and new process before production cutover.',
-        'Client owns the resulting system, controls, and operating cadence.'
+        'Fixed scope tied to one high-friction workflow.',
+        'Fixed fee with explicit acceptance criteria.',
+        'Parallel run before cutover to verify output integrity.',
+        'Documented logic and transfer of operational control to the client.'
       ]
     },
+    controlStatement:
+      'AI that improves IRR modeling is useful. AI that produces defensible LP reporting is strategic.',
     outcomeCards: [
       {
-        title: '40-60% Reporting Time Reduction',
-        description: 'Shrink analyst assembly cycles for recurring reporting periods and packet updates.'
+        title: 'Defensible Performance Reporting',
+        description: 'Improve LP and IC confidence with documented controls, evidence trails, and reproducible portfolio reporting outputs.'
       },
       {
-        title: 'Cleaner Investment Committee Prep',
-        description: 'Deliver consistent metrics and fewer pre-read corrections before decision meetings.'
+        title: 'Standardized Waterfall Logic',
+        description: 'Reduce review friction by enforcing governed waterfall calculations and explicit change control.'
       },
       {
-        title: 'Reduced Analyst Lift',
-        description: 'Move repetitive reconciliation work into structured workflows and controlled pipelines.'
+        title: 'Reduced Capital Call Errors',
+        description: 'Lower manual exceptions through controlled capital activity workflows and traceable approval states.'
       },
       {
-        title: 'Stronger Audit Defensibility',
-        description: 'Improve traceability across calculations, approvals, and final reporting artifacts.'
+        title: 'Audit-Ready Reporting Infrastructure',
+        description: 'Strengthen governance with portfolio-level traceability, documented logic, and clear control ownership.'
       }
     ]
   },
@@ -119,87 +126,89 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     slug: 'consumer-credit',
     label: 'Consumer Credit',
     heroSubheadline:
-      'Operational AI for underwriting, servicing, collections, and compliance reporting workflows.',
+      'AI embedded in controlled operational systems for underwriting exception queues, servicing handoffs, delinquency tracking, and regulatory documentation.',
     pressureCards: [
       {
-        title: 'Margin Compression Is Ongoing',
+        title: 'Credit Margins Are Under Pressure',
         description:
-          'Origination and servicing teams are expected to improve throughput while operating with tighter economics.'
+          'Lenders must accelerate throughput while preserving risk discipline and documentation quality in a tighter spread environment.'
       },
       {
-        title: 'Regulatory Scrutiny Is Increasing',
+        title: 'Regulatory Reviews Expect Evidence',
         description:
-          'Control discipline and documentation quality are now core operating requirements, not optional process hygiene.'
+          'Decision logic, adverse action context, and servicing records must be traceable, not reconstructed after the fact.'
       },
       {
-        title: 'Default Volatility Changes Risk Posture',
+        title: 'Default Volatility Requires Faster Signal',
         description:
-          'Shifts in delinquency behavior require faster operational signal flow across underwriting and servicing.'
+          'Delinquency tracking and loss forecasting are constrained when risk scoring inputs and portfolio stratification are fragmented.'
       },
       {
-        title: 'Manual Exception Review Does Not Scale',
+        title: 'Manual Exception Queues Do Not Scale',
         description:
-          'Exception queues expand quickly when decisions and escalations depend on manual triage.'
+          'Underwriting and servicing teams lose cycle time when high-volume exception handling depends on ad hoc triage.'
       }
     ],
     breakpoints: {
       items: [
-        'Spreadsheet underwriting logic introduces inconsistent decision paths.',
-        'Servicing workflows require manual handoffs and re-keyed updates.',
-        'Collections reporting is fragmented across teams and systems.',
-        'Compliance reporting cycles are slowed by evidence assembly friction.'
+        'Underwriting exception queues rely on spreadsheet logic with inconsistent decision paths.',
+        'Risk scoring inputs are reconciled manually before adjudication and review.',
+        'Servicing handoffs create state loss between collections, care, and compliance teams.',
+        'Regulatory documentation is assembled retroactively from disconnected systems.'
       ],
       explanation:
-        'Execution breaks where decision logic, ownership, and evidence generation are not embedded into the workflow itself. Manual oversight cannot keep pace with volume variance.'
+        'AI-driven decisions must be explainable. We build systems where credit logic can be reviewed, traced, and defended.'
     },
     reconstructCards: [
       {
-        title: 'Decision-Support Overlays',
-        description: 'Embed governed recommendation layers into existing credit decision workflows.',
-        outcome: 'Improve speed while preserving controlled approval paths.'
+        title: 'Documented Credit Decision Engine',
+        description: 'Embed decision support with explicit rule lineage, approval states, and exception evidence.',
+        outcome: 'Shortened underwriting decision cycles with documented decision logic.'
       },
       {
-        title: 'Underwriting Workflow Engines',
-        description: 'Structure rule execution, exception routing, and adjudication logging in one flow.',
-        outcome: 'Reduce cycle time variability and improve consistency.'
+        title: 'Underwriting and Servicing Workflow Controls',
+        description: 'Standardize handoffs, queue ownership, and escalation thresholds across the credit lifecycle.',
+        outcome: 'Servicing workflow traceability and reduced reconciliation drift.'
       },
       {
-        title: 'Portfolio Analytics Layer',
-        description: 'Unify underwriting, servicing, and collections signals into an operational reporting layer.',
-        outcome: 'Increase risk visibility across delinquency and recovery cohorts.'
+        title: 'Portfolio Stratification and Risk Layer',
+        description: 'Unify delinquency tracking, loss forecasting, and cohort-level performance visibility.',
+        outcome: 'Audit-aligned portfolio reporting and clearer risk governance.'
       },
       {
-        title: 'Compliance-Aligned Data Models',
-        description: 'Model operational data and outputs to support reproducible compliance reporting.',
-        outcome: 'Strengthen documentation quality and reduce regulatory response friction.'
+        title: 'Regulatory Documentation Pipeline',
+        description: 'Generate reproducible compliance artifacts from workflow states instead of manual backfill.',
+        outcome: 'Reduced compliance friction and stronger control defensibility.'
       }
     ],
     engagementModel: {
       intro:
-        'Delivery follows fixed-fee workflow replacement with controls-first design and explicit owner accountability.',
+        'AI-native workflows with measurable operational impact require evidence-first execution: controls, documentation, and reviewable logic at each decision point.',
       principles: [
-        'Fixed scope with decision gates tied to operational outputs.',
-        'Fixed fee with no expansion into broad transformation programs.',
-        'One workflow replacement at a time with measured control lift.',
-        'Parallel-run validation before cutover and client ownership at handoff.'
+        'Fixed scope aligned to one workflow with quantifiable throughput and control metrics.',
+        'Fixed fee and explicit stage-gate deliverables.',
+        'Parallel run before cutover to validate underwriting and servicing integrity.',
+        'Documented logic and transfer of operational control to internal owners.'
       ]
     },
+    controlStatement:
+      'Automation is only valuable when it can be measured and defended.',
     outcomeCards: [
       {
-        title: 'Faster Underwriting Cycles',
-        description: 'Improve time-to-decision by reducing exception handling latency and rework.'
+        title: 'Shortened Underwriting Decision Cycles',
+        description: 'Reduce exception latency with controlled routing and documented adjudication paths.'
       },
       {
-        title: 'Reduced Servicing Labor',
-        description: 'Lower manual servicing effort through structured routing and standardized execution states.'
+        title: 'Documented Decision Logic',
+        description: 'Maintain traceable credit logic that can be reviewed during internal and external audits.'
       },
       {
-        title: 'Improved Risk Visibility',
-        description: 'Enable clearer portfolio signal tracking across underwriting and collections operations.'
+        title: 'Reduced Compliance Friction',
+        description: 'Lower audit prep burden through continuously generated regulatory documentation.'
       },
       {
-        title: 'Stronger Audit Documentation',
-        description: 'Increase completeness and repeatability of control evidence for compliance review.'
+        title: 'Audit-Aligned Portfolio Reporting',
+        description: 'Improve governance with portfolio stratification outputs tied to reconciled operational data.'
       }
     ]
   },
@@ -207,87 +216,89 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     slug: 'medical',
     label: 'Medical',
     heroSubheadline:
-      'Operational AI for prior authorization, revenue cycle, scheduling, and payer reporting workflows.',
+      'Execution systems designed to produce audit-ready outcomes in revenue cycle management, denial management, prior authorization workflows, and payer reconciliation.',
     pressureCards: [
       {
-        title: 'Staffing Shortages Increase Throughput Risk',
+        title: 'Staffing Constraints Increase Throughput Risk',
         description:
-          'Care delivery organizations are expected to maintain service levels with constrained administrative capacity.'
+          'Provider and MSO teams are expected to maintain service and collections performance with limited administrative capacity.'
       },
       {
-        title: 'Reimbursement Delays Pressure Cashflow',
+        title: 'Reimbursement Delays Pressure Margin',
         description:
-          'Lagging collections and denied claims create avoidable operational strain across provider groups.'
+          'Cash acceleration stalls when prior authorization, denial management, and payer reconciliation are loosely controlled.'
       },
       {
-        title: 'Payer Reporting Burden Continues to Grow',
+        title: 'Payer Reporting Burden Keeps Expanding',
         description:
-          'Administrative reporting expectations increase while source data remains fragmented and manually assembled.'
+          'Practice-level reporting and compliance documentation requirements are rising across contracts and jurisdictions.'
       },
       {
-        title: 'Admin Cost Creep Is Persistent',
+        title: 'Manual Reconciliation Consumes Capacity',
         description:
-          'Manual coordination across scheduling, billing, and payer systems drives overhead expansion.'
+          'Teams spend disproportionate time resolving workflow drift between CPT coding, billing, and payer systems.'
       }
     ],
     breakpoints: {
       items: [
-        'Prior authorization tracking is fragmented across systems and communications channels.',
-        'Revenue cycle leakage persists through unresolved billing and posting exceptions.',
-        'Scheduling workflows underperform due to weak optimization and handoff discipline.',
-        'Payer reports are built manually with recurring reconciliation loops.'
+        'Prior authorization workflows lose status integrity across payer portals and internal queues.',
+        'Denial management relies on late-stage manual triage rather than controlled exception states.',
+        'Payer reconciliation and CPT coding alignment require repeated spreadsheet tie-outs.',
+        'Practice-level reporting is delayed by fragmented source systems and inconsistent ownership.'
       ],
       explanation:
-        'Where ownership, lifecycle state definitions, and reconciliation logic are weak, teams absorb variance manually. This suppresses throughput and delays cash realization.'
+        'AI in healthcare must improve margin without increasing compliance risk. We design workflows that do both.'
     },
     reconstructCards: [
       {
-        title: 'Billing Exception Detection',
-        description: 'Detect and route high-risk billing exceptions before they age into downstream denials.',
-        outcome: 'Improve claim quality and reduce avoidable rework.'
+        title: 'Revenue Cycle Exception Control',
+        description: 'Detect and route high-risk claim exceptions before downstream denial accumulation.',
+        outcome: 'Reduced claim denials and fewer manual correction loops.'
       },
       {
-        title: 'Structured Reconciliation Workflows',
-        description: 'Implement repeatable reconciliation states with owner-level escalation controls.',
-        outcome: 'Lower unresolved variance and improve payment traceability.'
+        title: 'Prior Auth and Denial Workflow System',
+        description: 'Structure lifecycle states, owner accountability, and escalation logic across payer touchpoints.',
+        outcome: 'Faster reimbursement cycles with stronger traceability.'
       },
       {
-        title: 'Scheduling Optimization Engine',
-        description: 'Structure scheduling decisions around capacity constraints and operational priorities.',
-        outcome: 'Increase utilization and reduce avoidable scheduling friction.'
+        title: 'Payer Reconciliation and Coding Alignment',
+        description: 'Standardize payer reconciliation and CPT coding control checks under documented governance.',
+        outcome: 'Clean payer reporting trails and lower compliance documentation friction.'
       },
       {
-        title: 'Operational Dashboards',
-        description: 'Deliver role-specific dashboards tied to workflow states and exception ownership.',
-        outcome: 'Give leadership timely visibility into operational execution risk.'
+        title: 'Structured Operational Dashboards',
+        description: 'Publish practice-level reporting tied directly to workflow states and evidence-ready metrics.',
+        outcome: 'Lower administrative overhead and clearer leadership control.'
       }
     ],
     engagementModel: {
       intro:
-        'Programs are run as fixed-scope execution engagements with measurable operating outputs and continuity controls.',
+        'AI embedded in controlled operational systems creates value only when outputs are measurable, traceable, and defensible in compliance review.',
       principles: [
-        'Fixed scope and fee anchored to one operational workflow.',
-        'Replace one workflow at a time to reduce disruption risk.',
-        'Parallel-run evidence before full cutover decisions.',
-        'Client ownership of system logic, data model, and governance cadence.'
+        'Fixed scope and fixed fee centered on one operational workflow.',
+        'Parallel run before cutover to protect continuity and reimbursement timing.',
+        'Documented logic across authorization, denial, and reconciliation steps.',
+        'Transfer of operational control to internal leaders with governance artifacts.'
       ]
     },
+    controlStatement:
+      'If your AI strategy lives in slide decks, it is not operational.',
     outcomeCards: [
       {
-        title: 'Faster Collections',
-        description: 'Improve speed-to-cash by reducing queue stagnation and reconciliation delays.'
+        title: 'Reduced Claim Denials',
+        description: 'Increase first-pass quality with standardized controls and traceable exception handling.'
       },
       {
-        title: 'Fewer Claim Denials',
-        description: 'Reduce denial frequency by standardizing upstream controls and exception handling.'
+        title: 'Faster Reimbursement Cycles',
+        description: 'Accelerate payment timelines by reducing state drift across prior auth and denial workflows.'
       },
       {
-        title: 'Reduced Admin Overhead',
-        description: 'Lower recurring manual effort across scheduling, reporting, and billing coordination.'
+        title: 'Lower Administrative Overhead',
+        description: 'Decrease manual reconciliation effort with structured workflows and governed data states.'
       },
       {
-        title: 'Executive Clarity',
-        description: 'Provide cleaner performance visibility for operations and finance leadership decisions.'
+        title: 'Clean Payer Reporting Trails',
+        description: 'Improve audit readiness through reproducible reporting, documentation, and control evidence.'
       }
     ]
   },
@@ -295,87 +306,89 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     slug: 'legal',
     label: 'Legal',
     heroSubheadline:
-      'Operational AI for intake, matter tracking, document handling, and billing workflows.',
+      'AI-native workflows with measurable operational impact across intake qualification, matter lifecycle tracking, document classification, and time entry reconciliation.',
     pressureCards: [
       {
-        title: 'Client Cost Scrutiny Is Sharpening',
+        title: 'Client Cost Scrutiny Is Rising',
         description:
-          'Clients increasingly expect clearer service economics, faster visibility, and tighter execution controls.'
+          'Legal teams are under pressure to show clearer value, cleaner billing narratives, and faster status transparency.'
       },
       {
-        title: 'Non-Billable Time Is Expanding',
+        title: 'Non-Billable Leakage Is Expanding',
         description:
-          'Administrative coordination and status gathering consume high-value capacity across teams.'
+          'Administrative follow-up and matter status reconstruction consume capacity that should remain billable.'
       },
       {
-        title: 'Manual Document Handling Slows Matters',
+        title: 'Document Workflows Remain Manual',
         description:
-          'Classification and routing delays reduce throughput and increase partner review burden.'
+          'Document classification bottlenecks delay matter progression and increase review overhead.'
       },
       {
-        title: 'Case Reporting Is Fragmented',
+        title: 'Case Status Visibility Is Fragmented',
         description:
-          'Matter status visibility is often reconstructed manually from disconnected systems and communications.'
+          'Partners and operations teams often manage updates across disconnected systems and inconsistent workflows.'
       }
     ],
     breakpoints: {
       items: [
-        'Intake qualification criteria are applied inconsistently across teams.',
-        'Case and matter status tracking depends on manual updates.',
-        'Document classification queues create avoidable delays.',
-        'Billing reconciliation requires repeated cross-system alignment.'
+        'Intake qualification criteria are applied inconsistently across practice groups.',
+        'Matter lifecycle tracking lacks controlled state definitions and ownership handoffs.',
+        'Document classification queues create avoidable delays in active matters.',
+        'Time entry reconciliation and billing narratives require repeated manual alignment.'
       ],
       explanation:
-        'Firms lose operational leverage when intake, matter progression, and reporting logic are loosely coupled. Variance is absorbed manually and becomes non-billable load.'
+        'AI does not replace legal judgment. It reduces administrative friction around it.'
     },
     reconstructCards: [
       {
-        title: 'Structured Intake Engines',
-        description: 'Standardize intake qualification, routing, and decision checkpoints.',
-        outcome: 'Increase intake consistency and reduce early-stage cycle time.'
+        title: 'Intake Qualification Engine',
+        description: 'Standardize intake logic, routing controls, and acceptance criteria across matter types.',
+        outcome: 'Reduced intake bottlenecks and cleaner qualification evidence.'
       },
       {
-        title: 'Workflow Visibility Layer',
-        description: 'Create a unified state model for matter progression and owner accountability.',
-        outcome: 'Improve operational control and reduce status ambiguity.'
+        title: 'Matter Lifecycle Visibility Layer',
+        description: 'Define governed matter states, owner accountability, and exception escalation.',
+        outcome: 'Matter-level visibility with auditable execution control.'
       },
       {
-        title: 'AI-Assisted Document Triage',
-        description: 'Accelerate document classification and routing under controlled review logic.',
-        outcome: 'Reduce manual handling delay and partner review drag.'
+        title: 'Document Triage Workflow',
+        description: 'Accelerate document classification with controlled review checkpoints and traceability.',
+        outcome: 'Document triage acceleration and reduced operational drag.'
       },
       {
-        title: 'Matter-Level Reporting Automation',
-        description: 'Generate repeatable client and internal reporting outputs from governed workflow data.',
-        outcome: 'Improve reporting reliability and reduce administrative burden.'
+        title: 'Billing Reconciliation and Reporting System',
+        description: 'Automate time entry reconciliation, client billing narratives, and case status reporting outputs.',
+        outcome: 'Cleaner billing documentation and improved client reporting transparency.'
       }
     ],
     engagementModel: {
       intro:
-        'Engagements are fixed-scope, fixed-fee workflow replacements focused on operational control and measurable throughput gains.',
+        'Execution systems designed to produce audit-ready outcomes reduce non-billable load while improving matter-level governance and reporting consistency.',
       principles: [
-        'Fixed scope aligned to one high-friction operational workflow.',
-        'Fixed fee with explicit stage gates and acceptance criteria.',
-        'Parallel-run to validate workflow integrity before cutover.',
-        'Client ownership of operational logic and reporting artifacts after handoff.'
+        'Fixed scope and fixed fee for one high-friction legal operations workflow.',
+        'Parallel run before cutover to validate matter continuity and billing integrity.',
+        'Documented logic across intake, matter tracking, and reporting steps.',
+        'Transfer of operational control with governance checkpoints and evidence standards.'
       ]
     },
+    controlStatement:
+      'AI without operational control creates noise. We build signal.',
     outcomeCards: [
       {
-        title: 'Faster Intake Cycles',
-        description: 'Reduce intake-to-assignment lag through structured qualification and routing.'
+        title: 'Reduced Intake Bottlenecks',
+        description: 'Improve intake throughput with controlled qualification logic and clear owner handoffs.'
       },
       {
-        title: 'Reduced Non-Billable Hours',
-        description: 'Lower administrative effort tied to status chasing and manual coordination.'
+        title: 'Matter-Level Visibility',
+        description: 'Increase case status transparency through governed lifecycle tracking and documented state changes.'
       },
       {
-        title: 'Improved Client Reporting',
-        description: 'Increase consistency and timeliness of matter-level reporting outputs.'
+        title: 'Cleaner Billing Documentation',
+        description: 'Reduce reconciliation friction with traceable time entry and narrative generation controls.'
       },
       {
-        title: 'Stronger Operational Control',
-        description: 'Improve execution discipline through state definitions, ownership, and auditability.'
+        title: 'Improved Client Reporting Transparency',
+        description: 'Deliver defensible client-facing reporting from structured, audit-aligned operational workflows.'
       }
     ]
   }
