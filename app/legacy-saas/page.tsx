@@ -53,7 +53,7 @@ export default function LegacySaaSPage() {
       <section className="space-y-3 sm:space-y-4">
         <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Legacy SaaS Migration</p>
         <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
-          Take back control from expensive vendors
+          Run your business, not your vendors
         </h1>
         <p className="max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
           Most businesses are locked into costly SaaS subscriptions that constrain their workflows, lock up their data,
