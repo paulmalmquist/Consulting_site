@@ -143,23 +143,27 @@ h3 {
   .nv-snap-flow {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
     gap: clamp(1.5rem, 2vw, 2rem);
     scroll-snap-type: none;
+    width: 100%;
     height: 100%;
+    align-items: stretch;
   }
 
   .nv-snap-panel {
     min-height: auto;
     padding-block: 0;
     height: 100%;
-    align-items: flex-end;
+    align-items: stretch;
   }
 
   .nv-panel-shell {
     grid-template-columns: 1fr;
     gap: clamp(0.9rem, 1.4vh, 1.25rem);
     padding: clamp(1rem, 1.6vh, 1.5rem);
-    height: auto;
+    min-height: 100%;
+    height: 100%;
   }
 }
 

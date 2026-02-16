@@ -12,6 +12,20 @@ const nextConfig = {
   assetPrefix: basePath ? `${basePath}/` : undefined,
   images: {
     unoptimized: true
+  },
+  async redirects() {
+    return [
+      {
+        source: '/legacy-saas',
+        destination: '/saas-iceberg',
+        permanent: true
+      },
+      {
+        source: '/legacy-saas-migration',
+        destination: '/saas-iceberg',
+        permanent: true
+      }
+    ];
   }
 };
 

@@ -3,14 +3,13 @@
     {
       "title": "Overview",
       "items": [
-        { "label": "AI Concierge", "href": "/ai-concierge", "icon": "🧭" },
         { "label": "Home", "href": "/", "icon": "🏠" },
         { "label": "What We Do", "href": "/what-we-do", "icon": "⚙️" },
-        { "label": "The Shift", "href": "/shift", "icon": "↗️" },
-        { "label": "Legacy SaaS", "href": "/legacy-saas", "icon": "📦" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
-        { "label": "SaaS Iceberg", "href": "/saas-iceberg", "icon": "🧊" },
-        { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" }
+        { "label": "The Shift", "href": "/shift", "icon": "↗️" },
+        { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
+        { "label": "AI Concierge", "href": "/ai-concierge", "icon": "🧭" },
+        { "label": "Legacy SaaS", "href": "/legacy-saas", "icon": "📦" }
       ]
     },
     {

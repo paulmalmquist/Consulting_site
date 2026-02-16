@@ -32,7 +32,7 @@ const PANEL_CONTENT: Record<string, Omit<CapabilityPanel, 'title'>> = {
   'Legacy SaaS Migration': {
     sentence: 'Consolidate costly SaaS sprawl into an internal system you control.',
     graphic: 'merge',
-    href: '/legacy-saas-migration'
+    href: '/saas-iceberg'
   }
 };
 

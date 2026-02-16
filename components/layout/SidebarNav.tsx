@@ -15,7 +15,6 @@ import {
   House,
   Layers3,
   Mail,
-  Snowflake,
   UserRound,
   Workflow,
   X
@@ -26,24 +25,21 @@ import { cn } from '../ui/cn';
 
 const ALLOWED_NAV_ITEMS = new Set([
   'Home',
-  'AI Concierge',
   'What We Do',
+  'Industries',
   'The Shift',
   'Operational Assessment',
-  'SaaS Iceberg',
+  'AI Concierge',
   'Legacy SaaS',
-  'Industries',
   'About',
   'Contact'
 ]);
 
 const INDUSTRY_CHILDREN = [
-  { label: 'Healthcare', href: '/industries/healthcare' },
-  { label: 'Legal', href: '/industries/legal' },
   { label: 'Real Estate Private Equity', href: '/industries/real-estate-private-equity' },
-  { label: 'Finance', href: '/industries/finance' },
-  { label: 'Construction', href: '/industries/construction' },
-  { label: 'Project & Development Services (PDS)', href: '/industries/pds' }
+  { label: 'Consumer Credit', href: '/industries/consumer-credit' },
+  { label: 'Medical', href: '/industries/medical' },
+  { label: 'Legal', href: '/industries/legal' }
 ];
 
 const VISIBLE_NAV_GROUPS = navigation.groups
@@ -61,7 +57,6 @@ const NAV_ICON_BY_LABEL: Record<string, LucideIcon> = {
   'Legacy SaaS': Layers3,
   Industries: Factory,
   'Operational Assessment': ClipboardCheck,
-  'SaaS Iceberg': Snowflake,
   About: UserRound,
   Contact: Mail
 };
