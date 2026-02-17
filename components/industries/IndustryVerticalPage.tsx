@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { IndustryVertical } from '../../content/industry-verticals';
+import { CredibilitySection } from '../marketing/CredibilitySection';
 
 type IndustryVerticalPageProps = {
   industry: IndustryVertical;
@@ -40,6 +41,8 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
           </Link>
         </div>
       </section>
+
+      <CredibilitySection />
 
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">AI Pressure Is Rising.</h2>
