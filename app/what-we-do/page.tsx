@@ -87,28 +87,28 @@ const DELIVERABLES: DeliverableItem[] = [
 const PRICING = [
   {
     offer: 'Option 1 - Capability Discovery',
-    price: '$35,000 fixed',
+    price: '$3,500 fixed',
     scope: '1 workflow',
     timeline: '2-3 weeks',
     included: 'Workflow map, dependency map, cost baseline, pilot scope, decision memo'
   },
   {
     offer: 'Option 2 - Pilot Build',
-    price: '$125,000 fixed',
+    price: '$12,500 fixed',
     scope: '1 workflow pilot',
     timeline: '6-8 weeks',
     included: 'Working replacement workflow, parallel run, proof log, rollback plan'
   },
   {
     offer: 'Option 3 - Pilot + Cutover',
-    price: '$195,000 fixed',
+    price: '$19,500 fixed',
     scope: '1 workflow pilot + cutover',
     timeline: '10-12 weeks',
     included: 'Everything in Pilot Build plus production cutover and governance design'
   },
   {
     offer: 'Governance Retainer (Optional)',
-    price: 'Starts at $20,000/month',
+    price: 'Starts at $2,000/month',
     scope: 'Ongoing oversight',
     timeline: 'Monthly',
     included: 'Monitoring, exception review, and reporting integrity checks'

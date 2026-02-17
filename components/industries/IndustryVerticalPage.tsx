@@ -42,7 +42,12 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
         </div>
       </section>
 
-      <CredibilitySection />
+      <CredibilitySection
+        headline={`Why Operators in ${industry.label} Work With Us`}
+        intro={industry.credibility.intro}
+        pillars={industry.credibility.pillars}
+        showTrustAmplifiers={false}
+      />
 
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">AI Pressure Is Rising.</h2>

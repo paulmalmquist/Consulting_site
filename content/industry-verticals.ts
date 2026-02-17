@@ -23,6 +23,13 @@ export type IndustryVertical = {
     intro: string;
     principles: string[];
   };
+  credibility: {
+    intro: string;
+    pillars: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
   controlStatement: string;
   outcomeCards: IndustryCard[];
 };
@@ -99,6 +106,32 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
         'Fixed fee with explicit acceptance criteria.',
         'Parallel run before cutover to verify output integrity.',
         'Documented logic and transfer of operational control to the client.'
+      ]
+    },
+    credibility: {
+      intro:
+        'Operational performance in real estate private equity depends on reporting integrity, model discipline, and controlled execution across asset-level workflows. We work at the point where LP expectations, investment committee cadence, and portfolio operations intersect.',
+      pillars: [
+        {
+          title: 'Investment Operations Fluency',
+          description:
+            'Asset management reporting, capital events, and investment committee preparation are treated as one operating system, not disconnected tasks.'
+        },
+        {
+          title: 'Financial Model Integrity',
+          description:
+            'Waterfall modeling logic, IRR sensitivity assumptions, and allocation pathways remain controlled, versioned, and reviewable.'
+        },
+        {
+          title: 'Audit-Ready Reporting',
+          description:
+            'LP reporting packages, capital account statements, and covenant compliance outputs are built for traceability under scrutiny.'
+        },
+        {
+          title: 'Workflow Reconstruction',
+          description:
+            'Spreadsheet-dependent reporting chains are replaced with structured execution layers that reduce reconciliation risk across asset classes.'
+        }
       ]
     },
     controlStatement:
@@ -191,6 +224,32 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
         'Documented logic and transfer of operational control to internal owners.'
       ]
     },
+    credibility: {
+      intro:
+        'Credit operations fail at handoffs between underwriting, servicing, and compliance when decision logic is not observable. We build systems around explainable decisions, queue integrity, and documentation readiness.',
+      pillars: [
+        {
+          title: 'Credit Logic Awareness',
+          description:
+            'Underwriting exception queues, risk score overrides, and adjudication pathways are mapped to where failures actually occur.'
+        },
+        {
+          title: 'Explainability & Traceability',
+          description:
+            'Decision systems are structured so credit logic, overrides, and portfolio stratification outcomes can be reviewed and defended.'
+        },
+        {
+          title: 'Servicing Workflow Reconstruction',
+          description:
+            'Fragmented servicing handoffs and delinquency tracking loops are rebuilt into measurable operational chains with clear ownership.'
+        },
+        {
+          title: 'Compliance Alignment',
+          description:
+            'Regulatory documentation is generated from workflow states and control events, not assembled late through manual backfill.'
+        }
+      ]
+    },
     controlStatement:
       'Automation is only valuable when it can be measured and defended.',
     outcomeCards: [
@@ -281,6 +340,32 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
         'Transfer of operational control to internal leaders with governance artifacts.'
       ]
     },
+    credibility: {
+      intro:
+        'Healthcare operating margin is heavily influenced by administrative execution quality in revenue cycle workflows. We work inside prior authorization, denial management, and payer reconciliation realities where leakage occurs.',
+      pillars: [
+        {
+          title: 'Revenue Cycle Depth',
+          description:
+            'Denial rates, payer reconciliation variance, and reimbursement timing are handled as operational control issues with financial impact.'
+        },
+        {
+          title: 'Workflow Before AI',
+          description:
+            'Broken prior authorization, scheduling, and billing chains are stabilized first so automation improves throughput instead of amplifying noise.'
+        },
+        {
+          title: 'Compliance-Conscious Design',
+          description:
+            'CPT coding alignment, reporting obligations, and documentation controls are embedded into workflow logic from day one.'
+        },
+        {
+          title: 'Operational Visibility',
+          description:
+            'Practice-level dashboards are tied to actual workflow state and exception ownership, not delayed spreadsheet rollups.'
+        }
+      ]
+    },
     controlStatement:
       'If your AI strategy lives in slide decks, it is not operational.',
     outcomeCards: [
@@ -369,6 +454,32 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
         'Parallel run before cutover to validate matter continuity and billing integrity.',
         'Documented logic across intake, matter tracking, and reporting steps.',
         'Transfer of operational control with governance checkpoints and evidence standards.'
+      ]
+    },
+    credibility: {
+      intro:
+        'Legal operations performance depends on clean matter progression, disciplined documentation, and reliable billing workflows. We focus on where administrative friction accumulates and non-billable load expands.',
+      pillars: [
+        {
+          title: 'Matter-Level Operational Insight',
+          description:
+            'Matter lifecycle tracking, intake qualification gaps, and status handoffs are analyzed where execution drift begins.'
+        },
+        {
+          title: 'Non-Billable Time Reduction',
+          description:
+            'Administrative drag is reduced by structuring workflow states, ownership, and reconciliation steps around measurable control points.'
+        },
+        {
+          title: 'Document Workflow Control',
+          description:
+            'Document classification and triage are designed for assistive speed while preserving process clarity and legal review integrity.'
+        },
+        {
+          title: 'Reporting & Transparency',
+          description:
+            'Time entry reconciliation, billing narrative assembly, and client reporting are aligned to improve internal and external visibility.'
+        }
       ]
     },
     controlStatement:
