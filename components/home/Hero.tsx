@@ -54,7 +54,7 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
           </div>
         </div>
       </div>
-      <div className="w-full max-w-7xl mx-auto px-6 pb-8 md:pb-12">
+      <div className="w-full pb-8 md:pb-12">
         <CapabilityScrollPanels items={proofBullets} />
       </div>
     </section>
