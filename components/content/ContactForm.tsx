@@ -152,74 +152,8 @@ export function ContactForm() {
           </label>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          <label className="text-xs text-slate-400">
-            Company (optional)
-            <input
-              value={form.attendeeCompany}
-              onChange={(event) => setForm((prev) => ({ ...prev, attendeeCompany: event.target.value }))}
-              className="mt-2 w-full rounded-lg border border-slate-700/60 bg-slate-950/40 px-3 py-2 text-sm text-white focus:border-cyan-200/50 focus:outline-none focus:ring-1 focus:ring-cyan-200/30"
-            />
-          </label>
-          <label className="text-xs text-slate-400">
-            Company Size
-            <select
-              value={form.companySize}
-              onChange={(event) => setForm((prev) => ({ ...prev, companySize: event.target.value }))}
-              className="mt-2 w-full rounded-lg border border-slate-700/60 bg-slate-950/40 px-3 py-2 text-sm text-white focus:border-cyan-200/50 focus:outline-none focus:ring-1 focus:ring-cyan-200/30"
-            >
-              <option value="">Select size</option>
-              {COMPANY_SIZE_OPTIONS.map((size) => (
-                <option key={size} value={size}>
-                  {size}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-
-        <div>
-          <label className="text-xs text-slate-400">Industry Type (select all that apply)</label>
-          <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
-            {INDUSTRY_OPTIONS.map((industry) => (
-              <button
-                key={industry}
-                type="button"
-                onClick={() => toggleMultiSelect('industryTypes', industry)}
-                className={`rounded-lg border px-3 py-2 text-xs transition ${
-                  form.industryTypes.includes(industry)
-                    ? 'border-cyan-300/50 bg-cyan-200/10 text-cyan-100'
-                    : 'border-slate-700/60 bg-slate-950/40 text-slate-300 hover:border-slate-600 hover:bg-slate-900/60'
-                }`}
-              >
-                {industry}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <label className="text-xs text-slate-400">Primary System Concerns (select all that apply)</label>
-          <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {SYSTEM_CONCERN_OPTIONS.map((concern) => (
-              <button
-                key={concern}
-                type="button"
-                onClick={() => toggleMultiSelect('systemConcerns', concern)}
-                className={`rounded-lg border px-3 py-2 text-xs text-left transition ${
-                  form.systemConcerns.includes(concern)
-                    ? 'border-cyan-300/50 bg-cyan-200/10 text-cyan-100'
-                    : 'border-slate-700/60 bg-slate-950/40 text-slate-300 hover:border-slate-600 hover:bg-slate-900/60'
-                }`}
-              >
-                {concern}
-              </button>
-            ))}
-          </div>
-        </div>
-
         <label className="text-xs text-slate-400">
-          What are you trying to solve?
+          What problem are you trying to solve?
           <textarea
             required
             rows={4}
@@ -228,26 +162,6 @@ export function ContactForm() {
             className="mt-2 w-full rounded-lg border border-slate-700/60 bg-slate-950/40 px-3 py-2 text-sm text-white focus:border-cyan-200/50 focus:outline-none focus:ring-1 focus:ring-cyan-200/30"
           />
         </label>
-
-        <div>
-          <label className="text-xs text-slate-400">What are your main objectives? (select all that apply)</label>
-          <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {OBJECTIVE_OPTIONS.map((objective) => (
-              <button
-                key={objective}
-                type="button"
-                onClick={() => toggleMultiSelect('objectives', objective)}
-                className={`rounded-lg border px-3 py-2 text-xs text-left transition ${
-                  form.objectives.includes(objective)
-                    ? 'border-emerald-300/50 bg-emerald-200/10 text-emerald-100'
-                    : 'border-slate-700/60 bg-slate-950/40 text-slate-300 hover:border-slate-600 hover:bg-slate-900/60'
-                }`}
-              >
-                {objective}
-              </button>
-            ))}
-          </div>
-        </div>
 
         <div className="flex flex-wrap gap-3 pt-2">
           <button
@@ -258,6 +172,98 @@ export function ContactForm() {
             {isSubmitting ? <Loader2 size={16} className="animate-spin" aria-hidden="true" /> : <CalendarCheck2 size={16} aria-hidden="true" />}
             {isSubmitting ? 'Preparing...' : 'Book a meeting'}
           </button>
+        </div>
+
+        <div className="border-t border-slate-800/80 pt-4">
+          <p className="text-xs text-slate-500">Optional details (helps us prepare)</p>
+        </div>
+
+        <div className="space-y-5 opacity-90">
+          <div className="grid gap-4 md:grid-cols-2">
+            <label className="text-xs text-slate-400">
+              Company (optional)
+              <input
+                value={form.attendeeCompany}
+                onChange={(event) => setForm((prev) => ({ ...prev, attendeeCompany: event.target.value }))}
+                className="mt-2 w-full rounded-lg border border-slate-700/60 bg-slate-950/40 px-3 py-2 text-sm text-white focus:border-cyan-200/50 focus:outline-none focus:ring-1 focus:ring-cyan-200/30"
+              />
+            </label>
+            <label className="text-xs text-slate-400">
+              Company Size
+              <select
+                value={form.companySize}
+                onChange={(event) => setForm((prev) => ({ ...prev, companySize: event.target.value }))}
+                className="mt-2 w-full rounded-lg border border-slate-700/60 bg-slate-950/40 px-3 py-2 text-sm text-white focus:border-cyan-200/50 focus:outline-none focus:ring-1 focus:ring-cyan-200/30"
+              >
+                <option value="">Select size</option>
+                {COMPANY_SIZE_OPTIONS.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <div>
+            <label className="text-xs text-slate-400">Industry Type (select all that apply)</label>
+            <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
+              {INDUSTRY_OPTIONS.map((industry) => (
+                <button
+                  key={industry}
+                  type="button"
+                  onClick={() => toggleMultiSelect('industryTypes', industry)}
+                  className={`rounded-lg border px-3 py-2 text-xs transition ${
+                    form.industryTypes.includes(industry)
+                      ? 'border-cyan-300/50 bg-cyan-200/10 text-cyan-100'
+                      : 'border-slate-700/60 bg-slate-950/40 text-slate-300 hover:border-slate-600 hover:bg-slate-900/60'
+                  }`}
+                >
+                  {industry}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label className="text-xs text-slate-400">Primary System Concerns (select all that apply)</label>
+            <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {SYSTEM_CONCERN_OPTIONS.map((concern) => (
+                <button
+                  key={concern}
+                  type="button"
+                  onClick={() => toggleMultiSelect('systemConcerns', concern)}
+                  className={`rounded-lg border px-3 py-2 text-xs text-left transition ${
+                    form.systemConcerns.includes(concern)
+                      ? 'border-cyan-300/50 bg-cyan-200/10 text-cyan-100'
+                      : 'border-slate-700/60 bg-slate-950/40 text-slate-300 hover:border-slate-600 hover:bg-slate-900/60'
+                  }`}
+                >
+                  {concern}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <label className="text-xs text-slate-400">What are your main objectives? (select all that apply)</label>
+            <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {OBJECTIVE_OPTIONS.map((objective) => (
+                <button
+                  key={objective}
+                  type="button"
+                  onClick={() => toggleMultiSelect('objectives', objective)}
+                  className={`rounded-lg border px-3 py-2 text-xs text-left transition ${
+                    form.objectives.includes(objective)
+                      ? 'border-emerald-300/50 bg-emerald-200/10 text-emerald-100'
+                      : 'border-slate-700/60 bg-slate-950/40 text-slate-300 hover:border-slate-600 hover:bg-slate-900/60'
+                  }`}
+                >
+                  {objective}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <a
             href={`mailto:${directEmail}`}
             className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 px-5 py-2 text-sm text-slate-100 hover:border-slate-500"
@@ -277,4 +283,3 @@ export function ContactForm() {
     </div>
   );
 }
-
