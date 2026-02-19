@@ -79,7 +79,7 @@ export function ContactForm() {
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const directEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'hello@novendor.io';
+  const directEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'info@novendor.ai';
 
   const toggleMultiSelect = (field: 'industryTypes' | 'systemConcerns' | 'objectives', value: string) => {
     setForm((prev) => ({
