@@ -201,7 +201,7 @@ export function SystemConvergenceGraphic() {
   /* ---- Static fallback ---- */
   if (mounted && useFallback) {
     return (
-      <div className="relative h-full min-h-[260px] w-full overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-950/40 p-4 sm:min-h-[300px] sm:p-6 md:min-h-[360px] md:p-8">
+      <div className="relative h-full min-h-[220px] w-full overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-950/40 p-4 sm:min-h-[250px] sm:p-6 md:min-h-[300px] md:p-8">
         <svg
           viewBox="0 0 600 400"
           className="h-full w-full"
@@ -257,7 +257,7 @@ export function SystemConvergenceGraphic() {
 
   /* ---- Animated version (JS-driven, no CSS transform animations) ---- */
   return (
-    <div className="relative h-full min-h-[260px] w-full overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-950/40 p-4 sm:min-h-[300px] sm:p-6 md:min-h-[360px] md:p-8">
+    <div className="relative h-full min-h-[220px] w-full overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-950/40 p-4 sm:min-h-[250px] sm:p-6 md:min-h-[300px] md:p-8">
       <svg
         ref={svgRef}
         viewBox="0 0 600 400"
