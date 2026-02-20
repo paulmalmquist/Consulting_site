@@ -39,7 +39,9 @@ export function Hero({ headline, subheadline, secondaryCta, proofBullets }: Hero
                 headline
               )}
             </h1>
-            <p className="nv-subheadline max-w-2xl text-[clamp(1rem,1.45vw,1.125rem)] leading-relaxed lg:mx-0">{subheadline}</p>
+            <p className="nv-subheadline max-w-2xl whitespace-pre-line text-[clamp(1rem,1.45vw,1.125rem)] leading-relaxed lg:mx-0">
+              {subheadline}
+            </p>
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
               <Link
                 href={secondaryCta.href}
