@@ -205,7 +205,7 @@ export default function WhatWeDoPage() {
             >
               <p className="text-base font-semibold text-white">{industry.label}</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">{industry.teaser}</p>
-              <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200">
+              <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-300/35 bg-emerald-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-100">
                 View industry playbook
                 <ArrowRight size={14} aria-hidden="true" />
               </span>

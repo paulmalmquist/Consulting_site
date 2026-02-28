@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { INDUSTRY_VERTICALS } from '../../content/industry-verticals';
 import { IndustryConsistencyGrid } from '../../components/industries/IndustryConsistencyGrid';
 
@@ -38,7 +39,10 @@ export default function IndustriesPage() {
                 ))}
               </ul>
             </div>
-            <p className="mt-4 text-sm font-semibold text-white">View engagement model</p>
+            <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-300/35 bg-emerald-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-100">
+              View engagement model
+              <ArrowRight size={14} aria-hidden="true" />
+            </span>
           </Link>
         ))}
       </section>

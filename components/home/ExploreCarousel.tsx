@@ -38,6 +38,10 @@ export function ExploreCarousel({ title, subtitle, tiles }: ExploreCarouselProps
             <div className="mt-4 space-y-2">
               <p className="text-sm font-semibold text-white">{tile.title}</p>
               <p className="text-sm leading-relaxed text-slate-300">{tile.description}</p>
+              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-200/35 bg-cyan-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-100 transition group-hover:border-cyan-200/60 group-hover:bg-cyan-200/15">
+                Explore
+                <span aria-hidden="true">›</span>
+              </span>
             </div>
           </Link>
         ))}
