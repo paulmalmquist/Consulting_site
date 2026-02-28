@@ -14,42 +14,51 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
 
   return (
     <div className="space-y-8 lg:space-y-10">
-      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
-        <p className={cn('text-sm uppercase tracking-[0.2em]', theme.eyebrowText)}>Industry Engagement</p>
-        <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
-          Put AI to Work in {industry.label} Operations
-        </h1>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">{industry.heroSubheadline}</p>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-          AI embedded in controlled operational systems creates value only when outcomes are measurable, traceable, and audit-ready.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link href={contactHref} className={theme.primaryCta}>
-            Book an AI Execution Session
-          </Link>
-          <Link
-            href="/what-we-do"
-            className="inline-flex items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/45 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-900/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-          >
-            See Engagement Model
-          </Link>
-        </div>
-        <div className="mt-5 space-y-3">
-          <p className={cn('text-xs uppercase tracking-[0.12em]', theme.accentText)}>Compare industries</p>
-          <div className="flex flex-wrap gap-2">
-            <span className={cn('rounded-full border px-3 py-1.5 text-xs font-semibold', theme.quickSwitchActive)}>{industry.label}</span>
-            {INDUSTRY_VERTICALS.filter((item) => item.slug !== industry.slug).map((item) => (
-              <Link
-                key={item.slug}
-                href={`/industries/${item.slug}`}
-                className={cn(
-                  'rounded-full border px-3 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950',
-                  theme.quickSwitchInactive
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
+      <section className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/55">
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 h-1/2 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url(${industry.heroImageUrl})` }}
+        />
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-slate-950/20 via-slate-950/45 to-slate-950" />
+        <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.08)_0%,rgba(2,6,23,0.16)_32%,rgba(2,6,23,0.86)_68%,rgba(2,6,23,0.96)_100%)]" />
+        <div className="relative z-10 min-h-[68vh] p-6 pt-[26vh] sm:p-8 sm:pt-[28vh] lg:min-h-[72vh] lg:p-10 lg:pt-[32vh]">
+          <p className={cn('text-sm uppercase tracking-[0.2em]', theme.eyebrowText)}>Industry Engagement</p>
+          <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+            Put AI to Work in {industry.label} Operations
+          </h1>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">{industry.heroSubheadline}</p>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+            AI embedded in controlled operational systems creates value only when outcomes are measurable, traceable, and audit-ready.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href={contactHref} className={theme.primaryCta}>
+              Book an AI Execution Session
+            </Link>
+            <Link
+              href="/what-we-do"
+              className="inline-flex items-center justify-center rounded-full border border-slate-700/80 bg-slate-950/45 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-900/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            >
+              See Engagement Model
+            </Link>
+          </div>
+          <div className="mt-5 space-y-3">
+            <p className={cn('text-xs uppercase tracking-[0.12em]', theme.accentText)}>Compare industries</p>
+            <div className="flex flex-wrap gap-2">
+              <span className={cn('rounded-full border px-3 py-1.5 text-xs font-semibold', theme.quickSwitchActive)}>{industry.label}</span>
+              {INDUSTRY_VERTICALS.filter((item) => item.slug !== industry.slug).map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/industries/${item.slug}`}
+                  className={cn(
+                    'rounded-full border px-3 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950',
+                    theme.quickSwitchInactive
+                  )}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

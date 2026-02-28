@@ -15,6 +15,7 @@ export type IndustryVertical = {
   themeKey: 'cyan' | 'amber' | 'rose' | 'violet';
   teaser: string;
   contactLabel: string;
+  heroImageUrl: string;
   heroSubheadline: string;
   buyerProfile: string[];
   buyerSentence: string;
@@ -46,6 +47,7 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     themeKey: 'amber',
     teaser: 'Stabilize investor reporting, waterfall logic, and portfolio controls without rebuilding the entire investment stack.',
     contactLabel: 'Real Estate Private Equity',
+    heroImageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80',
     heroSubheadline:
       'AI-native workflows with measurable operational impact across LP reporting packages, capital account statements, waterfall calculations, and covenant compliance.',
     buyerProfile: [
@@ -176,6 +178,7 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     themeKey: 'cyan',
     teaser: 'Tighten underwriting, servicing, and compliance workflows so throughput improves without losing control.',
     contactLabel: 'Consumer Credit',
+    heroImageUrl: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1800&q=80',
     heroSubheadline:
       'AI embedded in controlled operational systems for underwriting exception queues, servicing handoffs, delinquency tracking, and regulatory documentation.',
     buyerProfile: [
@@ -302,6 +305,7 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     themeKey: 'rose',
     teaser: 'Reduce revenue-cycle leakage across prior auth, denial management, and payer reconciliation with governed workflow control.',
     contactLabel: 'Medical',
+    heroImageUrl: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=1800&q=80',
     heroSubheadline:
       'Execution systems designed to produce audit-ready outcomes in revenue cycle management, denial management, prior authorization workflows, and payer reconciliation.',
     buyerProfile: [
@@ -428,6 +432,7 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     themeKey: 'violet',
     teaser: 'Reduce administrative drag across intake, matter tracking, and billing while preserving partner-level visibility.',
     contactLabel: 'Legal',
+    heroImageUrl: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1800&q=80',
     heroSubheadline:
       'AI-native workflows with measurable operational impact across intake qualification, matter lifecycle tracking, document classification, and time entry reconciliation.',
     buyerProfile: [
