@@ -1,24 +1,21 @@
 import Link from 'next/link';
-import type { IndustryVertical } from '../../content/industry-verticals';
+import { INDUSTRY_VERTICALS, type IndustryVertical } from '../../content/industry-verticals';
+import { INDUSTRY_THEME_STYLES } from '../../lib/industryThemes';
 import { CredibilitySection } from '../marketing/CredibilitySection';
+import { cn } from '../ui/cn';
 
 type IndustryVerticalPageProps = {
   industry: IndustryVertical;
 };
 
 export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
-  const icpBullets = [
-    'Companies with real operational complexity',
-    'Multiple departments and vendor sprawl',
-    '50-1,000 employees',
-    'Leadership under AI ROI pressure',
-    'Teams buried in spreadsheets and manual reconciliation'
-  ];
+  const theme = INDUSTRY_THEME_STYLES[industry.themeKey];
+  const contactHref = `/contact?industry=${industry.slug}`;
 
   return (
     <div className="space-y-8 lg:space-y-10">
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
-        <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">Industry Engagement</p>
+        <p className={cn('text-sm uppercase tracking-[0.2em]', theme.eyebrowText)}>Industry Engagement</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
           Put AI to Work in {industry.label} Operations
         </h1>
@@ -27,10 +24,7 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
           AI embedded in controlled operational systems creates value only when outcomes are measurable, traceable, and audit-ready.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-full border border-emerald-300/45 bg-slate-950/70 px-5 py-2.5 text-sm font-semibold text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-200/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-          >
+          <Link href={contactHref} className={theme.primaryCta}>
             Book an AI Execution Session
           </Link>
           <Link
@@ -39,6 +33,24 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
           >
             See Engagement Model
           </Link>
+        </div>
+        <div className="mt-5 space-y-3">
+          <p className={cn('text-xs uppercase tracking-[0.12em]', theme.accentText)}>Compare industries</p>
+          <div className="flex flex-wrap gap-2">
+            <span className={cn('rounded-full border px-3 py-1.5 text-xs font-semibold', theme.quickSwitchActive)}>{industry.label}</span>
+            {INDUSTRY_VERTICALS.filter((item) => item.slug !== industry.slug).map((item) => (
+              <Link
+                key={item.slug}
+                href={`/industries/${item.slug}`}
+                className={cn(
+                  'rounded-full border px-3 py-1.5 text-xs font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950',
+                  theme.quickSwitchInactive
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -86,7 +98,7 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
             <article key={card.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
               <h3 className="text-base font-semibold text-white">{card.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">{card.description}</p>
-              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-emerald-200">Outcome orientation</p>
+              <p className={cn('mt-3 text-xs uppercase tracking-[0.12em]', theme.accentText)}>Outcome orientation</p>
               <p className="mt-1 text-sm text-slate-200">{card.outcome}</p>
             </article>
           ))}
@@ -103,7 +115,7 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-sm leading-relaxed text-emerald-100/90">
+        <p className={cn('mt-4 text-sm leading-relaxed', theme.accentText)}>
           We don&apos;t deploy AI experiments. We deliver operational systems - with evidence.
         </p>
       </section>
@@ -111,23 +123,21 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Who This Is Built For</h2>
         <ul className="mt-4 space-y-2 text-sm text-slate-200">
-          {icpBullets.map((item) => (
+          {industry.buyerProfile.map((item) => (
             <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
               {item}
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-sm leading-relaxed text-slate-300">
-          Built for companies big enough to have process - small enough to fix it.
-        </p>
+        <p className="mt-4 text-sm leading-relaxed text-slate-300">{industry.buyerSentence}</p>
       </section>
 
-      <section className="rounded-3xl border border-emerald-300/25 bg-gradient-to-r from-slate-900/85 to-emerald-900/20 p-5 sm:p-7">
+      <section className={cn('rounded-3xl border p-5 sm:p-7', theme.impactSection)}>
         <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Measurable Operational Impact.</h2>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-200">{industry.controlStatement}</p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {industry.outcomeCards.map((card) => (
-            <article key={card.title} className="rounded-2xl border border-emerald-300/20 bg-slate-950/55 p-4">
+            <article key={card.title} className={cn('rounded-2xl border p-4', theme.impactCard)}>
               <h3 className="text-base font-semibold text-white">{card.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-200">{card.description}</p>
             </article>
@@ -141,7 +151,7 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
           Start with one constrained workflow and execute with fixed scope, fixed fee, and measured operating outcomes.
         </p>
         <Link
-          href="/contact"
+          href={contactHref}
           className="mt-5 inline-flex items-center justify-center rounded-full border border-emerald-300/45 bg-slate-950/70 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-200/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         >
           Book an AI Execution Session

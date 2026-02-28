@@ -1,6 +1,8 @@
+import { Suspense } from 'react';
 import { ContactForm } from '../../components/content/ContactForm';
+import { ContactPageContent } from '../../components/content/ContactPageContent';
 
-export default function ContactPage() {
+function ContactPageFallback() {
   return (
     <div className="space-y-6">
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
@@ -11,5 +13,13 @@ export default function ContactPage() {
       </section>
       <ContactForm />
     </div>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<ContactPageFallback />}>
+      <ContactPageContent />
+    </Suspense>
   );
 }

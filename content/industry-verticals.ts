@@ -12,7 +12,12 @@ export type ReconstructCard = {
 export type IndustryVertical = {
   slug: 'real-estate-private-equity' | 'consumer-credit' | 'medical' | 'legal';
   label: string;
+  themeKey: 'cyan' | 'amber' | 'rose' | 'violet';
+  teaser: string;
+  contactLabel: string;
   heroSubheadline: string;
+  buyerProfile: string[];
+  buyerSentence: string;
   pressureCards: IndustryCard[];
   breakpoints: {
     items: string[];
@@ -38,8 +43,18 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
   {
     slug: 'real-estate-private-equity',
     label: 'Real Estate Private Equity',
+    themeKey: 'amber',
+    teaser: 'Stabilize investor reporting, waterfall logic, and portfolio controls without rebuilding the entire investment stack.',
+    contactLabel: 'Real Estate Private Equity',
     heroSubheadline:
       'AI-native workflows with measurable operational impact across LP reporting packages, capital account statements, waterfall calculations, and covenant compliance.',
+    buyerProfile: [
+      'Fund operations and portfolio teams managing LP reporting pressure across multiple assets.',
+      'CFO, COO, finance, and investor relations leaders accountable for reporting integrity.',
+      'Firms with spreadsheet-dependent waterfalls, capital events, and covenant workflows.',
+      'Teams that need audit-ready controls before adding more automation.'
+    ],
+    buyerSentence: 'Built for operators who need cleaner fund execution without disrupting the full investment stack.',
     pressureCards: [
       {
         title: 'LP Reporting Timelines Keep Compressing',
@@ -158,8 +173,18 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
   {
     slug: 'consumer-credit',
     label: 'Consumer Credit',
+    themeKey: 'cyan',
+    teaser: 'Tighten underwriting, servicing, and compliance workflows so throughput improves without losing control.',
+    contactLabel: 'Consumer Credit',
     heroSubheadline:
       'AI embedded in controlled operational systems for underwriting exception queues, servicing handoffs, delinquency tracking, and regulatory documentation.',
+    buyerProfile: [
+      'Lenders running high-volume exception queues across underwriting and servicing.',
+      'Risk, compliance, and operations leaders under pressure to prove decision integrity.',
+      'Teams managing delinquency, documentation, and handoff drift across multiple systems.',
+      'Organizations that need explainable automation before broader AI rollout.'
+    ],
+    buyerSentence: 'Built for credit teams that need faster throughput and stronger evidence at the same time.',
     pressureCards: [
       {
         title: 'Credit Margins Are Under Pressure',
@@ -274,8 +299,18 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
   {
     slug: 'medical',
     label: 'Medical',
+    themeKey: 'rose',
+    teaser: 'Reduce revenue-cycle leakage across prior auth, denial management, and payer reconciliation with governed workflow control.',
+    contactLabel: 'Medical',
     heroSubheadline:
       'Execution systems designed to produce audit-ready outcomes in revenue cycle management, denial management, prior authorization workflows, and payer reconciliation.',
+    buyerProfile: [
+      'Provider groups and MSOs with margin pressure tied to administrative execution.',
+      'Revenue cycle, finance, and operations leaders responsible for reimbursement continuity.',
+      'Teams buried in prior auth, denial, and reconciliation queues across payer touchpoints.',
+      'Organizations that need audit-ready process improvement without destabilizing billing operations.'
+    ],
+    buyerSentence: 'Built for healthcare operators who need cleaner reimbursement workflows without adding compliance risk.',
     pressureCards: [
       {
         title: 'Staffing Constraints Increase Throughput Risk',
@@ -390,8 +425,18 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
   {
     slug: 'legal',
     label: 'Legal',
+    themeKey: 'violet',
+    teaser: 'Reduce administrative drag across intake, matter tracking, and billing while preserving partner-level visibility.',
+    contactLabel: 'Legal',
     heroSubheadline:
       'AI-native workflows with measurable operational impact across intake qualification, matter lifecycle tracking, document classification, and time entry reconciliation.',
+    buyerProfile: [
+      'Firms and in-house legal operations teams with matter progression bottlenecks.',
+      'Partners, COOs, and legal operations leaders accountable for realization and reporting.',
+      'Teams losing billable capacity to manual intake, triage, and reconciliation work.',
+      'Organizations that need structured workflow control without disrupting legal judgment.'
+    ],
+    buyerSentence: 'Built for legal operators who need less non-billable friction and clearer matter visibility.',
     pressureCards: [
       {
         title: 'Client Cost Scrutiny Is Rising',

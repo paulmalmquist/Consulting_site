@@ -20,16 +20,12 @@ function buildMailto({ to, subject, body }: { to: string; subject: string; body:
 }
 
 const INDUSTRY_OPTIONS = [
-  'Professional Services',
-  'Healthcare',
-  'Manufacturing',
-  'Technology',
-  'Finance & Insurance',
-  'Real Estate',
-  'Education',
-  'Retail',
+  'Real Estate Private Equity',
+  'Consumer Credit',
+  'Medical',
+  'Legal',
   'Other'
-];
+] as const;
 
 const COMPANY_SIZE_OPTIONS = [
   '1-10 employees',
@@ -64,12 +60,24 @@ const OBJECTIVE_OPTIONS = [
   'Automate manual processes'
 ];
 
-export function ContactForm() {
+type ContactFormProps = {
+  defaultIndustry?: string;
+};
+
+function getDefaultIndustryTypes(defaultIndustry?: string) {
+  if (!defaultIndustry) {
+    return [];
+  }
+
+  return INDUSTRY_OPTIONS.includes(defaultIndustry as (typeof INDUSTRY_OPTIONS)[number]) ? [defaultIndustry] : [];
+}
+
+export function ContactForm({ defaultIndustry }: ContactFormProps) {
   const [form, setForm] = useState<FormState>({
     attendeeName: '',
     attendeeEmail: '',
     attendeeCompany: '',
-    industryTypes: [],
+    industryTypes: getDefaultIndustryTypes(defaultIndustry),
     companySize: '',
     systemConcerns: [],
     agenda: '',

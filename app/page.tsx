@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import { readJson } from '../lib/content';
 import { Hero } from '../components/home/Hero';
@@ -8,6 +9,7 @@ import { EngagementPhases } from '../components/home/EngagementPhases';
 import { FAQAccordion } from '../components/home/FAQAccordion';
 import { CTASection } from '../components/home/CTASection';
 import { VisualPlaceholder } from '../components/home/VisualPlaceholder';
+import { INDUSTRY_VERTICALS } from '../content/industry-verticals';
 
 type NavLink = {
   label: string;
@@ -130,6 +132,7 @@ type FaqSection = {
 
 export default function HomePage() {
   const home = readJson<HomePageData>('homepage.json');
+  const heroIndex = home.sections.findIndex((section) => section.type === 'hero');
 
   const renderSection = (section: HomeSection) => {
     switch (section.type) {
@@ -279,11 +282,29 @@ export default function HomePage() {
     }
   };
 
+  const industryCueBand = (
+    <section className="space-y-6">
+      <ExploreCarousel
+        title="Where the workflow changes by industry"
+        subtitle="The delivery model stays stable. What changes by sector is the control surface, the artifacts, and the failure points that need to be rebuilt safely."
+        tiles={INDUSTRY_VERTICALS.map((industry) => ({
+          title: industry.label,
+          description: industry.teaser,
+          href: `/industries/${industry.slug}`
+        }))}
+      />
+    </section>
+  );
+
   return (
     <div className="space-y-12">
       <div className="mx-auto flex w-full max-w-none flex-col gap-16 md:mr-auto md:ml-0">
-        {home.sections.map((section) => (
-          <div key={section.id}>{renderSection(section)}</div>
+        {heroIndex === -1 && industryCueBand}
+        {home.sections.map((section, index) => (
+          <Fragment key={section.id}>
+            <div>{renderSection(section)}</div>
+            {index === heroIndex && industryCueBand}
+          </Fragment>
         ))}
       </div>
     </div>

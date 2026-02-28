@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { INDUSTRY_VERTICALS } from '../../content/industry-verticals';
+import { IndustryConsistencyGrid } from '../../components/industries/IndustryConsistencyGrid';
 
 export default function IndustriesPage() {
   return (
@@ -8,20 +9,36 @@ export default function IndustriesPage() {
         <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">Industries</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">Industry Engagement Playbooks</h1>
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-          Operational AI execution for four high-friction sectors. Each playbook follows the same structure: pressure reality, workflow breakpoints,
-          reconstruction, engagement model, and measurable impact.
+          The operating model stays consistent across all four engagements: pressure reality, workflow breakpoints, reconstruction, engagement model,
+          and measurable impact.
+        </p>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+          What changes by sector is the workflow itself: the controls, artifacts, handoffs, and evidence requirements needed to move safely.
         </p>
       </section>
 
-      <section className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+      <IndustryConsistencyGrid />
+
+      <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
         {INDUSTRY_VERTICALS.map((industry) => (
           <Link
             key={industry.slug}
             href={`/industries/${industry.slug}`}
-            className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-5 transition hover:border-emerald-300/35"
+            className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-5 transition hover:border-emerald-300/35 hover:bg-slate-900/70"
           >
             <p className="text-lg font-semibold text-white">{industry.label}</p>
-            <p className="mt-2 text-sm text-slate-300">View engagement model</p>
+            <p className="mt-2 text-sm leading-relaxed text-slate-300">{industry.teaser}</p>
+            <div className="mt-4 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200">Workflow examples</p>
+              <ul className="space-y-2 text-sm text-slate-200">
+                {industry.reconstructCards.slice(0, 2).map((card) => (
+                  <li key={card.title} className="rounded-xl border border-slate-800/80 bg-slate-900/60 p-2.5">
+                    {card.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="mt-4 text-sm font-semibold text-white">View engagement model</p>
           </Link>
         ))}
       </section>

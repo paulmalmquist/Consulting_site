@@ -17,6 +17,7 @@ import {
   ShieldCheck,
   Users
 } from 'lucide-react';
+import { INDUSTRY_VERTICALS } from '../../content/industry-verticals';
 
 type LabelItem = {
   label: string;
@@ -181,6 +182,35 @@ export default function WhatWeDoPage() {
               })}
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
+        <div className="space-y-2">
+          <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">Applied by industry</p>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            The delivery model stays fixed. The workflow changes.
+          </h2>
+          <p className="max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+            We keep the engagement structure consistent across sectors, then adapt the workflow controls, evidence, and operational handoffs to the
+            industry-specific failure points.
+          </p>
+        </div>
+        <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {INDUSTRY_VERTICALS.map((industry) => (
+            <Link
+              key={industry.slug}
+              href={`/industries/${industry.slug}`}
+              className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4 transition hover:border-emerald-300/35 hover:bg-slate-900/70"
+            >
+              <p className="text-base font-semibold text-white">{industry.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-300">{industry.teaser}</p>
+              <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200">
+                View industry playbook
+                <ArrowRight size={14} aria-hidden="true" />
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 
