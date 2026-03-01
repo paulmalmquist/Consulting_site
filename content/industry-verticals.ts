@@ -9,6 +9,13 @@ export type ReconstructCard = {
   outcome: string;
 };
 
+export type IndustrySection = {
+  title: string;
+  intro?: string;
+  items: string[];
+  closing?: string[];
+};
+
 export type IndustryVertical = {
   slug: 'real-estate-private-equity' | 'consumer-credit' | 'medical' | 'legal';
   label: string;
@@ -16,14 +23,12 @@ export type IndustryVertical = {
   teaser: string;
   contactLabel: string;
   heroImageUrl: string;
+  heroHeadline: string;
   heroSubheadline: string;
+  whyItBreaks: IndustrySection;
+  whatWeChange: IndustrySection;
   buyerProfile: string[];
   buyerSentence: string;
-  pressureCards: IndustryCard[];
-  breakpoints: {
-    items: string[];
-    explanation: string;
-  };
   reconstructCards: ReconstructCard[];
   engagementModel: {
     intro: string;
@@ -48,8 +53,41 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     teaser: 'Stabilize investor reporting, waterfall logic, and portfolio controls without rebuilding the entire investment stack.',
     contactLabel: 'Real Estate Private Equity',
     heroImageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80',
+    heroHeadline: 'Make Fund Math Deterministic',
     heroSubheadline:
-      'AI-native workflows with measurable operational impact across LP reporting packages, capital account statements, waterfall calculations, and covenant compliance.',
+      'Replace spreadsheet-dependent fund operations with controlled execution across underwriting, waterfall logic, capital activity, and investor reporting. The objective is continuity across the capital stack, with calculations, approvals, and reporting outputs that remain reviewable under scrutiny.',
+    whyItBreaks: {
+      title: 'Why It Breaks',
+      intro: 'The model is not the problem. The operating chain around it is.',
+      items: [
+        'Underwriting assumptions drift across analyst versions before investment committee review.',
+        'Waterfall logic is defended from spreadsheets instead of governed from a controlled source.',
+        'Capital call and distribution workflows depend on manual tie-outs.',
+        'Portfolio rollups arrive too late to support timely decisions.',
+        'Investor reporting is rebuilt each cycle from disconnected asset data.'
+      ],
+      closing: [
+        'The breakdown is not in financial intent.',
+        'It is in version drift, weak ownership, and reporting logic that cannot be traced end to end.'
+      ]
+    },
+    whatWeChange: {
+      title: 'What We Change',
+      intro:
+        'We turn fund operations into a governed execution layer that preserves calculation integrity from deal evaluation through reporting.',
+      items: [
+        'Version-controlled underwriting assumptions and approval checkpoints',
+        'Deterministic waterfall logic with explicit rule governance',
+        'Capital activity workflows with auditable state transitions',
+        'Portfolio-level covenant and reporting controls across assets',
+        'Investor reporting assembled from workflow-native data instead of manual reconsolidation'
+      ],
+      closing: [
+        'No uncontrolled model forks.',
+        'No last-mile reporting reconstruction.',
+        'Fund math becomes repeatable, reviewable, and operational.'
+      ]
+    },
     buyerProfile: [
       'Fund operations and portfolio teams managing LP reporting pressure across multiple assets.',
       'CFO, COO, finance, and investor relations leaders accountable for reporting integrity.',
@@ -57,38 +95,6 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
       'Teams that need audit-ready controls before adding more automation.'
     ],
     buyerSentence: 'Built for operators who need cleaner fund execution without disrupting the full investment stack.',
-    pressureCards: [
-      {
-        title: 'LP Reporting Timelines Keep Compressing',
-        description:
-          'Investor expectations for faster LP reporting packages are rising while supporting data still arrives from fragmented systems.'
-      },
-      {
-        title: 'Portfolio Rollups Lag Decision Windows',
-        description:
-          'Investment teams often review stale portfolio rollups when manual consolidation delays investment committee materials.'
-      },
-      {
-        title: 'Waterfall Logic Is Hard to Defend',
-        description:
-          'Spreadsheet-based waterfall calculations increase version drift, manual reconciliation, and escalation risk near close cycles.'
-      },
-      {
-        title: 'Covenant Compliance Scrutiny Is Higher',
-        description:
-          'Debt markets volatility increases pressure for traceable covenant compliance reporting and defensible exception handling.'
-      }
-    ],
-    breakpoints: {
-      items: [
-        'LP reporting packages are rebuilt manually from disconnected portfolio sources.',
-        'Capital account statements require repeated tie-outs before release.',
-        'Waterfall calculations vary across analyst templates, reducing IRR integrity.',
-        'Covenant compliance monitoring depends on delayed spreadsheet portfolio rollups.'
-      ],
-      explanation:
-        'AI does not replace fragmented systems. It exposes where controls are weak. The issue is not effort; it is missing execution logic, weak traceability, and inconsistent ownership.'
-    },
     reconstructCards: [
       {
         title: 'LP Reporting System',
@@ -179,8 +185,41 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     teaser: 'Tighten underwriting, servicing, and compliance workflows so throughput improves without losing control.',
     contactLabel: 'Consumer Credit',
     heroImageUrl: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1800&q=80',
+    heroHeadline: 'Make Credit Logic Operational',
     heroSubheadline:
-      'AI embedded in controlled operational systems for underwriting exception queues, servicing handoffs, delinquency tracking, and regulatory documentation.',
+      'Embed underwriting discipline, servicing controls, segmentation logic, and regulatory documentation directly into observable workflows. Credit risk management improves when portfolio risk monitoring, covenant tracking, and underwriting exception management operate inside the same controlled system.',
+    whyItBreaks: {
+      title: 'Why It Breaks',
+      intro: 'Credit policy is rarely the issue. Execution is.',
+      items: [
+        'Exception queues grow without visibility.',
+        'Risk overrides lose audit clarity.',
+        'Segmentation remains static when portfolio conditions change.',
+        'Servicing handoffs create exposure gaps between teams.',
+        'Documentation is assembled after the fact instead of generated from workflow state.'
+      ],
+      closing: [
+        'The risk is not bad intent.',
+        'It is invisible breakdown across credit exposure aggregation, counterparty risk review, and day-to-day execution.'
+      ]
+    },
+    whatWeChange: {
+      title: 'What We Change',
+      intro:
+        'We embed credit logic directly into execution systems so control survives volume, handoffs, and review.',
+      items: [
+        'Dynamic portfolio segmentation tied to live workflow states',
+        'Rule-based exposure triggers for portfolio risk monitoring',
+        'Real-time covenant tracking and concentration monitoring',
+        'Structured underwriting exception management with explicit queue ownership',
+        'Workflow-native documentation generation for audits, examinations, and stress testing support'
+      ],
+      closing: [
+        'No parallel spreadsheets.',
+        'No shadow tracking systems.',
+        'Credit discipline becomes operational.'
+      ]
+    },
     buyerProfile: [
       'Lenders running high-volume exception queues across underwriting and servicing.',
       'Risk, compliance, and operations leaders under pressure to prove decision integrity.',
@@ -188,38 +227,6 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
       'Organizations that need explainable automation before broader AI rollout.'
     ],
     buyerSentence: 'Built for credit teams that need faster throughput and stronger evidence at the same time.',
-    pressureCards: [
-      {
-        title: 'Credit Margins Are Under Pressure',
-        description:
-          'Lenders must accelerate throughput while preserving risk discipline and documentation quality in a tighter spread environment.'
-      },
-      {
-        title: 'Regulatory Reviews Expect Evidence',
-        description:
-          'Decision logic, adverse action context, and servicing records must be traceable, not reconstructed after the fact.'
-      },
-      {
-        title: 'Default Volatility Requires Faster Signal',
-        description:
-          'Delinquency tracking and loss forecasting are constrained when risk scoring inputs and portfolio stratification are fragmented.'
-      },
-      {
-        title: 'Manual Exception Queues Do Not Scale',
-        description:
-          'Underwriting and servicing teams lose cycle time when high-volume exception handling depends on ad hoc triage.'
-      }
-    ],
-    breakpoints: {
-      items: [
-        'Underwriting exception queues rely on spreadsheet logic with inconsistent decision paths.',
-        'Risk scoring inputs are reconciled manually before adjudication and review.',
-        'Servicing handoffs create state loss between collections, care, and compliance teams.',
-        'Regulatory documentation is assembled retroactively from disconnected systems.'
-      ],
-      explanation:
-        'AI-driven decisions must be explainable. We build systems where credit logic can be reviewed, traced, and defended.'
-    },
     reconstructCards: [
       {
         title: 'Documented Credit Decision Engine',
@@ -306,8 +313,42 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     teaser: 'Reduce revenue-cycle leakage across prior auth, denial management, and payer reconciliation with governed workflow control.',
     contactLabel: 'Medical',
     heroImageUrl: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=1800&q=80',
+    heroHeadline: 'Make Clinical Operations Observable',
     heroSubheadline:
-      'Execution systems designed to produce audit-ready outcomes in revenue cycle management, denial management, prior authorization workflows, and payer reconciliation.',
+      'Create operational control across prior authorization, denial management, payer reconciliation, and reimbursement workflows without adding compliance risk. The goal is observable execution, cleaner handoffs, and measurable financial continuity across care delivery administration.',
+    whyItBreaks: {
+      title: 'Why It Breaks',
+      intro:
+        'Clinical and revenue-cycle workflows do not usually fail because teams lack effort. They fail because operational state disappears between steps.',
+      items: [
+        'Authorization status changes are lost between payer portals and internal teams.',
+        'Denials are triaged late, after avoidable backlog has already formed.',
+        'Coding, billing, and reconciliation rely on repeated manual tie-outs.',
+        'Ownership blurs across intake, clinical support, and billing operations.',
+        'Reporting is assembled from fragmented systems instead of live workflow evidence.'
+      ],
+      closing: [
+        'The exposure is not abstract inefficiency.',
+        'It is reimbursement leakage, delayed cash, and limited visibility into where care-adjacent operations are actually breaking.'
+      ]
+    },
+    whatWeChange: {
+      title: 'What We Change',
+      intro:
+        'We build an execution layer that keeps operational state visible across administrative care workflows and ties every exception to an owner, a rule, and an audit trail.',
+      items: [
+        'Prior authorization workflows with governed status transitions',
+        'Denial management routed through controlled exception states',
+        'Payer reconciliation and coding checks tied to documented control points',
+        'Queue ownership and escalation logic across reimbursement handoffs',
+        'Reporting generated from workflow evidence instead of retrospective assembly'
+      ],
+      closing: [
+        'No hidden queue drift.',
+        'No reconciliation by folklore.',
+        'Operational control stays visible from intake through reimbursement.'
+      ]
+    },
     buyerProfile: [
       'Provider groups and MSOs with margin pressure tied to administrative execution.',
       'Revenue cycle, finance, and operations leaders responsible for reimbursement continuity.',
@@ -315,38 +356,6 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
       'Organizations that need audit-ready process improvement without destabilizing billing operations.'
     ],
     buyerSentence: 'Built for healthcare operators who need cleaner reimbursement workflows without adding compliance risk.',
-    pressureCards: [
-      {
-        title: 'Staffing Constraints Increase Throughput Risk',
-        description:
-          'Provider and MSO teams are expected to maintain service and collections performance with limited administrative capacity.'
-      },
-      {
-        title: 'Reimbursement Delays Pressure Margin',
-        description:
-          'Cash acceleration stalls when prior authorization, denial management, and payer reconciliation are loosely controlled.'
-      },
-      {
-        title: 'Payer Reporting Burden Keeps Expanding',
-        description:
-          'Practice-level reporting and compliance documentation requirements are rising across contracts and jurisdictions.'
-      },
-      {
-        title: 'Manual Reconciliation Consumes Capacity',
-        description:
-          'Teams spend disproportionate time resolving workflow drift between CPT coding, billing, and payer systems.'
-      }
-    ],
-    breakpoints: {
-      items: [
-        'Prior authorization workflows lose status integrity across payer portals and internal queues.',
-        'Denial management relies on late-stage manual triage rather than controlled exception states.',
-        'Payer reconciliation and CPT coding alignment require repeated spreadsheet tie-outs.',
-        'Practice-level reporting is delayed by fragmented source systems and inconsistent ownership.'
-      ],
-      explanation:
-        'AI in healthcare must improve margin without increasing compliance risk. We design workflows that do both.'
-    },
     reconstructCards: [
       {
         title: 'Revenue Cycle Exception Control',
@@ -433,8 +442,41 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
     teaser: 'Reduce administrative drag across intake, matter tracking, and billing while preserving partner-level visibility.',
     contactLabel: 'Legal',
     heroImageUrl: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1800&q=80',
+    heroHeadline: 'Turn Legal Workflow Into Measurable Execution',
     heroSubheadline:
-      'AI-native workflows with measurable operational impact across intake qualification, matter lifecycle tracking, document classification, and time entry reconciliation.',
+      'Reduce administrative drag across intake, matter progression, document handling, and billing by embedding control directly into legal operations. The result is cleaner execution, better matter visibility, and measurable operational discipline without interfering with legal judgment.',
+    whyItBreaks: {
+      title: 'Why It Breaks',
+      intro: 'Legal judgment is not the bottleneck. Workflow inconsistency is.',
+      items: [
+        'Intake criteria are applied differently across teams and matter types.',
+        'Matter status changes are tracked informally instead of through governed states.',
+        'Document triage creates avoidable delay before substantive work can proceed.',
+        'Billing narratives and time reconciliation require repeated manual cleanup.',
+        'Partners and operators rebuild status visibility from disconnected systems.'
+      ],
+      closing: [
+        'The problem is not expertise.',
+        'It is administrative drift that expands non-billable load and weakens operational visibility.'
+      ]
+    },
+    whatWeChange: {
+      title: 'What We Change',
+      intro:
+        'We structure legal operations as a controlled execution chain so intake, matter movement, document handling, and billing progress can be measured and defended.',
+      items: [
+        'Standardized intake qualification and routing logic',
+        'Governed matter states with explicit ownership and escalation',
+        'Controlled document triage with review checkpoints',
+        'Time entry and billing reconciliation tied to workflow events',
+        'Status reporting generated from matter-state evidence instead of manual reconstruction'
+      ],
+      closing: [
+        'No invisible handoffs.',
+        'No status reporting built from memory.',
+        'Legal workflow becomes measurable without reducing professional judgment to software theater.'
+      ]
+    },
     buyerProfile: [
       'Firms and in-house legal operations teams with matter progression bottlenecks.',
       'Partners, COOs, and legal operations leaders accountable for realization and reporting.',
@@ -442,38 +484,6 @@ export const INDUSTRY_VERTICALS: IndustryVertical[] = [
       'Organizations that need structured workflow control without disrupting legal judgment.'
     ],
     buyerSentence: 'Built for legal operators who need less non-billable friction and clearer matter visibility.',
-    pressureCards: [
-      {
-        title: 'Client Cost Scrutiny Is Rising',
-        description:
-          'Legal teams are under pressure to show clearer value, cleaner billing narratives, and faster status transparency.'
-      },
-      {
-        title: 'Non-Billable Leakage Is Expanding',
-        description:
-          'Administrative follow-up and matter status reconstruction consume capacity that should remain billable.'
-      },
-      {
-        title: 'Document Workflows Remain Manual',
-        description:
-          'Document classification bottlenecks delay matter progression and increase review overhead.'
-      },
-      {
-        title: 'Case Status Visibility Is Fragmented',
-        description:
-          'Partners and operations teams often manage updates across disconnected systems and inconsistent workflows.'
-      }
-    ],
-    breakpoints: {
-      items: [
-        'Intake qualification criteria are applied inconsistently across practice groups.',
-        'Matter lifecycle tracking lacks controlled state definitions and ownership handoffs.',
-        'Document classification queues create avoidable delays in active matters.',
-        'Time entry reconciliation and billing narratives require repeated manual alignment.'
-      ],
-      explanation:
-        'AI does not replace legal judgment. It reduces administrative friction around it.'
-    },
     reconstructCards: [
       {
         title: 'Intake Qualification Engine',

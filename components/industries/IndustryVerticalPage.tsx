@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { INDUSTRY_VERTICALS, type IndustryVertical } from '../../content/industry-verticals';
 import { INDUSTRY_THEME_STYLES } from '../../lib/industryThemes';
-import { CredibilitySection } from '../marketing/CredibilitySection';
 import { cn } from '../ui/cn';
 
 type IndustryVerticalPageProps = {
@@ -24,13 +23,8 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.08)_0%,rgba(2,6,23,0.16)_32%,rgba(2,6,23,0.86)_68%,rgba(2,6,23,0.96)_100%)]" />
         <div className="relative z-10 min-h-[68vh] p-6 pt-[26vh] sm:p-8 sm:pt-[28vh] lg:min-h-[72vh] lg:p-10 lg:pt-[32vh]">
           <p className={cn('text-sm uppercase tracking-[0.2em]', theme.eyebrowText)}>Industry Engagement</p>
-          <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Put AI to Work in {industry.label} Operations
-          </h1>
+          <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">{industry.heroHeadline}</h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">{industry.heroSubheadline}</p>
-          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            AI embedded in controlled operational systems creates value only when outcomes are measurable, traceable, and audit-ready.
-          </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href={contactHref} className={theme.primaryCta}>
               Book an AI Execution Session
@@ -63,31 +57,15 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
         </div>
       </section>
 
-      <CredibilitySection
-        headline={`Why Operators in ${industry.label} Work With Us`}
-        intro={industry.credibility.intro}
-        pillars={industry.credibility.pillars}
-        showTrustAmplifiers={false}
-      />
-
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">AI Pressure Is Rising.</h2>
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          {industry.pressureCards.map((card) => (
-            <article key={card.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-              <h3 className="text-base font-semibold text-white">{card.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">{card.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Where Operational Work Breaks.</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{industry.whyItBreaks.title}</h2>
         <div className="mt-4 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
           <article className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
+            {industry.whyItBreaks.intro ? (
+              <p className="mb-4 text-base font-medium leading-relaxed text-slate-100">{industry.whyItBreaks.intro}</p>
+            ) : null}
             <ul className="space-y-2 text-sm text-slate-200">
-              {industry.breakpoints.items.map((item) => (
+              {industry.whyItBreaks.items.map((item) => (
                 <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-900/60 p-3">
                   {item}
                 </li>
@@ -95,38 +73,56 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
             </ul>
           </article>
           <article className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-            <p className="text-sm leading-relaxed text-slate-300">{industry.breakpoints.explanation}</p>
+            <div className="space-y-3">
+              {industry.whyItBreaks.closing?.map((line) => (
+                <p key={line} className="text-sm leading-relaxed text-slate-300">
+                  {line}
+                </p>
+              ))}
+            </div>
           </article>
         </div>
       </section>
 
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">What We Reconstruct.</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{industry.whatWeChange.title}</h2>
+        {industry.whatWeChange.intro ? (
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">{industry.whatWeChange.intro}</p>
+        ) : null}
+        <div className="mt-4 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+          <article className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
+            <ul className="space-y-2 text-sm text-slate-200">
+              {industry.whatWeChange.items.map((item) => (
+                <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-900/60 p-3">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+          <article className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
+            <div className="space-y-3">
+              {industry.whatWeChange.closing?.map((line) => (
+                <p key={line} className="text-sm leading-relaxed text-slate-300">
+                  {line}
+                </p>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Controlled Capabilities</h2>
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           {industry.reconstructCards.map((card) => (
             <article key={card.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
               <h3 className="text-base font-semibold text-white">{card.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">{card.description}</p>
-              <p className={cn('mt-3 text-xs uppercase tracking-[0.12em]', theme.accentText)}>Outcome orientation</p>
+              <p className={cn('mt-3 text-xs uppercase tracking-[0.12em]', theme.accentText)}>Operational result</p>
               <p className="mt-1 text-sm text-slate-200">{card.outcome}</p>
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Engagement Model</h2>
-        <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">{industry.engagementModel.intro}</p>
-        <ul className="mt-4 space-y-2 text-sm text-slate-200">
-          {industry.engagementModel.principles.map((item) => (
-            <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-              {item}
-            </li>
-          ))}
-        </ul>
-        <p className={cn('mt-4 text-sm leading-relaxed', theme.accentText)}>
-          We don&apos;t deploy AI experiments. We deliver operational systems - with evidence.
-        </p>
       </section>
 
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
@@ -142,7 +138,7 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
       </section>
 
       <section className={cn('rounded-3xl border p-5 sm:p-7', theme.impactSection)}>
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Measurable Operational Impact.</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Outcomes</h2>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-200">{industry.controlStatement}</p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {industry.outcomeCards.map((card) => (
@@ -155,7 +151,7 @@ export function IndustryVerticalPage({ industry }: IndustryVerticalPageProps) {
       </section>
 
       <section className="rounded-3xl border border-slate-800/80 bg-slate-950/50 p-6 sm:p-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Put AI to Work in Your Operations.</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Bring Control to the Workflow.</h2>
         <p className="mt-2 text-sm text-slate-300 sm:text-base">
           Start with one constrained workflow and execute with fixed scope, fixed fee, and measured operating outcomes.
         </p>
