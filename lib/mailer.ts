@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
 import type { BookingRecord } from './booking-store';
+import type { MeetingRecord, MeetingAttendee, DeliveryStatus } from './meetings-store';
 
 type Attachment = {
   filename: string;
@@ -128,6 +129,122 @@ function internalMessage(record: BookingRecord): string {
   }
   lines.push(`Booking ID: ${record.id}`);
   return lines.join('\n');
+}
+
+// ─── Meeting invite sending (full meeting scheduler) ─────────────────────────
+
+type MeetingEmailMethod = 'REQUEST' | 'CANCEL';
+
+type AttendeeDeliveryResult = {
+  email: string;
+  delivery_status: DeliveryStatus;
+};
+
+function meetingAttendeeBody(meeting: MeetingRecord, method: MeetingEmailMethod): string {
+  if (method === 'CANCEL') {
+    return [
+      `Your meeting has been canceled.`,
+      '',
+      `Title: ${meeting.title}`,
+      `Was scheduled: ${meeting.start_time_utc} – ${meeting.end_time_utc} UTC`,
+      '',
+      'This meeting has been removed from your calendar. Check the attached .ics file to cancel it in your calendar app.',
+    ].join('\n');
+  }
+
+  const lines = [
+    `You have been invited to: ${meeting.title}`,
+    '',
+    `Purpose: ${meeting.purpose}`,
+    meeting.description ? `Details: ${meeting.description}` : null,
+    '',
+    `When (UTC): ${meeting.start_time_utc} – ${meeting.end_time_utc}`,
+    `Timezone: ${meeting.timezone}`,
+  ].filter(Boolean) as string[];
+
+  if (meeting.meeting_link) lines.push(`Join link: ${meeting.meeting_link}`);
+  if (meeting.location) lines.push(`Location: ${meeting.location}`);
+
+  lines.push('');
+  lines.push('The attached .ics file can be opened in Google Calendar, Outlook, or Apple Calendar.');
+  return lines.join('\n');
+}
+
+function meetingInternalBody(meeting: MeetingRecord, attendees: MeetingAttendee[], method: MeetingEmailMethod): string {
+  const action = method === 'CANCEL' ? 'CANCELED' : 'NEW BOOKING';
+  const lines = [
+    `[${action}] ${meeting.title}`,
+    '',
+    `Purpose: ${meeting.purpose}`,
+    `When (UTC): ${meeting.start_time_utc} – ${meeting.end_time_utc}`,
+    `Timezone: ${meeting.timezone}`,
+    `Meeting ID: ${meeting.id}`,
+    '',
+    'Attendees:',
+    ...attendees.map((a) => `  • ${a.name} <${a.email}>`),
+  ];
+  if (meeting.meeting_link) lines.push(`Join link: ${meeting.meeting_link}`);
+  return lines.join('\n');
+}
+
+function meetingSubject(meeting: MeetingRecord, method: MeetingEmailMethod): string {
+  if (method === 'CANCEL') return `Canceled: ${meeting.title}`;
+  return `${meeting.title} — calendar invite`;
+}
+
+function rescheduleSubject(meeting: MeetingRecord): string {
+  return `Updated: ${meeting.title} — new time`;
+}
+
+/**
+ * Sends per-attendee meeting invites (or cancellations) with ICS attachment.
+ * Returns delivery results for each non-organizer attendee.
+ */
+export async function sendMeetingInvites(
+  meeting: MeetingRecord,
+  attendees: MeetingAttendee[],
+  icsText: string,
+  method: MeetingEmailMethod,
+  isReschedule = false
+): Promise<AttendeeDeliveryResult[]> {
+  const icsFilename = `winston-meeting-${meeting.id}.ics`;
+  const icsContentType = `text/calendar; method=${method}; charset=UTF-8`;
+
+  const attachment = {
+    filename: icsFilename,
+    content: icsText,
+    contentType: icsContentType,
+  };
+
+  const subject = isReschedule ? rescheduleSubject(meeting) : meetingSubject(meeting, method);
+  const bodyText = meetingAttendeeBody(meeting, method);
+
+  const results: AttendeeDeliveryResult[] = [];
+
+  // Send to each non-organizer attendee
+  const inviteTargets = attendees.filter((a) => a.role !== 'organizer');
+  for (const attendee of inviteTargets) {
+    try {
+      await sendMail({ to: attendee.email, subject, text: bodyText, attachments: [attachment] });
+      results.push({ email: attendee.email, delivery_status: 'sent' });
+    } catch {
+      results.push({ email: attendee.email, delivery_status: 'failed' });
+    }
+  }
+
+  // Internal notification
+  const internalRecipient = process.env.BOOKING_INTERNAL_EMAIL ?? process.env.BOOKING_ORGANIZER_EMAIL ?? '';
+  if (internalRecipient) {
+    const internalText = meetingInternalBody(meeting, inviteTargets, method);
+    await sendMail({
+      to: internalRecipient,
+      subject: `[Winston] ${subject}`,
+      text: internalText,
+      attachments: [attachment],
+    }).catch(() => {/* internal notification failure is non-fatal */});
+  }
+
+  return results;
 }
 
 export async function sendBookingEmails(record: BookingRecord): Promise<DeliveryMode> {
