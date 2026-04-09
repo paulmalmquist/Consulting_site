@@ -30,7 +30,7 @@ const ALLOWED_NAV_ITEMS = new Set([
   'The Shift',
   'Operational Assessment',
   'AI Concierge',
-  'Legacy SaaS',
+  'Legacy SaaS Migration',
   'About',
   'Contact'
 ]);
@@ -54,7 +54,7 @@ const NAV_ICON_BY_LABEL: Record<string, LucideIcon> = {
   'AI Concierge': Compass,
   'What We Do': Workflow,
   'The Shift': ArrowRightLeft,
-  'Legacy SaaS': Layers3,
+  'Legacy SaaS Migration': Layers3,
   Industries: Factory,
   'Operational Assessment': ClipboardCheck,
   About: UserRound,
@@ -282,7 +282,7 @@ export function SidebarNav({ isCollapsed, toggleCollapsed, drawerOpen, setDrawer
             onClick={() => setDrawerOpen(false)}
             className="mt-2 inline-flex w-full items-center justify-center rounded-lg border border-cyan-300/30 bg-slate-900/70 px-3 py-2 text-xs font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
           >
-            Book intro
+            Start with one workflow
           </Link>
         </div>
       </div>

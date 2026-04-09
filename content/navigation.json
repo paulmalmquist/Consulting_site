@@ -6,10 +6,15 @@
         { "label": "Home", "href": "/", "icon": "🏠" },
         { "label": "What We Do", "href": "/what-we-do", "icon": "⚙️" },
         { "label": "Industries", "href": "/industries", "icon": "🏗️" },
-        { "label": "The Shift", "href": "/shift", "icon": "↗️" },
+        { "label": "The Shift", "href": "/the-shift", "icon": "↗️" }
+      ]
+    },
+    {
+      "title": "Capabilities",
+      "items": [
         { "label": "Operational Assessment", "href": "/operational-assessment", "icon": "🧰" },
         { "label": "AI Concierge", "href": "/ai-concierge", "icon": "🧭" },
-        { "label": "Legacy SaaS", "href": "/legacy-saas", "icon": "📦" }
+        { "label": "Legacy SaaS Migration", "href": "/legacy-saas", "icon": "📦" }
       ]
     },
     {

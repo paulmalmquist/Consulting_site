@@ -1,312 +1,69 @@
-import { Fragment } from 'react';
 import Link from 'next/link';
-import { readJson } from '../lib/content';
-import { Hero } from '../components/home/Hero';
-import { Stepper } from '../components/home/Stepper';
-import { CardGrid } from '../components/home/CardGrid';
-import { ExploreCarousel } from '../components/home/ExploreCarousel';
-import { EngagementPhases } from '../components/home/EngagementPhases';
-import { FAQAccordion } from '../components/home/FAQAccordion';
-import { CTASection } from '../components/home/CTASection';
-import { VisualPlaceholder } from '../components/home/VisualPlaceholder';
-import { INDUSTRY_VERTICALS } from '../content/industry-verticals';
+import { BeforeAfterDiagram } from '../components/visual/BeforeAfterDiagram';
+import { ControlLayerDiagram } from '../components/visual/ControlLayerDiagram';
+import { SloganBadge } from '../components/visual/SloganBadge';
 
-type NavLink = {
-  label: string;
-  href: string;
-};
-
-type CTA = {
-  label: string;
-  href: string;
-};
-
-type HomePageData = {
-  nav: {
-    logo: { label: string; href: string };
-    links: NavLink[];
-    primaryCta: CTA;
-    secondaryCta: CTA;
-  };
-  sections: HomeSection[];
-};
-
-type HomeSection =
-  | HeroSection
-  | PatternSection
-  | StructuralSection
-  | PositioningSection
-  | ExploreSection
-  | BaselineSection
-  | OutcomesSection
-  | EngagementSection
-  | CtaSection
-  | FaqSection;
-
-type HeroSection = {
-  id: string;
-  type: 'hero';
-  headline: string;
-  subheadline: string;
-  primaryCta: CTA;
-  secondaryCta: CTA;
-  proofBullets: { icon: string; title: string }[];
-};
-
-type PatternSection = {
-  id: string;
-  type: 'pattern';
-  title: string;
-  lead: string;
-  bullets: string[];
-  callout: string;
-  visual: { title: string; description: string };
-};
-
-type StructuralSection = {
-  id: string;
-  type: 'structural';
-  title: string;
-  steps: string[];
-  whyTitle: string;
-  whyBody: string;
-};
-
-type PositioningSection = {
-  id: string;
-  type: 'positioning';
-  title: string;
-  cards: { title: string; description: string }[];
-};
-
-type ExploreSection = {
-  id: string;
-  type: 'explore';
-  title: string;
-  subtitle: string;
-  primaryCta: CTA;
-  secondaryCta: CTA;
-  tiles: { title: string; description: string; href: string }[];
-};
-
-type BaselineSection = {
-  id: string;
-  type: 'baseline';
-  title: string;
-  description: string;
-  cta: CTA;
-};
-
-type OutcomesSection = {
-  id: string;
-  type: 'outcomes';
-  title: string;
-  subtitle: string;
-  outcomes: string[];
-  deliverables: { title: string; description: string }[];
-  visual: { title: string; description: string };
-};
-
-type EngagementSection = {
-  id: string;
-  type: 'engagement';
-  title: string;
-  phases: { title: string; duration: string; description: string; decision: string }[];
-};
-
-type CtaSection = {
-  id: string;
-  type: 'cta';
-  headline: string;
-  body: string;
-  primaryCta: CTA;
-  secondaryCta: CTA;
-};
-
-type FaqSection = {
-  id: string;
-  type: 'faq';
-  title: string;
-  items: { question: string; answer: string }[];
-};
+const steps = [
+  { name: 'Discovery', detail: 'Map one high-friction workflow and baseline cycle time, error rate, and owner gaps.' },
+  { name: 'Pilot', detail: 'Build controlled states, rules, and evidence in parallel with current operations.' },
+  { name: 'Cutover', detail: 'Switch with rollback protection once outputs match and governance is approved.' }
+];
 
 export default function HomePage() {
-  const home = readJson<HomePageData>('homepage.json');
-  const heroIndex = home.sections.findIndex((section) => section.type === 'hero');
-
-  const renderSection = (section: HomeSection) => {
-    switch (section.type) {
-      case 'hero':
-        return (
-          <section id={section.id} className="space-y-8">
-            <Hero
-              headline={section.headline}
-              subheadline={section.subheadline}
-              primaryCta={section.primaryCta}
-              secondaryCta={section.secondaryCta}
-              proofBullets={section.proofBullets}
-            />
-          </section>
-        );
-      case 'pattern':
-        return (
-          <section id={section.id} className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-4 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
-              <p className="text-sm uppercase tracking-[0.2em] text-slate-400">The pattern</p>
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{section.title}</h2>
-              <p className="text-base leading-relaxed text-slate-300">{section.lead}</p>
-              <ul className="space-y-2 text-sm text-slate-200">
-                {section.bullets.map((item) => (
-                  <li key={item}>• {item}</li>
-                ))}
-              </ul>
-              <div className="rounded-2xl border border-slate-800/80 bg-slate-950/40 p-4 text-sm text-slate-200">
-                {section.callout}
-              </div>
-            </div>
-            <VisualPlaceholder title={section.visual.title} description={section.visual.description} />
-          </section>
-        );
-      case 'structural':
-        return (
-          <section id={section.id} className="space-y-6 rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
-            <div className="space-y-3">
-              <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Structural response</p>
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{section.title}</h2>
-            </div>
-            <Stepper steps={section.steps} />
-            <div className="rounded-2xl border border-slate-800/80 bg-slate-950/40 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">{section.whyTitle}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">{section.whyBody}</p>
-            </div>
-          </section>
-        );
-      case 'positioning':
-        return (
-          <section id={section.id} className="space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Positioning</p>
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{section.title}</h2>
-            </div>
-            <CardGrid cards={section.cards} />
-          </section>
-        );
-      case 'explore':
-        return (
-          <section id={section.id} className="space-y-6">
-            <ExploreCarousel title={section.title} subtitle={section.subtitle} tiles={section.tiles} />
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href={section.primaryCta.href}
-                className="rounded-full border border-cyan-200/70 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-100 hover:bg-cyan-200/10"
-              >
-                {section.primaryCta.label}
-              </Link>
-              <Link
-                href={section.secondaryCta.href}
-                className="rounded-full border border-slate-700 px-5 py-2 text-sm font-semibold text-white transition hover:border-slate-500 hover:bg-white/5"
-              >
-                {section.secondaryCta.label}
-              </Link>
-            </div>
-          </section>
-        );
-      case 'baseline':
-        return (
-          <section id={section.id} className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-8">
-            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-              <div className="max-w-2xl space-y-3">
-                <h2 className="text-xl font-semibold tracking-tight text-white md:text-2xl">{section.title}</h2>
-                <p className="text-sm leading-relaxed text-slate-300">{section.description}</p>
-              </div>
-              <Link
-                href={section.cta.href}
-                className="rounded-full border border-cyan-300/40 bg-slate-900/70 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
-              >
-                {section.cta.label}
-              </Link>
-            </div>
-          </section>
-        );
-      case 'outcomes':
-        return (
-          <section id={section.id} className="space-y-8">
-            <div className="space-y-3">
-              <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Outcomes + deliverables</p>
-              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{section.title}</h2>
-              <p className="text-base leading-relaxed text-slate-300">{section.subtitle}</p>
-            </div>
-            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="space-y-4">
-                <ul className="space-y-3 text-sm text-slate-200">
-                  {section.outcomes.map((outcome) => (
-                    <li key={outcome} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
-                      {outcome}
-                    </li>
-                  ))}
-                </ul>
-                <VisualPlaceholder title={section.visual.title} description={section.visual.description} />
-              </div>
-              <div className="space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Typical deliverables</p>
-                <CardGrid cards={section.deliverables} columns="md:grid-cols-1" />
-              </div>
-            </div>
-          </section>
-        );
-      case 'engagement':
-        return (
-          <section id={section.id} className="space-y-4">
-            <EngagementPhases title={section.title} phases={section.phases} />
-          </section>
-        );
-      case 'cta':
-        return (
-          <section id={section.id}>
-            <CTASection
-              headline={section.headline}
-              body={section.body}
-              primaryCta={section.primaryCta}
-              secondaryCta={section.secondaryCta}
-            />
-          </section>
-        );
-      case 'faq':
-        return (
-          <section id={section.id}>
-            <FAQAccordion title={section.title} items={section.items} />
-          </section>
-        );
-      default:
-        return null;
-    }
-  };
-
-  const industryCueBand = (
-    <section className="space-y-6">
-      <ExploreCarousel
-        title="Where the workflow changes by industry"
-        subtitle="The delivery model stays stable. What changes by sector is the control surface, the artifacts, and the failure points that need to be rebuilt safely."
-        tiles={INDUSTRY_VERTICALS.map((industry) => ({
-          title: industry.label,
-          description: industry.teaser,
-          href: `/industries/${industry.slug}`
-        }))}
-      />
-    </section>
-  );
-
   return (
-    <div className="space-y-12">
-      <div className="mx-auto flex w-full max-w-none flex-col gap-16 md:mr-auto md:ml-0">
-        {heroIndex === -1 && industryCueBand}
-        {home.sections.map((section, index) => (
-          <Fragment key={section.id}>
-            <div>{renderSection(section)}</div>
-            {index === heroIndex && industryCueBand}
-          </Fragment>
-        ))}
-      </div>
+    <div className="space-y-8 lg:space-y-10">
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
+        <SloganBadge />
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+          Replace one broken workflow with a controlled execution layer in 12 weeks.
+        </h1>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+          Own Your Operating Logic by standardizing workflow states, enforcing rule-level controls, and generating audit-ready outputs from one system of execution.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link href="/operational-assessment" className="rounded-full border border-emerald-300/45 bg-slate-950/70 px-5 py-2.5 text-sm font-semibold text-emerald-100">
+            Identify your first fixable workflow in 30 minutes
+          </Link>
+          <Link href="/what-we-do" className="rounded-full border border-slate-700 px-5 py-2.5 text-sm font-semibold text-white">
+            Start with one workflow
+          </Link>
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6">
+        <p className="text-xs uppercase tracking-[0.14em] text-emerald-200">3-step model</p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          {steps.map((step, index) => (
+            <article key={step.name} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
+              <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Step {index + 1}</p>
+              <h2 className="mt-1 text-lg font-semibold text-white">{step.name}</h2>
+              <p className="mt-2 text-sm text-slate-300">{step.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <BeforeAfterDiagram title="Own Your Operating Logic: Workflow Transformation" />
+      <ControlLayerDiagram title="Controlled Execution Layer" />
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6">
+        <p className="text-xs uppercase tracking-[0.14em] text-cyan-200">Case example (illustrative)</p>
+        <h2 className="mt-2 text-2xl font-semibold text-white">From reporting drift to controlled fund operations</h2>
+        <p className="mt-2 text-sm text-slate-300">
+          A synthetic REPE scenario: a mid-market operator replaced spreadsheet-driven capital call handoffs with state-based approvals and reduced capital call errors from 5% to 1.2% in 8 weeks.
+        </p>
+      </section>
+
+      <section className="rounded-3xl border border-emerald-300/25 bg-slate-950/50 p-6">
+        <SloganBadge className="mb-4" />
+        <h2 className="text-2xl font-semibold text-white">Typical Results</h2>
+        <ul className="mt-3 space-y-2 text-sm text-slate-200">
+          <li>25–40% reduction in manual reconciliation</li>
+          <li>30% faster reporting cycles</li>
+          <li>90%+ traceability on key workflows</li>
+        </ul>
+        <p className="mt-4 text-sm text-slate-300">Own Your Operating Logic is the operating thesis behind every implementation.</p>
+      </section>
     </div>
   );
 }

@@ -1,5 +1,1 @@
-import { permanentRedirect } from 'next/navigation';
-
-export default function LegacySaaSMigrationPage() {
-  permanentRedirect('/saas-iceberg');
-}
+export { default } from '../legacy-saas/page';

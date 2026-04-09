@@ -1,381 +1,64 @@
 import Link from 'next/link';
-import type { LucideIcon } from 'lucide-react';
-import {
-  ArrowRight,
-  Briefcase,
-  CheckCircle2,
-  CircleOff,
-  DollarSign,
-  Hammer,
-  ListChecks,
-  Map,
-  Network,
-  PackageCheck,
-  Receipt,
-  RotateCcw,
-  Search,
-  ShieldCheck,
-  Users
-} from 'lucide-react';
-import { INDUSTRY_VERTICALS } from '../../content/industry-verticals';
+import { BeforeAfterDiagram } from '../../components/visual/BeforeAfterDiagram';
+import { ControlLayerDiagram } from '../../components/visual/ControlLayerDiagram';
+import { SloganBadge } from '../../components/visual/SloganBadge';
 
-type LabelItem = {
-  label: string;
-  icon: LucideIcon;
-};
-
-type StepItem = {
-  title: string;
-  timeline: string;
-  receives: string;
-  decision: string;
-  icon: LucideIcon;
-};
-
-type DeliverableItem = {
-  title: string;
-  icon: LucideIcon;
-};
-
-const WHAT_THIS_IS_NOT: LabelItem[] = [
-  { label: 'Staff augmentation', icon: CircleOff },
-  { label: 'Generic consulting', icon: CircleOff },
-  { label: 'SaaS subscriptions', icon: CircleOff },
-  { label: 'Big-bang rip-and-replace programs', icon: CircleOff }
-];
-
-const WHAT_THIS_IS: LabelItem[] = [
-  { label: 'Fixed-scope workflow replacement', icon: CheckCircle2 },
-  { label: 'Senior delivery with decision gates', icon: CheckCircle2 },
-  { label: 'Parallel-run proof before cutover', icon: CheckCircle2 },
-  { label: 'Ownership transfer with governance controls', icon: CheckCircle2 }
-];
-
-const STEP_MODEL: StepItem[] = [
-  {
-    title: 'Step 1 - Discovery',
-    timeline: '2-3 weeks',
-    receives: 'Workflow map, system dependency map, cost baseline, and pilot scope.',
-    decision: 'Approve the pilot scope or stop with clear findings.',
-    icon: Search
-  },
-  {
-    title: 'Step 2 - Pilot',
-    timeline: '6-8 weeks',
-    receives: 'Working replacement workflow, parallel-run proof log, and rollback plan.',
-    decision: 'Cut over, extend the pilot, or stop.',
-    icon: Hammer
-  },
-  {
-    title: 'Step 3 - Cutover + Governance',
-    timeline: '10-12 weeks total when bundled with pilot',
-    receives: 'Production handoff package, governance checklist, and reporting controls.',
-    decision: 'Approve production ownership and governance cadence.',
-    icon: ShieldCheck
-  }
-];
-
-const DELIVERABLES: DeliverableItem[] = [
-  { title: 'Workflow map', icon: Map },
-  { title: 'System dependency map', icon: Network },
-  { title: 'Cost baseline', icon: DollarSign },
-  { title: 'Parallel-run proof log', icon: ListChecks },
-  { title: 'Rollback plan', icon: RotateCcw },
-  { title: 'Production handoff package', icon: PackageCheck },
-  { title: 'Governance checklist', icon: Receipt }
-];
-
-const PRICING = [
-  {
-    offer: 'Option 1 - Capability Discovery',
-    price: '$3,500 fixed',
-    scope: '1 workflow',
-    timeline: '2-3 weeks',
-    included: 'Workflow map, dependency map, cost baseline, pilot scope, decision memo'
-  },
-  {
-    offer: 'Option 2 - Pilot Build',
-    price: '$12,500 fixed',
-    scope: '1 workflow pilot',
-    timeline: '6-8 weeks',
-    included: 'Working replacement workflow, parallel run, proof log, rollback plan'
-  },
-  {
-    offer: 'Option 3 - Pilot + Cutover',
-    price: '$19,500 fixed',
-    scope: '1 workflow pilot + cutover',
-    timeline: '10-12 weeks',
-    included: 'Everything in Pilot Build plus production cutover and governance design'
-  },
-  {
-    offer: 'Governance Retainer (Optional)',
-    price: 'Starts at $2,000/month',
-    scope: 'Ongoing oversight',
-    timeline: 'Monthly',
-    included: 'Monitoring, exception review, and reporting integrity checks'
-  }
-];
-
-const WHO_FOR = [
-  'Companies at $50M+ annual revenue or equivalent operating complexity',
-  'COO, CFO, CIO, VP Operations, and PMO program sponsors',
-  'Teams with one painful workflow and a clear internal owner',
-  'Buyers who prefer fixed-fee outcomes over hourly staffing'
-];
-
-const WHO_NOT_FOR = [
-  'Teams looking for low-cost ad hoc support',
-  'Buyers who only want additional staff',
-  'Organizations expecting software seat licensing',
-  'Teams unwilling to assign an internal workflow owner'
+const timeline = [
+  { phase: 'Weeks 1-3', name: 'Discovery', gate: 'Approve pilot scope or stop', detail: 'Inventory systems, define workflow states, and baseline cost-of-breakage.' },
+  { phase: 'Weeks 4-9', name: 'Pilot', gate: 'Approve cutover readiness or stop', detail: 'Run current and new workflows in parallel with error and timing checks.' },
+  { phase: 'Weeks 10-12', name: 'Cutover', gate: 'Approve ownership transfer', detail: 'Cut over with rollback plan, runbook, and governance cadence.' }
 ];
 
 export default function WhatWeDoPage() {
   return (
     <div className="space-y-8 lg:space-y-10">
       <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-6 sm:p-8 lg:p-10">
-        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">What We Do</p>
-            <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Replace one broken workflow without a risky full overhaul.
-            </h1>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-              Novendor fixes one high-friction workflow at a time and replaces it with a system your company owns and controls.
-            </p>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-              We map the workflow, build the replacement, run both side by side, and switch only when proof is clear.
-            </p>
-            <div className="mt-6">
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-300/45 bg-slate-950/70 px-5 py-2.5 text-sm font-semibold text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-200/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-              >
-                Start with Capability Discovery
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            </div>
-          </div>
-          <aside className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-            <p className="text-xs uppercase tracking-[0.12em] text-slate-400">At a glance</p>
-            <div className="mt-4 space-y-3">
-              {[
-                { title: 'Discovery', detail: 'Map the workflow and costs', icon: Search },
-                { title: 'Pilot', detail: 'Run old and new side by side', icon: Hammer },
-                { title: 'Cutover', detail: 'Switch with rollback safety', icon: ShieldCheck }
-              ].map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} className="relative rounded-xl border border-slate-800/80 bg-slate-900/70 p-3">
-                    <div className="flex items-start gap-3">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-emerald-300/30 bg-emerald-200/10 text-emerald-100">
-                        <Icon size={14} aria-hidden="true" />
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold text-white">{item.title}</p>
-                        <p className="text-xs text-slate-300">{item.detail}</p>
-                      </div>
-                    </div>
-                    {index < 2 && <div className="mt-3 h-px bg-gradient-to-r from-emerald-300/35 to-transparent" aria-hidden="true" />}
-                  </div>
-                );
-              })}
-            </div>
-          </aside>
+        <SloganBadge />
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+          Transform one broken workflow into a controlled system in 12 weeks.
+        </h1>
+        <p className="mt-4 max-w-3xl text-sm text-slate-300 sm:text-base">
+          Own Your Operating Logic by replacing spreadsheet drift, hidden handoffs, and untraceable approvals with state-based execution and explicit controls.
+        </p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link href="/operational-assessment" className="rounded-full border border-emerald-300/45 bg-slate-950/70 px-5 py-2.5 text-sm font-semibold text-emerald-100">See your first use case</Link>
+          <Link href="/contact" className="rounded-full border border-slate-700 px-5 py-2.5 text-sm font-semibold text-white">Fix your workflow</Link>
         </div>
       </section>
 
-      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
-        <div className="space-y-2">
-          <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">Applied by industry</p>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-            The delivery model stays fixed. The workflow changes.
-          </h2>
-          <p className="max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            We keep the engagement structure consistent across sectors, then adapt the workflow controls, evidence, and operational handoffs to the
-            industry-specific failure points.
-          </p>
-        </div>
-        <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          {INDUSTRY_VERTICALS.map((industry) => (
-            <Link
-              key={industry.slug}
-              href={`/industries/${industry.slug}`}
-              className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4 transition hover:border-emerald-300/35 hover:bg-slate-900/70"
-            >
-              <p className="text-base font-semibold text-white">{industry.label}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">{industry.teaser}</p>
-              <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-300/35 bg-emerald-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-100">
-                View industry playbook
-                <ArrowRight size={14} aria-hidden="true" />
-              </span>
-            </Link>
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6">
+        <p className="text-xs uppercase tracking-[0.14em] text-cyan-200">Timeline + Decision Gates</p>
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          {timeline.map((item) => (
+            <article key={item.name} className="rounded-2xl border border-slate-800/70 bg-slate-950/40 p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">{item.phase}</p>
+              <h2 className="mt-1 text-lg font-semibold text-white">{item.name}</h2>
+              <p className="mt-2 text-sm text-slate-300">{item.detail}</p>
+              <p className="mt-3 rounded-lg border border-emerald-300/30 bg-emerald-300/10 px-3 py-2 text-xs font-semibold text-emerald-100">Gate: {item.gate}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="grid gap-4 rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7 md:grid-cols-2">
-        <article>
-          <h2 className="text-xl font-semibold text-white">What This Is Not</h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-200">
-            {WHAT_THIS_IS_NOT.map((item) => (
-              <li key={item.label} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                <span className="flex items-center gap-2">
-                  <item.icon size={14} className="text-rose-200" aria-hidden="true" />
-                  {item.label}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </article>
-        <article>
-          <h2 className="text-xl font-semibold text-white">What This Is</h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-200">
-            {WHAT_THIS_IS.map((item) => (
-              <li key={item.label} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                <span className="flex items-center gap-2">
-                  <item.icon size={14} className="text-emerald-200" aria-hidden="true" />
-                  {item.label}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </article>
+      <BeforeAfterDiagram />
+      <ControlLayerDiagram />
+
+      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6">
+        <h2 className="text-2xl font-semibold text-white">Mini narrative</h2>
+        <p className="mt-3 text-sm text-slate-300">
+          A consumer credit operator started with one exception-routing workflow. In three weeks, we mapped ownership and failure points. By week nine, the pilot reduced queue bounce-backs by 32%. By week twelve, the team owned a governed state model and no longer relied on spreadsheet triage.
+        </p>
       </section>
 
-      <section aria-labelledby="step-model-title" className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-4 sm:p-6 lg:p-8">
-        <div className="space-y-2">
-          <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">How It Actually Works</p>
-          <h2 id="step-model-title" className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-            3-step model
-          </h2>
-        </div>
-        <div className="mt-5 grid gap-3 md:grid-cols-3">
-          {STEP_MODEL.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <article key={step.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-                <div className="flex items-center justify-between gap-3">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-300/30 bg-emerald-200/10 text-emerald-100">
-                    <Icon size={16} aria-hidden="true" />
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.12em] text-emerald-200/90">{index + 1}</span>
-                </div>
-                <p className="mt-3 text-base font-semibold text-white">{step.title}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.12em] text-emerald-200">{step.timeline}</p>
-                <div className="mt-3 space-y-2">
-                  <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Client receives</p>
-                  <p className="text-sm text-slate-200">{step.receives}</p>
-                </div>
-                <div className="mt-3 space-y-2">
-                  <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Decision made</p>
-                  <p className="text-sm text-slate-200">{step.decision}</p>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Concrete Deliverables</h2>
-        <div className="mt-4 grid gap-3 md:grid-cols-2">
-          {DELIVERABLES.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div key={item.title} className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4 text-sm text-slate-200">
-                <span className="flex items-center gap-3">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-slate-700/80 bg-slate-900/70 text-cyan-200">
-                    <Icon size={15} aria-hidden="true" />
-                  </span>
-                  {item.title}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Pricing (Fixed Scope)</h2>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full min-w-[760px] border-collapse text-sm">
-            <thead>
-              <tr className="text-left text-xs uppercase tracking-[0.12em] text-slate-400">
-                <th className="border-b border-slate-800 p-3">Offer</th>
-                <th className="border-b border-slate-800 p-3">Price</th>
-                <th className="border-b border-slate-800 p-3">Scope</th>
-                <th className="border-b border-slate-800 p-3">Timeline</th>
-                <th className="border-b border-slate-800 p-3">Included</th>
-              </tr>
-            </thead>
-            <tbody>
-              {PRICING.map((row) => (
-                <tr key={row.offer} className="align-top text-slate-200">
-                  <td className="border-b border-slate-800/80 p-3 font-semibold text-white">{row.offer}</td>
-                  <td className="border-b border-slate-800/80 p-3">{row.price}</td>
-                  <td className="border-b border-slate-800/80 p-3">{row.scope}</td>
-                  <td className="border-b border-slate-800/80 p-3">{row.timeline}</td>
-                  <td className="border-b border-slate-800/80 p-3">{row.included}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="mt-4 grid gap-3 md:grid-cols-3">
-          <article className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-            <p className="text-sm font-semibold text-white">Why fixed pricing matters</p>
-            <p className="mt-2 text-sm text-slate-300">Procurement gets clear scope, clear budget, and clear outputs before work begins.</p>
-          </article>
-          <article className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-            <p className="text-sm font-semibold text-white">Why this is not SaaS pricing</p>
-            <p className="mt-2 text-sm text-slate-300">There is no seat license. Fees are tied to delivery phases and accepted outcomes.</p>
-          </article>
-          <article className="rounded-2xl border border-slate-800/80 bg-slate-950/45 p-4">
-            <p className="text-sm font-semibold text-white">Why this is not hourly consulting</p>
-            <p className="mt-2 text-sm text-slate-300">Fees are tied to defined deliverables and decisions, not time spent in meetings.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="grid gap-4 rounded-3xl border border-slate-800/70 bg-slate-900/55 p-5 sm:p-7 md:grid-cols-2">
-        <article>
-          <h2 className="text-xl font-semibold text-white">Who This Is For</h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-200">
-            {WHO_FOR.map((item) => (
-              <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                <span className="flex items-start gap-2">
-                  <Briefcase size={14} className="mt-0.5 text-emerald-200" aria-hidden="true" />
-                  <span>{item}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </article>
-        <article>
-          <h2 className="text-xl font-semibold text-white">Who This Is Not For</h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-200">
-            {WHO_NOT_FOR.map((item) => (
-              <li key={item} className="rounded-xl border border-slate-800/80 bg-slate-950/45 p-3">
-                <span className="flex items-start gap-2">
-                  <Users size={14} className="mt-0.5 text-slate-300" aria-hidden="true" />
-                  <span>{item}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </article>
-      </section>
-
-      <section className="rounded-3xl border border-slate-800/80 bg-slate-950/50 p-6 sm:p-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">Ready to scope the first workflow?</h2>
-        <p className="mt-2 text-sm text-slate-300 sm:text-base">Start with a fixed-scope Discovery package.</p>
-        <Link
-          href="/services"
-          className="mt-5 inline-flex items-center justify-center rounded-full border border-emerald-300/45 bg-slate-950/70 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-200/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-        >
-          Start Discovery
-        </Link>
+      <section className="rounded-3xl border border-emerald-300/25 bg-slate-950/50 p-6">
+        <SloganBadge className="mb-4" />
+        <h2 className="text-2xl font-semibold text-white">Typical Results</h2>
+        <ul className="mt-3 space-y-2 text-sm text-slate-200">
+          <li>25–40% reduction in manual reconciliation and rework</li>
+          <li>20–35% faster cycle time on the target workflow</li>
+          <li>90%+ traceability for critical decisions and handoffs</li>
+        </ul>
+        <Link href="/contact" className="mt-5 inline-flex rounded-full border border-emerald-300/45 bg-emerald-300/10 px-5 py-2.5 text-sm font-semibold text-emerald-100">Start with one workflow</Link>
       </section>
     </div>
   );
